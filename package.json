@@ -1,0 +1,23 @@
+{
+	"name": "blockbench.net",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+	},
+	"dependencies": {
+		"core-js": "^3.9.1",
+		"nuxt": "^2.15.3"
+	},
+	"devDependencies": {
+		"@fortawesome/free-brands-svg-icons": "^5.15.3",
+		"@fortawesome/free-solid-svg-icons": "^5.15.3",
+		"@nuxtjs/fontawesome": "^1.1.2",
+		"@nuxtjs/svg": "^0.1.12",
+		"push-dir": "^0.4.1"
+	}
+}
