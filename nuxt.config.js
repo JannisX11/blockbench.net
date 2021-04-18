@@ -38,7 +38,8 @@ export default {
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
 		'@nuxtjs/svg',
-		'@nuxtjs/fontawesome'
+		'@nuxtjs/fontawesome',
+		'@nuxtjs/google-fonts'
 	],
 
 	fontawesome: {
@@ -46,6 +47,14 @@ export default {
 		icons: {
 			solid: true,
 			brands: true
+		}
+	},
+
+	googleFonts: {
+		families: {
+			Montserrat: {
+				wght: [400, 500]
+			}
 		}
 	},
 

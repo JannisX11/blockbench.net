@@ -10,10 +10,13 @@
 				<fa icon="bars" />
 			</div>
 
-			<ul id="menu" :class="{folded: !show_menu}">
+			<ul id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
 				<li><nuxt-link to='/download'>Download</nuxt-link></li>
-				<li><nuxt-link to='/home'>Home</nuxt-link></li>
-				<li><a href="https://twitter.com/blockbench" target="_blank"><fa :icon="['fab', 'twitter']" /></a></li>
+				<li><nuxt-link to='/faq'>FAQ</nuxt-link></li>
+				<li><nuxt-link to='/test'>Test</nuxt-link></li>
+				<li class="menu_icon"><a href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a></li>
+				<li class="menu_icon"><a href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a></li>
+				<li class="menu_icon"><a href="http://discord.blockbench.net" target="_blank" title="Discord"><fa :icon="['fab', 'discord']" /></a></li>
 			</ul>
 
 		</div>
@@ -35,6 +38,7 @@ export default {
 		background-color: var(--dark-ui);
 		position: fixed;
 		top: 0;
+		z-index: 10;
 		height: var(--header-height);
 		width: 100%;
 		color: var(--dark-text);
@@ -52,7 +56,7 @@ export default {
 	}
 
 	#home_link {
-		padding: 13px;
+		padding: 14px;
 	}
 	#menu {
 		display: flex;
@@ -61,7 +65,10 @@ export default {
 
 	#menu li {
 		flex: 0 0 auto;
-		margin: 0 12px;
+		margin: 0 8px;
+	}
+	#menu li:hover {
+		color: var(--dark-hover);
 	}
 	#menu li a {
 		height: 100%;
@@ -70,7 +77,15 @@ export default {
 		padding: 22px 12px;
 	}
 	#menu li a.nuxt-link-exact-active {
-		border-bottom: 3px solid var(--accent);
+		border-bottom: 5px solid var(--accent);
+		color: var(--accent);
+	}
+	#menu li.menu_icon {
+		margin: 0;
+		margin-left: 8px;
+	}
+	#menu .svg-inline--fa {
+		font-size: 20px;
 	}
 
 	#mobile_menu_toggle {
@@ -91,9 +106,12 @@ export default {
 			background-color: var(--light-ui);
 			color: var(--light-text);
 			width: 100%;
+			overflow: hidden;
+			transform-origin: top;
+			transition: transform 120ms ease;
 		}
 		#menu.folded {
-			display: none;
+			transform: scaleY(0);
 		}
 		#menu li {
 			height: 48px;
@@ -104,6 +122,9 @@ export default {
 		#menu li a.nuxt-link-exact-active {
 			border-bottom: none;
 			border-left: 3px solid var(--accent);
+		}
+		#menu li.menu_icon {
+			display: inline-block;
 		}
 	}
 </style>>
