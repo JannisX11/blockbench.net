@@ -60,15 +60,24 @@ body {
 }
 
 a {
-	color: inherit;
 	text-decoration: none;
+	color: var(--accent);
+}
+a:hover {
+	text-decoration: underline;
+}
+h1 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
 }
 h1, h2, h3 {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-h1 {font-size: 2.4em;}
-h2 {font-size: 2.0em;}
+h1 {font-size: 2.2em;}
+h2 {font-size: 1.9em;}
 h3 {font-size: 1.7em;}
 h4 {font-size: 1.5em;}
 h5 {font-size: 1.3em;}
@@ -88,6 +97,10 @@ button {
 	text-transform: uppercase;
 	margin: 4px 0;
 }
+ul {
+	padding-left: 12px;
+	line-height: 24px;
+}
 
 #page_flow {
 	min-height: 100vh;
@@ -103,14 +116,9 @@ button {
 }
 .content {
 	display: block;
-	margin: auto;
-	padding: 12px;
-	max-width: var(--max-page-width);
-}
-@media only screen and (max-width: 600px) {
-	.content {
-		padding: 12px 0;
-	}
+	margin: 0 auto;
+	padding: 20px;
+	width: min(var(--max-page-width), 100%);
 }
 
 

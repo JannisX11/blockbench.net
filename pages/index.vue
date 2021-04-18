@@ -17,7 +17,7 @@
 		
 		<section class="showcase">
 			<content class="content">
-				<h1>Made in Blockbench!</h1>
+				<h2>Made in Blockbench!</h2>
 				<iframe width="1000" height="720" src="https://sketchfab.com/playlists/embed?collection=98346534947c4e229ced71854c9ede1a&autostart=0"
 					frameborder="0" allow="autoplay; fullscreen; vr" allowvr=""
 					allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""
@@ -153,10 +153,22 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 	section {
 		padding: 40px 0;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	@media only screen and (max-width: 600px) {
+		.content {
+			padding: 12px 0;
+		}
 	}
 
 	section.download {
@@ -166,6 +178,8 @@ export default {
 		color: var(--dark-text);
 		text-align: center;
 		padding-top: 100px;
+	}
+	section.download .content {
 		perspective: 1000px;
 	}
 	section.download h3 {
@@ -180,9 +194,13 @@ export default {
 	}
 	#front_page_app {
 		width: min(100%, 1000px);
-		box-shadow: 0 0 20px black;
+		box-shadow: 0 0 20px #000000bb;
 		transform: rotateX(calc(10deg - 60deg * var(--scroll)));
 		margin-bottom: -120px;
+		transition: transform 800ms ease;
+	}
+	#front_page_app:hover {
+		transform: scale(1.08);
 	}
 	section.download button {
 		transition: padding 150ms ease-in-out;
@@ -206,6 +224,7 @@ export default {
 	iframe {
 		width: 100%;
 		height: min(75vh, 640px);
+		box-shadow: 0 0 8px #00000070;
 	}
 
 	

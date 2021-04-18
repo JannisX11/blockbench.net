@@ -13,7 +13,7 @@
 			<ul id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
 				<li><nuxt-link to='/download'>Download</nuxt-link></li>
 				<li><nuxt-link to='/faq'>FAQ</nuxt-link></li>
-				<li><nuxt-link to='/test'>Test</nuxt-link></li>
+				<li><nuxt-link to='/quickstart'>Quickstart</nuxt-link></li>
 				<li class="menu_icon"><a href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a></li>
 				<li class="menu_icon"><a href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a></li>
 				<li class="menu_icon"><a href="http://discord.blockbench.net" target="_blank" title="Discord"><fa :icon="['fab', 'discord']" /></a></li>
@@ -43,6 +43,14 @@ export default {
 		width: 100%;
 		color: var(--dark-text);
 	}
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	a:hover {
+		text-decoration: none;
+	}
 	li {
 		list-style: none;
 		padding: 0;
@@ -57,6 +65,10 @@ export default {
 
 	#home_link {
 		padding: 14px;
+		opacity: 0.9;
+	}
+	#home_link:hover {
+		opacity: 1;
 	}
 	#menu {
 		display: flex;
@@ -67,18 +79,18 @@ export default {
 		flex: 0 0 auto;
 		margin: 0 8px;
 	}
-	#menu li:hover {
-		color: var(--dark-hover);
-	}
 	#menu li a {
 		height: 100%;
 		display: block;
 		padding: 10px;
 		padding: 22px 12px;
 	}
-	#menu li a.nuxt-link-exact-active {
+	#menu li:hover {
+		color: var(--dark-hover);
+	}
+	#menu li a.nuxt-link-exact-active, #menu li a:hover {
 		border-bottom: 5px solid var(--accent);
-		color: var(--accent);
+		color: var(--dark-hover);
 	}
 	#menu li.menu_icon {
 		margin: 0;
@@ -119,9 +131,17 @@ export default {
 		#menu li a {
 			padding: 15px 12px;
 		}
+		#menu li:hover {
+			color: var(--light-hover);
+		}
+		#menu li a:hover {
+			border-bottom: none;
+			color: var(--light-hover);
+		}
 		#menu li a.nuxt-link-exact-active {
 			border-bottom: none;
-			border-left: 3px solid var(--accent);
+			border-left: 5px solid var(--accent);
+			color: var(--light-hover);
 		}
 		#menu li.menu_icon {
 			display: inline-block;
