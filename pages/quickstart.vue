@@ -227,9 +227,6 @@ export default {
 </script>
 
 <style scoped>
-		.content {
-			background-color: var(--light-ui);
-		}
 		p {
 			margin: 16px 0;
 		}

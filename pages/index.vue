@@ -144,7 +144,7 @@
 <script>
 
 export default {
-	beforeMount () {
+	beforeMount() {
 		document.body.style.setProperty('--scroll', 0);
 		window.addEventListener('scroll', () => {
 			document.body.style.setProperty('--scroll', window.pageYOffset / window.innerHeight);
@@ -155,6 +155,11 @@ export default {
 
 <style scoped>
 
+	.content {
+		padding: 0px;
+		width: min(var(--max-page-width), 100%);
+		background-color: transparent;
+	}
 	section {
 		padding: 40px 0;
 	}
@@ -175,7 +180,7 @@ export default {
 		background-color: var(--dark-background);
 		background-image: url('~assets/background.png');
 		background-size: cover;
-		color: var(--dark-text);
+		color: white;
 		text-align: center;
 		padding-top: 100px;
 	}

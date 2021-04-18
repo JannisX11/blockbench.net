@@ -42,10 +42,10 @@ html {
 body {
 	--light-ui: white;
 	--light-background: #ebeef2;
-	--light-text: #444;
+	--light-text: #47494E;
 	--light-hover: #233850;
 
-	--dark-ui: #233850;
+	--dark-ui: #212e3c;
 	--dark-background: #1d2125;
 	--dark-text: #eeeeef;
 	--dark-hover: white;
@@ -61,9 +61,13 @@ body {
 
 a {
 	text-decoration: none;
+	color: inherit;
+}
+.content a {
+	text-decoration: none;
 	color: var(--accent);
 }
-a:hover {
+.content a:hover {
 	text-decoration: underline;
 }
 h1 {
@@ -89,7 +93,6 @@ button {
 	font-size: 0.92em;
 	cursor: pointer;
 
-	border-radius: 5px;
 	padding: 20px 28px;
 	background-color: var(--accent);
 	color: var(--dark-hover);
@@ -99,6 +102,9 @@ button {
 }
 ul {
 	padding-left: 12px;
+	line-height: 24px;
+}
+p {
 	line-height: 24px;
 }
 
@@ -117,8 +123,9 @@ ul {
 .content {
 	display: block;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 20px 100px;
 	width: min(var(--max-page-width), 100%);
+	background-color: var(--light-ui);
 }
 
 

@@ -11,7 +11,7 @@
 			</div>
 
 			<ul id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
-				<li><nuxt-link to='/download'>Download</nuxt-link></li>
+				<li><nuxt-link to='/downloads'>Download</nuxt-link></li>
 				<li><nuxt-link to='/faq'>FAQ</nuxt-link></li>
 				<li><nuxt-link to='/quickstart'>Quickstart</nuxt-link></li>
 				<li class="menu_icon"><a href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a></li>
@@ -44,13 +44,6 @@ export default {
 		color: var(--dark-text);
 	}
 	
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-	a:hover {
-		text-decoration: none;
-	}
 	li {
 		list-style: none;
 		padding: 0;
