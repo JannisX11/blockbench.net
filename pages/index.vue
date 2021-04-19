@@ -7,7 +7,7 @@
 				<h3>A boxy 3D model editor</h3>
 
 				<div class="buttons">
-					<button><a href="/download">Download</a></button>
+					<button><a href="/downloads">Download</a></button>
 					<button class="webapp"><a href="https://web.blockbench.net" target="_blank">Open Web App</a></button>
 				</div>
 
@@ -27,31 +27,31 @@
 
 		<section class="users">
 			<content class="content">
-				<h2>Happy Blockbench Users</h2>
+				<h2>Supporters and Sponsors</h2>
 				<ul id="blockbench_user_list">
 						<!-- Just used for demo purposes -->
 					<li>
-						<img src="~assets/users/noxcrew_logo.png">
+						<img src="~assets/sponsors/noxcrew_logo.png">
 						<label>Noxcrew</label>
 					</li>
 					<li>
-						<img src="~assets/users/noxcrew_logo.png">
+						<img src="~assets/sponsors/cyclone_logo.png">
+						<label>Cyclone</label>
+					</li>
+					<li>
+						<img src="~assets/sponsors/noxcrew_logo.png">
 						<label>Noxcrew</label>
 					</li>
 					<li>
-						<img src="~assets/users/noxcrew_logo.png">
+						<img src="~assets/sponsors/noxcrew_logo.png">
 						<label>Noxcrew</label>
 					</li>
 					<li>
-						<img src="~assets/users/noxcrew_logo.png">
+						<img src="~assets/sponsors/noxcrew_logo.png">
 						<label>Noxcrew</label>
 					</li>
 					<li>
-						<img src="~assets/users/noxcrew_logo.png">
-						<label>Noxcrew</label>
-					</li>
-					<li>
-						<img src="~assets/users/noxcrew_logo.png">
+						<img src="~assets/sponsors/noxcrew_logo.png">
 						<label>Noxcrew</label>
 					</li>
 				</ul>
@@ -114,18 +114,8 @@
 					<img src="~assets/features/flower_pot.png" />
 				</div>
 				<div class="text_body">
-					<h3>Plugins</h3>
+					<h3>Free & Open Source</h3>
 					<p>Customize Blockbench with the built-in plugin store. Or create your own plugin and add a new feature or new format.</p>
-				</div>
-			</content>
-
-			<content class="content split">
-				<div class="text_body">
-					<h3>Free and Open Source</h3>
-					<p></p>
-				</div>
-				<div>
-					<img src="~assets/features/flower_pot.png" />
 				</div>
 			</content>
 		</section>

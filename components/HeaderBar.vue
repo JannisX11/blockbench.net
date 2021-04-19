@@ -16,6 +16,7 @@
 				<li><nuxt-link to='/quickstart'>Quickstart</nuxt-link></li>
 				<li class="menu_icon"><a href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a></li>
 				<li class="menu_icon"><a href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a></li>
+				<li class="menu_icon"><a href="https://github.com/JannisX11/blockbench" target="_blank" title="Github"><fa :icon="['fab', 'github']" /></a></li>
 				<li class="menu_icon"><a href="http://discord.blockbench.net" target="_blank" title="Discord"><fa :icon="['fab', 'discord']" /></a></li>
 			</ul>
 
@@ -70,7 +71,7 @@ export default {
 
 	#menu li {
 		flex: 0 0 auto;
-		margin: 0 8px;
+		margin: 0 4px;
 	}
 	#menu li a {
 		height: 100%;
@@ -86,8 +87,7 @@ export default {
 		color: var(--dark-hover);
 	}
 	#menu li.menu_icon {
-		margin: 0;
-		margin-left: 8px;
+		margin-right: 0;
 	}
 	#menu .svg-inline--fa {
 		font-size: 20px;

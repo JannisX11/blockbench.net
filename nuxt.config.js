@@ -20,6 +20,7 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
+		'@/assets/css/main.css'
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -37,10 +38,19 @@ export default {
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
+		'@nuxtjs/content',
 		'@nuxtjs/svg',
 		'@nuxtjs/fontawesome',
 		'@nuxtjs/google-fonts'
 	],
+
+	content: {
+		markdown: {
+			prism: {
+				theme: 'prism-themes/themes/prism-material-oceanic.css'
+			}
+		}
+	},
 
 	fontawesome: {
 		component: 'fa',

@@ -12,6 +12,8 @@
 
 			<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ version }}</span></p>
 
+			<div id="download_options">
+
 			<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank">
 				<fa :icon="['fab', 'windows']" />
 				<h5>Windows</h5>
@@ -42,6 +44,8 @@
 				<h5>Linux</h5>
 				<p>AppImage</p>
 			</a>
+
+			</div>
 
 			<p>Or check the <a href="https://github.com/JannisX11/blockbench/releases">Github release page</a> for other installers and older versions.</p>
 
@@ -83,13 +87,17 @@ export default {
 </script>
 
 <style scoped>
+	#download_options {
+		column-count: 2;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 	a.blockbench_download {
 		margin: 8px;
 		padding: 16px;
 		margin-left: 0;
 		color: inherit;
 		display: block;
-		border-radius: 5px;
 	}
 	a.blockbench_download > :first-child {
 		font-size: 34pt;
@@ -112,5 +120,10 @@ export default {
 	}
 	a.blockbench_download > p {
 		display: inline-block;
+	}
+	@media only screen and (max-width: 600px) {
+		#download_options {
+			column-count: 1;
+		}
 	}
 </style>
