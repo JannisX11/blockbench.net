@@ -263,5 +263,10 @@ export default {
 	.text_body {
 		padding: 20px 32px;
 	}
+	@media only screen and (max-width: 600px) {
+		.content.split {
+			flex-direction: column;
+		}
+	}
 
 </style>

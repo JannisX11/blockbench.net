@@ -24,7 +24,7 @@ html {
 body {
 	--light-ui: white;
 	--light-background: #edf0f4;
-	--light-text: #47494E;
+	--light-text: #404552;
 	--light-hover: #233850;
 
 	--dark-ui: #212e3c;
@@ -34,7 +34,6 @@ body {
 
 	--accent: #3e90ff;
 
-	--max-page-width: 1200px;
 	--header-height: 64px;
 
 	background-color: #ebeef2;
@@ -58,9 +57,9 @@ h1 {
 	border-bottom: 1px solid #ccc;
 	text-align: center;
 }
-h1, h2, h3 {
-	margin-top: 10px;
-	margin-bottom: 10px;
+h1, h2, h3, h4 {
+	margin-top: 6px;
+	margin-bottom: 20px;
 }
 h1 {font-size: 2.2em;}
 h2 {font-size: 1.9em;}
@@ -82,10 +81,12 @@ button {
 	text-transform: uppercase;
 	margin: 4px 0;
 }
-ul {
+.content ul, .content ol {
 	padding-left: 12px;
 	line-height: 24px;
+	margin-bottom: 30px;
 }
-p {
+.content p {
 	line-height: 24px;
+	margin-bottom: 15px;
 }

@@ -63,7 +63,7 @@ export default {
 	googleFonts: {
 		families: {
 			Montserrat: {
-				wght: [400, 500]
+				wght: [300, 400, 500]
 			}
 		}
 	},

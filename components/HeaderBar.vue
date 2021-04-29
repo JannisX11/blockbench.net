@@ -11,8 +11,8 @@
 			</div>
 
 			<ul id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
+				<li><nuxt-link to='/wiki'>Wiki</nuxt-link></li>
 				<li><nuxt-link to='/downloads'>Download</nuxt-link></li>
-				<li><nuxt-link to='/faq'>FAQ</nuxt-link></li>
 				<li><nuxt-link to='/quickstart'>Quickstart</nuxt-link></li>
 				<li class="menu_icon"><a href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a></li>
 				<li class="menu_icon"><a href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a></li>

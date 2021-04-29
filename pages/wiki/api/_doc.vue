@@ -11,8 +11,10 @@
 
 
 export default {
+	layout: 'wiki',
 	async asyncData({$content, params}) {
-		const doc = await $content('api/' + params.doc).fetch();
+		console.log(params)
+		const doc = await $content('api', params.doc).fetch();
 		return {doc}
 	}
 }
