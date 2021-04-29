@@ -10,15 +10,15 @@
 				<fa icon="bars" />
 			</div>
 
-			<ul id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
-				<li><nuxt-link to='/wiki'>Wiki</nuxt-link></li>
-				<li><nuxt-link to='/downloads'>Download</nuxt-link></li>
-				<li><nuxt-link to='/quickstart'>Quickstart</nuxt-link></li>
-				<li class="menu_icon"><a href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a></li>
-				<li class="menu_icon"><a href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a></li>
-				<li class="menu_icon"><a href="https://github.com/JannisX11/blockbench" target="_blank" title="Github"><fa :icon="['fab', 'github']" /></a></li>
-				<li class="menu_icon"><a href="http://discord.blockbench.net" target="_blank" title="Discord"><fa :icon="['fab', 'discord']" /></a></li>
-			</ul>
+			<nav id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
+				<nuxt-link to='/wiki'>Wiki</nuxt-link>
+				<nuxt-link to='/downloads'>Download</nuxt-link>
+				<nuxt-link to='/quickstart'>Quickstart</nuxt-link>
+				<a class="menu_icon" href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a>
+				<a class="menu_icon" href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a>
+				<a class="menu_icon" href="https://github.com/JannisX11/blockbench" target="_blank" title="Github"><fa :icon="['fab', 'github']" /></a>
+				<a class="menu_icon" href="http://discord.blockbench.net" target="_blank" title="Discord"><fa :icon="['fab', 'discord']" /></a>
+			</nav>
 
 		</div>
 	</div>
@@ -45,10 +45,6 @@ export default {
 		color: var(--dark-text);
 	}
 	
-	li {
-		list-style: none;
-		padding: 0;
-	}
 	#navigation {
 		display: flex;
 		height: 100%;
@@ -69,24 +65,22 @@ export default {
 		padding: 0;
 	}
 
-	#menu li {
+	#menu a {
 		flex: 0 0 auto;
 		margin: 0 4px;
-	}
-	#menu li a {
 		height: 100%;
 		display: block;
 		padding: 10px;
 		padding: 22px 12px;
 	}
-	#menu li:hover {
+	#menu a:hover {
 		color: var(--dark-hover);
 	}
-	#menu li a.nuxt-link-exact-active, #menu li a:hover {
+	#menu  a.nuxt-link-exact-active, #menu  a:hover {
 		border-bottom: 5px solid var(--accent);
 		color: var(--dark-hover);
 	}
-	#menu li.menu_icon {
+	#menu a.menu_icon {
 		margin-right: 0;
 	}
 	#menu .svg-inline--fa {
@@ -118,25 +112,23 @@ export default {
 		#menu.folded {
 			transform: scaleY(0);
 		}
-		#menu li {
+		#menu a {
 			height: 48px;
-		}
-		#menu li a {
 			padding: 15px 12px;
 		}
-		#menu li:hover {
+		#menu a:hover {
 			color: var(--light-hover);
 		}
-		#menu li a:hover {
+		#menu a:hover {
 			border-bottom: none;
 			color: var(--light-hover);
 		}
-		#menu li a.nuxt-link-exact-active {
+		#menu a.nuxt-link-exact-active {
 			border-bottom: none;
 			border-left: 5px solid var(--accent);
 			color: var(--light-hover);
 		}
-		#menu li.menu_icon {
+		#menu a.menu_icon {
 			display: inline-block;
 		}
 	}

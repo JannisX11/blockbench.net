@@ -64,6 +64,9 @@ export default {
 		families: {
 			Montserrat: {
 				wght: [300, 400, 500]
+			},
+			Nunito: {
+				wght: [300, 400, 500]
 			}
 		}
 	},

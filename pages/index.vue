@@ -27,34 +27,39 @@
 
 		<section class="users">
 			<content class="content">
-				<h2>Supporters and Sponsors</h2>
-				<ul id="blockbench_user_list">
+				<h2>Who's using Blockbench</h2>
+				<div id="blockbench_user_list">
 						<!-- Just used for demo purposes -->
-					<li>
+					<a href="https://noxcrew.com">
 						<img src="~assets/sponsors/noxcrew_logo.png">
-						<label>Noxcrew</label>
-					</li>
-					<li>
+						Noxcrew
+					</a>
+					<a href="https://minecraft.net">
+						<img src="~assets/sponsors/mojang_logo.jpg">
+						Mojang Studios
+					</a>
+					<a href="https://noxcrew.com">
 						<img src="~assets/sponsors/cyclone_logo.png">
-						<label>Cyclone</label>
-					</li>
-					<li>
+						Cyclone
+					</a>
+					<a href="https://noxcrew.com">
 						<img src="~assets/sponsors/noxcrew_logo.png">
-						<label>Noxcrew</label>
-					</li>
-					<li>
+						Everbloom Games
+					</a>
+					<a href="https://noxcrew.com">
 						<img src="~assets/sponsors/noxcrew_logo.png">
-						<label>Noxcrew</label>
-					</li>
-					<li>
+						Spark Universe
+					</a>
+					<a href="https://noxcrew.com">
 						<img src="~assets/sponsors/noxcrew_logo.png">
-						<label>Noxcrew</label>
-					</li>
-					<li>
+						Gamemode One
+					</a>
+					<a href="https://noxcrew.com">
 						<img src="~assets/sponsors/noxcrew_logo.png">
-						<label>Noxcrew</label>
-					</li>
-				</ul>
+						Oreville Studios
+					</a>
+					<p>...and many more!</p>
+				</div>
 			</content>
 		</section>
 		
@@ -222,21 +227,28 @@ export default {
 		box-shadow: 0 0 8px #00000070;
 	}
 
-	
-	ul#blockbench_user_list {
-		overflow-y: hidden;
-		overflow-x: scroll;
-		display: flex;
-		list-style: none;
-		padding: 0;
+	section.users {
+		background-color: var(--light-background);
 	}
-	ul#blockbench_user_list > li {
-		height: 90px;
-		margin: 0 16px;
+	#blockbench_user_list > a {
+		display: inline-block;
+		height: 110px;
+		min-width: 220px;
+		margin: 8px;
+		padding: 16px;
+		text-align: center;
+		transition: background-color 300ms ease;
+	}
+	#blockbench_user_list {
 		text-align: center;
 	}
-	ul#blockbench_user_list > li > img {
+	#blockbench_user_list > a:hover {
+		background-color: var(--light-ui);
+	}
+	#blockbench_user_list > a > img {
 		height: 60px;
+		display: block;
+		margin: auto;
 	}
 
 

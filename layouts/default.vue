@@ -22,7 +22,6 @@ export default {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	--max-page-width: 1200px;
 }
 #content_wrapper {
 	margin-top: var(--header-height);
@@ -34,8 +33,8 @@ export default {
 .content {
 	display: block;
 	margin: 0 auto;
-	padding: 20px 100px;
-	width: min(var(--max-page-width), 100%);
+	padding: 20px;
+	width: min(var(--max-content-width), 100%);
 	background-color: var(--light-ui);
 }
 

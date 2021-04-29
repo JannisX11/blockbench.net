@@ -1,7 +1,10 @@
 <template>
-	<div id="page_flow_wiki">
+	<div id="page_flow" class="page_flow_wiki">
 		<HeaderBar />
-		<nuxt id="wiki_wrapper" />
+		<div id="wiki_wrapper">
+			<NavigationSidebar />
+			<nuxt class="content" />
+		</div>
 		<FooterBar />
 	</div>
 </template>
@@ -17,28 +20,30 @@ export default {
 
 <style>
 
-#page_flow_wiki {
+#page_flow {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	--max-page-width: 100%;
 }
+
 #wiki_wrapper {
+	margin: auto;
 	margin-top: var(--header-height);
 	scroll-margin-top: var(--header-height);
+	max-width: var(--max-page-width);
 	flex-grow: 1;
 	display: flex;
 	flex-direction: row;
+	width: 100%;
 }
 #wiki_wrapper .content {
 	display: block;
 	margin: 0 auto;
-	padding: 20px 100px;
-	width: min(var(--max-page-width), 100%);
+	padding: 20px;
+	width: min(var(--max-content-width), 100%);
 	background-color: var(--light-ui);
-	margin: 0;
-	max-width: 1000px;
 }
+
 
 
  

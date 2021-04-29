@@ -1,6 +1,6 @@
 html {
 	font-family:
-		Montserrat,
+		Nunito,
 		'Segoe UI',
 		'Helvetica Neue',
 		Arial,
@@ -25,6 +25,7 @@ body {
 	--light-ui: white;
 	--light-background: #edf0f4;
 	--light-text: #404552;
+	--light-subtle: #9299a6;
 	--light-hover: #233850;
 
 	--dark-ui: #212e3c;
@@ -36,7 +37,10 @@ body {
 
 	--header-height: 64px;
 
-	background-color: #ebeef2;
+	--max-page-width: 1200px;
+	--max-content-width: 890px;
+
+	background-color: var(--light-ui);
 	color: var(--light-text);
 }
 
@@ -81,6 +85,26 @@ button {
 	text-transform: uppercase;
 	margin: 4px 0;
 }
+input[type=text], input[type=number] {
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	border: 1px solid #dadee3;
+	font-size: inherit;
+	padding: 8px 12px;
+	outline-color: var(--accent);
+}
+
+code {
+	background-color: #f1f3f5;
+	padding: 0 4px;
+}
+pre code {
+	background-color: unset;
+	padding: unset;
+}
+
+
 .content ul, .content ol {
 	padding-left: 12px;
 	line-height: 24px;

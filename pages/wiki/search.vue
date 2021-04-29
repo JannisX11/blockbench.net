@@ -2,7 +2,7 @@
 	<div class="wiki">
 		<NavigationSidebar />
 		<div class="content">
-			<h1>Welcome to the Wiki!</h1>
+			<h1>Search Results</h1>
 		</div>
 	</div>
 </template>
