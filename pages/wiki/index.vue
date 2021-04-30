@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="content">
 		<h1>Welcome to the Wiki!</h1>
 
 		<p>Welcome to the Blockbench Wiki, the centralized place for knowledge about Blockbench!</p>

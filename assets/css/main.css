@@ -37,7 +37,7 @@ body {
 
 	--header-height: 64px;
 
-	--max-page-width: 1200px;
+	--max-page-width: 1280px;
 	--max-content-width: 890px;
 
 	background-color: var(--light-ui);
@@ -102,6 +102,14 @@ code {
 pre code {
 	background-color: unset;
 	padding: unset;
+}
+table {
+	border-spacing: 0;
+}
+td, th {
+	border: 1px solid #e1e4e5;
+	border-collapse: collapse;
+	padding: 8px;
 }
 
 

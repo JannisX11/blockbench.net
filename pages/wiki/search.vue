@@ -1,9 +1,6 @@
 <template>
-	<div class="wiki">
-		<NavigationSidebar />
-		<div class="content">
-			<h1>Search Results</h1>
-		</div>
+	<div class="content">
+		<h1>Search Results</h1>
 	</div>
 </template>
 

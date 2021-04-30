@@ -30,31 +30,31 @@
 				<h2>Who's using Blockbench</h2>
 				<div id="blockbench_user_list">
 						<!-- Just used for demo purposes -->
-					<a href="https://noxcrew.com">
+					<a href="https://noxcrew.com", target="_blank">
 						<img src="~assets/sponsors/noxcrew_logo.png">
 						Noxcrew
 					</a>
-					<a href="https://minecraft.net">
+					<a href="https://minecraft.net", target="_blank">
 						<img src="~assets/sponsors/mojang_logo.jpg">
 						Mojang Studios
 					</a>
-					<a href="https://noxcrew.com">
+					<a href="https://noxcrew.com", target="_blank">
 						<img src="~assets/sponsors/cyclone_logo.png">
 						Cyclone
 					</a>
-					<a href="https://noxcrew.com">
+					<a href="https://noxcrew.com", target="_blank">
 						<img src="~assets/sponsors/noxcrew_logo.png">
 						Everbloom Games
 					</a>
-					<a href="https://noxcrew.com">
+					<a href="https://noxcrew.com", target="_blank">
 						<img src="~assets/sponsors/noxcrew_logo.png">
 						Spark Universe
 					</a>
-					<a href="https://noxcrew.com">
+					<a href="https://noxcrew.com", target="_blank">
 						<img src="~assets/sponsors/noxcrew_logo.png">
 						Gamemode One
 					</a>
-					<a href="https://noxcrew.com">
+					<a href="https://noxcrew.com", target="_blank">
 						<img src="~assets/sponsors/noxcrew_logo.png">
 						Oreville Studios
 					</a>
@@ -144,7 +144,8 @@ export default {
 		window.addEventListener('scroll', () => {
 			document.body.style.setProperty('--scroll', window.pageYOffset / window.innerHeight);
 		}, false);
-	}
+	},
+	
 }
 </script>
 

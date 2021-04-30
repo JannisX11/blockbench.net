@@ -11,9 +11,9 @@
 			</div>
 
 			<nav id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
-				<nuxt-link to='/wiki'>Wiki</nuxt-link>
 				<nuxt-link to='/downloads'>Download</nuxt-link>
 				<nuxt-link to='/quickstart'>Quickstart</nuxt-link>
+				<nuxt-link to='/wiki'>Wiki</nuxt-link>
 				<a class="menu_icon" href="https://twitter.com/blockbench" target="_blank" title="Twitter"><fa :icon="['fab', 'twitter']" /></a>
 				<a class="menu_icon" href="https://reddit.com/r/blockbench" target="_blank" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a>
 				<a class="menu_icon" href="https://github.com/JannisX11/blockbench" target="_blank" title="Github"><fa :icon="['fab', 'github']" /></a>
@@ -108,6 +108,7 @@ export default {
 			overflow: hidden;
 			transform-origin: top;
 			transition: transform 120ms ease;
+			box-shadow: 0 0 4px #00000077;
 		}
 		#menu.folded {
 			transform: scaleY(0);

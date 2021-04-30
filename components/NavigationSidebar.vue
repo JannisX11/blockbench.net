@@ -1,12 +1,15 @@
 <template>
-	<div id="navigation_sidebar">
+	<div id="navigation_sidebar" :class="{folded: !show_menu}">
+		<div id="mobile_sidebar_toggle" @click="show_menu = !show_menu">
+			<fa icon="bars" />
+		</div>
 		<nav id="navigation_wrapper">
 
 			<div id="nav_title">Blockbench Wiki</div>
 
 			<SearchBar :value="''" />
 
-			<ul class="nav_sections">
+			<ul class="nav_sections" @click="show_menu = false">
 				<li>
 					<nuxt-link to="/wiki">Home</nuxt-link>
 				</li>
@@ -66,13 +69,14 @@ export default {
 
 	#navigation_sidebar {
 		width: 280px;
-		background-color: var(--light-ui);
 		margin-right: 5px;
 		padding-top: 30px;
+		flex-shrink: 0;
 	}
 	#navigation_wrapper {
 		position: sticky;
 		top: var(--header-height);
+		background-color: var(--light-ui);
 	}
 
 	#nav_title {
@@ -89,11 +93,10 @@ export default {
 		padding: 4px;
 		padding-left: 16px;
 	}
-	li {
-		margin-bottom: 1px;
-	}
 	ul.nav_sections {
 		padding-left: 0;
+		max-height: calc(100vh - 186px);
+		overflow-y: auto;
 	}
 	ul.nav_sections > li {
 		margin: 20px 0;
@@ -117,9 +120,59 @@ export default {
 		background-color: var(--accent);
 		color: var(--dark-hover);
 	}
+	#mobile_sidebar_toggle {
+		display: none;
+		position: absolute;
+		background-color: var(--light-ui);
+		z-index: 11;
+		width: 38px;
+		text-align: center;
+		vertical-align: c;
+		padding: 6px;
+		font-size: 20px;
+		top: 0;
+		cursor: pointer;
+		box-shadow: 0 0 3px #00000077;
+	}
 
 	.search_bar {
 		margin: 20px 0;
 	}
-	
-</style>>
+
+	@media only screen and (max-width: 600px) {
+		#mobile_sidebar_toggle {
+			display: block;
+		}
+		#navigation_sidebar {
+			position: fixed;
+			padding: 0;
+			bottom: 0;
+			top: var(--header-height);
+		}
+		#navigation_wrapper {
+			display: block;
+			top: 0;
+			width: 100%;
+			height: calc(100vh - var(--header-height));
+			overflow: hidden;
+			transform-origin: top;
+			transition: transform 120ms ease;
+			box-shadow: 0 0 4px #00000077;
+			z-index: 10;
+		}
+		#navigation_sidebar.folded {
+			width: 40px;
+			height: 40px;
+		}
+		#navigation_sidebar.folded #navigation_wrapper {
+			transform: scaleY(0);
+		}
+		#navigation_sidebar:not(.folded) #mobile_sidebar_toggle {
+			box-shadow: none;
+		}
+		#nav_title {
+			padding-left: 45px;
+		}
+	}
+</style>
+
