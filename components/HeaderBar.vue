@@ -76,7 +76,7 @@ export default {
 		border-width: 0;
 		transition: border-width 60ms ease;
 	}
-	#menu a.nuxt-link-exact-active, #menu a:hover {
+	#menu a.nuxt-link-active, #menu a:hover {
 		border-bottom-width: 5px;
 		color: var(--dark-hover);
 	}
@@ -121,7 +121,7 @@ export default {
 			border-bottom: none;
 			color: var(--light-hover);
 		}
-		#menu a.nuxt-link-exact-active {
+		#menu a.nuxt-link-active {
 			border-bottom: none;
 			border-left: 5px solid var(--accent);
 			color: var(--light-hover);

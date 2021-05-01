@@ -27,11 +27,11 @@ export default {
 	plugins: [
 	],
 
-  /*
-  router: {
-    base: '/blockbench.net/'
-  },
-  */
+  
+	router: {
+		base: '/blockbench.net/'
+	},
+  
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,

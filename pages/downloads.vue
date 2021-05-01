@@ -10,7 +10,7 @@
 
 
 
-			<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ version }}</span></p>
+			<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ name }}</span></p>
 
 			<div id="download_options">
 
@@ -61,28 +61,35 @@
 </template>
 
 <script>
-
+const path = 'https://github.com/JannisX11/blockbench/releases/download';
 
 export default {
 	data() {return {
-		path: 'https://github.com/JannisX11/blockbench/releases/download',
-		version: '',
+		path,
+		version: '1.0.0',
 		name: '',
 		latest: false,
 	}},
-	beforeMount() {
-		if (location.hash.length > 5 && location.hash.substr(1, 1) == 'v') {
-			this.version = this.name = location.hash.substr(2);
+	async fetch(context) {
+		console.log('FETCH', context, typeof location)
+		this.version = '1.1.1';
+		if (typeof location != 'undefined' && location.hash.length > 5 && location.hash.substr(1, 1) == 'v') {
+			
+			this.version = location.hash.substr(2)
+			this.name = location.hash.substr(2)
 
 		} else {
-			fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest').then(async (response) => {
-				let release = await response.json();
-				this.version = release.tag_name.replace(/^v/, '');
-				this.name = release.name;
-				this.latest = true;
-			})
+			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
+			let release = await response.json();
+
+			this.version = release.tag_name.replace(/^v/, '')
+			this.name = release.name
+			this.latest = true
 		}
-	}
+	},
+	fetchKey: 'downloads',
+
+	fetchOnServer: false
 }
 </script>
 
