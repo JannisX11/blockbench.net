@@ -1,6 +1,9 @@
 <template>
-	<div id="footer">
-	</div>
+	<footer id="footer">
+		<div id="footer_content">
+			© 2021 Jannis Petersen
+		</div>
+	</footer>
 </template>
 
 <script>
@@ -18,6 +21,12 @@ export default {
 	#footer {
 		min-height: 30px;
 		background-color: var(--dark-ui);
+		color: var(--dark-subtle);
+	}
+	#footer_content {
+		max-width: var(--max-page-width);
+		padding: 4px;
+		margin: auto;
 	}
 
 	@media only screen and (max-width: 600px) {

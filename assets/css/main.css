@@ -27,10 +27,12 @@ body {
 	--light-text: #404552;
 	--light-subtle: #9299a6;
 	--light-hover: #233850;
+	--light-border: #dadee3;
 
 	--dark-ui: #212e3c;
 	--dark-background: #1d2125;
 	--dark-text: #eeeeef;
+	--dark-subtle: #97979c;
 	--dark-hover: white;
 
 	--accent: #3e90ff;
@@ -58,7 +60,7 @@ a {
 h1 {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--light-border);
 	text-align: center;
 }
 h1, h2, h3, h4 {
@@ -89,7 +91,7 @@ input[type=text], input[type=number] {
 	appearance: none;
 	border: none;
 	background-color: transparent;
-	border: 1px solid #dadee3;
+	border: 1px solid var(--light-border);
 	font-size: inherit;
 	padding: 8px 12px;
 	outline-color: var(--accent);

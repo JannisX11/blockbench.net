@@ -72,12 +72,12 @@ export default {
 		display: block;
 		padding: 10px;
 		padding: 22px 12px;
-	}
-	#menu a:hover {
-		color: var(--dark-hover);
-	}
-	#menu  a.nuxt-link-exact-active, #menu  a:hover {
 		border-bottom: 5px solid var(--accent);
+		border-width: 0;
+		transition: border-width 60ms ease;
+	}
+	#menu a.nuxt-link-exact-active, #menu a:hover {
+		border-bottom-width: 5px;
 		color: var(--dark-hover);
 	}
 	#menu a.menu_icon {
@@ -116,9 +116,6 @@ export default {
 		#menu a {
 			height: 48px;
 			padding: 15px 12px;
-		}
-		#menu a:hover {
-			color: var(--light-hover);
 		}
 		#menu a:hover {
 			border-bottom: none;

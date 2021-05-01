@@ -77,7 +77,6 @@ export default {
 
 	h1, h2, h3 {
 		scroll-margin: 64px;
-		scroll-padding: 64px;
 	}
 
  

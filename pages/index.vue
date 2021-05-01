@@ -30,32 +30,32 @@
 				<h2>Who's using Blockbench</h2>
 				<div id="blockbench_user_list">
 						<!-- Just used for demo purposes -->
-					<a href="https://noxcrew.com", target="_blank">
-						<img src="~assets/sponsors/noxcrew_logo.png">
+					<a href="https://noxcrew.com" target="_blank">
+						<img src="~assets/companies/noxcrew.png">
 						Noxcrew
 					</a>
-					<a href="https://minecraft.net", target="_blank">
-						<img src="~assets/sponsors/mojang_logo.jpg">
+					<a href="https://minecraft.net" target="_blank">
+						<img src="~assets/companies/mojang.png">
 						Mojang Studios
 					</a>
-					<a href="https://noxcrew.com", target="_blank">
-						<img src="~assets/sponsors/cyclone_logo.png">
+					<a href="https://www.cyclone.games" target="_blank">
+						<img src="~assets/companies/cyclone.png">
 						Cyclone
 					</a>
-					<a href="https://noxcrew.com", target="_blank">
-						<img src="~assets/sponsors/noxcrew_logo.png">
+					<a href="https://everbloomgames.com/" target="_blank">
+						<img src="~assets/companies/everbloom.svg">
 						Everbloom Games
 					</a>
-					<a href="https://noxcrew.com", target="_blank">
-						<img src="~assets/sponsors/noxcrew_logo.png">
+					<a href="https://sparkuniverse.com" target="_blank">
+						<img src="~assets/companies/spark.png">
 						Spark Universe
 					</a>
-					<a href="https://noxcrew.com", target="_blank">
-						<img src="~assets/sponsors/noxcrew_logo.png">
+					<a href="https://www.gamemodeone.com" target="_blank">
+						<img src="~assets/companies/mojang.png">
 						Gamemode One
 					</a>
-					<a href="https://noxcrew.com", target="_blank">
-						<img src="~assets/sponsors/noxcrew_logo.png">
+					<a href="https://orevillestudios.com" target="_blank">
+						<img src="~assets/companies/oreville_studios_logo.svg">
 						Oreville Studios
 					</a>
 					<p>...and many more!</p>
@@ -238,6 +238,7 @@ export default {
 		margin: 8px;
 		padding: 16px;
 		text-align: center;
+		color: var(--light-subtle);
 		transition: background-color 300ms ease;
 	}
 	#blockbench_user_list {
@@ -250,6 +251,7 @@ export default {
 		height: 60px;
 		display: block;
 		margin: auto;
+		margin-bottom: 4px;
 	}
 
 

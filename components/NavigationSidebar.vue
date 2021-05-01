@@ -97,6 +97,7 @@ export default {
 		padding-left: 0;
 		max-height: calc(100vh - 186px);
 		overflow-y: auto;
+		border-right: 1px solid var(--light-border);
 	}
 	ul.nav_sections > li {
 		margin: 20px 0;
