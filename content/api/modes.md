@@ -1,3 +1,7 @@
+---
+title: Modes
+---
+
 # Modes
 
 ### `new Mode( id: String, data: Object )`

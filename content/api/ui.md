@@ -1,3 +1,7 @@
+---
+title: Interface
+---
+
 # Interface
 
 ## Dialog

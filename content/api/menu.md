@@ -1,3 +1,7 @@
+---
+title: Menu
+---
+
 # Menus
 
 ## Menu Class

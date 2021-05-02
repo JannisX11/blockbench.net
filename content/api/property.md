@@ -1,3 +1,7 @@
+---
+title: Properties
+---
+
 # Property
 
 Properties are used to dynamically assign properties to existing classes that are undo-relevant.

@@ -1,4 +1,8 @@
-# Undo
+---
+title: Undo
+---
+
+ Undo
 
 ## Creating an undo point
 

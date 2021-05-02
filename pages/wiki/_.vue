@@ -13,8 +13,13 @@
 export default {
 	layout: 'wiki',
 	async asyncData({$content, params}) {
-		const doc = await $content('guides', params.doc).fetch();
-		return {doc}
+		const doc = await $content(params.pathMatch || 'index').fetch();
+		return {doc};
+	},
+	head() {
+		return {
+			title: `${this.doc.title} - Blockbench Wiki`,
+		}
 	}
 }
 </script>

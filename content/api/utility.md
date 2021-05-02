@@ -1,4 +1,8 @@
-# Utility
+---
+title: Utils
+---
+
+# Utils
 
 Blockbench comes with a bunch of custom utility functions to make the life of developers easier.
 

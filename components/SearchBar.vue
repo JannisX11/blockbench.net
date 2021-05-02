@@ -1,7 +1,7 @@
 <template>
 	<div class="search_bar">
-		<input type="text" v-model="value">
-		<div :title="value ? 'Search' : 'Clear'" :class="{clickable: !!value}" @click="value = ''">
+		<input type="text" :value="value" @input="change($event.target.value)">
+		<div :title="value ? 'Search' : 'Clear'" :class="{clickable: !!value}" @click="change('')">
 			<fa v-if="!value" icon="search" />
 			<fa v-else icon="times" />
 		</div>
@@ -13,6 +13,11 @@ export default {
 	name: 'SearchBar',
 	props: {
 		value: String
+	},
+	methods: {
+		change(text) {
+			this.$emit('input', text);
+		}
 	}
 }
 </script>

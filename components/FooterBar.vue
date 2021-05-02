@@ -2,6 +2,9 @@
 	<footer id="footer">
 		<div id="footer_content">
 			© 2021 Jannis Petersen
+			<nav>
+				<nuxt-link to='/about'>Imprint & Privacy Policy</nuxt-link>
+			</nav>
 		</div>
 	</footer>
 </template>
@@ -25,8 +28,15 @@ export default {
 	}
 	#footer_content {
 		max-width: var(--max-page-width);
-		padding: 4px;
+		padding-top: 5px;
+		padding-bottom: 0;
 		margin: auto;
+	}
+	nav {
+		float: right;
+	}
+	a:hover {
+		color: var(--dark-hover);
 	}
 
 	@media only screen and (max-width: 600px) {

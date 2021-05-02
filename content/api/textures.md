@@ -1,3 +1,7 @@
+---
+title: Textures
+---
+
 # Textures
 
 Textures are saved in the global `textures` array. `textures.selected` will return the currently selected texture. If single_texture is enabled in the current format, only one texture can exist at a time.

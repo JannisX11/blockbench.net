@@ -7,9 +7,14 @@
 
 			<div id="nav_title">Blockbench Wiki</div>
 
-			<SearchBar :value="''" />
+			<SearchBar v-model="search_term" />
 
 			<ul class="nav_sections" @click="show_menu = false">
+
+				<li v-for="page in pages" :key="page.slug">
+					<NuxtLink :to="{ name: 'wiki', params: { slug: page.slug } }">{{ page.slug }}</NuxtLink>
+				</li>
+
 				<li>
 					<nuxt-link to="/wiki">Home</nuxt-link>
 				</li>
@@ -59,9 +64,42 @@
 
 export default {
 	name: 'NavigationSidebar',
-	data() { return {
-		show_menu: false
-	}}
+	data() {return {
+		show_menu: false,
+		search_term: '',
+		categories: [],
+	}},
+	
+	watch: {
+		search_term() {
+			this.updateSearch()
+		}
+  	},
+	methods: {
+		async updateSearch() {
+			let articles;
+			if (this.search_term == '') {
+				articles = await this.$content(undefined, {deep: true})	
+					.only(['title', 'slug'])
+					.sortBy('path', 'asc')
+					.search(this.search_term)
+					.fetch()
+			} else {
+				articles = await this.$content(undefined, {deep: true})	
+					.only(['title', 'slug'])
+					.sortBy('path', 'asc')
+					.search(this.search_term)
+					.fetch()
+			}
+			this.categories.forEach(category => {
+				
+			})
+			
+		}
+	},
+	async beforeMount() {
+		this.updateSearch();
+	}
 }
 </script>
 

@@ -1,3 +1,7 @@
+---
+title: Blockbench
+---
+
 # Blockbench
 
 The Blockbench object provides useful variables and methods to interact with general functionality of Blockbench.

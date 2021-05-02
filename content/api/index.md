@@ -1,3 +1,7 @@
+---
+title: Plugins Introduction
+---
+
 # Creating a Plugin
 
 Download Blockbench on [blockbench.net](https://blockbench.net)

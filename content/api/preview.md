@@ -1,3 +1,7 @@
+---
+title: Preview
+---
+
 # Preview
 
 ### new Preview( data )

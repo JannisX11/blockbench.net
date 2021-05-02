@@ -1,3 +1,9 @@
+---
+title: Minecraft-Style Modeling Tips
+description: 20 Tips for Modeling & Texturing in Minecraft's Style
+---
+
+
 # Tips for Modeling & Texturing in Minecraft's Style
 
 ## About the Author

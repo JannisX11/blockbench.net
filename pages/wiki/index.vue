@@ -11,7 +11,12 @@
 
 
 export default {
-	layout: 'wiki'
+	layout: 'wiki',
+	head() {
+		return {
+			title: `Blockbench Wiki`,
+		}
+	}
 }
 </script>
 

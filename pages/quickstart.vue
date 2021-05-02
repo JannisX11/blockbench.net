@@ -25,9 +25,9 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=aaJ8XgMAOno">Modeling and Implementation Tutorial</a></li>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=dFRRinZMNNM">Modeling and Implementation Tutorial with OptiFine CIT</a></li>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=wm-giZnkUk4&list=PL9GkT_XFhyAJNg2EZvvp1X25oMdy1jfRW">Comprehensive Resource Pack and Model Tutorial Playlist (Not including Blockbench)</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=aaJ8XgMAOno">Modeling and Implementation Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dFRRinZMNNM">Modeling and Implementation Tutorial with OptiFine CIT</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=wm-giZnkUk4&list=PL9GkT_XFhyAJNg2EZvvp1X25oMdy1jfRW">Comprehensive Resource Pack and Model Tutorial Playlist (Not including Blockbench)</a></li>
 					</ul>
 				</template>
 
@@ -52,9 +52,9 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=xoybMf05Jl8">Dragnoz Add-Entity and Modeling Tutorial</a></li>
-						<li><a target="_blank" href="https://bedrock.dev/1.15.0.0/1.15.0.51">Bedrock Addon Documentation</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=xoybMf05Jl8">Dragnoz Add-Entity and Modeling Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://bedrock.dev/1.15.0.0/1.15.0.51">Bedrock Addon Documentation</a></li>
 					</ul>
 				</template>
 
@@ -81,9 +81,9 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=Y9tbKb_fgqg">CEM Random Model Tutorial</a></li>
-						<li><a target="_blank" href="https://github.com/sp614x/optifine/tree/master/OptiFineDoc/doc">OptiFine Resource Pack Documentation</a></li>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Y9tbKb_fgqg">CEM Random Model Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://github.com/sp614x/optifine/tree/master/OptiFineDoc/doc">OptiFine Resource Pack Documentation</a></li>
 					</ul>
 				</template>
 
@@ -109,8 +109,8 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
-						<li><a target="_blank" href="https://discord.mcmoddev.com/">Mod Development Discord Server</a></li>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://discord.mcmoddev.com/">Mod Development Discord Server</a></li>
 					</ul>
 				</template>
 
@@ -132,7 +132,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 					</ul>
 				</template>
 

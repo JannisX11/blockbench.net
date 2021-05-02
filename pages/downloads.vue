@@ -14,32 +14,32 @@
 
 			<div id="download_options">
 
-			<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank">
+			<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank" rel="noopener">
 				<fa :icon="['fab', 'windows']" />
 				<h5>Windows</h5>
 				<p>One-click Installer</p>
 			</a>
-			<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank">
+			<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank" rel="noopener">
 				<fa icon="box-open" />
 				<h5>Windows</h5>
 				<p>Portable Windows Version</p>
 			</a>
-			<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_${version}.dmg`" target="_blank">
+			<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_${version}.dmg`" target="_blank" rel="noopener">
 				<fa :icon="['fab', 'apple']" />
 				<h5>macOS</h5>
 				<p>DMG Image</p>
 			</a>
-			<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank">
+			<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank" rel="noopener">
 				<fa :icon="['fab', 'ubuntu']" />
 				<h5>Linux</h5>
 				<p>Debian/Ubuntu Package</p>
 			</a>
-			<a class="blockbench_download linux_rpm" :href="`${path}/v${version}/Blockbench_${version}.rpm`" target="_blank">
+			<a class="blockbench_download linux_rpm" :href="`${path}/v${version}/Blockbench_${version}.rpm`" target="_blank" rel="noopener">
 				<fa :icon="['fab', 'redhat']" />
 				<h5>Linux</h5>
 				<p>RPM Package</p>
 			</a>
-			<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank">
+			<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank" rel="noopener">
 				<fa :icon="['fab', 'linux']" />
 				<h5>Linux</h5>
 				<p>AppImage</p>

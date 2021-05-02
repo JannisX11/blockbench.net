@@ -1,3 +1,7 @@
+---
+title: Plugin
+---
+
 # Plugin
 
 ## Creating a plugin
