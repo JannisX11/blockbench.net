@@ -7,6 +7,15 @@
 			<h2>Blockbench</h2>
 			<p>Blockbench is a free, modern model editor for boxy models and pixel art textures.</p>
 
+			<h2>Contributors</h2>
+			<p>The illustrations on this website where contributed by 
+				<a href="https://twitter.com/@JannisX11" target="_blank" rel="noopener">@JannisX11</a>,
+				<a href="https://twitter.com/@MasterianoX" target="_blank" rel="noopener">@MasterianoX</a>,
+				<a href="https://twitter.com/@Ycarx" target="_blank" rel="noopener">@Ycarx</a>,
+				<a href="https://twitter.com/@moska_design" target="_blank" rel="noopener">@moska.</a>, and
+				<a href="https://twitter.com/@Throir" target="_blank" rel="noopener">@Throir</a>
+			</p>
+
 			<h2>Contact</h2>
 			<p>For help with Blockbench, please use the help channels on the Blockbench Discord server.</p>
 			<p><a target="_blank" rel="noopener" href="http://discord.blockbench.net">Discord Server</a></p>

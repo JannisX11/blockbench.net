@@ -5,57 +5,60 @@
 			<h1>Downloads</h1>
 			
 			<h3>Thank you for using Blockbench!</h3>
-			<p>Choose the installer for your operating system. Once installed, you will receive updates within the program.</p>
-			<p>If you need help getting started, join the Blockbench Discord server: <a href="http://discord.blockbench.net" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">discord.blockbench.net</a></p>
+			<p>Choose the installation method for your system. Once installed, you will receive updates within the program.</p>
+			<p>If you need help getting started, check out the <nuxt-link to="/quickstart">Quickstart Guide</nuxt-link>.</p>
 
+			<div id="install_options">
+				<section>
+					<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ name }}</span></p>
 
+					<div id="download_options">
 
-			<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ name }}</span></p>
+					<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank" rel="noopener">
+						<fa :icon="['fab', 'windows']" />
+						<h5>Windows</h5>
+						<label>One-click Installer</label>
+					</a>
+					<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank" rel="noopener">
+						<fa icon="box-open" />
+						<h5>Windows</h5>
+						<label>Portable Windows Version</label>
+					</a>
+					<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_${version}.dmg`" target="_blank" rel="noopener">
+						<fa :icon="['fab', 'apple']" />
+						<h5>macOS</h5>
+						<label>DMG Image</label>
+					</a>
+					<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank" rel="noopener">
+						<fa :icon="['fab', 'ubuntu']" />
+						<h5>Linux</h5>
+						<label>Debian/Ubuntu Package</label>
+					</a>
+					<a class="blockbench_download linux_rpm" :href="`${path}/v${version}/Blockbench_${version}.rpm`" target="_blank" rel="noopener">
+						<fa :icon="['fab', 'redhat']" />
+						<h5>Linux</h5>
+						<label>RPM Package</label>
+					</a>
+					<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank" rel="noopener">
+						<fa :icon="['fab', 'linux']" />
+						<h5>Linux</h5>
+						<label>AppImage</label>
+					</a>
 
-			<div id="download_options">
+					</div>
 
-			<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank" rel="noopener">
-				<fa :icon="['fab', 'windows']" />
-				<h5>Windows</h5>
-				<p>One-click Installer</p>
-			</a>
-			<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank" rel="noopener">
-				<fa icon="box-open" />
-				<h5>Windows</h5>
-				<p>Portable Windows Version</p>
-			</a>
-			<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_${version}.dmg`" target="_blank" rel="noopener">
-				<fa :icon="['fab', 'apple']" />
-				<h5>macOS</h5>
-				<p>DMG Image</p>
-			</a>
-			<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank" rel="noopener">
-				<fa :icon="['fab', 'ubuntu']" />
-				<h5>Linux</h5>
-				<p>Debian/Ubuntu Package</p>
-			</a>
-			<a class="blockbench_download linux_rpm" :href="`${path}/v${version}/Blockbench_${version}.rpm`" target="_blank" rel="noopener">
-				<fa :icon="['fab', 'redhat']" />
-				<h5>Linux</h5>
-				<p>RPM Package</p>
-			</a>
-			<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank" rel="noopener">
-				<fa :icon="['fab', 'linux']" />
-				<h5>Linux</h5>
-				<p>AppImage</p>
-			</a>
-
+					<p>Or check the <a href="https://github.com/JannisX11/blockbench/releases">Github release page</a> for other installers and older versions.</p>
+				</section>
+				
+				<section>
+					<h4>Mobile App</h4>
+					<p>Are you using a mobile device? Blockbench is available as a progressive web app! That means that you can install it directly from the browser, without the need to use an APK or go through an app store:</p>
+					<ul>
+						<li>On Android, go to&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Chrome. A pop-up will appear, asking you whether to add Blockbench.</li>
+						<li>On iOS, open&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Safari. Press the share button and select “Add to Home Screen”</li>
+					</ul>
+				</section>
 			</div>
-
-			<p>Or check the <a href="https://github.com/JannisX11/blockbench/releases">Github release page</a> for other installers and older versions.</p>
-
-			<h4>Mobile App</h4>
-			<p>Are you using a mobile device? Blockbench is available as a progressive web app! That means that you can install it directly from the browser, without the need to use an APK or go through an app store:</p>
-			<ul>
-				<li>On Android, go to&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Chrome. A pop-up will appear, asking you whether to add Blockbench.</li>
-				<li>On iOS, open&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Safari. Press the share button and select “Add to Home Screen”</li>
-			</ul>
-
 		</div>
 	</div>
 </template>
@@ -63,33 +66,31 @@
 <script>
 const path = 'https://github.com/JannisX11/blockbench/releases/download';
 
+const data = {
+	path,
+	version: '1.0.0',
+	name: 'a',
+	latest: false,
+};
+
 export default {
-	data() {return {
-		path,
-		version: '1.0.0',
-		name: '',
-		latest: false,
-	}},
+	data() {return data},
 	async fetch(context) {
-		console.log('FETCH', context, typeof location)
-		this.version = '1.1.1';
+		data.version = '1.1.1';
 		if (typeof location != 'undefined' && location.hash.length > 5 && location.hash.substr(1, 1) == 'v') {
 			
-			this.version = location.hash.substr(2)
-			this.name = location.hash.substr(2)
+			data.version = location.hash.substr(2)
+			data.name = location.hash.substr(2)
 
 		} else {
 			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
 			let release = await response.json();
 
-			this.version = release.tag_name.replace(/^v/, '')
-			this.name = release.name
-			this.latest = true
+			data.version = release.tag_name.replace(/^v/, '')
+			data.name = release.name
+			data.latest = true
 		}
 	},
-	fetchKey: 'downloads',
-
-	fetchOnServer: false
 }
 </script>
 
@@ -128,7 +129,14 @@ export default {
 	a.blockbench_download > p {
 		display: inline-block;
 	}
+	a.blockbench_download > * {
+		cursor: inherit;
+	}
 	@media only screen and (max-width: 600px) {
+		#install_options {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 		#download_options {
 			column-count: 1;
 		}

@@ -11,37 +11,16 @@
 
 			<ul class="nav_sections" @click="show_menu = false">
 
-				<li v-for="page in pages" :key="page.slug">
-					<NuxtLink :to="{ name: 'wiki', params: { slug: page.slug } }">{{ page.slug }}</NuxtLink>
-				</li>
+				<li v-for="category in categories" :key="category.id">
 
-				<li>
-					<nuxt-link to="/wiki">Home</nuxt-link>
-				</li>
-				<li>
-					<a>Guides</a>
-					<ul class="nav_pages">
-						<li><nuxt-link to="/wiki/guides/minecraft-modeling-texturing-tips">Minecraft-Style Modeling Tips</nuxt-link></li>
-					</ul>
-				</li>
-				<li>
-					<nuxt-link to="/wiki/api/index">Plugin API</nuxt-link>
-					<ul class="nav_pages">
-						<li><nuxt-link to="/wiki/api/index">Plugin</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/preview">Preview</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/actions">Actions</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/blockbench">Blockbench</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/formats">Formats</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/menu">Menu</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/modes">Modes</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/outliner">Outliner</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/plugin">Plugin</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/property">Property</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/textures">Textures</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/theme">Theme</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/ui">UI</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/undo">Undo</nuxt-link></li>
-						<li><nuxt-link to="/wiki/api/utility">Utility</nuxt-link></li>
+					<nuxt-link :to="{ name: 'wiki', params: { slug: category.id } }">{{ category.title }}</nuxt-link>
+					<div class="category_fold_button" v-if="category.pages && category.pages.length" @click="category.folded = !category.folded">
+						<fa :icon="category.folded ? 'angle-right' : 'angle-down'" />
+					</div>
+					<ul class="nav_pages" v-if="!category.folded">
+						<li v-for="page in category.pages" :key="page.slug">
+							<nuxt-link :to="'/wiki' + page.path" :title="page.description">{{ page.title }}</nuxt-link>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -67,7 +46,11 @@ export default {
 	data() {return {
 		show_menu: false,
 		search_term: '',
-		categories: [],
+		categories: [
+			{id: 'home', title: 'Home', folded: false},
+			{id: 'guides', title: 'Guides', folded: false, pages: []},
+			{id: 'api', title: 'API', folded: false, pages: []},
+		],
 	}},
 	
 	watch: {
@@ -80,20 +63,26 @@ export default {
 			let articles;
 			if (this.search_term == '') {
 				articles = await this.$content(undefined, {deep: true})	
-					.only(['title', 'slug'])
+					.only(['title', 'slug', 'path', 'description'])
 					.sortBy('path', 'asc')
 					.search(this.search_term)
 					.fetch()
 			} else {
 				articles = await this.$content(undefined, {deep: true})	
-					.only(['title', 'slug'])
+					//.only(['title', 'slug'])
 					.sortBy('path', 'asc')
 					.search(this.search_term)
 					.fetch()
 			}
 			this.categories.forEach(category => {
-				
+				if (!category.pages) return;
+				let pages = articles.filter(article => {
+					console.log(article, category.id)
+					return article.path.substr(1, category.id.length) == category.id;
+				})
+				category.pages.splice(0, category.pages.length, ...pages);
 			})
+			console.log(this.categories);
 			
 		}
 	},
@@ -139,6 +128,7 @@ export default {
 	}
 	ul.nav_sections > li {
 		margin: 20px 0;
+		position: relative;
 	}
 	ul.nav_sections > li > a {
 		font-weight: bold;
@@ -151,7 +141,7 @@ export default {
 	ul.nav_pages > li > a {
 		padding-left: 30px;
 	}
-	ul.nav_pages > li a.nuxt-link-exact-active {
+	ul.nav_pages > li a.nuxt-link-active {
 		background-color: var(--accent);
 		color: var(--dark-hover);
 	}
@@ -174,6 +164,22 @@ export default {
 		box-shadow: 0 0 3px #00000077;
 	}
 
+	.category_fold_button {
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		padding: 4px;
+		top: 0;
+		right: 0;
+		text-align: center;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	.category_fold_button:hover {
+		background-color: var(--accent);
+		color: var(--dark-hover);
+	}
+
 	.search_bar {
 		margin: 20px 0;
 	}
@@ -187,6 +193,7 @@ export default {
 			padding: 0;
 			bottom: 0;
 			top: var(--header-height);
+			z-index: 10;
 		}
 		#navigation_wrapper {
 			display: block;
@@ -197,7 +204,6 @@ export default {
 			transform-origin: top;
 			transition: transform 120ms ease;
 			box-shadow: 0 0 4px #00000077;
-			z-index: 10;
 		}
 		#navigation_sidebar.folded {
 			width: 40px;

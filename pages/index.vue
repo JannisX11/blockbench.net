@@ -76,7 +76,7 @@
 
 			<content class="content split">
 				<div>
-					<img src="~assets/features/flower_pot.png" />
+					<img src="~assets/features/texturing.png" />
 				</div>
 				<div class="text_body">
 					<h3>Texturing Tools</h3>
@@ -115,7 +115,7 @@
 					<p>Customize Blockbench with the built-in plugin store. Or create your own plugin and add a new feature or new format.</p>
 				</div>
 				<div>
-					<img src="~assets/features/flower_pot.png" />
+					<img src="~assets/features/open_source.png" />
 				</div>
 			</content>
 		</section>
@@ -144,13 +144,6 @@ export default {
 	}
 	section {
 		padding: 40px 0;
-	}
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-	a:hover {
-		text-decoration: none;
 	}
 	@media only screen and (max-width: 600px) {
 		.content {
@@ -200,6 +193,13 @@ export default {
 		background-color: transparent;
 		border: 2px solid var(--dark-text);
 	}
+	button a {
+		text-decoration: none;
+		color: inherit;
+	}
+	button a:hover {
+		text-decoration: none;
+	}
 
 
 
@@ -248,21 +248,20 @@ export default {
 	.content.split {
 		display: flex;
 		padding: 0;
-		border-top: 1px solid var(--light-border);
+		border-bottom: 1px solid var(--light-border);
 		min-height: 360px;
-	}
-	.content.split:first-child {
-		border-top: none;
 	}
 	.content.split > * {
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: 50%;
-		max-height: 360px;
 	}
 	.content.split > * > img {
 		max-width: 100%;
 		max-height: 100%;
+		display: block;
+		margin: auto;
+		max-height: 360px;
 	}
 	.text_body {
 		padding: 20px 32px;

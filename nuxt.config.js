@@ -1,6 +1,7 @@
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
+	ssr: false,
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
@@ -63,10 +64,7 @@ export default {
 
 	googleFonts: {
 		families: {
-			Montserrat: {
-				wght: [300, 400, 500]
-			},
-			Nunito: {
+			'Nunito Sans': {
 				wght: [300, 400, 500]
 			}
 		}
