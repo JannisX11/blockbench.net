@@ -42,7 +42,8 @@ export default {
 		'@nuxt/content',
 		'@nuxtjs/svg',
 		'@nuxtjs/fontawesome',
-		'@nuxtjs/google-fonts'
+		'@nuxtjs/google-fonts',
+		'@nuxtjs/color-mode'
 	],
 
 	content: {
@@ -68,6 +69,11 @@ export default {
 				wght: [300, 400, 500]
 			}
 		}
+	},
+
+	colorMode: {
+		preference: 'system',
+		fallback: 'light',
 	},
 
 	// Modules: https://go.nuxtjs.dev/config-modules

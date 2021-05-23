@@ -50,7 +50,7 @@
 						Spark Universe
 					</a>
 					<a href="https://www.gamemodeone.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/mojang.png" alt="Gamemode One Logo">
+						<img src="~assets/companies/gamemodeone.png" alt="Gamemode One Logo">
 						Gamemode One
 					</a>
 					<a href="https://orevillestudios.com" target="_blank" rel="noopener">
@@ -125,6 +125,7 @@
 <script>
 
 export default {
+	colorMode: 'light',
 	beforeMount() {
 		document.body.style.setProperty('--scroll', 0);
 		window.addEventListener('scroll', () => {
@@ -225,13 +226,14 @@ export default {
 		padding: 16px;
 		text-align: center;
 		color: var(--light-subtle);
-		transition: background-color 300ms ease;
+		transition: background-color 300ms ease, transform 300ms ease;
 	}
 	#blockbench_user_list {
 		text-align: center;
 	}
 	#blockbench_user_list > a:hover {
 		background-color: var(--light-ui);
+		transform: scale(1.1);
 	}
 	#blockbench_user_list > a > img {
 		height: 60px;
@@ -243,7 +245,7 @@ export default {
 
 	section.features {
 		background-color: var(--light-ui);
-		box-shadow: 0 0 20px #dddedf;
+		box-shadow: 0 0 20px #080b0d14;
 	}
 	.content.split {
 		display: flex;

@@ -4,8 +4,8 @@
 		<div id="content_wrapper" class="error_page">
 			<content class="content">
 				<img src="~assets/error.png" />
-				<h1>{{ error.statusCode }}</h1>
-				<p>{{ error.message }}</p>
+				<h1>{{ error.statusCode == 404 ? 'Sorry, we could not find this page 😕' : error.message }}</h1>
+				<p>{{ error.statusCode }}</p>
 			</content>
 		</div>
 	</div>
@@ -46,7 +46,7 @@ export default {
 	margin-top: calc(34vh - 230px);
 }
 #content_wrapper.error_page .content p {
-	font-size: 1.5;
+	font-size: 1.5em;
 	color: var(--light-subtle);
 }
 #content_wrapper.error_page .content img {

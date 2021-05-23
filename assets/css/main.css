@@ -35,7 +35,7 @@ body {
 	--dark-subtle: #b3b3ba;
 	--dark-hover: white;
 
-	--accent: #3e90ff;
+	--accent: #1e93d9;
 
 	--header-height: 64px;
 
@@ -44,6 +44,14 @@ body {
 
 	background-color: var(--light-ui);
 	color: var(--light-text);
+}
+.dark-mode body {
+	--light-ui: var(--dark-background);
+	--light-background: var(--dark-background);
+	--light-text: #cdcdd5;
+	--light-subtle: #8d8d95;
+	--light-hover: var(--dark-hover);
+	--light-border: #111214;
 }
 
 a {
@@ -99,6 +107,7 @@ input[type=text], input[type=number] {
 	border: 1px solid var(--light-border);
 	font-size: inherit;
 	padding: 8px 12px;
+	color: inherit;
 	outline-color: var(--accent);
 }
 
@@ -106,16 +115,19 @@ code {
 	background-color: #f1f3f5;
 	padding: 0 4px;
 }
+.dark-mode code {
+	background-color: #263238;
+}
 pre code {
 	background-color: unset;
 	padding: unset;
 }
 table {
 	border-spacing: 0;
+	border-collapse: collapse;
 }
 td, th {
-	border: 1px solid #e1e4e5;
-	border-collapse: collapse;
+	border: 1px solid var(--light-border);
 	padding: 8px;
 }
 

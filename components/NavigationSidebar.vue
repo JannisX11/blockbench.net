@@ -49,6 +49,7 @@ export default {
 		categories: [
 			{id: 'home', title: 'Home', folded: false},
 			{id: 'guides', title: 'Guides', folded: false, pages: []},
+			{id: 'blockbench', title: 'Blockbench', folded: false, pages: []},
 			{id: 'api', title: 'API', folded: false, pages: []},
 		],
 	}},

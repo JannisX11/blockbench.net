@@ -18,6 +18,10 @@
 				<a class="menu_icon" href="https://reddit.com/r/blockbench" target="_blank" rel="noopener" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a>
 				<a class="menu_icon" href="https://github.com/JannisX11/blockbench" target="_blank" rel="noopener" title="Github"><fa :icon="['fab', 'github']" /></a>
 				<a class="menu_icon" href="http://discord.blockbench.net" target="_blank" rel="noopener" title="Discord"><fa :icon="['fab', 'discord']" /></a>
+
+				<div class="menu_icon" id="color_mode_toggle" :title="colorThemeTitle" @click="toggleColorMode()">
+					<fa :icon="['fa', ($colorMode.preference == 'dark' ? 'moon' : ($colorMode.preference == 'light' ? 'sun' : 'lightbulb'))]" />
+				</div>
 			</nav>
 
 		</div>
@@ -30,7 +34,21 @@ export default {
 	name: 'HeaderBar',
 	data() { return {
 		show_menu: false
-	}}
+	}},
+	computed: {
+		colorThemeTitle() {
+			let mode = this.$colorMode.preference;
+			return 'Color Mode: ' + mode.substr(0, 1).toUpperCase() + mode.substr(1);
+		}
+	},
+	methods: {
+		toggleColorMode() {
+			let modes = ['system', 'dark', 'light'];
+			let index = modes.indexOf(this.$colorMode.preference) + 1;
+			if (index >= modes.length) index = 0;
+			this.$colorMode.preference = modes[index];
+		}
+	}
 }
 </script>
 
@@ -65,7 +83,7 @@ export default {
 		padding: 0;
 	}
 
-	#menu a {
+	#menu > * {
 		flex: 0 0 auto;
 		margin: 0 4px;
 		height: 100%;
@@ -75,16 +93,25 @@ export default {
 		border-bottom: 5px solid var(--accent);
 		border-width: 0;
 		transition: border-width 60ms ease;
+		cursor: pointer;
 	}
 	#menu a.nuxt-link-active, #menu a:hover {
 		border-bottom-width: 5px;
 		color: var(--dark-hover);
 	}
-	#menu a.menu_icon {
+	#menu > :hover {
+		color: var(--dark-hover);
+	}
+	#menu .menu_icon {
 		margin-right: 0;
+		width: 42px;
+		text-align: center;
 	}
 	#menu .svg-inline--fa {
 		font-size: 20px;
+	}
+	#color_mode_toggle {
+		margin-left: 16px;
 	}
 
 	#mobile_menu_toggle {
@@ -113,11 +140,11 @@ export default {
 		#menu.folded {
 			transform: scaleY(0);
 		}
-		#menu a {
+		#menu > * {
 			height: 48px;
 			padding: 15px 12px;
 		}
-		#menu a:hover {
+		#menu > :hover {
 			border-bottom: none;
 			color: var(--light-hover);
 		}
@@ -126,8 +153,12 @@ export default {
 			border-left: 5px solid var(--accent);
 			color: var(--light-hover);
 		}
-		#menu a.menu_icon {
+		#menu .menu_icon {
 			display: inline-block;
+		}
+		#menu #color_mode_toggle {
+			margin-right: 8px;
+			float: right;
 		}
 	}
 </style>>
