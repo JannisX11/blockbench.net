@@ -63,14 +63,13 @@ export default {
 		async updateSearch() {
 			let articles;
 			if (this.search_term == '') {
-				articles = await this.$content(undefined, {deep: true})	
+				articles = await this.$content(undefined, {deep: true})
 					.only(['title', 'slug', 'path', 'description'])
 					.sortBy('path', 'asc')
 					.search(this.search_term)
 					.fetch()
 			} else {
-				articles = await this.$content(undefined, {deep: true})	
-					//.only(['title', 'slug'])
+				articles = await this.$content(undefined, {deep: true})
 					.sortBy('path', 'asc')
 					.search(this.search_term)
 					.fetch()

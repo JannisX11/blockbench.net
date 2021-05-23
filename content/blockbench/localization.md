@@ -6,10 +6,10 @@ description: How to contribute to Blockbench languages
 # Localization
 
 ## How it Works
-The translations will be community-sourced. This means that if you are fluent in another language and know your way around Blockbench, you can contribute to the translation project of that language. The Blockbench interface has been split up into many small strings for each button and message. To contribute, choose your language and then simply translate each string from English into that language.
+Blockbench translations are community-sourced. This means that if you are fluent in another language and know your way around Blockbench, you can contribute to the translation project of that language. The Blockbench interface has been split up into many small strings for each button, label, and message. To contribute, choose your language and then simply translate each string from English into that language.
 
 ## What to Keep in Mind
-When you are translating, please write your translations carefully and read over them once you’re done. This is to ensure a consistently high quality standard.
+When you are translating, please write your translations carefully and read over them once you’re done. This is important to ensure a consistently high quality of translations.
 
 - Check the casing and form. This depends on the language, but often button labels are capizalized while dialog messages are written like regular sentences with a point at the end.
 - Avoid typos.
