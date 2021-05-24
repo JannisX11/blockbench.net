@@ -49,13 +49,13 @@
 						<img src="~assets/companies/spark.png" alt="Spark Universe Logo">
 						Spark Universe
 					</a>
+					<a href="https://orevillestudios.com" class="oreville_studios" target="_blank" rel="noopener">
+						<img src="~assets/companies/oreville_studios_logo.svg" alt="Oreville Studios Logo">
+						Oreville Studios
+					</a>
 					<a href="https://www.gamemodeone.com" target="_blank" rel="noopener">
 						<img src="~assets/companies/gamemodeone.png" alt="Gamemode One Logo">
 						Gamemode One
-					</a>
-					<a href="https://orevillestudios.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/oreville_studios_logo.svg" alt="Oreville Studios Logo">
-						Oreville Studios
 					</a>
 					<p>...and many more!</p>
 				</div>
@@ -112,7 +112,8 @@
 			<content class="content split">
 				<div class="text_body">
 					<h3>Free & Open Source</h3>
-					<p>Customize Blockbench with the built-in plugin store. Or create your own plugin and add a new feature or new format.</p>
+					<p>Blockbench is free to use for any type of project, forever, no strings attached.</p>
+					<p>The project is open source under the GPL license.</p>
 				</div>
 				<div>
 					<img src="~assets/features/open_source.png" />
@@ -125,7 +126,6 @@
 <script>
 
 export default {
-	colorMode: 'light',
 	beforeMount() {
 		document.body.style.setProperty('--scroll', 0);
 		window.addEventListener('scroll', () => {
@@ -240,6 +240,10 @@ export default {
 		display: block;
 		margin: auto;
 		margin-bottom: 4px;
+	}
+
+	.dark-mode #blockbench_user_list .oreville_studios img {
+		filter: invert(1);
 	}
 
 

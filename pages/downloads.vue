@@ -8,9 +8,10 @@
 			<p>Choose the installation method for your system. Once installed, you will receive updates within the program.</p>
 			<p>If you need help getting started, check out the <nuxt-link to="/quickstart">Quickstart Guide</nuxt-link>.</p>
 
+			<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ name }}</span></p>
+
 			<div id="install_options">
 				<section>
-					<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ name }}</span></p>
 
 					<div id="download_options">
 
@@ -50,6 +51,8 @@
 					<p>Or check the <a href="https://github.com/JannisX11/blockbench/releases">Github release page</a> for other installers and older versions.</p>
 				</section>
 				
+				<img src="~assets/wiki/download.png" />
+
 				<section>
 					<h4>Mobile App</h4>
 					<p>Are you using a mobile device? Blockbench is available as a progressive web app! That means that you can install it directly from the browser, without the need to use an APK or go through an app store:</p>
@@ -59,6 +62,7 @@
 					</ul>
 				</section>
 			</div>
+
 		</div>
 	</div>
 </template>
@@ -95,6 +99,11 @@ export default {
 </script>
 
 <style scoped>
+	#install_options > img {
+		display: block;
+		margin: auto;
+		max-width: 100%;
+	}
 	#download_options {
 		column-count: 2;
 		margin-top: 20px;

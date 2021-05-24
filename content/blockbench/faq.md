@@ -5,8 +5,6 @@ description: Frequently Asked Questions about the Blockbench app
 
 # Blockbench FAQ
 
-## Frequently Asked Questions
-
 ### Is Blockbench free?
 
 Yes, Blockbench is absolutely free! The project is open source and the website is funded by donations.
@@ -15,9 +13,13 @@ Yes, Blockbench is absolutely free! The project is open source and the website i
 
 Everything that you make with Blockbench is your artwork. Blockbench is just a tool. That means that you can use and redistribute anything made with Blockbench, even for commercial use.
 
-### How Do I Get Started?
+### How do I get started?
 
 The [quick-start wizard](https://blockbench.net/quickstart) shows you which format to select and gives you useful informations, tutorials and resources for your specific needs.
+
+### Where do I report bugs?
+
+You can report issues on the [Blockbench bug tracker](https://github.com/JannisX11/blockbench) on Github. Before you report a bug, make sure it hasn't already been reported.
 
 ### Where do I find error messages?
 

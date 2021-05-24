@@ -72,8 +72,7 @@ export default {
 	},
 
 	colorMode: {
-		preference: 'system',
-		fallback: 'light',
+		preference: 'light'
 	},
 
 	// Modules: https://go.nuxtjs.dev/config-modules

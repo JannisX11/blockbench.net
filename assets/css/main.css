@@ -47,7 +47,7 @@ body {
 }
 .dark-mode body {
 	--light-ui: var(--dark-background);
-	--light-background: var(--dark-background);
+	--light-background: var(--dark-ui);
 	--light-text: #cdcdd5;
 	--light-subtle: #8d8d95;
 	--light-hover: var(--dark-hover);
