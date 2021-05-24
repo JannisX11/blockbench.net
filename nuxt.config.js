@@ -33,6 +33,10 @@ export default {
   
 	router: {
 	},
+
+	generate: {
+		fallback: true
+	},
   
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
