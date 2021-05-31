@@ -14,7 +14,8 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' }
+			{ hid: 'description', name: 'description', content: 'A boxy 3D model editor for low-poly and pixel-art' },
+			{ hid: 'og:image', content: '/logo_banner.png' },
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }

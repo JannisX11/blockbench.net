@@ -51,7 +51,7 @@
 					<p>Or check the <a href="https://github.com/JannisX11/blockbench/releases">Github release page</a> for other installers and older versions.</p>
 				</section>
 				
-				<img src="~assets/wiki/download.png" />
+				<img src="~assets/wiki/download.png" alt="Image of a computer, a phone, and a tablet, running Blockbench." />
 
 				<section>
 					<h4>Mobile App</h4>

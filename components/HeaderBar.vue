@@ -43,7 +43,7 @@ export default {
 	},
 	methods: {
 		toggleColorMode() {
-			let modes = ['system', 'dark', 'light'];
+			let modes = ['light', 'dark', 'system'];
 			let index = modes.indexOf(this.$colorMode.preference) + 1;
 			if (index >= modes.length) index = 0;
 			this.$colorMode.preference = modes[index];

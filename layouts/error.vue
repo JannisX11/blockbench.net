@@ -4,7 +4,7 @@
 		<div id="content_wrapper" class="error_page">
 			<content class="content">
 				<img src="~assets/error.png" />
-				<h1>{{ error.statusCode == 404 ? 'Sorry, we could not find this page 😕' : error.message }}</h1>
+				<h1>{{ (error.statusCode == 404 || error.statusCode == 500) ? 'Sorry, we could not find this page 😕' : error.message }}</h1>
 				<p>{{ error.statusCode }}</p>
 			</content>
 		</div>

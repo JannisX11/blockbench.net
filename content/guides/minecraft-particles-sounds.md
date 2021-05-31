@@ -16,7 +16,7 @@ Sounds and particle effects are cued by keyframes. To enable the effect animator
 - Instruction keyframes allow you to run arbitracy MoLang expressions on the entity at any time during the animation.
   This can be used to modify variables in order to switch textures or change other rendering properties.
 
-![Effect animator in Blockbench](images/wiki/guides/effect-animator.png)
+![Effect animator in Blockbench](/images/wiki/guides/effect-animator.png)
 
 ## Previewing Effects
 
@@ -89,6 +89,6 @@ The effect identifier is used to reference a particle effect or sound somewhere 
 
 Now that the short name is defined, we can use it in the animation. Simply enter the short name into the "Effect" input in the keyframe panel in Blockbench.
 
-![Keyframe panel in Blockbench with short name placed into the effect input](images/wiki/guides/keyframe-panel.png)
+![Keyframe panel in Blockbench with short name placed into the effect input](/images/wiki/guides/keyframe-panel.png)
 
 Now the sound or particle effect should work inside Minecraft!

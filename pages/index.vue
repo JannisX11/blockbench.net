@@ -11,14 +11,15 @@
 					<button class="webapp"><a href="https://web.blockbench.net" target="_blank" rel="noopener">Open Web App</a></button>
 				</div>
 
-				<img id="front_page_app" src="~assets/front_page_app.png" />
+				<img id="front_page_app" src="~assets/front_page_app.png" alt="Blockbench Interface" />
 			</content>
 		</section>
 		
 		<section class="showcase">
 			<content class="content">
-				<h2>Made in Blockbench!</h2>
-				<iframe title="Sketchfab Model Gallery" width="1000" height="720" src="https://sketchfab.com/playlists/embed?collection=98346534947c4e229ced71854c9ede1a&autostart=0"
+				<h2 @click="acceptSketchfabCookies()">Made in Blockbench!</h2>
+				<div id="sketchfab_viewer" v-if="!sketchfab_cookies_accepted"></div>
+				<iframe v-else id="sketchfab_viewer" title="Sketchfab Model Gallery" width="1000" height="720" :src="sketchfab_cookies_accepted ? 'https://sketchfab.com/playlists/embed?collection=98346534947c4e229ced71854c9ede1a&autostart=0' : ''"
 					frameborder="0" allow="autoplay; fullscreen; vr" allowvr=""
 					allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""
 				></iframe>
@@ -54,7 +55,7 @@
 						Oreville Studios
 					</a>
 					<a href="https://www.gamemodeone.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/gamemodeone.png" alt="Gamemode One Logo">
+						<img src="~assets/companies/gamemodeone.svg" alt="Gamemode One Logo">
 						Gamemode One
 					</a>
 					<p>...and many more!</p>
@@ -70,13 +71,13 @@
 					<p>Simply resize, rotate and arrange cuboid shapes to form your own model.</p>
 				</div>
 				<div>
-					<img src="~assets/features/flower_pot.png" />
+					<img src="~assets/features/flower_pot.png" alt="Modeling Illustration" />
 				</div>
 			</content>
 
 			<content class="content split">
 				<div>
-					<img src="~assets/features/texturing.png" />
+					<img src="~assets/features/texturing.png" alt="Texturing Illustration" />
 				</div>
 				<div class="text_body">
 					<h3>Texturing Tools</h3>
@@ -93,13 +94,13 @@
 					<p>Animations can later be exported to Minecraft: Bedrock Edition, rendered in Blender or Maya, or shared on Sketchfab.</p>
 				</div>
 				<div>
-					<img src="~assets/features/flower_pot.png" />
+					<img src="~assets/features/flower_pot.png" alt="Animation Illustration" />
 				</div>
 			</content>
 
 			<content class="content split">
 				<div>
-					<img src="~assets/features/flower_pot.png" />
+					<img src="~assets/features/plugins.png" alt="Plugin Illustration" />
 				</div>
 				<div class="text_body">
 					<h3>Plugins</h3>
@@ -116,7 +117,7 @@
 					<p>The project is open source under the GPL license.</p>
 				</div>
 				<div>
-					<img src="~assets/features/open_source.png" />
+					<img src="~assets/features/open_source.png" alt="Open Source Illustration" />
 				</div>
 			</content>
 		</section>
@@ -126,7 +127,18 @@
 <script>
 
 export default {
+	data() {return {
+		sketchfab_cookies_accepted: true
+	}},
+	methods: {
+		acceptSketchfabCookies() {
+			this.sketchfab_cookies_accepted = true;
+			localStorage.setItem('sketchfab-cookies-accepted', true);
+		}
+	},
 	beforeMount() {
+		this.sketchfab_cookies_accepted = localStorage.getItem('sketchfab-cookies-accepted') == 'true';
+
 		document.body.style.setProperty('--scroll', 0);
 		window.addEventListener('scroll', () => {
 			document.body.style.setProperty('--scroll', window.pageYOffset / window.innerHeight);
@@ -209,7 +221,7 @@ export default {
 		background-color: var(--dark-background);;
 		color: var(--dark-text);
 	}
-	iframe {
+	#sketchfab_viewer {
 		width: 100%;
 		height: min(75vh, 640px);
 		box-shadow: 0 0 8px #00000070;

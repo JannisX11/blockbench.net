@@ -36,16 +36,16 @@ description: Frequently Asked Questions about the Blockbench app
 	margin-bottom: 34px;
 	border-radius: 10px;
 	padding-bottom: 6px;">
-	<a href="images/logos/icon.png" target="_blank" style="display: inline-block; text-align: center; margin: 10px" rel="noopener noreferrer">
-		<img width="150px" style="display: block;" src="images/logos/icon.png">
+	<a href="/images/logos/icon.png" target="_blank" style="display: inline-block; text-align: center; margin: 10px" rel="noopener noreferrer">
+		<img width="150px" style="display: block;" src="/images/logos/icon.png">
 		<label>Main Logo</label>
 	</a>
-	<a href="images/logos/blockbench_inverted.png" target="_blank" style="display: inline-block; text-align: center; margin: 10px" rel="noopener noreferrer">
-		<img width="180px" style="display: block;" src="images/logos/blockbench_inverted.png">
+	<a href="/images/logos/blockbench_inverted.png" target="_blank" style="display: inline-block; text-align: center; margin: 10px" rel="noopener noreferrer">
+		<img width="180px" style="display: block;" src="/images/logos/blockbench_inverted.png">
 		<label>White Logo</label>
 	</a>
-	<a href="images/logos/blockbench_logo_text.png" target="_blank" style="display: inline-block; text-align: center; margin: 10px" rel="noopener noreferrer">
-		<img width="300px" style="display: block;" src="images/logos/blockbench_logo_text.png">
+	<a href="/images/logos/blockbench_logo_text.png" target="_blank" style="display: inline-block; text-align: center; margin: 10px" rel="noopener noreferrer">
+		<img width="300px" style="display: block;" src="/images/logos/blockbench_logo_text.png">
 		<label>Logo with Text</label>
 	</a>
 	<p style="opacity: 0.7;">More logos and SVG versions can be found in the logo kit</p>

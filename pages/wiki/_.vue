@@ -1,6 +1,6 @@
 <template>
 	<div class="content_wrapper">
-		<TableOfContents :document="doc" />
+		<TableOfContents v-if="!doc.hidetoc" :document="doc" />
 		<div class="content">
 			<nuxt-content :document="doc" />
 		</div>
@@ -14,6 +14,7 @@ export default {
 	layout: 'wiki',
 	async asyncData({$content, params}) {
 		const doc = await $content(params.pathMatch || 'index').fetch();
+		console.log('xy', doc)
 		return {doc};
 	},
 	head() {
