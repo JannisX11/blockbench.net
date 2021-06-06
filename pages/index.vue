@@ -81,14 +81,14 @@
 			</content>
 
 			<content class="content split">
-				<div>
-					<img src="~assets/features/texturing.png" alt="Texturing Illustration" />
-				</div>
 				<div class="text_body">
 					<h3>Texturing Tools</h3>
 					<p>Create, edit and paint texture right inside the program. Create or import palettes, paint, or draw shapes.</p>
 					<p>Blockbench can automatically create a UV map and template for your model so that you can start painting right away.</p>
 					<p>You can paint directly on the model in 3D space, use the 2D texture editor, or connect your favorite external image editor or pixel art software.</p>
+				</div>
+				<div>
+					<img src="~assets/features/texturing.png" alt="Texturing Illustration" />
 				</div>
 			</content>
 
@@ -105,14 +105,14 @@
 			</content>
 
 			<content class="content split">
-				<div>
-					<img src="~assets/features/plugins.png" alt="Plugin Illustration" />
-				</div>
 				<div class="text_body">
 					<h3>Plugins</h3>
 					<p>Customize Blockbench with the built-in plugin store.</p>
 					<p>Plugins extend the functionality of Blockbench beyond what it's already capable of. They add new tools, support for new export formats, or model generators.</p>
 					<p>You can also create your own plugin to extend Blockbench or to support your own format.</p>
+				</div>
+				<div>
+					<img src="~assets/features/plugins.png" alt="Plugin Illustration" />
 				</div>
 			</content>
 
@@ -195,7 +195,7 @@ export default {
 	#front_page_app {
 		width: min(100%, 1000px);
 		box-shadow: 0 0 20px #000000bb;
-		transform: rotateX(calc(10deg - 60deg * var(--scroll)));
+		transform: rotateX(max(calc(10deg - 60deg * var(--scroll)), -20deg));
 		margin-bottom: -120px;
 		transition: transform 800ms ease;
 	}
@@ -296,6 +296,9 @@ export default {
 		border-bottom: 1px solid var(--light-border);
 		min-height: 360px;
 	}
+	.content.split:nth-child(even) {
+		flex-direction: row-reverse;
+	}
 	.content.split > * {
 		flex-grow: 1;
 		flex-shrink: 1;
@@ -317,7 +320,7 @@ export default {
 	}
 	@media only screen and (max-width: 600px) {
 		.content.split {
-			flex-direction: column;
+			flex-direction: column !important;
 		}
 	}
 

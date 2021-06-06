@@ -199,7 +199,7 @@
 				</template>
 			</div>
 
-			<button @click="backPage()">Back</button>
+			<button @click="backPage()" v-if="page != 'q_game'">Back</button>
 
 		</content>
 	</div>

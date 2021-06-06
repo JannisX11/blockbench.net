@@ -42,6 +42,8 @@ body {
 	--max-page-width: 1280px;
 	--max-content-width: 890px;
 
+	--scroll: 0;
+
 	background-color: var(--light-ui);
 	color: var(--light-text);
 }

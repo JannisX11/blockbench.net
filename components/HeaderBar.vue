@@ -1,5 +1,5 @@
 <template>
-	<div id="header">
+	<header>
 		<div id="navigation">
 
 			<nuxt-link id="home_link" to='/'>
@@ -25,7 +25,7 @@
 			</nav>
 
 		</div>
-	</div>
+	</header>
 </template>
 
 <script>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-	#header {
+	header {
 		background-color: var(--dark-ui);
 		position: fixed;
 		top: 0;
