@@ -17,8 +17,12 @@
 		
 		<section class="showcase">
 			<content class="content">
-				<h2 @click="acceptSketchfabCookies()">Made in Blockbench!</h2>
-				<div id="sketchfab_viewer" v-if="!sketchfab_cookies_accepted"></div>
+				<h2>Made in Blockbench!</h2>
+				<div id="sketchfab_viewer" v-if="!sketchfab_cookies_accepted">
+					<h4>View awesome Blockbench models in 3D!</h4>
+					<p>The viewer is powered by Sketchfab and uses Sketchfab cookies. To learn more, check out the <a href="" target="_blank" rel="noopener noreferrer">Sketchfab Privacy Policy</a>.</p>
+					<button @click="acceptSketchfabCookies()">Accept and View Models</button>
+				</div>
 				<iframe v-else id="sketchfab_viewer" title="Sketchfab Model Gallery" width="1000" height="720" :src="sketchfab_cookies_accepted ? 'https://sketchfab.com/playlists/embed?collection=98346534947c4e229ced71854c9ede1a&autostart=0' : ''"
 					frameborder="0" allow="autoplay; fullscreen; vr" allowvr=""
 					allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""
@@ -35,7 +39,7 @@
 						Noxcrew
 					</a>
 					<a href="https://minecraft.net" target="_blank" rel="noopener">
-						<img src="~assets/companies/mojang.png" alt="Mojang Studios Logo">
+						<img src="~assets/companies/mccb_logo_primary.png" alt="Mojang Studios Logo">
 						Mojang Studios
 					</a>
 					<a href="https://www.cyclone.games" target="_blank" rel="noopener">
@@ -43,11 +47,12 @@
 						Cyclone
 					</a>
 					<a href="https://everbloomgames.com/" target="_blank" rel="noopener">
-						<img src="~assets/companies/everbloom.svg" alt="Everbloom Games Logo">
+						<img class="logo_light_mode" src="~assets/companies/everbloom.svg" alt="Everbloom Games Logo">
+						<img class="logo_dark_mode" src="~assets/companies/everbloom_dark.svg" alt="Everbloom Games Logo">
 						Everbloom Games
 					</a>
 					<a href="https://sparkuniverse.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/spark.png" alt="Spark Universe Logo">
+						<img src="~assets/companies/spark_logo.png" alt="Spark Universe Logo">
 						Spark Universe
 					</a>
 					<a href="https://orevillestudios.com" class="oreville_studios" target="_blank" rel="noopener">
@@ -92,9 +97,10 @@
 					<h3>Animations</h3>
 					<p>Blockbench comes with a powerful animation editor. Rig your model, then use position, rotation and scale keyframes to bring it to life. Use the graph editor to fine-tune your creation.</p>
 					<p>Animations can later be exported to Minecraft: Bedrock Edition, rendered in Blender or Maya, or shared on Sketchfab.</p>
+					<p><a target="_blank" rel="noopener" href="https://sketchfab.com/jannisx11/collections/blockbench-animations">View Blockbench animations...</a></p>
 				</div>
 				<div>
-					<img src="~assets/features/flower_pot.png" alt="Animation Illustration" />
+					<img src="~assets/features/animation.png" alt="Animation Illustration" />
 				</div>
 			</content>
 
@@ -115,6 +121,7 @@
 					<h3>Free & Open Source</h3>
 					<p>Blockbench is free to use for any type of project, forever, no strings attached.</p>
 					<p>The project is open source under the GPL license.</p>
+					<p><a target="_blank" rel="noopener" href="https://github.com/JannisX11/blockbench">View the source code...</a></p>
 				</div>
 				<div>
 					<img src="~assets/features/open_source.png" alt="Open Source Illustration" />
@@ -196,11 +203,18 @@ export default {
 		transform: scale(1.08);
 	}
 	section.download button {
+		padding: 0;
+	}
+	section.download button a {
+		padding: 20px 28px;
+		display: block;
+	}
+	section.download button {
 		transition: padding 150ms ease-in-out;
 	}
 	section.download button:hover {
-		padding-right: 34px;
-		padding-left: 34px;
+		padding-right: 7px;
+		padding-left: 7px;
 	}
 	section.download button.webapp {
 		background-color: transparent;
@@ -225,6 +239,13 @@ export default {
 		width: 100%;
 		height: min(75vh, 640px);
 		box-shadow: 0 0 8px #00000070;
+	}
+	div#sketchfab_viewer {
+		text-align: center;
+		padding-top: 20vh;
+		background-image: url('~assets/sketchfab.png');
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 
 	section.users {
@@ -256,6 +277,12 @@ export default {
 
 	.dark-mode #blockbench_user_list .oreville_studios img {
 		filter: invert(1);
+	}
+	html:not(.dark-mode) #blockbench_user_list img.logo_dark_mode {
+		display: none;
+	}
+	html.dark-mode #blockbench_user_list img.logo_light_mode {
+		display: none;
 	}
 
 

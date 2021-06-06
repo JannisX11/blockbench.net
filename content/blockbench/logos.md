@@ -51,6 +51,10 @@ description: Frequently Asked Questions about the Blockbench app
 	<p style="opacity: 0.7;">More logos and SVG versions can be found in the logo kit</p>
 </div>
 
+<a href="/download_files/blockbench_logo_kit_v1.zip" target="_blank" rel="noopener noreferrer">
+	<button>Download Logo Kit</button>
+</a>
+
 ## Usage Guidelines
 
 - You can use the Blockbench logo to give credit or link to Blockbench.
