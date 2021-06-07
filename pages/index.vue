@@ -163,7 +163,7 @@ export default {
 		background-color: transparent;
 	}
 	section {
-		padding: 40px 0;
+		padding: 64px 0;
 	}
 	@media only screen and (max-width: 600px) {
 		.content {
@@ -194,7 +194,7 @@ export default {
 	}
 	#front_page_app {
 		width: min(100%, 1000px);
-		box-shadow: 0 0 20px #000000bb;
+		box-shadow: 0 2px 20px #000000bb;
 		transform: rotateX(max(calc(10deg - 60deg * var(--scroll)), -20deg));
 		margin-bottom: -120px;
 		transition: transform 800ms ease;

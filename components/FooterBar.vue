@@ -3,7 +3,8 @@
 		<div id="footer_content">
 			© 2021 Jannis Petersen
 			<nav>
-				<nuxt-link to='/about'>Imprint & Privacy Policy</nuxt-link>
+				<nuxt-link to='/about'>About</nuxt-link>
+				<nuxt-link to='/imprint'>Imprint & Privacy Policy</nuxt-link>
 			</nav>
 		</div>
 	</footer>
@@ -34,6 +35,9 @@ export default {
 	}
 	nav {
 		float: right;
+	}
+	nav > * {
+		margin: 0 5px;
 	}
 	a:hover {
 		color: var(--dark-hover);
