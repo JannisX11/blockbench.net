@@ -35,6 +35,7 @@ export default {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
+		overflow-x: hidden;
 	}
 	#wiki_wrapper .content {
 		display: block;

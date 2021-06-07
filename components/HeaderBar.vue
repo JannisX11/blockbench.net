@@ -57,7 +57,7 @@ export default {
 		background-color: var(--dark-ui);
 		position: fixed;
 		top: 0;
-		z-index: 10;
+		z-index: 11;
 		height: var(--header-height);
 		width: 100%;
 		color: var(--dark-text);

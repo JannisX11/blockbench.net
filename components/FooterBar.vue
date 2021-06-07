@@ -1,7 +1,6 @@
 <template>
 	<footer id="footer">
 		<div id="footer_content">
-			© 2021 Jannis Petersen
 			<nav>
 				<nuxt-link to='/about'>About</nuxt-link>
 				<nuxt-link to='/imprint'>Imprint & Privacy Policy</nuxt-link>

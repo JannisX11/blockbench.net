@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<client-only>
 		<div class="content">
 							
 			<h1>Downloads</h1>
@@ -64,7 +64,7 @@
 			</div>
 
 		</div>
-	</div>
+	</client-only>
 </template>
 
 <script>
@@ -73,7 +73,7 @@ const path = 'https://github.com/JannisX11/blockbench/releases/download';
 const data = {
 	path,
 	version: '1.0.0',
-	name: 'a',
+	name: '',
 	latest: false,
 };
 

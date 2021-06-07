@@ -194,6 +194,7 @@ export default {
 	}
 	#front_page_app {
 		width: min(100%, 1000px);
+		max-width: 100%;
 		box-shadow: 0 2px 20px #000000bb;
 		transform: rotateX(max(calc(10deg - 60deg * var(--scroll)), -20deg));
 		margin-bottom: -120px;

@@ -1,8 +1,6 @@
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
-	//ssr: false,
-	mode: 'universal',
 
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
@@ -54,6 +52,7 @@ export default {
 	],
 
 	content: {
+		
 		markdown: {
 			prism: {
 				theme: 'prism-themes/themes/prism-material-oceanic.css'
