@@ -14,7 +14,6 @@ export default {
 	layout: 'wiki',
 	async asyncData({$content, params}) {
 		const doc = await $content(params.pathMatch || 'index').fetch();
-		console.log('xy', doc)
 		return {doc};
 	},
 	head() {

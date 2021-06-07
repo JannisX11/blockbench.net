@@ -1,5 +1,5 @@
 <template>
-	<client-only>
+	<div>
 		<div class="content">
 							
 			<h1>Downloads</h1>
@@ -64,7 +64,7 @@
 			</div>
 
 		</div>
-	</client-only>
+	</div>
 </template>
 
 <script>
@@ -74,7 +74,7 @@ const data = {
 	path,
 	version: '1.0.0',
 	name: '',
-	latest: false,
+	latest: true,
 };
 
 export default {
