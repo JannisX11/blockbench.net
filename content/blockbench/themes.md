@@ -9,6 +9,9 @@ Themes allow you to change the visual appearance of Blockbench. You can drag and
 ## Creating Themes
 
 Themes can be created using the theme editor in Blockbench. You can open it by going to `File` > `Preferences` > `Theme...`.
+
+### Colors and Fonts
+
 You can change the base interface colors by clicking on the colored rectangle and selecting a color. You can also change the fonts.
 
 * The main font is the default font.

@@ -2,10 +2,12 @@
 title: Formats
 description: formats
 hidetoc: true
-
 ---
 
 # Blockbench Format Features
+
+Blockbench has a number of built-in formats that optimize the interface and workflow for specific exports.
+This list attempts to give an overview over the features that each format enables, and where they can be used.
 
 | |Java Block/Item|Bedrock Model|Bedrock Legacy|Modded Entity|OptiFine Entity|OptiFine Part|Generic Model|GeckoLib Model
 |---|---|---|---|---|---|---|---|---
@@ -60,9 +62,9 @@ Sound/Particle/Custom Keyframes| |x|x| | | |x|x
 ### Notes
 - ¹ Experiemental feature
 - ² Only exports item display settings json (to control how items look in guis and hand)
-- ³ Use GeckoLib to run Blockbench animations in Minecraft mods
-- ⁴ Optifine entities support expression based animations. More info 
-- ⁵ Models that don't support unlimited cube sizes are restricted to only integers for cube sizes i.e. 0 1 2 etc."
+- ³ Use [GeckoLib](https://geckolib.com/en/latest/) to run Blockbench animations in Minecraft mods
+- ⁴ Optifine entities support expression based animations. [More info](https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cem_animation.txt)
+- ⁵ Models that don't support unlimited cube sizes are restricted to only integers for cube sizes i.e. 0 1 2 etc.
 
 
 </template>

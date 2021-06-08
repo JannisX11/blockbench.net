@@ -13,7 +13,7 @@
 				<a href="https://twitter.com/@MasterianoX" target="_blank" rel="noopener">@MasterianoX</a>,
 				<a href="https://twitter.com/@wackyblocks" target="_blank" rel="noopener">@Wacky</a>,
 				<a href="https://twitter.com/@moska_design" target="_blank" rel="noopener">@moska.</a>, and
-				<a href="https://twitter.com/@Throir" target="_blank" rel="noopener">@Throir</a>
+				<a href="https://twitter.com/@Throir1" target="_blank" rel="noopener">@Throir</a>
 			</p>
 
 			<h2>Contact</h2>

@@ -79,6 +79,9 @@ export default {
 	h1, h2, h3 {
 		scroll-margin: 64px;
 	}
+	.nuxt-content > * {
+		max-width: 100%;
+	}
 
  
 </style>
