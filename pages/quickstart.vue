@@ -53,6 +53,7 @@
 					<h3>Tutorials</h3>
 					<ul>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=xoybMf05Jl8">Dragnoz Add-Entity and Modeling Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://bedrock.dev/1.15.0.0/1.15.0.51">Bedrock Addon Documentation</a></li>
 					</ul>
@@ -82,6 +83,7 @@
 					<h3>Tutorials</h3>
 					<ul>
 						<li><a target="_blank" rel="noopener" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ckE-BGPF7SU">CEM Animation Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Y9tbKb_fgqg">CEM Random Model Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://github.com/sp614x/optifine/tree/master/OptiFineDoc/doc">OptiFine Resource Pack Documentation</a></li>
 					</ul>
@@ -109,7 +111,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" rel="noopener" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://discord.mcmoddev.com/">Mod Development Discord Server</a></li>
 					</ul>
 				</template>
@@ -144,6 +146,11 @@
 					<h3>Quick Info</h3>
 					<ul>
 						<li>This format is meant to only change the texture, not the model</li>
+					</ul>
+
+					<h3>Tutorials</h3>
+					<ul>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/xC81Q3HGraE">Skin Editing Tutorial</a></li>
 					</ul>
 				</template>
 
