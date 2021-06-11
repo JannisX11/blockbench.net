@@ -251,6 +251,7 @@ export default {
 
 	section.users {
 		background-color: var(--light-background);
+		text-align: center;
 	}
 	#blockbench_user_list > a {
 		display: inline-block;

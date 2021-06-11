@@ -1,6 +1,6 @@
 <template>
 	<div id="page_flow">
-		<content class="content">
+		<content class="content error_page">
 			<img src="~assets/error.png" />
 			<h1>{{ (error.statusCode == 404 || error.statusCode == 500) ? 'Sorry, we could not find this page 😕' : error.message }}</h1>
 			<p>{{ error.statusCode }}</p>
@@ -31,22 +31,17 @@ export default {
 	display: flex;
 	flex-direction: column;
 }
-#content_wrapper.error_page {
+.content.error_page {
 	margin-top: var(--header-height);
 	scroll-margin-top: var(--header-height);
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-}
-#content_wrapper.error_page .content {
 	text-align: center;
 	margin-top: calc(34vh - 230px);
 }
-#content_wrapper.error_page .content p {
+.error_page p {
 	font-size: 1.5em;
 	color: var(--light-subtle);
 }
-#content_wrapper.error_page .content img {
+.error_page img {
 	max-width: 100%;
 }
 
