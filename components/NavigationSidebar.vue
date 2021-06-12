@@ -77,12 +77,10 @@ export default {
 			this.categories.forEach(category => {
 				if (!category.pages) return;
 				let pages = articles.filter(article => {
-					console.log(article, category.id)
 					return article.path.substr(1, category.id.length) == category.id;
 				})
 				category.pages.splice(0, category.pages.length, ...pages);
 			})
-			console.log(this.categories);
 			
 		}
 	},
