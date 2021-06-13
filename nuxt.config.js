@@ -17,7 +17,8 @@ export default {
 			{ hid: 'twitter:image', name: 'twitter:image', property: 'twitter:image', content: 'https://blockbench-net.netlify.app/logo_banner.png' },
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+			{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+			{ rel: 'alternate icon', type: 'image/png', href: '/favicon.png' }
 		]
 	},
 
