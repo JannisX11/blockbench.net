@@ -123,7 +123,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-non-mc-models</a></li>
+						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-models</a></li>
 						<li>Models can be exported as .obj or .gltf</li>
 					</ul>
 
@@ -134,6 +134,29 @@
 
 					<h3>Tutorials</h3>
 					<ul>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+					</ul>
+				</template>
+
+				<template v-if="page == 'hytale'">
+					<h4 class="suggestion">The following format was suggested for you:</h4>
+					<h2>Generic Model</h2>
+					<p>Hytale is not out yet, but the generic model format can be used to create Hytale-inspired models.</p>
+
+					<h3>Quick Info</h3>
+					<ul>
+						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-models</a></li>
+						<li>Models can be exported as .obj or .gltf</li>
+					</ul>
+
+					<h3>Caveats</h3>
+					<ul>
+						<li>Models cannot be exported in a Hytale-compatible format at the moment because the game has not been released yet.</li>
+					</ul>
+
+					<h3>Tutorials</h3>
+					<ul>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=qT8cnXuUPnI">Hytale Modeling and Art-Style Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 					</ul>
 				</template>
@@ -162,7 +185,6 @@
 
 
 
-
 				<template v-if="page == 'q_game'">
 					<p>This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!</p>
 					<p></p>
@@ -171,7 +193,8 @@
 
 					<div class="answer" @click="loadPage('q_java_type')">Minecraft: Java Edition</div>
 					<div class="answer" @click="loadPage('q_bedrock_type')">Minecraft: Bedrock Edition</div>
-					<div class="answer" @click="loadPage('generic')">Blender / Game Engine</div>
+					<div class="answer" @click="loadPage('hytale')">Hytale</div>
+					<div class="answer" @click="loadPage('generic')">Rendering / Game Engine</div>
 					<div class="answer" @click="loadPage('generic')">Just for fun</div>
 				</template>
 
