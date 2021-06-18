@@ -173,7 +173,7 @@ export default {
 
 	section.download {
 		background-color: var(--dark-background);
-		background-image: url('~assets/background.png');
+		background-image: url('~assets/background.jpg');
 		background-size: cover;
 		color: white;
 		text-align: center;
