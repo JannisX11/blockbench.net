@@ -25,9 +25,14 @@
 						<h5>Windows</h5>
 						<label>Portable Windows Version</label>
 					</a>
-					<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_${version}.dmg`" target="_blank" rel="noopener">
+					<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_x64_${version}.dmg`" target="_blank" rel="noopener">
 						<fa :icon="['fab', 'apple']" />
-						<h5>macOS</h5>
+						<h5>macOS (Intel)</h5>
+						<label>DMG Image</label>
+					</a>
+					<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_arm64_${version}.dmg`" target="_blank" rel="noopener">
+						<fa :icon="['fab', 'apple']" />
+						<h5>macOS (Apple Silicon)</h5>
 						<label>DMG Image</label>
 					</a>
 					<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank" rel="noopener">
@@ -115,6 +120,7 @@ export default {
 		margin-left: 0;
 		color: inherit;
 		display: block;
+		break-inside: avoid;
 	}
 	a.blockbench_download > :first-child {
 		font-size: 34pt;
