@@ -13,48 +13,50 @@
 			<div id="install_options">
 				<section>
 
-					<div id="download_options">
+					<div id="install_os_section">
+					
+						<div class="install_os">
+							<fa :icon="['fab', 'windows']" />
+							<h3>Windows</h3>
+							<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank" rel="noopener">
+								<label>Installer</label>
+							</a>
+							<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank" rel="noopener">
+								<label>Portable</label>
+							</a>
+						</div>
 
-					<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${version}.exe`" target="_blank" rel="noopener">
-						<fa :icon="['fab', 'windows']" />
-						<h5>Windows</h5>
-						<label>One-click Installer</label>
-					</a>
-					<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank" rel="noopener">
-						<fa icon="box-open" />
-						<h5>Windows</h5>
-						<label>Portable Windows Version</label>
-					</a>
-					<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_x64_${version}.dmg`" target="_blank" rel="noopener">
-						<fa :icon="['fab', 'apple']" />
-						<h5>macOS (Intel)</h5>
-						<label>DMG Image</label>
-					</a>
-					<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_arm64_${version}.dmg`" target="_blank" rel="noopener">
-						<fa :icon="['fab', 'apple']" />
-						<h5>macOS (Apple Silicon)</h5>
-						<label>DMG Image</label>
-					</a>
-					<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank" rel="noopener">
-						<fa :icon="['fab', 'ubuntu']" />
-						<h5>Linux</h5>
-						<label>Debian/Ubuntu Package</label>
-					</a>
-					<a class="blockbench_download linux_rpm" :href="`${path}/v${version}/Blockbench_${version}.rpm`" target="_blank" rel="noopener">
-						<fa :icon="['fab', 'redhat']" />
-						<h5>Linux</h5>
-						<label>RPM Package</label>
-					</a>
-					<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank" rel="noopener">
-						<fa :icon="['fab', 'linux']" />
-						<h5>Linux</h5>
-						<label>AppImage</label>
-					</a>
+						<div class="install_os">
+							<fa :icon="['fab', 'linux']" />
+							<h3>Linux</h3>
+							<a class="blockbench_download linux" :href="`${path}/v${version}/Blockbench_${version}.deb`" target="_blank" rel="noopener">
+								<label>Debian/Ubuntu Package</label>
+							</a>
+							<a class="blockbench_download linux_rpm" :href="`${path}/v${version}/Blockbench_${version}.rpm`" target="_blank" rel="noopener">
+								<label>RPM Package</label>
+							</a>
+							<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank" rel="noopener">
+								<label>AppImage</label>
+							</a>
+						</div>
 
+						<div class="install_os">
+							<fa :icon="['fab', 'apple']" />
+							<h3>macOS</h3>
+							<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_x64_${version}.dmg`" target="_blank" rel="noopener">
+								<label>macOS Intel</label>
+							</a>
+							<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_arm64_${version}.dmg`" target="_blank" rel="noopener">
+								<label>macOS Apple Silicon</label>
+							</a>
+						</div>
+						
 					</div>
 
-					<p>Or check the <a href="https://github.com/JannisX11/blockbench/releases">Github release page</a> for other installers and older versions.</p>
+					<center><p>Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for other installers and older versions.</p></center>
+
 				</section>
+
 				
 				<img src="~assets/wiki/download.png" alt="Image of a computer, a phone, and a tablet, running Blockbench." />
 
@@ -109,6 +111,42 @@ export default {
 		margin: auto;
 		max-width: 100%;
 	}
+	#install_os_section {
+		display: flex;
+		margin-bottom: 20px;
+	}
+	.install_os {
+		text-align: center;
+		flex-basis: 0;
+		flex-grow: 1;
+		margin: 12px;
+		transition: transform 120ms ease;
+	}
+	.install_os > :first-child { /* ICON */
+		text-align: center;
+		display: block;
+		width: 100%;
+		height: 80px;
+		margin-bottom: 10px;
+	}
+	.install_os a {
+		display: block;
+		width: 100%;
+		padding: 8px;
+		color: inherit;
+		text-decoration: none;
+		transition: transform 120ms ease;
+	}
+	.install_os a:first-of-type {
+		background-color: var(--accent);
+		color: var(--dark-hover);
+	}
+	.install_os a:hover {
+		transform: scale(1.08);
+	}
+	
+	
+	/*
 	#download_options {
 		column-count: 2;
 		margin-top: 20px;
@@ -144,6 +182,7 @@ export default {
 	a.blockbench_download > p {
 		display: inline-block;
 	}
+	*/
 	a.blockbench_download > * {
 		cursor: inherit;
 	}
@@ -152,8 +191,8 @@ export default {
 			display: flex;
 			flex-direction: column-reverse;
 		}
-		#download_options {
-			column-count: 1;
+		#install_os_section {
+			flex-direction: column;
 		}
 	}
 </style>
