@@ -55,9 +55,12 @@
 
 					<center><p>Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for other installers and older versions.</p></center>
 
+					<h4>Updates</h4>
+					<p>Blockbench updates to the latest version automatically! </p>
+					<p>To update the desktop app, download and run the installer again. Running the installer will just change the installed Blockbench version, it won't touch your user preferences.</p>
+
 				</section>
 
-				
 				<img src="~assets/wiki/download.png" alt="Image of a computer, a phone, and a tablet, running Blockbench." />
 
 				<section>
@@ -102,6 +105,15 @@ export default {
 			data.latest = true
 		}
 	},
+	head: {
+		title: 'Downloads - Blockbench',
+		htmlAttrs: {
+			lang: 'en'
+		},
+		meta: [
+			{ hid: 'description', name: 'description', content: 'Download the latest version of Blockbench - for Windows, mac, and Linux' },
+		],
+	}
 }
 </script>
 
@@ -144,45 +156,6 @@ export default {
 	.install_os a:hover {
 		transform: scale(1.08);
 	}
-	
-	
-	/*
-	#download_options {
-		column-count: 2;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	a.blockbench_download {
-		margin: 8px;
-		padding: 16px;
-		margin-left: 0;
-		color: inherit;
-		display: block;
-		break-inside: avoid;
-	}
-	a.blockbench_download > :first-child {
-		font-size: 34pt;
-		float: left;
-		width: 74px;
-		margin-top: 2px;
-		text-align: center;
-		transition: width 120ms ease-in-out;
-	}
-	a.blockbench_download:hover {
-		background-color: var(--accent);
-		color: var(--dark-hover);
-		text-decoration: none;
-	}
-	a.blockbench_download:hover > :first-child {
-		width: 80px;
-	}
-	a.blockbench_download > h5 {
-		margin-bottom: 0px !important;
-	}
-	a.blockbench_download > p {
-		display: inline-block;
-	}
-	*/
 	a.blockbench_download > * {
 		cursor: inherit;
 	}
