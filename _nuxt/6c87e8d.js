@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{314:function(n,e,c){"use strict";c.r(e);var t={fetch:function(n){n.params;(0,n.redirect)(301,"/wiki/blockbench/faq")}},d=c(8),component=Object(d.a)(t,undefined,undefined,!1,null,null,null);e.default=component.exports}}]);

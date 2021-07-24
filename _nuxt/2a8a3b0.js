@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{315:function(n,e,c){"use strict";c.r(e);var l={fetch:function(n){n.params;(0,n.redirect)(301,"/wiki/blockbench/localization")}},o=c(8),component=Object(o.a)(l,undefined,undefined,!1,null,null,null);e.default=component.exports}}]);

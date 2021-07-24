@@ -1,0 +1,3 @@
+SetEnvIf Origin ^(https?://.+\.blockbench\.net(?::\d{1,5})?)$   CORS_ALLOW_ORIGIN=$1
+Header append Access-Control-Allow-Origin  %{CORS_ALLOW_ORIGIN}e   env=CORS_ALLOW_ORIGIN
+Header merge  Vary "Origin"
