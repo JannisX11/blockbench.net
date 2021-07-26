@@ -4,7 +4,7 @@ description: Tips for creating art in the Minecraft style
 ---
 
 # Minecraft Style Guide
-This set of guidelines covers the properties of the Minecraft art style. It is intended to help you create models and textures that fit right into the vanilla game and to unify the terminology for the community to give more efficient and constructive feedback. Please keep in mind that not all of the mentioned principles apply universally to non-vanilla art styles or to art unrelated to Minecraft. If you plan to create Minecraft art and aren't fully familiar with the technical aspects of it, reading the <a href="https://www.blockbench.net/wiki/guides/blockbench-guide"> Blockbench Guide </a> is highly recommended. It contains materials on how to properly use Blockbench and take full advantage of its features.
+This set of guidelines covers the properties of the Minecraft art style. It is intended to help you create models and textures that fit right into the vanilla game and to unify the terminology for the community to give more efficient and constructive feedback. Please keep in mind that not all of the mentioned principles apply universally to non-vanilla art styles or to art unrelated to Minecraft. If you plan to create Minecraft art and aren't fully familiar with the technical aspects of it, reading [Blockbench Overview & Tips](/wiki/guides/blockbench-overview-tips) is highly recommended. It contains materials on how to properly use Blockbench and take full advantage of its features.
 
 ## Modeling
 ### Element Count
@@ -122,7 +122,11 @@ All drawn items fit within a 16x16 grid.
 ![Item Creation](/images/wiki/guides/minecraft_style_guide/item_creation.png)
 
 ### Block Textures
-Block textures need to look good on their own, as well as when placed next to each other. Placing several blocks of the same kind next to each other is called tiling. If a portion of the texture visibly repeats, revealing the tiling pattern, it is called a tiling artifact and is to be corrected. Blockbench can be used to make the block texture directly (in Paint mode) or just as a live 3D preview of a texture created in an external image editor. The best way to preview tiling is by creating a wall of 3x3 blocks. It is important to check tiling before doing too much shading. An early version of the texture with two or three shades is enough. After checking for tiling, you can proceed with shading, but still regularly check for tiling as you shade.
+Block textures need to look good on their own, as well as when placed next to each other. Placing several blocks of the same kind next to each other is called tiling. If a portion of the texture visibly repeats, revealing the tiling pattern, it is called a tiling artifact and is to be corrected.
+
+Blockbench can be used to make the block texture directly (in Paint mode) or just as a live 3D preview of a texture created in an external image editor. The best way to preview tiling is by creating a wall of 3x3 blocks.
+
+It is important to check tiling before doing too much shading. An early version of the texture with two or three shades is enough. After checking for tiling, you can proceed with shading, but still regularly check for tiling as you shade.
 
 ![Block Tiling](/images/wiki/guides/minecraft_style_guide/block_tiling.png)
 

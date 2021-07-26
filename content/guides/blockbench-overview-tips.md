@@ -8,16 +8,18 @@ description: The fundamentals of Blockbench and how to use it efficiently
 ## Community
 
 ### Discord
-Join the <a href= "http://discord.blockbench.net/"> Blockbench Discord server</a>, it is the heart of the Blockbench community! You can discuss WIP projects, share finished models, ask questions, collaborate, participate in events, or just hang out with the community.
+Join the [Blockbench Discord server](http://discord.blockbench.net/), it is the heart of the Blockbench community! You can discuss WIP projects, share finished models, ask questions, collaborate, participate in events, or just hang out with the community.
 
 ### Sketchfab
-Sketchfab is a platform to publish, share, discover, buy and sell 3D, VR and AR content. Many Blockbench artists already use it to showcase their work. You can upload models from Blockbench directly to Sketchfab. Once on Sketchfab, you can change lighting and effects and create renders or share your model. You can also build your portfolio or embed models into your website.
+Sketchfab is a platform to publish, share, discover, buy and sell 3D, VR and AR content. Many Blockbench artists already use it to showcase their work.
+
+You can upload models from Blockbench directly to Sketchfab, by going to "File" > "Export" > "Upload to Sketchfab". Once on Sketchfab, you can change lighting and effects and create renders or share your model. You can also build your portfolio or embed models into your website.
 
 ### Sharing Models
-You can easily share Blockbench models with others. Go to File > Export > Share, copy the short link and send it to someone. They can click the link to view or edit the model in the web app.
+You can easily share Blockbench models with others. Go to "File" > "Export" > "Share", copy the short link and send it to someone. They can click the link to view or edit the model in the web app.
 
 ### Streamer Mode
-If you stream Blockbench, but don't want your audience to see other projects you worked on, enable Streamer Mode in the Settings (File > Preferences > Settings > General). It will hide potentially sensitive information like unreleased projects.
+If you stream Blockbench, but don't want your audience to see other projects you worked on, enable Streamer Mode in the Settings ("File" > "Preferences" > "Settings..." > "General"). It will hide potentially sensitive information like unreleased projects.
 
 ![streamer Mode](/images/wiki/guides/blockbench_guide/streamer_mode.png)
 
@@ -29,7 +31,7 @@ The default Blockbench interface consists of the Viewport (1, red), Left Sidebar
 ### Viewport
 An axis (plural axes) is a reference line in a coordinate system that defines a dimension. In a 3D space there are three axes: X, Y and Z. In Blockbench X represents width, Y height and Z length. The origin of the coordinate system is the point of intersection between the three axes, i.e. its coordinates are (0, 0, 0). The coordinates get higher in the + direction (from the origin to where the arrow points) of each axis and lower in the - direction (from the origin to away from where the arrow points) of each axis.
 
-The coordinate grid is made up of equally spaced intersecting lines (starting from the axes). The different grid options can be toggled in Settings > Grid.
+The coordinate grid is made up of equally spaced intersecting lines (starting from the axes). The different grid options can be toggled in "Settings" > "Grid".
 * Small Grid: single 1x1 meter pixel-accurate grid and axes
 * Block Grid: additional 1x1 meter squares around the small grid
 * Precise Block Grid: makes block grids pixel-accurate
@@ -38,7 +40,7 @@ The coordinate grid is made up of equally spaced intersecting lines (starting fr
 * Display Mode: grid visible in Display mode
 * Painting Grid: grid that covers the textured parts on the model in Paint Mode
 
-By default the spacing equals 1 pixel unit (16 units in a meter), but it can be adjusted in Settings > Snapping > Grid Resolution.
+By default the spacing equals 1 pixel unit (16 units in a meter), but it can be adjusted in "Settings" > "Snapping" > "Grid Resolution".
 
 There are three main motions for navigating the Viewport (rotate, drag and zoom). These controls can be adjusted in Keybindings by either setting them manually or loading a keymap. Here is a list of default keymaps:
 * Default (Trackpad)
@@ -86,7 +88,7 @@ The Status Bar contains sidebar toggle arrows and easily accessible information 
 * Toggle Sidebar: left and right arrow for hiding and revealing the left and right sidebar respectively
 * Save Status: icon that lets you know whether the model is saved (✓) or not (X)
 * Format Icon: icon that tells you the format of the model (hover to read)
-* Model Identifier: text that states the name of the model identifier (it can be edited in File > Project)
+* Model Identifier: text that states the name of the model identifier (it can be edited in "File" > "Project...")
 * FPS Indicator: number of frames per second displayed in Blockbench at any given moment
 
 ## General
@@ -101,7 +103,7 @@ Here is a list of useful words and their definitions to easily communicate what 
 * Locator: dimensionless element in the model that can be used as a reference point (e.g. to position particles)
 
 ### Keybindings
-Keybindings (keyboard shortcuts) are one of the main ways to speed up your workflow. To learn them, hover over actions (the keybinding will appear next to the label), open the menus or search them in Preferences > Keybindings. If there is no keybinding for an action, you can in most cases define one in Preferences > Keybindings. Default keybindings can also be changed there.
+Keybindings (keyboard shortcuts) are one of the main ways to speed up your workflow. To learn them, hover over actions (the keybinding will appear next to the label), open the menus or search them in "Preferences" > "Keybindings". If there is no keybinding for an action, you can in most cases define one in "Preferences" > "Keybindings". Default keybindings can also be changed there.
 
 ### Selecting Elements
 Elements can be selected in the Viewport and Outliner by left-clicking.
@@ -123,10 +125,10 @@ You can load background images into Blockbench. A background can be helpful to c
 Press Z to switch between Textured, Solid and Wireframe Mode. The Solid Mode enables you to view the shape of the model without the texture. The Wireframe Mode only shows the shape outlines, allowing you to see through the model and align cubes and pivot points more easily.
 
 ### Backups
-Losing progress is rarely a concern with Blockbench because it creates automatic backups once every 10 minutes by default (you can adjust the interval length in the Settings). Click Help > Open Backup Folder and locate the right backup file.
+Losing progress is rarely a concern with Blockbench because it creates automatic backups once every 10 minutes by default (you can adjust the interval length in the Settings). Click "Help" > "Open Backup Folder" and locate the right backup file.
 
 ### Progressive Web App
-You can install Blockbench as a Progressive Web App. This is an in-between of the desktop app and the web app and is particularly useful on Phones and Tablets. PWAs launch in full screen and work offline! Find installation instructions on the <a href= "https://blockbench.net/downloads/"> Download page. </a>
+You can install Blockbench as a Progressive Web App. This is an in-between of the desktop app and the web app and is particularly useful on Phones and Tablets. PWAs launch in full screen and work offline! Find installation instructions on the [Download page](https://blockbench.net/downloads/).
 
 ## Edit Mode
 
