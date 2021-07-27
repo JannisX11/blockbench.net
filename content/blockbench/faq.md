@@ -1,6 +1,8 @@
 ---
 title: FAQ
 description: Frequently Asked Questions about the Blockbench app
+authors:
+  - JannisX11
 ---
 
 # Blockbench FAQ

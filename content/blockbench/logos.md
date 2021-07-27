@@ -1,6 +1,8 @@
 ---
 title: Logos and Brand Assets
 description: Frequently Asked Questions about the Blockbench app
+authors:
+  - JannisX11
 ---
 
 # Logos and Brand Assets

@@ -1,6 +1,8 @@
 ---
 title: Particles and Sounds in MC Bedrock
 description: How to add particles and sounds effects to animations for Minecraft Bedrock Edition
+authors:
+  - JannisX11
 ---
 
 

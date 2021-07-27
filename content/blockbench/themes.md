@@ -1,5 +1,7 @@
 ---
 title: Custom Themes
+authors:
+  - JannisX11
 ---
 
 # Custom Themes

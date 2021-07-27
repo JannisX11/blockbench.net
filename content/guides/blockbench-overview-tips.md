@@ -1,6 +1,8 @@
 ---
 title: Blockbench Overview & Tips
 description: The fundamentals of Blockbench and how to use it efficiently
+authors:
+  - MasterianoX
 ---
 
 # Blockbench Overview & Tips

@@ -1,6 +1,8 @@
 ---
 title: Localization
 description: How to contribute to Blockbench languages
+authors:
+  - JannisX11
 ---
 
 # Localization

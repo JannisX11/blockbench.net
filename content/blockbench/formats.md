@@ -2,6 +2,9 @@
 title: Formats
 description: formats
 hidetoc: true
+authors:
+  - Wackyblocks
+  - JannisX11
 ---
 
 # Blockbench Format Features
