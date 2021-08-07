@@ -3,7 +3,7 @@
 		<h1>Blockbench Plugins</h1>
 
 		<div>
-			This page lists all plugins that are available to install in Blockbench through the built-in plugin store.
+			These are all plugins that are available to install in Blockbench through the built-in plugin store.
 			<SearchBar v-model="search_term" />
 		</div>
 
@@ -75,6 +75,20 @@ export default {
 				}
 				return false;
 			})
+		}
+	},
+	head() {
+		return {
+			title: `Plugins - Blockbench`,
+			meta: [
+				{ hid: 'description', name: 'description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' },
+				// Open Graph
+				{ hid: 'og:title', property: 'og:title', content: `Plugins - Blockbench` },
+				{ hid: 'og:description', property: 'og:description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' },
+				// Twitter Card
+				{ hid: 'twitter:title', name: 'twitter:title', content: `Plugins - Blockbench` },
+				{ hid: 'twitter:description', name: 'twitter:description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' }
+			]
 		}
 	}
 }

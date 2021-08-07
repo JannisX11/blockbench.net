@@ -252,6 +252,20 @@ export default {
 			let page = this.history.pop() || default_page;
 			this.page = page;
 		}
+	},
+	head() {
+		return {
+			title: `Quickstart - Blockbench`,
+			meta: [
+				{ hid: 'description', name: 'description', content: 'This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!' },
+				// Open Graph
+				{ hid: 'og:title', property: 'og:title', content: `Quickstart - Blockbench` },
+				{ hid: 'og:description', property: 'og:description', content: 'This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!' },
+				// Twitter Card
+				{ hid: 'twitter:title', name: 'twitter:title', content: `Quickstart - Blockbench` },
+				{ hid: 'twitter:description', name: 'twitter:description', content: 'This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!' }
+			]
+		}
 	}
 }
 </script>
