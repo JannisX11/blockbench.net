@@ -30,11 +30,13 @@
 
 			<h3>How to install the plugin</h3>
 
-			<p>
-				To install the plugin, open Blockbench and open file <b>File</b> menu in the top left corner.
-				Select <b>Plugins...</b>. This will open the built-in plugin browser.
-				Make sure you are in the <b>Available</b> tab, then search for the plugin. Once you have found it, press the <b>Install</b> button on the right hand side.
-			</p>
+			<ol>
+				<li>To install the plugin, start Blockbench and open file <b>File</b> menu in the top left corner.</li>
+				<li>Select <b>Plugins...</b> to open the built-in plugin browser.</li>
+				<li>Make sure you are in the <b>Available</b> tab, then search for the plugin.</li>
+				<li>Once you have found it, press the <b>Install</b> button on the right hand side.</li>
+			</ol>
+
 		</div>
 	</div>
 </template>
