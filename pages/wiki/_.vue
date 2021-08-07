@@ -52,10 +52,6 @@ export default {
 				{ hid: 'twitter:description', name: 'twitter:description', content: this.doc.description }
 			]
 		}
-	},
-	methods: {
-		async getAvatar(username) {
-		}
 	}
 }
 </script>

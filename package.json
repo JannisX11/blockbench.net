@@ -10,6 +10,7 @@
 		"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
 	},
 	"dependencies": {
+		"@nuxt/markdown": "0.0.21",
 		"core-js": "^3.9.1",
 		"nuxt": "^2.15.7"
 	},
