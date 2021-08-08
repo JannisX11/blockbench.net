@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import Markdown from '@nuxt/markdown'
 
+import Markdown from '@nuxt/markdown'
 
 export default {
 	async asyncData({params}) {
@@ -118,7 +118,7 @@ export default {
 		border: 1px solid var(--light-border);
 		min-height: 200px;
 		padding: 16px 24px;
-		margin: 24px 0px;
+		margin: 24px -15px;
 	}
 	html.dark-mode .plugin {
 		background: var(--dark-ui);
