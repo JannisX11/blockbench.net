@@ -34,7 +34,7 @@
 				<template v-if="page == 'bedrock'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>Bedrock Model</h2>
-					<p>The Bedrock Model format can currently only be used to create entity models</p>
+					<p>The Bedrock Model format can currently only be used to create entity models, block models are available in experimental worlds</p>
 
 					<h3>Quick Info</h3>
 					<ul>
@@ -42,12 +42,17 @@
 						<li>Files are saved with the extension .geo.json</li>
 						<li>Models are structured using bones, which can be animated when used in entities</li>
 						<li>Models are referenced using the Geometry Name as defined in the Project Settings</li>
-						<li>If experimental features are enabled on your works, models can be used for custom blocks as well</li>
+						<li>If <a href="https://feedback.minecraft.net/hc/en-us/articles/4403610710797" target="_blank" rel="noopener">experimental features</a> are enabled on your world, models can be used for custom blocks as well</li>
 					</ul>
 
 					<h3>Caveats</h3>
 					<ul>
 						<li>On entities, each model can only have one texture</li>
+					</ul>
+
+					<h3>Tips</h3>
+					<ul>
+						<li>To quickly and easily add your model to Minecraft as a custom entity, use the <a href="https://aka.ms/mcentitywizard" target="_blank" rel="noopener">Minecraft Entity Wizard</a>.</li>
 					</ul>
 
 					<h3>Tutorials</h3>
@@ -251,6 +256,20 @@ export default {
 		backPage() {
 			let page = this.history.pop() || default_page;
 			this.page = page;
+		}
+	},
+	head() {
+		return {
+			title: `Quickstart - Blockbench`,
+			meta: [
+				{ hid: 'description', name: 'description', content: 'This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!' },
+				// Open Graph
+				{ hid: 'og:title', property: 'og:title', content: `Quickstart - Blockbench` },
+				{ hid: 'og:description', property: 'og:description', content: 'This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!' },
+				// Twitter Card
+				{ hid: 'twitter:title', name: 'twitter:title', content: `Quickstart - Blockbench` },
+				{ hid: 'twitter:description', name: 'twitter:description', content: 'This Website will guide you to the correct Blockbench format for your model as well as important information, tutorials and resources!' }
+			]
 		}
 	}
 }
