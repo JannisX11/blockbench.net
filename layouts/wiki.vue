@@ -65,6 +65,13 @@ export default {
 			max-height: calc(100vh - 120px);
 			overflow-y: auto;
 		}
+		#wiki_wrapper table {
+			display: block;
+			overflow: auto;
+			max-width: 100vw;
+			margin: 0 -20px;
+			padding: 0px 20px;
+		}
 	}
 
 	#wiki_wrapper h1 {

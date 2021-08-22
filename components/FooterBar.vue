@@ -2,11 +2,12 @@
 	<footer id="footer">
 		<div id="footer_content">
 			<a href="https://www.netlify.com" target="_blank" rel="noopener">
-				This site is powered by <img id="netlify_logo" src="~assets/netlify-full-logo-dark.svg" alt="Deploys by Netlify" />
+				This site is hosted by <img id="netlify_logo" src="~assets/netlify-full-logo-dark.svg" alt="Deploys by Netlify" />
 			</a>
 			<nav>
 				<nuxt-link to='/about'>About</nuxt-link>
-				<nuxt-link to='/imprint'>Imprint & Privacy Policy</nuxt-link>
+				<nuxt-link to='/imprint'>Imprint</nuxt-link>
+				<nuxt-link to='/privacy-policy'>Privacy Policy</nuxt-link>
 			</nav>
 		</div>
 	</footer>
