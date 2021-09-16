@@ -20,7 +20,7 @@
 				<h2>Made in Blockbench!</h2>
 				<div id="sketchfab_viewer" v-if="!sketchfab_cookies_accepted">
 					<h4>View awesome Blockbench models in 3D!</h4>
-					<p>The viewer is powered by Sketchfab and uses Sketchfab cookies. To learn more, check out the <a href="" target="_blank" rel="noopener noreferrer">Sketchfab Privacy Policy</a>.</p>
+					<p>The viewer is powered by Sketchfab and uses Sketchfab cookies. To learn more, check out the <a href="https://sketchfab.com/privacy" target="_blank" rel="noopener noreferrer">Sketchfab Privacy Policy</a>.</p>
 					<button @click="acceptSketchfabCookies()">Accept and View Models</button>
 				</div>
 				<iframe v-else id="sketchfab_viewer" title="Sketchfab Model Gallery" width="1000" height="720" :src="sketchfab_cookies_accepted ? 'https://sketchfab.com/playlists/embed?collection=98346534947c4e229ced71854c9ede1a&autostart=0' : ''"
