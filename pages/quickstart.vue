@@ -57,6 +57,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
+						<li><a target="_blank" rel="noopener" href="https://www.blockbench.net/wiki/guides/bedrock-modeling">Written Bedrock Modeling and Implementation Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=xoybMf05Jl8">Dragnoz Add-Entity and Modeling Tutorial</a></li>
@@ -134,7 +135,7 @@
 
 					<h3>Caveats</h3>
 					<ul>
-						<li>Models are still limited to cubes</li>
+						<li>Models are still limited to cubes. (More complex shapes and full mesh modeling were introduced in the 4.0 beta)</li>
 					</ul>
 
 					<h3>Tutorials</h3>
@@ -173,12 +174,31 @@
 
 					<h3>Quick Info</h3>
 					<ul>
+						<li>Discord Help Channel: <a href="https://discord.gg/Xvmce4AKQB" class="channel">#help-skin-figura-modelengine</a></li>
 						<li>This format is meant to only change the texture, not the model</li>
 					</ul>
 
 					<h3>Tutorials</h3>
 					<ul>
 						<li><a target="_blank" rel="noopener" href="https://youtu.be/xC81Q3HGraE">Skin Editing Tutorial</a></li>
+					</ul>
+				</template>
+
+				<template v-if="page == 'model_engine'">
+					<h4 class="suggestion">The following model loader was suggested for you:</h4>
+					<h2>Model Engine</h2>
+					<p>Model Engine is a server plugin for Minecraft Java Edition servers, that allows you to add custom animated entity models to your server.</p>
+
+					<h3>Quick Info</h3>
+					<ul>
+						<li>Use the Blockbench format "Bedrock Model"</li>
+						<li>Because this is a third party model loader, models have certain restrictions that are not enforced by Blockbench but will cause issues when loading the model. Please refer to the wiki.</li>
+					</ul>
+
+					<h3>Tutorials</h3>
+					<ul>
+						<li><a target="_blank" rel="noopener" href="https://github.com/Ticxo/Model-Engine-Wiki">Model Engine Website</a></li>
+						<li>Discord Help Channel: <a href="https://discord.gg/Xvmce4AKQB" class="channel">#help-skin-figura-modelengine</a></li>
 					</ul>
 				</template>
 
@@ -229,6 +249,7 @@
 
 					<div class="answer" @click="loadPage('cem')">I can use OptiFine to view the changed model, and I want to change an entity model</div>
 					<div class="answer" @click="loadPage('modded_entity')">I am creating a custom mod</div>
+					<div class="answer" @click="loadPage('model_engine')">I want to add mobs with custom models to my Minecraft server</div>
 
 					<p>If none of these options apply to you, unfortunately that means that there is no way to realize your idea at the moment. Minecraft by itself does not allow custom entity or armor models.</p>
 				</template>
@@ -316,6 +337,4 @@ export default {
 			margin: 15px -20px;
 			padding: 20px;
 		}
-</style>>
-
 </style>

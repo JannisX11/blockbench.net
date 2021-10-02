@@ -8,7 +8,7 @@
 			<p>Choose the installation method for your system. Once installed, you will receive updates within the program.</p>
 			<p>If you need help getting started, check out the <nuxt-link to="/quickstart">Quickstart Guide</nuxt-link>.</p>
 
-			<p id="update_title"><b>{{ latest ? 'Latest Version' : 'Selected Version' }}: </b><span>{{ name }}</span></p>
+			<p id="update_title"><b>{{ type }}: </b><span>{{ name }}</span></p>
 
 			<div id="install_options">
 				<section>
@@ -53,7 +53,7 @@
 						
 					</div>
 
-					<center><p>Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for other installers and older versions.</p></center>
+					<center><p>Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre releases and older versions.</p></center>
 
 					<h4>Updates</h4>
 					<p>Blockbench updates to the latest version automatically! </p>
@@ -84,7 +84,7 @@ const data = {
 	path,
 	version: '1.0.0',
 	name: '',
-	latest: true,
+	type: 'Latest Version',
 };
 
 export default {
@@ -95,6 +95,15 @@ export default {
 			
 			data.version = location.hash.substr(2)
 			data.name = location.hash.substr(2)
+			data.type = 'Selected Version';
+
+		} else if (typeof location != 'undefined' && (location.hash.substr(1, 4) == 'beta' || location.hash.substr(1, 4) == 'pre')) {
+			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases?per_page=1');
+			let [release] = await response.json();
+
+			data.version = release.tag_name.replace(/^v/, '')
+			data.name = release.name
+			data.type = 'Latest Prerelease'
 
 		} else {
 			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
@@ -102,7 +111,7 @@ export default {
 
 			data.version = release.tag_name.replace(/^v/, '')
 			data.name = release.name
-			data.latest = true
+			data.type = 'Latest Version'
 		}
 	},
 	head: {

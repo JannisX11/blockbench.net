@@ -110,6 +110,7 @@
 					<p>Customize Blockbench with the built-in plugin store.</p>
 					<p>Plugins extend the functionality of Blockbench beyond what it's already capable of. They add new tools, support for new export formats, or model generators.</p>
 					<p>You can also create your own plugin to extend Blockbench or to support your own format.</p>
+					<p><nuxt-link to="/plugins">Browse Blockbench plugins...</nuxt-link></p>
 				</div>
 				<div>
 					<img src="~assets/features/plugins.png" alt="Plugin Illustration" />

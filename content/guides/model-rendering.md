@@ -104,6 +104,9 @@ Once you are happy with your angle and lighting, press the **Save render to imag
 
 
 ### Blender
+
+You can download Blender from [Blender.org - Download](https://www.blender.org/download/).
+
 After opening Blender, make sure to delete the default cube by pressing Delete and confirming the pop up. Now navigate to **File** > **Import** > **glTF 2.0**, and open your model file.
 
 ![Blender Interface](/images/wiki/guides/rendering/blender.png)
