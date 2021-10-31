@@ -71,9 +71,9 @@
 		<section class="features">
 			<content class="content split">
 				<div class="text_body">
-					<h3>Model Editing</h3>
-					<p>Blockbench puts all the tools at your disposal to make creating boxy models as easy as possible.</p>
-					<p>Simply resize, rotate and arrange cuboid shapes to form your own model.</p>
+					<h3>Low-poly Modeling</h3>
+					<p>Blockbench puts all the tools at your disposal to make the creation process of low-poly models as easy as possible.</p>
+					<p>Use cuboids to get that Minecraft aesthetic, or create complex low-poly shapes using the mesh modeling tools!</p>
 				</div>
 				<div>
 					<img src="~assets/features/flower_pot.png" alt="Modeling Illustration" />

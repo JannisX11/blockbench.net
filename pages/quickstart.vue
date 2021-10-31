@@ -20,7 +20,7 @@
 					<ul>
 						<li>Rotations are limited to 22.5 degree steps and one axis per element</li>
 						<li>The model is limited to a size of 3 by 3 by 3 blocks. Display settings can make item models larger though</li>
-						<li>This format does not support animations in vanilla Minecraft. If you are creating a mod, you can use <a href="https://geckolib.com/en/latest/">GeckoLib</a> to animate models. If not, the only way to animate is to switch out the model using commands or animated textures.</li>
+						<li>This format does not support animations in vanilla Minecraft. If you are creating a mod, you can use <a href="https://github.com/bernie-g/geckolib/wiki">GeckoLib</a> to animate models. If not, the only way to animate is to switch out the model using commands or animated textures.</li>
 					</ul>
 
 					<h3>Tutorials</h3>

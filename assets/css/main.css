@@ -139,6 +139,9 @@ td, th {
 	line-height: 24px;
 	margin-bottom: 30px;
 }
+.content li ul, .content li ol {
+	margin-bottom: 4px;
+}
 .content p {
 	line-height: 24px;
 	margin-bottom: 15px;

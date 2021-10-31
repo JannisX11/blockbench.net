@@ -5,7 +5,7 @@
 			<h1>Downloads</h1>
 			
 			<h3>Thank you for using Blockbench!</h3>
-			<p>Choose the installation method for your system. Once installed, you will receive updates within the program.</p>
+			<p>Choose the installation method for your system. Once installed, you will receive the latest updates automatically.</p>
 			<p>If you need help getting started, check out the <nuxt-link to="/quickstart">Quickstart Guide</nuxt-link>.</p>
 
 			<p id="update_title"><b>{{ type }}: </b><span>{{ name }}</span></p>
@@ -73,6 +73,33 @@
 				</section>
 			</div>
 
+			<h3>Hardware Requirements</h3>
+			<div class="column_left">
+				<h4>Minimum</h4>
+				<ul>
+					<li>
+						Desktop App
+						<ul>
+							<li><b>Windows</b> 7 or newer</li>
+							<li><b>macOS</b> 10.10 Yosemite or newer</li>
+							<li><b>Ubuntu</b> 12.04, Debian 8, Fedora 21 or newer</li>
+							<li>1+ GB of empty storage space</li>
+						</ul>
+					</li>
+					<li>1 GB of RAM</li>
+					<li>1280 x 720 display</li>
+				</ul>
+			</div>
+			<div class="column_right">
+				<h4>Recommended</h4>
+				<ul>
+					<li>Windows, macOS, or Linux computer</li>
+					<li>Mouse and keyboard</li>
+					<li>8 GB of RAM</li>
+					<li>1920 x 1080 display</li>
+					<li>10 GB of empty storage space</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
@@ -168,6 +195,11 @@ export default {
 	a.blockbench_download > * {
 		cursor: inherit;
 	}
+	.column_left,
+	.column_right {
+		float: left;
+		width: 50%;
+	}
 	@media only screen and (max-width: 600px) {
 		#install_options {
 			display: flex;
@@ -175,6 +207,11 @@ export default {
 		}
 		#install_os_section {
 			flex-direction: column;
+		}
+		.column_left,
+		.column_right {
+			float: none;
+			width: auto;
 		}
 	}
 </style>
