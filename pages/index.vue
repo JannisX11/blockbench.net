@@ -4,7 +4,7 @@
 			<content class="content">
 				<img id="main_logo" src="~assets/blockbench_logo_text_white.svg" alt="Blockbench" height="72px" />
 
-				<h3>A boxy 3D model editor</h3>
+				<h3>A low-poly 3D model editor</h3>
 
 				<div class="buttons">
 					<button><a href="/downloads">Download</a></button>

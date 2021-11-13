@@ -5,7 +5,7 @@
 			<h1>About</h1>
 
 			<h2>Blockbench</h2>
-			<p>Blockbench is a free, modern model editor for boxy models and pixel art textures.</p>
+			<p>Blockbench is a free, modern model editor for low-poly models with pixel art textures.</p>
 
 			<h2>Contributors</h2>
 			<p>The illustrations on this website were contributed by 
