@@ -38,6 +38,9 @@
 							<a class="blockbench_download linux_portable" :href="`${path}/v${version}/Blockbench_${version}.AppImage`" target="_blank" rel="noopener">
 								<label>AppImage</label>
 							</a>
+							<a class="blockbench_download linux_portable" :href="`https://flathub.org/apps/details/net.blockbench.Blockbench`" target="_blank" rel="noopener">
+								<label>Flatpak (Flathub)</label>
+							</a>
 						</div>
 
 						<div class="install_os">
