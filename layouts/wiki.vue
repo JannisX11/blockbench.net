@@ -43,6 +43,20 @@ export default {
 		width: min(var(--max-content-width), 100%);
 		background-color: var(--light-ui);
 	}
+	#wiki_wrapper table {
+		display: block;
+		overflow: auto;
+		max-width: 100vw;
+		margin: 0 -20px;
+		padding: 0px 20px;
+	}
+	#wiki_wrapper .nuxt-content-highlight {
+		display: block;
+		overflow: auto;
+		max-width: 100vw;
+		margin: 0 -20px;
+		padding: 0px 20px;
+	}
 
 	/* TOC */
 	@media only screen and (min-width: 800px) {
@@ -65,14 +79,8 @@ export default {
 			max-height: calc(100vh - 120px);
 			overflow-y: auto;
 		}
-		#wiki_wrapper table {
-			display: block;
-			overflow: auto;
-			max-width: 100vw;
-			margin: 0 -20px;
-			padding: 0px 20px;
-		}
 	}
+
 
 	#wiki_wrapper h1 {
 		text-align: initial;
@@ -87,6 +95,14 @@ export default {
 	}
 	.nuxt-content > * {
 		max-width: 100%;
+	}
+
+	@media only screen and (max-width: 800px) {
+		#wiki_wrapper .content .nuxt-content > p > img {
+			display: block;
+			margin: 0 -20px;
+			max-width: calc(100% + 40px);
+		}
 	}
 
  
