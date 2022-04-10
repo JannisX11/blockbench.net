@@ -104,7 +104,7 @@ Triggers an event.
 * `event_id` Name of the event,
 * `data` Data to submit to the listeners
 
-#### Blockbench.removeEventListener( event_id, callback)
+#### Blockbench.removeListener( event_id, callback)
 
 Removes an event listener using the `event_id` and `callback`. Should be used in `onunload` in a plugin to clear event listeners.
 
