@@ -34,12 +34,13 @@
 				<template v-if="page == 'bedrock'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>Bedrock Model</h2>
-					<p>The Bedrock Model format can currently only be used to create entity models, block models are available in experimental worlds</p>
+					<p>The Bedrock Model format can currently only be used to create entity models and attachables. Block models are available in experimental worlds</p>
 
 					<h3>Quick Info</h3>
 					<ul>
 						<li>Discord Help Channel: <a href="https://discord.gg/kWSDpjg" class="channel">#help-bedrock-edition</a></li>
 						<li>Files are saved with the extension .geo.json</li>
+						<li>Attachables can be used to <a href="https://wiki.bedrock.dev/items/3d-items.html#attachable-based-3d-item-models" target="_blank" rel="noopener">give items a model</a>, though the model is only displayed when a player holds the item in their hand.</li>
 						<li>Models are structured using bones, which can be animated when used in entities</li>
 						<li>Models are referenced using the Geometry Name as defined in the Project Settings</li>
 						<li>If <a href="https://feedback.minecraft.net/hc/en-us/articles/4403610710797" target="_blank" rel="noopener">experimental features</a> are enabled on your world, models can be used for custom blocks as well</li>
@@ -81,7 +82,6 @@
 					<h3>Caveats</h3>
 					<ul>
 						<li>Users without OptiFine installed won't see the model</li>
-						<li>Models are limited to the bones that the entity already had</li>
 						<li>Bone pivots are locked, so it is a good idea to leave them untouched</li>
 						<li>Animations can only be changed manually using a text editor, and only support math expressions</li>
 					</ul>
@@ -125,22 +125,19 @@
 				<template v-if="page == 'generic'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>Generic Model</h2>
-					<p>This format can be used to create custom models for the use in Blender, in games and game engines or just for showcase on Sketchfab. It unlocks most of the restrictions from dedicated Minecraft formats</p>
+					<p>This format can be used to create custom models for the use in Blender, in games and game engines or just for showcase on Sketchfab. It unlocks most of the restrictions from dedicated Minecraft formats.</p>
 
 					<h3>Quick Info</h3>
 					<ul>
 						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-models</a></li>
-						<li>Models can be exported as .obj or .gltf</li>
-					</ul>
-
-					<h3>Caveats</h3>
-					<ul>
-						<li>Models are still limited to cubes. (More complex shapes and full mesh modeling were introduced in the 4.0 beta)</li>
+						<li>Models can be made with custom meshes or with cubes.</li>
+						<li>Models can be exported as .obj, dae (Collada), or .glTF</li>
 					</ul>
 
 					<h3>Tutorials</h3>
 					<ul>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 					</ul>
 				</template>
 
@@ -151,7 +148,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-models</a></li>
+						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-format</a></li>
 						<li>Models can be exported as .obj or .gltf</li>
 					</ul>
 
@@ -202,11 +199,6 @@
 					</ul>
 				</template>
 
-				<template v-if="page == 'bedrock_item'">
-					<h2>Bedrock Item / Block</h2>
-					<p>Sorry, it is not yet possible to change item models in Minecraft: Bedrock Edition.</p>
-				</template>
-
 
 
 
@@ -238,7 +230,7 @@
 					<p>What kind of asset do you want to change?</p>
 
 					<div class="answer" @click="loadPage('bedrock')">Block Model</div>
-					<div class="answer" @click="loadPage('bedrock_item')">Item Model</div>
+					<div class="answer" @click="loadPage('bedrock')">Item Model</div>
 					<div class="answer" @click="loadPage('bedrock')">Entity / Mob Model</div>
 					<div class="answer" @click="loadPage('skin')">My Minecraft skin or an entity texture</div>
 				</template>
