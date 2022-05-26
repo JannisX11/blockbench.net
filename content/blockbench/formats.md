@@ -66,7 +66,7 @@ Sound/Particle/Custom Keyframes| |x|x| | | |x|x
 - ¹ Experiemental feature
 - ² Only exports item display settings json (to control how items look in guis and hand)
 - ³ Use [GeckoLib](https://github.com/bernie-g/geckolib/wiki) to run Blockbench animations in Minecraft mods
-- ⁴ Optifine entities support expression based animations. [More info](https://github.com/sp614x/optifine/blob/master/OptiFineDoc/doc/cem_animation.txt)
+- ⁴ Optifine entities support expression based animations. Requires the [CEM Template Loader Plugin](https://www.blockbench.net/plugins/cem_template_loader) to be able to edit and preview inside Blockbench. [Documentation](https://www.wynem.com/?cem_animation_doc)
 - ⁵ Models that don't support unlimited cube sizes are restricted to only integers for cube sizes i.e. 0 1 2 etc.
 
 
