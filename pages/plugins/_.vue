@@ -140,9 +140,6 @@ export default {
 	.plugin .min_version {
 		color: var(--light-subtle);
 	}
-    .plugin img {
-        image-rendering: pixelated;
-    }
 	h4 {
 		margin-bottom: 4px;
 		margin-top: 20px;
