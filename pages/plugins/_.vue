@@ -123,7 +123,6 @@ export default {
 	html.dark-mode .plugin {
 		background: var(--dark-ui);
 	}
-
 	.plugin .title {
 		display: inline-block;
 		margin-bottom: 4px;
@@ -141,11 +140,13 @@ export default {
 	.plugin .min_version {
 		color: var(--light-subtle);
 	}
+    .plugin img {
+        image-rendering: pixelated;
+    }
 	h4 {
 		margin-bottom: 4px;
 		margin-top: 20px;
 	}
-
 	.plugin_tag_list {
 		padding: 0;
 		margin-bottom: 5px;
