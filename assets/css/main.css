@@ -146,3 +146,8 @@ td, th {
 	line-height: 24px;
 	margin-bottom: 15px;
 }
+
+.plugin img {
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+}
