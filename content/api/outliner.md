@@ -281,7 +281,7 @@ Resizes the cube by a specified amount
 
 ## Locator
 
-### new Cube( data ).init()
+### new Locator( data ).init()
 
 Creates a new locator and initializes it.
 
@@ -289,7 +289,7 @@ Creates a new locator and initializes it.
 * `from: Array` Position of the locator in local space
 * `export: Boolean` Whether to include the locator in exported files.
 
-#### Cube#extend( data: Object )
+#### Locator#extend( data: Object )
 Copies properties from data to the locator.
 
 #### Locator#getUndoCopy( aspects )
