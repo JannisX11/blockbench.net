@@ -447,7 +447,7 @@ Set the seam mode of an edge
 
 ## MeshFace
 
--
+MeshFaces represent polygons that make up a mesh. MeshFaces inherit all methods from Face.
 
 ### new MeshFace( data )
 Creates a new mesh face.
