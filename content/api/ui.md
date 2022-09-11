@@ -35,7 +35,7 @@ Prompts the user to enter or edit a text.
 
 ### Blockbench.showToastNotification( options: Object )
 
-Prompts the user to enter or edit a text.
+Displays a notification at the top of the 3D viewport.
 
 * `options` 
 	* `text: String` Text message
