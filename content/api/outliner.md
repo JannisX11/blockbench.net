@@ -281,7 +281,7 @@ Resizes the cube by a specified amount
 
 ## Locator
 
-### new Cube( data ).init()
+### new Locator( data ).init()
 
 Creates a new locator and initializes it.
 
@@ -289,7 +289,7 @@ Creates a new locator and initializes it.
 * `from: Array` Position of the locator in local space
 * `export: Boolean` Whether to include the locator in exported files.
 
-#### Cube#extend( data: Object )
+#### Locator#extend( data: Object )
 Copies properties from data to the locator.
 
 #### Locator#getUndoCopy( aspects )
@@ -312,3 +312,200 @@ Moves the locator by a specified amounted axis.
 
 * `value: Float` Movement distance
 * `axis: Integer` Movement axis
+
+## Mesh
+
+Meshes represent regular meshes in the outliner. Meshes inherit all properties and methods from OutlinerNode and OutlinerElement.
+
+### new Mesh( data ).init()
+
+Creates a new mesh and initializes it.
+
+* `name: String` 
+* `origin: Array` Mesh pivot point
+* `rotation: Array` Mesh rotation
+* `visibility: Boolean` 
+* `export: Boolean` Whether to include the mesh in exported files.
+* `color: Number` Base mesh color as shown when untextured or in the outliner. Number between 0 and 7 mapping to the 8 colors.
+	* `0.` Light Blue
+	* `1.` Yellow
+	* `2.` Orange
+	* `4.` Red
+	* `4.` Purple
+	* `5.` Blue
+	* `6.` Green
+	* `7.` Lime
+
+* `parent: String` 
+* `vertices: Object` 
+* `faces: Object` 
+* `seams: Object` 
+
+#### Mesh#extend( data: Object )
+Copies properties from data to the mesh.
+
+#### Mesh#getMesh()
+Returns the ThreeJS mesh instance of the mesh.
+
+#### Mesh#remove()
+Removes the mesh.
+
+#### Mesh#getUndoCopy( aspects )
+Returns a copy of the mesh like it is used in Undo saves.
+
+#### Mesh#getUndoCopy( aspects )
+Returns a copy of the mesh like it is used in .bbmodel files.
+
+#### Mesh#roll( axis, steps, origin)
+Rolls the Mesh around an axis by steps of 90 degrees.
+
+* `axis: Integer` Rotation axis
+* `steps: Integer` Rotation steps. Each step is +90 degrees.
+* `origin: Array` Origin for the rotation. Defaults to the mesh's origin.
+
+#### Mesh#flip( axis, center )
+Flips the mesh.
+
+* `axis: Integer` Flip axis
+* `center: Float` Coordinate of the flipping center
+
+#### Mesh#transferOrigin( origin, ?update )
+
+Move the origin of a bone to a specific location without visually affecting the position of it's content.
+
+* `origin: Array` Position of the new 3D origin
+* `update: Boolean` Specifies whether to update the mesh. default is true
+
+#### Mesh#getWorldCenter( ignore_selected_vertices )
+Returns the actual center of the mesh in world space. Returns a ThreeJS Vector3.
+
+* `ignore_selected_vertices: Boolean` Whether to ignore the selected vertices of the mesh
+
+#### Mesh#setColor( index )
+Assigns a marker color to the mesh, out of 8 possible colors.
+
+* `index: Integer` Index of default marker colors (light_blue, yellow, orange, red, purple, blue, green, lime)
+
+#### Mesh#applyTexture( texture, faces )
+Applies a texture to the mesh.
+
+* `texture: Texture`
+* `faces: Array|Boolean` Faces to assign the texture to. If true, the texture is applied to all the faces. If omitted, the texture is applied to the currently selected faces.
+
+#### Mesh#moveVector( value, axis, ?update )
+Move the mesh by a specific vector in the mesh's local space.
+
+* `value: Vector3|Float` Movement distance
+* `axis: Integer` If `value` is specified as a number, this is the movement axis.
+* `update: Boolean` Specifies whether to update the mesh. default is true
+
+#### Mesh#resize( value, axis, negative, allow_negative, bidirectional )
+Resizes the mesh by a specified amount
+
+* `value: Float` Resize value
+* `axis: Integer` Resize axis
+* `negative: Boolean` If true, the object is resized in the negative direction on the specified axis.
+* `allow_negative: Boolean` If true, the function will allow negative mesh sizes.
+* `bidirectional: Boolean` If true, the object is resized in both directions.
+
+#### Mesh#addVertices( ...vectors )
+Add vertices to the mesh
+
+* `vectors: Vector3` Vector3(s) representing a vertex in local space.
+
+#### Mesh#addFaces( ...faces )
+Add vertices to the mesh
+
+* `faces: MeshFace` Faces to add.
+
+#### Mesh#getSelectedVertices( make )
+Returns the selected vertices of the mesh
+
+* `make: Boolean` If true, initializes an empty array in Project.selected_vertices if an array doesn't already exist.
+
+#### Mesh#getSelectedFaces()
+Returns the selected faces of the mesh
+
+#### Mesh#getSelectionRotation()
+Returns a computed rotation that is formed by selected vertices
+
+#### Mesh#forAllFaces( cb )
+A callback loop for each face
+
+* `cb: Function( face: MeshFace, key: String )` The callback function.
+
+#### Mesh#setSeam( edge, value )
+Set the seam mode of an edge
+
+* `edge: String[]` The edge, takes two valid vertex keys from the mesh.
+* `value: String` Seam mode (join,  divide). If omitted, the seam will be removed.
+
+#### Mesh#getSeam( edge )
+Set the seam mode of an edge
+
+* `edge: String[]` The edge, takes two valid vertex keys from the mesh.
+
+## MeshFace
+
+MeshFaces represent polygons that make up a mesh. MeshFaces inherit all methods from Face.
+
+### new MeshFace( data )
+Creates a new mesh face.
+
+* `mesh: Mesh` Mesh that the face belongs to.
+* `vertices: String[]` Vertices that makes the face. When the length of the array equals to (2), face is considered as an edge.
+* `uv: Object` Object representing the UV positions of the vertices of this face.
+* `texture: String|Boolean<false>` Mesh rotation.
+
+#### MeshFace#extend( data: Object )
+Copies properties from data to the face.
+
+#### MeshFace#getNormal( normalize )
+Returns the directional vector identical to the face's direction.
+
+* `normalize: Boolean` If true, returns a normalized version of the vector.
+
+#### MeshFace#getBoundingRect()
+Returns the bounding box of the face's uv island
+
+#### MeshFace#getOccupationMatrix( texture_space, start_offset, matrix )
+Returns the occupation matrix of the face
+
+* `texture_space: Boolean`
+* `start_offset: Vector2`
+* `matrix: Object`
+
+#### MeshFace#getAngleTo( other_face )
+Returns the angle that is made up with other_face
+
+* `other_face: MeshFace` Target face.
+
+#### MeshFace#invert()
+Inverts the face inside-out and vice versa
+
+#### MeshFace#isSelected()
+Returns if the face is selected
+
+#### MeshFace#getSortedVertices()
+Returns the vertex array sorted in a clock-wise order
+
+#### MeshFace#getAdjacentFace( side_index )
+Returns a mesh face that creates a link with the face
+
+* `side_index: Integer` What side of the face that should be linked
+
+#### MeshFace#getFaceKey()
+Returns the key of the face
+
+#### MeshFace#UVToLocal( uv )
+Returns the mapped uv pixel in 3d space local to the face
+
+* `uv: Vector2` UV position
+
+#### MeshFace#localToUV( vector )
+Returns a vector2 UV position relative to the face in local space
+
+* `vector: Vector3` Local position
+
+#### MeshFace#getCenter()
+Returns the center of the face local to the master mesh
