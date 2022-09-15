@@ -38,7 +38,7 @@ Plugin.register('height_randomizer', {
 	variant: 'both'
 });
 ```
-The variant tells Blockbench where the plugin can be used. In this case it can be used in both the web app and the desktop app. The icon uses a material icon string. You can learn more about icons here: [Blockbench#icons](blockbench.md#icons)
+The variant tells Blockbench where the plugin can be used. In this case it can be used in both the web app and the desktop app. The icon uses a material icon string. You can learn more about icons here: [Blockbench#icons](blockbench#icons)
 
 
 

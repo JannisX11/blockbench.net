@@ -25,7 +25,7 @@ Plugin.register('plugin_id', {
 * `author: String` Author name or names 
 * `description: String` Plugin description for the store in Blockbench
 * `about: String` Longer Plugin description or instructions, can be unfolded in the store
-* `icon: String` Blockbench icon string, see [Blockbench#icons](blockbench.md#icons)
+* `icon: String` Blockbench icon string, see [Blockbench#icons](blockbench#icons)
 * `version: String` Version number for your plugin using [semver](https://semver.org) 
 * `variant: String` Variant of Blockbench which supports your plugin. Can be `desktop`, `web` or `both`
 * `min_version: String` Minimum compatible Blockbench version 

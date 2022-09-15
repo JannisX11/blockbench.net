@@ -88,10 +88,8 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" rel="noopener" href="https://youtu.be/2FHti73k2Ek">CEM Modeling Tutorial</a></li>
-						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ckE-BGPF7SU">CEM Animation Tutorial</a></li>
-						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Y9tbKb_fgqg">CEM Random Model Tutorial</a></li>
-						<li><a target="_blank" rel="noopener" href="https://github.com/sp614x/optifine/tree/master/OptiFineDoc/doc">OptiFine Resource Pack Documentation</a></li>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/arj2eim42KI">Entity Modeling & Animation Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/0rT-q95dpV0">Changing player models with OptiFine</a></li>
 					</ul>
 				</template>
 
@@ -117,6 +115,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/HXzhcfYlKFQ">GeckoLib Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://discord.mcmoddev.com/">Mod Development Discord Server</a></li>
 					</ul>
@@ -136,6 +135,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=WbyCbA1c8BM">Low Poly Modeling Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 					</ul>

@@ -13,6 +13,7 @@
 			<nav id="menu" :class="{folded: !show_menu}" @click="show_menu = false">
 				<nuxt-link to='/downloads'>Download</nuxt-link>
 				<nuxt-link to='/quickstart'>Quickstart</nuxt-link>
+				<nuxt-link to='/gallery'>Gallery</nuxt-link>
 				<nuxt-link to='/plugins'>Plugins</nuxt-link>
 				<nuxt-link to='/wiki'>Wiki</nuxt-link>
 				<a class="menu_icon" href="https://twitter.com/blockbench" target="_blank" rel="noopener" title="Twitter"><fa :icon="['fab', 'twitter']" /></a>
