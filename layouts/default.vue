@@ -1,7 +1,9 @@
 <template>
 	<div id="page_flow">
 		<HeaderBar />
-		<nuxt id="content_wrapper" />
+		<client-only placeholder="Loading...">
+			<nuxt id="content_wrapper" />
+		</client-only>
 		<FooterBar />
 	</div>
 </template>

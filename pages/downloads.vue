@@ -60,7 +60,7 @@
 
 					<h4>Updates</h4>
 					<p>Blockbench updates to the latest version automatically! </p>
-					<p>To update the desktop app, download and run the installer again. Running the installer will just change the installed Blockbench version, it won't touch your user preferences.</p>
+					<p>To update the desktop app, you can alternatively download and run the installer again. Running the installer will just change the installed Blockbench version, it won't touch and user preferences and models.</p>
 
 				</section>
 

@@ -105,7 +105,7 @@
 				<img src="~assets/gallery/wacky_3.9.png" />
 				<h2>Splash Art Contest 3.9: Wacky's Submission</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wackyblocks">Wacky</a>, June 2021</label>
-				<p>This was the first ever content that Wacky joined but did not win. Still, the model is too good to not include in the gallery!</p>
+				<p>This was the first ever contest that Wacky joined but did not win. Still, the model is too good to not include in the gallery!</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'vehicle'])">
