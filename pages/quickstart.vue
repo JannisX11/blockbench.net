@@ -11,7 +11,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/hbaee9s" class="channel">#help-vanilla-java-block-item</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/2MBR98rKwn" class="channel">#help-minecraft-java</a></li>
 						<li>Model files are saved as .json</li>
 						<li>Display settings can be used to change how the model is positioned as an item in specific environments</li>
 					</ul>
@@ -38,9 +38,9 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/kWSDpjg" class="channel">#help-bedrock-edition</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/J6Wj5ayEmZ" class="channel">#help-minecraft-bedrock</a></li>
 						<li>Files are saved with the extension .geo.json</li>
-						<li>Attachables can be used to <a href="https://wiki.bedrock.dev/items/3d-items.html#attachable-based-3d-item-models" target="_blank" rel="noopener">give items a model</a>, though the model is only displayed when a player holds the item in their hand.</li>
+						<li>Attachables can be used to <a href="https://wiki.bedrock.dev/items/attachables.html" target="_blank" rel="noopener">give items a model</a>, though the model is only displayed when a player holds the item in their hand.</li>
 						<li>Models are structured using bones, which can be animated when used in entities</li>
 						<li>Models are referenced using the Geometry Name as defined in the Project Settings</li>
 						<li>If <a href="https://feedback.minecraft.net/hc/en-us/articles/4403610710797" target="_blank" rel="noopener">experimental features</a> are enabled on your world, models can be used for custom blocks as well</li>
@@ -73,7 +73,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/JEFW7h4" class="channel">#help-optifine</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/2MBR98rKwn" class="channel">#help-minecraft-java</a></li>
 						<li>Files are saved with the extension .jem</li>
 						<li>Individual parts of the model can be changed using the format "OptiFine Part" (.jpm), but it is recommended to just use JEM</li>
 						<li>The easiest way to get started is to use a template from the "CEM Template Loader" Blockbench plugin</li>
@@ -100,7 +100,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/Z4cpaSQ" class="channel">#help-modded-java</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/2MBR98rKwn" class="channel">#help-minecraft-java</a></li>
 						<li>Files are saved with the extension .java</li>
 						<li>Models are written in Java code instead of dedicated data structures like all other Blockbench export formats</li>
 						<li>Blockbench animations can be loaded with <a href="https://geckolib.com/en/latest/">GeckoLib</a></li>
@@ -128,7 +128,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-models</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/Bswa9MJ8v3" class="channel">#help-lowpoly</a></li>
 						<li>Models can be made with custom meshes or with cubes.</li>
 						<li>Models can be exported as .obj, dae (Collada), or .glTF</li>
 					</ul>
@@ -148,7 +148,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/eGDN6nE" class="channel">#help-generic-format</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/Bswa9MJ8v3" class="channel">#help-lowpoly</a></li>
 						<li>Models can be exported as .obj or .gltf</li>
 					</ul>
 
@@ -171,7 +171,8 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Channel: <a href="https://discord.gg/Xvmce4AKQB" class="channel">#help-skin-figura-modelengine</a></li>
+						<li>Discord Help Forum (Java): <a href="https://discord.gg/2MBR98rKwn" class="channel">#help-minecraft-java</a></li>
+						<li>Discord Help Forum (Bedrock): <a href="https://discord.gg/J6Wj5ayEmZ" class="channel">#help-minecraft-bedrock</a></li>
 						<li>This format is meant to only change the texture, not the model</li>
 					</ul>
 
@@ -195,7 +196,7 @@
 					<h3>Tutorials</h3>
 					<ul>
 						<li><a target="_blank" rel="noopener" href="https://github.com/Ticxo/Model-Engine-Wiki">Model Engine Website</a></li>
-						<li>Discord Help Channel: <a href="https://discord.gg/Xvmce4AKQB" class="channel">#help-skin-figura-modelengine</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/2MBR98rKwn" class="channel">#help-minecraft-java</a></li>
 					</ul>
 				</template>
 
