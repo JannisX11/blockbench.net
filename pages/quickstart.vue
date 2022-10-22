@@ -115,7 +115,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" rel="noopener" href="https://youtu.be/HXzhcfYlKFQ">GeckoLib Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://github.com/bernie-g/geckolib/wiki/Getting-Started">GeckoLib Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://discord.mcmoddev.com/">Mod Development Discord Server</a></li>
 					</ul>
