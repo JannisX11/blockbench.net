@@ -8,7 +8,7 @@
 		</div>
 
 		<div id="plugin_list">
-			<nuxt-link :to="'plugins/' + plugin.id" class="plugin" v-for="plugin in filteredPlugins" :key="plugin.id">
+			<nuxt-link :to="'/plugins/' + plugin.id" class="plugin" v-for="plugin in filteredPlugins" :key="plugin.id">
 				<h3 class="title">{{ plugin.title }}</h3><span class="version" v-if="plugin.version">v{{ plugin.version }}</span>
 				<p class="author">by {{ plugin.author }}</p>
 				<p class="description">{{ plugin.description }}</p>

@@ -47,7 +47,7 @@ import Markdown from '@nuxt/markdown'
 
 export default {
 	async asyncData({params}) {
-		let plugin_id = params.pathMatch;
+		let plugin_id = params.pathMatch.replace(/[\\\/]+/, '');
 		let response = await fetch(`https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json`)
 		const plugins = await response.json();
 
@@ -100,10 +100,10 @@ export default {
 			meta: [
 				{ hid: 'description', name: 'description', content: this.plugin.description },
 				// Open Graph
-				{ hid: 'og:title', property: 'og:title', content: `${this.plugin.title} - Blockbench Wiki` },
+				{ hid: 'og:title', property: 'og:title', content: `${this.plugin.title} - Blockbench` },
 				{ hid: 'og:description', property: 'og:description', content: this.plugin.description },
 				// Twitter Card
-				{ hid: 'twitter:title', name: 'twitter:title', content: `${this.plugin.title} - Blockbench Wiki` },
+				{ hid: 'twitter:title', name: 'twitter:title', content: `${this.plugin.title} - Blockbench` },
 				{ hid: 'twitter:description', name: 'twitter:description', content: this.plugin.description }
 			]
 		}

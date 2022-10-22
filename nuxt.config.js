@@ -13,9 +13,11 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+			{ name: 'theme-color', content: '#212e3c' },
 			{ hid: 'description', name: 'description', content: 'An easy to use 3D model editor for low-poly and pixel-art' },
 			{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://blockbench-net.netlify.app/logo_banner.png' },
 			{ hid: 'twitter:image', name: 'twitter:image', property: 'twitter:image', content: 'https://blockbench-net.netlify.app/logo_banner.png' },
+			{ hid: 'twitter:card', name: 'twitter:image', property: 'twitter:image', content: 'https://blockbench-net.netlify.app/logo_banner.png' },
 		],
 		link: [
 			{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
