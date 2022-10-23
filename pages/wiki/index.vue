@@ -12,13 +12,13 @@
 				<h4>Overview & Tips</h4>
 				<p>The fundamentals of Blockbench and how to use it efficiently</p>
 			</nuxt-link>
-			<nuxt-link to="/wiki/guides/rendering-models">
+			<nuxt-link to="/wiki/guides/model-rendering">
 				<h4>Rendering Models</h4>
 				<p>Make beautiful renders of your models!</p>
 			</nuxt-link>
 			<nuxt-link to="/wiki/api/plugin">
 				<h4>Creating a Plugin</h4>
-				<p>Learn how to write, test, and submit a Blockbench plugin.</p>
+				<p>Learn how to write, test, and submit a Blockbench plugin</p>
 			</nuxt-link>
 		</div>
 	</div>
@@ -47,7 +47,7 @@ export default {
 	}
 	#wiki_recommendations {
 		padding: 0;
-		margin-top: 30px;
+		margin: 30px -12px;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px;

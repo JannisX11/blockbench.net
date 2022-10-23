@@ -108,7 +108,9 @@ export default {
 			'Nunito Sans': {
 				wght: [300, 400, 500]
 			}
-		}
+		},
+        download: true,
+        base64: false
 	},
 
 	colorMode: {
