@@ -50,7 +50,8 @@ export default {
 				// Twitter Card
 				{ hid: 'twitter:title', name: 'twitter:title', content: `${this.doc.title} - Blockbench Wiki` },
 				{ hid: 'twitter:description', name: 'twitter:description', content: this.doc.description },
-				{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'https://www.blockbench.net/images/wiki/wiki.png' }
+				{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.blockbench.net/images/wiki/wiki.png' },
+				{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' }
 			]
 		}
 	}

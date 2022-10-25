@@ -33,8 +33,16 @@ export default {
 		return {
 			title: `Blockbench Wiki`,
 			meta: [
-				{hid: 'description', name: 'description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
-				{hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'https://www.blockbench.net/images/wiki/wiki.png' }
+				{ hid: 'description', name: 'description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
+				// Open Graph
+				{ hid: 'og:title', property: 'og:title', content: `Blockbench Wiki` },
+				{ hid: 'og:description', property: 'og:description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
+				// Twitter Card
+				{ hid: 'twitter:title', name: 'twitter:title', content: `Blockbench Wiki` },
+				{ hid: 'twitter:description', name: 'twitter:description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
+				// Img
+				{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.blockbench.net/images/wiki/wiki.png' },
+				{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' }
 			]
 		}
 	}

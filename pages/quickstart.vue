@@ -33,8 +33,8 @@
 
 				<template v-if="page == 'bedrock'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
-					<h2>Bedrock Model</h2>
-					<p>The Bedrock Model format can currently only be used to create entity models and attachables. Block models are available in experimental worlds</p>
+					<h2>Bedrock Entity</h2>
+					<p>The Bedrock Entity format can be used to create entity models and attachables.</p>
 
 					<h3>Quick Info</h3>
 					<ul>
@@ -42,8 +42,7 @@
 						<li>Files are saved with the extension .geo.json</li>
 						<li>Attachables can be used to <a href="https://wiki.bedrock.dev/items/attachables.html" target="_blank" rel="noopener">give items a model</a>, though the model is only displayed when a player holds the item in their hand.</li>
 						<li>Models are structured using bones, which can be animated when used in entities</li>
-						<li>Models are referenced using the Geometry Name as defined in the Project Settings</li>
-						<li>If <a href="https://feedback.minecraft.net/hc/en-us/articles/4403610710797" target="_blank" rel="noopener">experimental features</a> are enabled on your world, models can be used for custom blocks as well</li>
+						<li>Models are referenced using the Model Identifier as defined in the Project Settings</li>
 					</ul>
 
 					<h3>Caveats</h3>
@@ -62,7 +61,40 @@
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=xoybMf05Jl8">Dragnoz Add-Entity and Modeling Tutorial</a></li>
-						<li><a target="_blank" rel="noopener" href="https://bedrock.dev/1.15.0.0/1.15.0.51">Bedrock Addon Documentation</a></li>
+						<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/minecraft/creator/">Bedrock Addon Documentation</a></li>
+					</ul>
+				</template>
+
+				<template v-if="page == 'bedrock_block'">
+					<h4 class="suggestion">The following format was suggested for you:</h4>
+					<h2>Bedrock Block</h2>
+					<p>The Bedrock Block format can be used to create block models for Minecraft Bedrock.</p>
+
+					<h3>Quick Info</h3>
+					<ul>
+						<li>Discord Help Forum: <a href="https://discord.gg/J6Wj5ayEmZ" class="channel">#help-minecraft-bedrock</a></li>
+						<li>Files are saved with the extension .geo.json</li>
+						<li>Models are referenced by the geometry component using the Model Identifier as defined in the Project Settings</li>
+					</ul>
+
+					<h3>Caveats</h3>
+					<ul>
+						<li>Total model size is restricted to 30 x 30 x 30 pixels. The restricted box can be off-centered from by center of the block by up to 7 blocks in any direction.</li>
+						<li>Entity model features such as animations, render controllers etc. are not supported.</li>
+						<li>Models can have multiple textures, but these need to be set-up in the behavior file and using Material Instances.</li>
+					</ul>
+
+					<h3>Tips</h3>
+					<ul>
+						<li>To quickly and easily add your model to Minecraft as a custom block, use the <a href="https://learn.microsoft.com/en-us/minecraft/creator/documents/minecraftblockwizard" target="_blank" rel="noopener">Minecraft Block Wizard</a>.</li>
+					</ul>
+
+					<h3>Tutorials</h3>
+					<ul>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/WnxMasZjmIc">Block Wizard Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/">Bedrock Addon Documentation for Blocks</a></li>
 					</ul>
 				</template>
 
@@ -189,7 +221,7 @@
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Use the Blockbench format "Bedrock Model"</li>
+						<li>Use the Blockbench format "Bedrock Entity"</li>
 						<li>Because this is a third party model loader, models have certain restrictions that are not enforced by Blockbench but will cause issues when loading the model. Please refer to the wiki.</li>
 					</ul>
 
@@ -230,7 +262,7 @@
 					<h2>Model Type</h2>
 					<p>What kind of asset do you want to change?</p>
 
-					<div class="answer" @click="loadPage('bedrock')">Block Model</div>
+					<div class="answer" @click="loadPage('bedrock_block')">Block Model</div>
 					<div class="answer" @click="loadPage('bedrock')">Item Model</div>
 					<div class="answer" @click="loadPage('bedrock')">Entity / Mob Model</div>
 					<div class="answer" @click="loadPage('skin')">My Minecraft skin or an entity texture</div>
