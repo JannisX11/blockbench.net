@@ -236,7 +236,8 @@ export default {
 					hid: 'description',
 					name: 'description',
 					content: 'Blockbench Gallery and Hall of Fame'
-				}
+				},
+				{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.blockbench.net/images/gallery.png' },
 			]
 		}
 	},
