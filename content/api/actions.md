@@ -9,6 +9,7 @@ title: Actions
 BarItem is the parent class of all widgets and actions.
 
 ### new BarItem(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* `id` BarItem ID
 	* `private` If true, the instance won't be referenced in the `BarItems` map.
@@ -119,6 +120,7 @@ Whether the menu meets it's condition.
 Actions are menu menu items that when clicked, performs an action; actions can also include sub actions. Actions inherit all properties and methods from BarItem.
 
 ### new Action(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `icon`
@@ -132,6 +134,7 @@ Actions are menu menu items that when clicked, performs an action; actions can a
 Toggles are actions that toggle a value when clicked. Toggles inherit all properties and methods from Action.
 
 ### new Toggle(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `default: Boolean`
@@ -139,9 +142,10 @@ Toggles are actions that toggle a value when clicked. Toggles inherit all proper
 
 ## Tool
 
-Toggles are actions that toggle a value when clicked. Toggles inherit all properties and methods from Action.
+Tools are types of actions that can be selected to change how the user can interact with the model. Tools inherit all properties and methods from Action.
 
 ### new Tool(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `icon`
@@ -174,7 +178,7 @@ Toggles are actions that toggle a value when clicked. Toggles inherit all proper
 		* `draw` Alternative way to create a custom brush, mutually exclusive with the changePixel() function. Draw runs once every time the brush starts or moves, and also along the bath on lines.
 
 #### Tool#select()
-Selects the brush.
+Selects the tool.
 
 # Widgets
 
@@ -182,6 +186,7 @@ Selects the brush.
 NumSlider is a widget that allows input of numerical/Molang values.
 
 ### new NumSlider(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `tool_setting`
@@ -226,6 +231,7 @@ Simulate an arrow click on the slider's arrows.
 ## BarSlider
 BarSlider is a range widget that allows input of numerical values between a range.
 ### new BarSlider(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `value`
@@ -244,6 +250,7 @@ BarSlider is a range widget that allows input of numerical values between a rang
 ## BarSelect
 BarSelect are actions users can select an option from.
 ### new BarSelect(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `value` Key of the default selected option
@@ -262,6 +269,7 @@ BarSelect are actions users can select an option from.
 ## BarText
 BarTexts are literal texts.
 ### new BarText(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* `text: String`
 	* `right` If true, the bartext floats to the right
@@ -273,6 +281,7 @@ BarTexts are literal texts.
 ## ColorPicker
 ColorPicker is widget that allows input of color.
 ### new ColorPicker(id, data)
+* `id: string` ID of the action, in snake_case
 * `data` Object
 	* <code>[<a href="#baritem">...</a>]</code> Properties inherited from BarItem
 	* `value` Default color
