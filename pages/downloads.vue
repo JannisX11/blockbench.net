@@ -91,6 +91,7 @@
 					</li>
 					<li>1 GB of RAM</li>
 					<li>1280 x 720 display</li>
+					<li>Intel HD Graphics 4000 or Nvidia/AMD equivalent, or newer</li>
 				</ul>
 			</div>
 			<div class="column_right">
