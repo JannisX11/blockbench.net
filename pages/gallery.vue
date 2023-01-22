@@ -18,6 +18,22 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle'])">
+				<img src="~assets/gallery/4.6.png" />
+				<h2>Splash Art Contest 4.6 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/wackyblocks">Wacky</a>, January 2023</label>
+				<p>The theme for the 13th Splash Art Contest was "Arctic Exploration Vehicle". When Wacky enters a contest, it is tough to beat him. Even though Jonny324 and DrRuan's entry came close with 1151 votes, Wacky ultimately took the win with 1475 votes!</p>
+				<p>The scene contains several Blockbench models that you may not even see all at first glance! Next to the gigantic explorer vehicle that took inspiration from old cargo ships, there is also a giant bucket-wheel excavator in the background, and an ATV on the right side of the image. And of course there are the snowy cliffs in the background that were also created in Blockbench.</p>
+			</section>
+
+			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle'])">
+				<img src="~assets/gallery/4.5.png" />
+				<h2>Splash Art Contest 4.5 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wan_w1n">Wan_win</a>, July 2022</label>
+				<p>The Splash Art Contest for Blockbench 4.5 marked the very first Runner-Up Splash Art Contest! All entries of previous contests that landed on second place were up against each other.</p>
+				<p>Wan_win's fantastic entry for the "Aviation" theme of 4.3 ultimately won with 728 votes and decorated the splash screen of Blockbench 4.5!</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle', 'city'])">
 				<img src="~assets/gallery/4.4.png" />
 				<h2>Splash Art Contest 4.4 Winner</h2>
