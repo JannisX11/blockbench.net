@@ -50,7 +50,8 @@ export default {
 			{id: 'home', title: 'Home', folded: false},
 			{id: 'guides', title: 'Guides', folded: false, pages: []},
 			{id: 'blockbench', title: 'Blockbench', folded: false, pages: []},
-			{id: 'api', title: 'API', folded: false, pages: []},
+			{id: 'docs', title: 'Documentation', folded: false, pages: []},
+			{id: 'api', title: 'API Reference', folded: false, pages: []},
 		],
 	}},
 	

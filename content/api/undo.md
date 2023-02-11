@@ -2,44 +2,126 @@
 title: Undo
 ---
 
- Undo
+# Undo
+## UndoSystem
+### new UndoSystem()
+Creates a new UndoSystem
 
-## Creating an undo point
 
-When modifying elements, textures, animations or anything else about the model, the changes need to be registered to the Undo system. This will a) create an Undo point to allow the user to undo the changes and b) synchronize the model to other users in an Edit Session. This can be achieved using Undo.initEdit and finishEdit.
 
-#### Undo.initEdit( aspects )
+### initEdit( aspects )
+Starts an edit to the current project by saving the state of the provided aspects
 
-Initializes an edit. Call this when you are about to do an edit, before changing anything.
+##### Arguments:
+* `aspects`: UndoAspects - Aspects to save
+	* `selection`: *boolean* (Optional)
+	* `elements`: Array of [OutlinerElement](outliner#outlinerelement) (Optional)
+	* `outliner`: *boolean* (Optional)
+	* `group`: [Group](group#group-1) (Optional)
+	* `textures`: Array of [Texture](textures#texture) (Optional)
+	* `texture_order`: *boolean* (Optional)
+	* `selected_texture`: *boolean* (Optional)
+	* `settings`: [See types]() (Optional)
+	* `uv_mode`: *boolean* (Optional)
+	* `animations`: Array of [Animation](#Animation) (Optional)
+	* `keyframes`: Array of [Keyframe](#Keyframe) (Optional)
+	* `display_slots`: Array of *string* (Optional)
+	* `exploded_view`: *boolean* (Optional)
 
-* `aspects`. Which aspects of the model to save. See [#Aspects](#aspects)
+Returns: *any*
 
-#### Undo.finishEdit( edit_name[, aspects] )
+### finishEdit( action[, aspects] )
+Finishes an edit by saving the state of the project after it was changed
 
-Wraps up and saves an edit. Call this function after doing your edit.
+##### Arguments:
+* `action`: *string* - Description of the edit
+* `aspects`: UndoAspects (Optional)
+	* `selection`: *boolean* (Optional)
+	* `elements`: Array of [OutlinerElement](outliner#outlinerelement) (Optional)
+	* `outliner`: *boolean* (Optional)
+	* `group`: [Group](group#group-1) (Optional)
+	* `textures`: Array of [Texture](textures#texture) (Optional)
+	* `texture_order`: *boolean* (Optional)
+	* `selected_texture`: *boolean* (Optional)
+	* `settings`: [See types]() (Optional)
+	* `uv_mode`: *boolean* (Optional)
+	* `animations`: Array of [Animation](#Animation) (Optional)
+	* `keyframes`: Array of [Keyframe](#Keyframe) (Optional)
+	* `display_slots`: Array of *string* (Optional)
+	* `exploded_view`: *boolean* (Optional)
 
-* `action_name` Name of the performed edit.
-* `aspects` Optional. If the set of aspects you are editing has changed, provide the changed aspects.
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/undo.d.ts#L66)
 
-## Aspects
+### cancelEdit()
+Cancels an event before it was finished and reset the project to the state before
 
-Aspects are used to tell Blockbench which parts of the model to save in an undo point. All aspects are within one `aspects` object. When adding or removing elements, textures etc., make sure the objects in question are stated in the first but not in the second aspects, or vice versa.
 
-|Aspect 	|Description	|Example
-|-----------|---------------|-
-|selection	|If true, the element and group selection will be saved 	|`{selection: true}`
-|elements	|Array of all elements (cubes and locators) to save.		|`{elements: [cube1, cube2, locator]}`
-|outliner	|If true, the complete outliner structure will be saved. This includes group data like names etc. 	|`{outliner: true}`
-|group		|A single group. 											|`{group: Group.selected}`
-|textures	|An array of textures. 										|`{textures: [texture]}`
-|bitmap		|If true, the content of the listed textures will be saved. |`{textures: [texture], bitmap: true}`
-|uv_mode	|When true, saves the current UV mode and project resolution settings. 	|`{uv_mode: true}`
-|animations	|Array of animations 										|`{animations: [Animator.selected]}`
-|keyframes	|Array of animation keyframes 								|`{keyframes: [keyframe]}`
-|display_slots	|Array of display slot ids 								|`{display_slots: ['thirdperson_righthand', 'head']}`
-|uv_only	|If true, only UV and face information of cubes will be saved. 	|`{elements. Cube.selected, uv_only: true}`
+
+### addKeyframeCasualties( keyframes )
+Add keyframes to the current edit that were indirectly removed by moving other keyframes to their position
+
+##### Arguments:
+* `keyframes`: Array of [Keyframe](#Keyframe) -
+
+
+### undo( [remote] )
+Undoes the latest edit
+
+##### Arguments:
+* `remote`: *boolean* (Optional)
+
+
+### redo( [remote] )
+Redoes the latest edit
+
+##### Arguments:
+* `remote`: *boolean* (Optional)
+
+### redo( [remote] )
+Redoes the latest edit
+
+##### Arguments:
+* `remote`: *boolean* (Optional)
+
+
+### amendEdit( form, callback )
+Provides a menu to amend the latest edit with slightly changed values
+
+##### Arguments:
+* `form`: AmendEditForm
+	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
+	* `type`: `"number"` (Optional)
+	* `label`: *string*
+	* `interval_type`: `"position"` or `"rotation"`
+	* `getInterval`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/undo.d.ts#L48) (Optional)
+	* `value`: *string* or *number* (Optional)
+	* `min`: *number* (Optional)
+	* `max`: *number* (Optional)
+	* `step`: *number* (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/undo.d.ts#L96)
+
+Returns: *any*
+
+### loadSave( save, reference[, mode] )
+Loads a specific undo save
+
+##### Arguments:
+* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/undo.d.ts#L16) - The undo save to load
+* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/undo.d.ts#L16) - The current undo save for reference
+* `mode`: `"session"` (Optional) - The load save modes
+
+
+
+## Undo
+#### Global Variable
+
+Type: [UndoSystem](undo#undosystem)
+
+Blockbench's undo system of the current project to register edits to the project and switch between them
 
 ## Example
+
+
 
 ```javascript
 Undo.initEdit({elements: []});
@@ -49,3 +131,4 @@ var other_cube = new Cube({name: 'lars'}).init();
 
 Undo.finishEdit('add new cubes', {elements: [new_cube, other_cube]});
 ```
+

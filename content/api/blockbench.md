@@ -3,229 +3,498 @@ title: Blockbench
 ---
 
 # Blockbench
+## Blockbench
+#### Namespace
 
-The Blockbench object provides useful variables and methods to interact with general functionality of Blockbench.
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| platform | `"web"` or `"win32"` or `"darwin"` or `"linux"` |  |
+| version | *string* | Blockbench version number |
+| queries | [See types]() or *undefined* | URL queries when opened as web app using a link that contained queries |
+| openTime | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | Time when Blockbench was opened |
 
-## Information
-
-* `Blockbench.isWeb` true if Blockbench is used in a web browser
-* `Blockbench.isMobile` true if Blockbench is used in the mobile version
-* `Blockbench.version` The installed version of Blockbench
-* `Blockbench.openTime` Date object of the time Blockbench was opened
-
-## Flags
-
-Flags can be used to save a binary state within an instance of Blockbench.
-
-#### Blockbench.addFlag( flag: String )
-
-#### Blockbench.removeFlag( flag: String )
-
-#### Blockbench.hasFlag( flag: String )
-
-## Import
-
-#### Blockbench.import( options: Object, callback: function )
-
-Opens the file import dialog and reads the file.
-
-* `options`
-	* `startpath` Path where to start the file dialog. Only works on desktop
-	* `type` Name of the file type. If unset, it will use the first extension
-	* `extensions` Array of extensions that can be imported
-	* `multiple` If true, multiple files can be selected and loaded
-	* `readtype` How to read the imported files. Can be `image`, `buffer` or `text` (default).
-	* `title` Title to use for the import dialog. Only works on desktop.
-	* `errorbox` Whether to display an error dialog if Blockbench can't load the file
-* `callback` Called after all files have been read.
-	* `files: Array` Imported and read files
-		* `path` Path to the file. Will only return the name in the web app
-		* `name` File name
-		* `content` Content of the file. String for plain text files, base64 string for images (only .tga images or images on the web app)
-
-#### Blockbench.read( paths, options, callback )
-
-Reads one or multiple files at a fixed path. Only available on desktop app.
-
-* `paths: Array` List of file paths.
-* `options: Object` Import options.
-	* `readtype: String` How to read the imported files. Can be `image`, `buffer` or `text` (default).
-	* `errorbox: Boolean` Whether to display an error dialog if Blockbench can't load the file
-* `callback`: Function. Called after all files have been read.
-	* `files`: Array of imported and read files
-		* `path: String` Path to the file. Will only return the name in the web app
-		* `name: String` File name
-		* `content: String` Content of the file. String for plain text files, base64 string for images (only .tga images or images on the web app)
-
-## Export
-
-#### Blockbench.export( options, callback )
-
-Opens a file save dialog to ask where to save the file. In most browsers, the file will just get downloaded with the default name.
-
-* `options`: Object
-	* `startpath` Path where to start the file dialog. Only works on desktop
-	* `type` Name of the file type
-	* `extensions` Array of possible extensions
-	* `name` Suggested file name. Gets overwritten by startpath.
-	* `content` Content of the file. Can be a string for plain text files or a base64 string or path for images.
-	* `savetype` How to save the file. Can be `text` (default), `image` or `zip`.
-	* `custom_writer` In the desktop app, you can use this to create a custom function to save the file. This can be used to merge with the old file for example. Has two arguments: `content` and `path`.
-* `callback`: Function. Called after the file has been exported.
-	* `path` The path the file has been exported to. Only on desktop app.
-
-#### Blockbench.writeFile( path, options, callback )
-
-Writes a file at the specified path.
-
-* `path`: File path
-* `options`: Object
-	* `content` Content of the file. Can be a string for plain text files or a base64 string or path for images.
-	* `savetype` How to save the file. Can be `text` (default), `image` or `zip`.
-	* `custom_writer` In the desktop app, you can use this to create a custom function to save the file. This can be used to merge with the old file for example. Has two arguments: `content` and `path`.
-* `callback`: Function. Called after the file has been exported.
-	* `path` The path the file has been exported to.
-
-## Events
-
-Listen to and dispatch Blockbench-specific events
-
-#### Blockbench.on( event_id, callback )
-
-Runs a function when Blockbench emits a specific event
-
-* `event_id` Event to listen for
-* `callback` Function to execute. Has one argument `data`.
-
-#### Blockbench.dispatchEvent( event_id, data )
-
-Triggers an event.
-
-* `event_id` Name of the event,
-* `data` Data to submit to the listeners
-
-#### Blockbench.removeListener( event_id, callback)
-
-Removes an event listener using the `event_id` and `callback`. Should be used in `onunload` in a plugin to clear event listeners.
-
-### List of Blockbench events
-
-| Event ID | Description
-|-|-
-| remove_animation	| Emitted after a user removes an animation
-| display_animation_frame	| Emitted when Blockbench renders a frame of an animation
-| before_closing	| 
-| create_session	| 
-| join_session		| 
-| quit_session		| 
-| send_session_data		| 
-| receive_session_data	| 
-| user_joins_session	| 
-| user_leaves_session	| 
-| process_chat_message	| 
-| update_settings		| 
-| update_project_settings	|
-| save_project	| 
-| load_project	| 
-| new_project	| 
-| reset_project	|  
-| close_project	| 
-| add_cube		| 
-| add_group		| 
-| update_selection	| 
-| update_keyframe_selection	| 
-| select_all		| 
-| added_to_selection| 
-| invert_selection	| 
-| canvas_select		| 
-| canvas_click		| 
-| change_texture_path	| 
-| add_texture		| 
-| finish_edit		| 
-| finished_edit		| 
-| undo				| 
-| redo				| 
-| select_mode		| 
-| unselect_mode		| 
+### reload()
+Reloads the Blockbench window
 
 
-## Drag and Drop Files
 
-#### Blockbench.addDragHandler( id, options, callback )
+### isNewerThan( version )
+checks if Blockbench is newer than the specified version
 
-Handles file drop events for the specified file types
+##### Arguments:
+* `version`: *string* - semver string
 
-* `id` ID of the handler
-* `options`: Objecct 
-	* `extensions` Array of extensions that will trigger this handler
-	* `element` 
-	* `addClass` 
-	* `propagate` 
-	* `readtype` How to read the dropped files. See [Blockbench.read](#blockbenchread-paths-options-callback)
-	* `errorbox` Whether to show an error message if Blockbench fails to load the file.
-* `callback`: Function. Called after all files have been read.
-	* `files`: Array of imported and read files
-		* `path` Path to the file. Will only return the name in the web app
-		* `name` File name
-		* `content` Content of the file. String for plain text files, base64 string for images (only .tga images or images on the web app)
+Returns: *boolean*
 
-#### Blockbench.removeDragHandler( id )
+### isOlderThan( version )
+checks if Blockbench is older than the specified version
 
-Removes and disables a drag handler using its ID.
+##### Arguments:
+* `version`: *string* - semver string
 
-## Icons
+Returns: *boolean*
 
-Icons are used throughout Blockbench in actions, menus and plugins. Google Material icons, Font Awesome Regular, Solid and Brands as well as a set of custom Blockbench icons are available.
+### getIconNode( icon[, color] )
+Resolves an icon string as a HTML element
 
-#### Blockbench.getIconNode( string[, color])
+##### Arguments:
+* `icon`: *string* - Material Icons, Fontawesome or custom icon string
+* `color`: *string* (Optional) - CSS color
 
-Returns a HTML node for the specified icon.
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
-* `string` Specifies the pack and name of the icon.
-	* Strings starting with fa return Font Awesome icons. Example: `'fa-bone'`
-	* Prepend `far.` or `fas.` to choose between regular and solid icons. Example: `'fas.fa-circle'`
-	* Regular strings will return a Google Materials Icon
-	* Strings starting with `icon-` will return custom Blockbench icons (see list below)
-	* Base64 image strings will return an image/texture in icon format
-	* Passing a function will run the function and use the return value to determine the icon
-	* If undefined, it will return a question mark icon
-* `color` Optional. Colors the icon in a specific color. Can be `x`, `y` or `z` for a generic axis color or a CSS color string for a custom color.
+### showQuickMessage( message[, time] )
+Shows a passing message in the middle of the screen
 
-### Available Icons
+##### Arguments:
+* `message`: *string* - Message
+* `time`: *number* (Optional) - Time in miliseconds that the message stays up
 
-* [Google Material Icons](https://material.io/resources/icons/?style=baseline)
-* [Font Awesome Free Icons](https://fontawesome.com/icons?d=gallery&m=free)
-* Custom Blockbench icons:
-	* `icon-mirror_x`
-	* `icon-mirror_y`
-	* `icon-mirror_z`
-	* `icon-saved`
-	* `icon-player`
-	* `icon-player_head`
-	* `icon-zombie`
-	* `icon-baby_zombie`
-	* `icon-armor_stand`
-	* `icon-armor_stand_small`
-	* `icon-ground`
-	* `icon-hud`
-	* `icon-inventory_full`
-	* `icon-inventory_nine`
-	* `icon-inventory_single`
-	* `icon-bow`
-	* `icon-crossbow`
-	* `icon-x11`
-	* `icon-blockbench`
-	* `icon-blockbench_inverted`
-	* `icon-vertexsnap`
-	* `icon-create_bitmap`
-	* `icon-objects`
-	* `icon-bb_interface`
-	* `icon-sketchfab`
-	* `icon-optifine_file`
-	* `icon-format_bedrock`
-	* `icon-format_block`
-	* `icon-format_free`
-	* `icon-format_java`
-	* `icon-format_optifine`
-	* `icon-format_bedrock_legacy`
+
+### showStatusMessage( message[, time] )
+##### Arguments:
+* `message`: *string*
+* `time`: *number* (Optional)
+
+
+### setStatusBarText( [text] )
+##### Arguments:
+* `text`: *string* (Optional)
+
+
+### setProgress( progress[, time, bar] )
+Set the value of a progress bar
+
+##### Arguments:
+* `progress`: *number* - Progress of the bar between 0 and 1
+* `time`: *number* (Optional) - Time over which the bar is animated, in miliseconds
+* `bar`: *string* (Optional) - ID of the bar element. If omitted, the main status bar will be selected
+
+
+### showMessageBox( options, callback )
+Opens a message box
+
+##### Arguments:
+* `options`: MessageBoxOptions
+	* `confirm`: *number* - Index of the confirm button within the buttons array
+	* `cancel`: *number* - Index of the cancel button within the buttons array
+	* `buttons`: Array of *string*
+	* `translateKey`: *string* (Optional)
+	* `title`: *string* (Optional)
+	* `message`: *string* (Optional)
+	* `icon`: *string* (Optional)
+	* `width`: *number*
+	* `commands`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L98) (Optional) - Display a list of actions to do in the dialog. When clicked, the message box closes with the string ID of the command as first argument.
+* `callback`: [See types]()
+
+
+### textPrompt( title, value, callback )
+##### Arguments:
+* `title`: *string*
+* `value`: *string*
+* `callback`: [See types]()
+
+
+### openLink( link )
+Opens the specified link in the browser or in a new tab
+
+##### Arguments:
+* `link`: [URL](#URL)
+
+
+### notification( title, text[, icon] )
+Shows a system notification
+
+##### Arguments:
+* `title`: *string* - Title
+* `text`: *string* - Text
+* `icon`: *string* (Optional) - Url or data url pointing to an icon. Defaults to Blockbench icon
+
+
+### addCSS( css )
+Adds custom CSS code to Blockbench, globally. Returns an object that is deletable
+
+##### Arguments:
+* `css`: *string* - CSS string
+
+Returns: [Deletable](misc#deletable)
+
+### addFlag( flag )
+##### Arguments:
+* `flag`: *string*
+
+
+### removeFlag( flag )
+##### Arguments:
+* `flag`: *string*
+
+
+### hasFlag( flag )
+##### Arguments:
+* `flag`: *string*
+
+Returns: *boolean*
+
+### dispatchEvent( event_name, data )
+##### Arguments:
+* `event_name`: [EventName](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L13)
+* `data`: *object*
+
+
+### addListener( event_names, callback )
+##### Arguments:
+* `event_names`: [EventName](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L13)
+* `callback`: [See types]()
+
+
+### on( event_names, callback )
+##### Arguments:
+* `event_names`: [EventName](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L13)
+* `callback`: [See types]()
+
+
+### removeListener( event_names )
+##### Arguments:
+* `event_names`: [EventName](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L13)
+
+
+### read( files[, options, callback] )
+Reads the content from the specified files. Desktop app only.
+
+##### Arguments:
+* `files`: Array of *string*
+* `options`: ReadOptions (Optional)
+	* `readtype`: [ReadType]() or [See types]() (Optional)
+	* `errorbox`: *boolean* (Optional)
+* `callback`: [See types]() (Optional)
+
+
+### readFile( files[, options, callback] )
+Reads the content from the specified files. Desktop app only.
+
+##### Arguments:
+* `files`: Array of *string*
+* `options`: ReadOptions (Optional)
+	* `readtype`: [ReadType]() or [See types]() (Optional)
+	* `errorbox`: *boolean* (Optional)
+* `callback`: [See types]() (Optional)
+
+
+### writeFile( file_path, options[, callback] )
+Writes a file to the file system. Desktop app only.
+
+##### Arguments:
+* `file_path`: *string*
+* `options`: WriteOptions
+	* `content`: *string* or [ArrayBuffer](#ArrayBuffer)
+	* `savetype`: [WriteType]() or [See types]() (Optional)
+	* `custom_writer`: Function
+* `callback`: [See types]() (Optional)
+
+
+### pickDirectory( options )
+Pick a directory. Desktop app only.
+
+##### Arguments:
+* `options`: PickDirOptions
+	* `startpath`: *string* (Optional) - Location where the file dialog starts off
+	* `resource_id`: *string* (Optional) - The resource identifier group, used to allow the file dialog (open and save) to remember where it was last used
+	* `title`: *string* (Optional) - Window title for the file picker
+
+Returns: *any*
+
+### import( options[, callback] )
+##### Arguments:
+* `options`: ImportOptions
+	* `readtype`: [ReadType]() or [See types]() (Optional)
+	* `errorbox`: *boolean* (Optional)
+	* `type`: *string* - Name of the file type
+	* `extensions`: Array of *string* - File Extensions
+	* `multiple`: *boolean* (Optional) - Allow selection of multiple elements
+	* `startpath`: *string* (Optional) - File picker start path
+	* `resource_id`: *string* (Optional) - The resource identifier group, used to allow the file dialog (open and save) to remember where it was last used
+	* `title`: *string* (Optional) - Title of the file picker window
+* `callback`: [See types]() (Optional)
+
+Returns: *any*
+
+### export( options[, callback] )
+##### Arguments:
+* `options`: ExportOptions
+	* `content`: *string* or [ArrayBuffer](#ArrayBuffer)
+	* `savetype`: [WriteType]() or [See types]() (Optional)
+	* `custom_writer`: Function
+	* `type`: *string* - Name of the file type
+	* `extensions`: Array of *string* - File extensions
+	* `name`: *string* (Optional) - Suggested file name
+	* `startpath`: *string* (Optional) - Location where the file dialog starts
+	* `resource_id`: *string* (Optional) - The resource identifier group, used to allow the file dialog (open and save) to remember where it was last used
+* `callback`: [See types]() (Optional)
+
+Returns: *any*
+
+### addDragHandler( id, options[, callback] )
+Adds a drag handler that handles dragging and dropping files into Blockbench
+
+##### Arguments:
+* `id`: *string*
+* `options`: DragHandlerOptions
+	* `readtype`: [ReadType]() or [See types]() (Optional)
+	* `errorbox`: *boolean* (Optional)
+	* `extensions`: Array of *string* or [See types]() - Allowed file extensions
+	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional) - Whether or not to enable the drag handler
+	* `element`: *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [See types]() (Optional) - Drop target element
+	* `propagate`: *boolean* (Optional) - If true, the drop will work on all child elements of the specified element
+* `callback`: [See types]() (Optional)
+
+Returns: [Deletable](misc#deletable)
+
+### removeDragHandler( id )
+##### Arguments:
+* `id`: *string*
+
+
+### import
+Reference
+
+
+### export
+Reference
+
+
+### Outliner
+Variable
+
+
+### OutlinerNode
+Variable
+
+
+### OutlinerElement
+Variable
+
+
+### Group
+Variable
+
+
+### Cube
+Variable
+
+
+### Mesh
+Variable
+
+
+### Locator
+Variable
+
+
+### NullObject
+Variable
+
+
+### TextureMesh
+Variable
+
+
+### Face
+Variable
+
+
+### CubeFace
+Variable
+
+
+### MeshFace
+Variable
+
+
+### NodePreviewController
+Variable
+
+
+### Animator
+Variable
+
+
+### Timeline
+Variable
+
+
+### AnimationItem
+Variable
+
+
+### Animation
+Variable
+
+
+### AnimationController
+Variable
+
+
+### Keyframe
+Variable
+
+
+### KeyframeDataPoint
+Variable
+
+
+### BoneAnimator
+Variable
+
+
+### NullObjectAnimator
+Variable
+
+
+### EffectAnimator
+Variable
+
+
+### TimelineMarker
+Variable
+
+
+### Panel
+Variable
+
+
+### Mode
+Variable
+
+
+### Dialog
+Variable
+
+
+### Setting
+Variable
+
+
+### Plugin
+Variable
+
+
+### Preview
+Variable
+
+
+### Toolbar
+Variable
+
+
+### Language
+Variable
+
+
+### Painter
+Variable
+
+
+### Screencam
+Variable
+
+
+### Settings
+Variable
+
+
+### TextureAnimator
+Variable
+
+
+### Toolbox
+Variable
+
+
+### BarItems
+Variable
+
+
+### BarItem
+Variable
+
+
+### Action
+Variable
+
+
+### Tool
+Variable
+
+
+### Toggle
+Variable
+
+
+### Widget
+Variable
+
+
+### BarSelect
+Variable
+
+
+### BarSlider
+Variable
+
+
+### BarText
+Variable
+
+
+### NumSlider
+Variable
+
+
+### ColorPicker
+Variable
+
+
+### Keybind
+Variable
+
+
+### KeybindItem
+Variable
+
+
+### Menu
+Variable
+
+
+### BarMenu
+Variable
+
+
+### ResizeLine
+Variable
+
+
+### ModelProject
+Variable
+
+
+### ModelFormat
+Variable
+
+
+### Codec
+Variable
+
+
+### DisplaySlot
+Variable
+
+
+### Reusable
+Variable
+
+
+### Texture
+Variable
+
 

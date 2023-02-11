@@ -2,80 +2,136 @@
 title: Menu
 ---
 
-# Menus
+# Menu
+## Menu
+Extends: [Deletable](misc#deletable)
 
-## Menu Class
+Extended by: [BarMenu](menu#barmenu)
 
-A menu or context menu.
+### new Menu( id, template[, options] )
+Creates a new Menu
 
-### new Menu( content )
+##### Arguments:
+* `id`: *string*
+* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/menu.d.ts#L18) or [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/menu.d.ts#L26)
+* `options`: MenuOptions (Optional)
+	* `onOpen`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/menu.d.ts#L20) (Optional)
+	* `onClose`: Function (Optional)
+	* `keep_open`: *boolean* (Optional)
+	* `searchable`: *boolean* (Optional)
 
-* `content: Array` List of main level menu items. Can be Actions, objects functioning as `MenuItems`, or `'_'` functioning as a separator
-	* `MenuItem: Object`
-		* `id: String` Identifier of the menu item, this is used to navigate nested menus.
-		* `name: String` Menu Label. This can be a direct name or a translation string
-		* `description: String` Item description, appearing when hovering over this menu item. This can be a direct name or a translation string
-		* `icon: Icon String` Menu item icon
-		* `color: CSS Color` color of the icon. Can be an axis letter for red/green/blue axis color.
-		* `condition: Condition` Whether to show this item
-		* `children: Array` Child menu items
-		* `click: Function` Runs when you click the event. First argument is the context as specified in Menu.open(). Second argument is the click event.
+### new Menu( template[, options] )
+*Alternative constructor signature*
 
-#### Menu#open( position, context )
 
-Opens the menu
+### open( position[, context] )
+Opens the menu somewhere
 
-* `position: MouseEvent|HTML Element` Event or element defining the opening position of the menu
-* `context: Any` Opening context of the menu. This can be used in click events of menu items for object specific context menus.
+##### Arguments:
+* `position`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [MouseEvent](#MouseEvent) - Position where to open the menu. Can be a mouse event, or a node that the menu is spawned below.
+* `context`: *any* (Optional) - Context for the click events inside the menu
 
-#### Menu#hide()
+Returns: [Menu](menu#menu-1)
 
-Hides the menu
+### hide()
+Closes the menu if it's open
 
-#### Menu#addAction( action, path )
 
-Adds an action or menu item to the menu
+Returns: [Menu](menu#menu-1)
 
-* `action: Action|Object` Action to add
-* `path: String` Path to where to add the action, separated by periods. The last part can be a number, indicating where in the list to add the action. The number can be negative for starting from the end. Example: `import.0` (Add the action to the start of the File > Import submenu)
+### addAction( action[, path] )
+Adds an action to the menu structure
 
-#### Menu#removeAction( path )
+##### Arguments:
+* `action`: [Action](action#action-1) - Action to add
+* `path`: *string* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `export.0`  places the action at the top position of the Export submenu.
 
-Removes an action from a menu.
 
-* `path: String` Path to the action, separated by periods.
+### removeAction( path )
+##### Arguments:
+* `path`: *string* - Path pointing to the location. Use the ID of each level of the menu, or index within a level, or item ID, separated by a point. For example,  `export.export_special_format`  removes the action "Export Special Format" from the Export submenu.
 
-## BarMenu Class
 
-Menu for the main menu bar
+### delete()
 
-### new BarMenu( id, content, condition )
 
-Creates a new menu inside the main menu bar
 
-* `id: String` Identifier for the menu
-* `content: Array` List of menu items. Works the same as in normal menus.
-* `condition: Condition` Whether to show the menu in the menu bar.
+## BarMenu
+Extends: [Menu](menu#menu-1)
+
+Creates a new menu in the menu bar
+
+### new BarMenu( id, structure[, condition] )
+Creates a new BarMenu
+
+##### Arguments:
+* `id`: *string*
+* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/menu.d.ts#L18)
+* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
+
+
+### open( position[, context] )
+Opens the menu somewhere
+
+##### Arguments:
+* `position`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [MouseEvent](#MouseEvent) - Position where to open the menu. Can be a mouse event, or a node that the menu is spawned below.
+* `context`: *any* (Optional) - Context for the click events inside the menu
+
+Returns: [BarMenu](menu#barmenu)
+
+### hide()
+Closes the menu if it's open
+
+
+Returns: [BarMenu](menu#barmenu)
+
+### addAction( action[, path] )
+Adds an action to the menu structure
+
+##### Arguments:
+* `action`: [Action](action#action-1) - Action to add
+* `path`: *string* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `export.0`  places the action at the top position of the Export submenu.
+
+
+### removeAction( path )
+##### Arguments:
+* `path`: *string* - Path pointing to the location. Use the ID of each level of the menu, or index within a level, or item ID, separated by a point. For example,  `export.export_special_format`  removes the action "Export Special Format" from the Export submenu.
+
+
+### highlight( action )
+Visually highlights an action within the menu, until the user opens the menu
+
+##### Arguments:
+* `action`: [Action](action#action-1)
+
+
+### delete()
+
 
 
 ## MenuBar
+#### Namespace
 
-Global constant keeping track of the program's main menu bar.
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/menu.d.ts#L64) |  |
 
-#### MenuBar.update()
+### addAction( action[, path] )
+Adds an action to the menu structure
 
-Updates the state and conditions of the menu bar
+##### Arguments:
+* `action`: [Action](action#action-1) - Action to add
+* `path`: *string* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `file.export.0`  places the action at the top position of the Export submenu in the File menu.
 
 
-#### MenuBar.addAction( action, path )
+### removeAction( path )
+##### Arguments:
+* `path`: *string* - Path pointing to the location. Use the ID of each level of the menu, or index within a level, or item ID, separated by a point. For example,  `export.export_special_format`  removes the action "Export Special Format" from the Export submenu.
 
-Adds an action or menu item to the menu
+Returns: *any*
 
-* `action: Action|Object` Action to add
-* `path: String` Path to where to add the action, separated by periods. The last part can be a number, indicating where in the list to add the action. The number can be negative for starting from the end. Example: `file.import.0` (Add the action to the start of the File > Import submenu)
+### update()
+Update the menu bar
 
-#### MenuBar.removeAction( path )
 
-Removes an action from a menu.
 
-* `path: String` Path to the action, separated by periods.

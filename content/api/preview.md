@@ -3,96 +3,115 @@ title: Preview
 ---
 
 # Preview
+## Preview
+Extends: [Deletable](misc#deletable)
 
-### new Preview( data )
-Creates a new 3D viewport
+### new Preview( options )
+Creates a new Preview
 
-* `data` Object
-	* `id` Preview ID
+##### Arguments:
+* `options`: PreviewOptions
+	* `id`: *string*
+	* `antialias`: *boolean* (Optional)
 
-#### Preview#canvas
-HTML canvas element of the preview
 
-#### Preview#isOrtho
-Boolean. Whether the preview is in orthographic mode
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| id | *string* |  |
+| canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) |  |
+| height | *number* |  |
+| width | *number* |  |
+| node | [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
+| isOrtho | *boolean* | True if the preview is in orthographic camera mode |
+| angle | *number* | Angle, when in a specific side view |
+| camera | [PerspectiveCamera](#PerspectiveCamera) or [OrthographicCamera](#OrthographicCamera) |  |
+| camPers | [PerspectiveCamera](#PerspectiveCamera) |  |
+| camOrtho | [OrthographicCamera](#OrthographicCamera) |  |
+| controls | *object* |  |
+| annotations | *object* |  |
+| renderer | [WebGLRenderer](#WebGLRenderer) |  |
+| background | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/preview.d.ts#L48) |  |
+| raycaster | [Raycaster](#Raycaster) |  |
 
-#### Preview#camera
-Currently active camera of the preview
+### delete()
 
-#### Preview#camPers
-Perspective Camera
 
-#### Preview#camOrtho
-OrthographicCamera
+### raycast( event )
+##### Arguments:
+* `event`: [MouseEvent](#MouseEvent)
 
-#### Preview#controls
-Orbit controls
+Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/preview.d.ts#L16)
 
-#### Preview#addAnnotation( key, node )
-Adds an annotation to the preview
+### render()
 
-* `key: String` Identifier key for the annotation
-* `node: HTML Node` Element to use as the annotation
 
-#### Preview#removeAnnotation( key )
-Remove an annotation
+### setProjectionMode( orthographic )
+##### Arguments:
+* `orthographic`: *boolean*
 
-* `key: String` Identifier key of the annotation
+Returns: [Preview](preview#preview-1)
 
-#### Preview#removeAnnotation( key )
-Remove an annotation
+### setFOV( fov )
+##### Arguments:
+* `fov`: *number*
 
-* `key: String` Identifier key of the annotation
 
-#### Preview#resize()
-Update the size of the preview
+### setLockedAngle( angle )
+##### Arguments:
+* `angle`: *number*
 
-#### Preview#raycast( event )
-Raycast into the 3D preview at the current event location
+Returns: [Preview](preview#preview-1)
 
-* `event: Event`
-* `Returns: Boolean|Object` false if nothing is found, otherwise an object containing the information
-	* `event: Event`
-	* `type: String` Type of object that was found
-	* `intersects: Array` List of all possible intersections
-	* `cube: Cube` Object that was clicked on
-	* `face: String` Face of the cube
-	* `vertex: Object` Vertex if a vertex was found
+### loadAnglePreset( angle_preset )
+##### Arguments:
+* `angle_preset`: AnglePreset
+	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L2)
+	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L2) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L2) (Optional)
+	* `projection`: `"perspective"` or `"unset"` or `"orthographic"`
+	* `zoom`: *number* (Optional)
+	* `focal_length`: *number* (Optional)
+	* `lockedAngle`: *number* (Optional)
 
-#### Preview#setProjectionMode( orthographic: Boolean )
-Sets the projection mode to orthographic is orthographic is true, otherwise sets it to perspective
+Returns: [Preview](preview#preview-1)
 
-#### Preview#setLockedAngle( angle: String )
-Switches to one of the fixed orthographic side views
+### newAnglePreset()
+Opens a dialog to create and save a new angle preset
 
-* `angle: String` Side at which the camera looks
 
-#### Preview#loadAnglePreset( angle: String )
-Switches to one of the fixed orthographic side views
+Returns: [Preview](preview#preview-1)
 
-* `angle: String` Side at which the camera looks
+### getFacingDirection()
 
-#### Preview#setFOV( fov: Number )
-Sets the FOV angle of the camera
+Returns: `"north"` or `"south"` or `"east"` or `"west"`
 
-#### Preview#getFacingDirection()
-Returns the direction that the camera is facing in
+### getFacingHeight()
 
-#### Preview#getFacingHeight()
-Returns the height that the camera is facing in. Can be `down`, `middle` or `up`.
+Returns: `"middle"` or `"up"` or `"down"`
 
-#### Preview#raycastMouseCoords( x, y )
-Transfer the screen space mouse coordinates `x` and `y` to 3D space of the orthographic camera.
+### occupyTransformer()
 
-#### Preview#occupyTransformer()
-Occupy the transformer gizmo and adjust the size to the current camera angle.
+Returns: [Preview](preview#preview-1)
 
-#### Preview#screenshot( options, callback )
-Takes a screenshot of the preview.
+### showContextMenu( event )
+##### Arguments:
+* `event`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 
-* `options: Object` 
-	* `crop: Boolean` Automatically crop the screenshot to the minimal size
-	* `width: Number` Screenshot width
-	* `height: Number` Screenshot height
-* `callback: Function` 
-	* `image: String` Base64 encoded image
+Returns: [Preview](preview#preview-1)
+
+### all
+Static Property
+
+Type: Array of [Preview](preview#preview-1)
+
+List of all previews
+
+
+### selected
+Static Property
+
+Type: [Preview](preview#preview-1)
+
+The last used preview
+
+

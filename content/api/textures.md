@@ -3,163 +3,289 @@ title: Textures
 ---
 
 # Textures
+## Texture
+### new Texture( data[, uuid] )
+Creates a new Texture
 
-Textures are saved in the global `textures` array. `textures.selected` will return the currently selected texture. If single_texture is enabled in the current format, only one texture can exist at a time.
-
-## new Texture( data, uuid )
-
-Creates a new texture
-
-* `id` Texture key used in java edition and OBJ models
-* `name` Texture name
-* `folder` Subfolder of the textures folder that the texture is in.
-* `namespace` Texture namespace, used for mods
-* `path` Full texture path
-* `particle` Whether to use the texture as the particle texture for java edition models
-* `source` Source string of the texture. Can either be a base64 string or a path. Paths will usually have `?2` or similar appended to make them update after being changed.
-* `selected` Whether the texture is selected
-* `show_icon` Whether the source of the texture should be displayed in the textures list.
-* `dark_box` If true, the UV editor will use a dark border for this texture. Calculated from the average color of the texture
-* `error` Numerical error code:
-	* `0` No errors
-	* `1` File error, texture could not be loaded
-	* `2` Invalid aspect ratio
-	* `3` Placeholder texture, the actual texture gets defined by the parent model
-* `width` Texture width
-* `height` Texture height
-* `ratio` Texture aspect ratio
-* `frameCount` Returns the frame count if the texture is an animated texture
-* `img` HTML Image instance of the texture
-* `saved` Whether the texture is saved
-* `mode` How the texture source is handled. Can be `'link'` or `'bitmap'`. Link textures are loaded from a path on the computer, so textures in the web app are always mode bitmap.
-* `uuid` Texture uuid.
-
-#### Canvas.materials[texture.uuid]
-THREE.JS materials are saved in a separate location to increase performance. You can get the material using the texture's uuid.
-
-#### Texture#getErrorMessage()
-Returns the translated error message of the texture.
-
-#### Texture#extend( data: Object )
-Copy properties from `data` into the texture.
-
-#### load( callback: Function )
-Loads the texture by updating its source.
-
-* `callback` function to call after the update is finished. The update is asynchronous.
-
-## Loading Textures
-
-#### Texture#fromJavaLink( link: String, path_array: Array )
-Tries to load the texture from a java edition resource pack using the relative path provided in the model file and the absolute path of the model.
-
-#### Texture#fromFile( file: String )
-Loads the texture from a file object, as used in Blockbench.import.
-
-#### Texture#fromPath( path: String )
-Loads the texture from an absolute path.
-
-#### Texture#fromDataURL( data_url: String )
-Loads the texture from a data URL (base64 encoded image)
-
-#### Texture#fromDefaultPack()
-Attempts to load the texture from the default resource pack if defined in the Blockbench settings.
-
-#### Texture#loadEmpty( error_id: Number )
-Loads the texture with an empty (error) texture and sets the error code to `error_id`.
-
-#### Texture#add( undo: Boolean )
-Adds the texture to Blockbench and takes care of applying the texture to all cubes if required by the format.
-
-* `undo` Whether to create an undo point for adding the texture.
-
-#### Texture#generateFolder( path: String )
-Generate the java edition texture folder from a given path.
-
-## Updating textures
-
-#### Texture#updateSource( data_url: String )
-Updates the source of the texture. This is used if the texture gets edited. Also updates the material and UV Editor view of the texture
-
-#### Texture#updateMaterial()
-Only update the THREE.JS material of the texture.
-
-#### Texture#reopen( force: Boolean )
-Opens a file dialog to replace the texture source with another file.
-
-* `force` If true, Blockbench won't show a warning message if the texture has unsaved changes.
-
-#### Texture#reloadTexture()
-Reloads the texture to update changes to the file. This is usually not necessary as the texture updates automatically when there are any changes.
-
-## Handling textures
-
-#### Texture#select( event: Event )
-Select this texture.
+##### Arguments:
+* `data`: TextureData
+	* `path`: *string* (Optional)
+	* `name`: *string* (Optional)
+	* `folder`: *string* (Optional)
+	* `namespace`: *string* (Optional)
+	* `id`: *string* (Optional)
+	* `particle`: *boolean* (Optional)
+	* `visible`: *boolean* (Optional)
+	* `mode`: *string* (Optional)
+	* `saved`: *boolean* (Optional)
+	* `keep_size`: *boolean* (Optional)
+	* `source`: *string* (Optional)
+* `uuid`: *string* (Optional)
 
 
-#### Texture#remove( no_update: Boolean )
-Removes the texture.
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| frameCount | *number* |  |
+| display_height | *number* |  |
+| ratio | *number* |  |
+| menu | [Menu](menu#menu-1) |  |
 
-* `no_update` If true, don't update the interface and don't create an undo point 
+### getErrorMessage()
 
-#### enableParticle()
-Marks this texture as particle texture for java edition models.
+Returns: *string*
 
-#### fillParticle()
-Marks this texture as particle texture for java edition models, unless there is already a particle texture.
+### extend( data )
+##### Arguments:
+* `data`: TextureData
+	* `path`: *string* (Optional)
+	* `name`: *string* (Optional)
+	* `folder`: *string* (Optional)
+	* `namespace`: *string* (Optional)
+	* `id`: *string* (Optional)
+	* `particle`: *boolean* (Optional)
+	* `visible`: *boolean* (Optional)
+	* `mode`: *string* (Optional)
+	* `saved`: *boolean* (Optional)
+	* `keep_size`: *boolean* (Optional)
+	* `source`: *string* (Optional)
 
-#### apply( all: Boolean )
-Applies the texture to all selected cubes. Creates an undo point.
+Returns: [Texture](textures#texture)
 
-* `all` When true, apply the texture to all faces
+### load( [cb] )
+Loads the texture from it's current source
 
-#### Texture#javaTextureLink()
-Returns the link of the texture as used in java edition block/item models.
+##### Arguments:
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/textures.d.ts#L53) (Optional) - Callback function
 
-## Texture Menu
+Returns: [Texture](textures#texture)
 
-#### Texture#openFolder()
-Show the source file of the texture in a new Explorer/Finder window.
+### fromJavaLink( link, path_array )
+##### Arguments:
+* `link`: *string*
+* `path_array`: Array of *string*
 
-#### Texture#openEditor()
-Open the texture in the preferred image editor as specified in the settings.
+Returns: [Texture](textures#texture)
 
-#### Texture#showContextMenu( event )
-Show the context menu of the texture using the position of the event.
+### fromFile( file )
+##### Arguments:
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/textures.d.ts#L55)
 
-#### Texture#openMenu()
-Opens the texture menu dialog.
+Returns: [Texture](textures#texture)
 
-## Editing Textures
+### fromPath( path )
+##### Arguments:
+* `path`: *string*
 
-#### Texture#edit( callback: Function, options: Object )
-Edits the texture using the callback function.
-* `callback` Function to edit the texture. If omitted, the texture will be converted to an editable texture but won't be edited.
+Returns: [Texture](textures#texture)
 
-#### Texture#save( as: Boolean )
-Saves changes to the texture.
-* `as` If true, a file dialog will be opened even if the location of the file is known.
+### fromDataURL( data_url )
+##### Arguments:
+* `data_url`: *string*
 
-#### Texture#getBase64()
-Returns the base64 string of the texture.
+Returns: [Texture](textures#texture)
+
+### fromDefaultPack()
+
+Returns: `true`
+
+### loadEmpty( [error_id] )
+Loads the default white error texture
+
+##### Arguments:
+* `error_id`: *number* (Optional) - Sets the error ID of the texture
+
+Returns: [Texture](textures#texture)
+
+### updateSource( dataUrl )
+##### Arguments:
+* `dataUrl`: *string*
+
+Returns: [Texture](textures#texture)
+
+### updateMaterial()
+
+Returns: [Texture](textures#texture)
+
+### reopen( force )
+Opens a dialog to replace the texture with another file
+
+##### Arguments:
+* `force`: *boolean* - If true, no warning appears of the texture has unsaved changes
+
+
+### reloadTexture()
+Reloads the texture. Only works in the desktop app
+
+
+
+### getMaterial()
+
+Returns: [MeshLambertMaterial](#MeshLambertMaterial)
+
+### select( [event] )
+##### Arguments:
+* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) (Optional)
+
+Returns: [Texture](textures#texture)
+
+### add( [undo] )
+Adds texture to the textures list and initializes it
+
+##### Arguments:
+* `undo`: *boolean* (Optional) - If true, an undo point is created
+
+Returns: *any*
+
+### remove( [no_update] )
+Removes the texture
+
+##### Arguments:
+* `no_update`: *boolean* (Optional) - If true, the texture is silently removed. The interface is not updated, no undo point is created
+
+
+### toggleVisibility()
+
+Returns: [Texture](textures#texture)
+
+### enableParticle()
+
+Returns: [Texture](textures#texture)
+
+### fillParticle()
+Enables 'particle' on this texture if it is not enabled on any other texture
+
+
+Returns: [Texture](textures#texture)
+
+### apply( all )
+Applies the texture to the selected elements
+
+##### Arguments:
+* `all`: *boolean* or `"blank"` - If true, the texture is applied to all faces of the elements. If 'blank', the texture is only applied to blank faces
+
+Returns: [Texture](textures#texture)
+
+### openFolder()
+Shows the texture file in the file explorer
+
+
+Returns: [Texture](textures#texture)
+
+### openEditor()
+Opens the texture in the configured image editor
+
+
+Returns: [Texture](textures#texture)
+
+### showContextMenu( event )
+##### Arguments:
+* `event`: [MouseEvent](#MouseEvent)
+
+
+### openMenu()
+
+
+### resizeDialog()
+
+Returns: [Texture](textures#texture)
+
+### scrollTo()
+Scroll the texture list to this texture
+
+
+
+### save( as )
+##### Arguments:
+* `as`: *any*
+
+Returns: [Texture](textures#texture)
+
+### getBase64()
+Returns the content of the texture as a base64 encoded string
+
+
+Returns: *string*
+
+### edit( callback, options )
+Wrapper to do edits to the texture.
+
+##### Arguments:
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/textures.d.ts#L125) -
+* `options`: TextureEditOptions - Editing options
+	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
+	* `edit_name`: *string* (Optional) - Name of the undo entry that is created
+	* `use_cache`: *boolean* (Optional) - Whether to use the cached canvas/jimp instance
+	* `no_undo`: *boolean* (Optional) - If true, no undo point is created. Default is false
+	* `no_update`: *boolean* (Optional) - If true, the texture is not updated visually
+	* `no_undo_init`: *boolean* (Optional)
+	* `no_undo_finish`: *boolean* (Optional)
+
+
+### Texture.getDefault()
+
+Returns: [Texture](textures#texture)
+
+### all
+Static Property
+
+Type: Array of [Texture](textures#texture)
+
+
+
+## saveTextures( [lazy] )
+#### Global Function
+
+Saves all textures
+
+##### Arguments:
+* `lazy`: *boolean* (Optional) - If true, the texture isn't saved if it doesn't have a local file to save to
+
+
+
+## loadTextureDraggable()
+#### Global Function
+
+Update the draggable/sortable functionality of the texture list
+
+
+
+
+## unselectTextures()
+#### Global Function
+
+Unselect all textures
+
+
 
 
 ## TextureAnimator
-Tool to control animated textures.
+#### Namespace
 
-#### TextureAnimator.start()
+Handles playback of animated textures
 
-#### TextureAnimator.stop()
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| isPlaying | *boolean* |  |
+| interval | *any* |  |
 
-#### TextureAnimator.toggle()
+### start()
 
-#### TextureAnimator.updateSpeed()
-Updates the playback speed of animated textures.
 
-#### TextureAnimator.reset()
-Sets all animated textures back to frame 0 and stops playing.
+### stop()
 
-#### TextureAnimator.updateButton()
-Updates whether the animation button displays a play or pause icon.
+
+### toggle()
+
+
+### updateSpeed()
+
+
+### nextFrame()
+
+
+### reset()
+
+
+### updateButton()
+
 

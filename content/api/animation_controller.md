@@ -1,0 +1,224 @@
+---
+title: Animation Controller
+---
+
+# Animation Controller
+## AnimationControllerState
+### new AnimationControllerState( controller[, options] )
+Creates a new AnimationControllerState
+
+##### Arguments:
+* `controller`: [AnimationController](animation_controller#animationcontroller)
+* `options`: AnimationControllerStateOptions (Optional)
+	* `name`: *string* (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L1) (Optional)
+	* `transitions`: Array of *object* (Optional)
+	* `sounds`: Array of *object* (Optional)
+	* `particles`: Array of *object* (Optional)
+	* `on_entry`: *string* (Optional)
+	* `on_exit`: *string* (Optional)
+	* `blend_transition`: *number* (Optional)
+	* `blend_via_shortest_path`: *boolean* (Optional)
+
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| controller | [AnimationController](animation_controller#animationcontroller) |  |
+| uuid | *string* |  |
+| name | *string* |  |
+| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L33) |  |
+| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L41) |  |
+| playing_sounds | Array of [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) |  |
+| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L9) |  |
+| transitions | Array of *object* |  |
+| sounds | Array of *object* |  |
+| particles | Array of *object* |  |
+| on_entry | *string* |  |
+| on_exit | *string* |  |
+| blend_transition | *number* |  |
+| blend_via_shortest_path | *boolean* |  |
+
+### extend( data )
+##### Arguments:
+* `data`: AnimationControllerStateOptions
+	* `name`: *string* (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L1) (Optional)
+	* `transitions`: Array of *object* (Optional)
+	* `sounds`: Array of *object* (Optional)
+	* `particles`: Array of *object* (Optional)
+	* `on_entry`: *string* (Optional)
+	* `on_exit`: *string* (Optional)
+	* `blend_transition`: *number* (Optional)
+	* `blend_via_shortest_path`: *boolean* (Optional)
+
+
+### getUndoCopy()
+
+Returns: *object*
+
+### compileForBedrock()
+
+Returns: *object*
+
+### select( [force] )
+##### Arguments:
+* `force`: *boolean* (Optional)
+
+
+### unselect()
+
+
+### playEffects()
+
+
+### scrollTo()
+
+
+### rename()
+
+
+### remove( [undo] )
+##### Arguments:
+* `undo`: *boolean* (Optional)
+
+
+### createUniqueName()
+
+
+### addAnimation( [animation] )
+##### Arguments:
+* `animation`: [Animation](#Animation) (Optional)
+
+
+### addTransition( [target_uuid] )
+##### Arguments:
+* `target_uuid`: *string* (Optional)
+
+
+### addParticle( [options] )
+##### Arguments:
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L68) (Optional)
+
+
+### addSound( [options] )
+##### Arguments:
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L69) (Optional)
+
+
+### openMenu( event )
+##### Arguments:
+* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+
+
+### getStateTime()
+Returns the current animation time of the state in seconds
+
+
+Returns: *number*
+
+
+## AnimationController
+Extends: [AnimationItem](animation#animationitem)
+
+### new AnimationController( data )
+Creates a new AnimationController
+
+##### Arguments:
+* `data`: AnimationControllerOptions
+	* `name`: *string* (Optional)
+	* `path`: *string* (Optional)
+	* `initial_state`: *string* (Optional)
+
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| name | *string* |  |
+| path | *string* |  |
+| uuid | *string* |  |
+| playing | *boolean* |  |
+| saved | *boolean* |  |
+| selected | *boolean* |  |
+| saved_name | *string* |  |
+| states | Array of [AnimationControllerState](animation_controller#animationcontrollerstate) |  |
+| initial_state | *string* |  |
+| selected_state | [AnimationControllerState](animation_controller#animationcontrollerstate) |  |
+
+### extend( data )
+##### Arguments:
+* `data`: AnimationControllerOptions
+	* `name`: *string* (Optional)
+	* `path`: *string* (Optional)
+	* `initial_state`: *string* (Optional)
+
+Returns: [AnimationController](animation_controller#animationcontroller)
+
+### getUndoCopy()
+
+Returns: *object*
+
+### compileForBedrock()
+
+Returns: *object*
+
+### save()
+
+Returns: [AnimationController](animation_controller#animationcontroller)
+
+### select()
+
+Returns: [AnimationController](animation_controller#animationcontroller)
+
+### createUniqueName( references )
+##### Arguments:
+* `references`: Array of [AnimationController](animation_controller#animationcontroller)
+
+Returns: *any*
+
+### rename()
+
+Returns: [AnimationController](animation_controller#animationcontroller)
+
+### add( undo )
+##### Arguments:
+* `undo`: *any*
+
+Returns: [AnimationController](animation_controller#animationcontroller)
+
+### remove( undo[, remove_from_file] )
+##### Arguments:
+* `undo`: *any*
+* `remove_from_file`: *boolean* (Optional)
+
+Returns: [AnimationController](animation_controller#animationcontroller)
+
+### propertiesDialog()
+
+
+### updatePreview()
+Updates the preview of the controller, including updating the animations and switching states if preview mode is set to play
+
+
+
+### togglePlayingState( [state] )
+##### Arguments:
+* `state`: *boolean* (Optional)
+
+Returns: *boolean*
+
+### showContextMenu( event )
+##### Arguments:
+* `event`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+
+
+### all
+Static Property
+
+Type: Array of [AnimationItem](animation#animationitem)
+
+
+### selected
+Static Property
+
+Type: [AnimationItem](animation#animationitem)
+
+

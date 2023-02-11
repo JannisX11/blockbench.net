@@ -38,6 +38,7 @@ export default {
 		width: 100%;
 		padding: 4px;
 		padding-left: 16px;
+		word-break: break-word;
 	}
 	li a.nuxt-link-exact-active {
 		text-decoration: underline;

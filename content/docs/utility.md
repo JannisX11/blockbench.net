@@ -17,9 +17,6 @@ Returns true if the condition checks out. Conditions can be
 #### oneLiner( data: Object )
 Used as a wrapper for an object to tell the JSON exporter to print the entire Object in one line.
 
-#### cl()
-A simple shortcut for `console.log`
-
 #### guid()
 Generates a uuid. Example: `df818b11-0785-2753-599a-95d6818ed846`
 
@@ -42,12 +39,11 @@ Returns the extension of a file path or name.
 
 ### DOM Manipulation
 
-Blockbench uses [jQuery](https://api.jquery.com) as a simple way to interact with the DOM.
+[jQuery](https://api.jquery.com) is available as a simple way to interact with the DOM. Note that native DOM manipulation functions are usually faster than jQuery. The use of native functions or vue components is generally encouraged over jQuery.
 
 ### Colors
 
 Blockbench uses [Spectrum](https://bgrins.github.io/spectrum/) as a Color picker and [tinycolor](https://github.com/bgrins/TinyColor) as a color handling and conversion library.
-Images can be manupulated using [Jimp](https://github.com/oliver-moran/jimp) but for simpler edits I recommend to use the HTML5 canvas since it is a lot faster.
 
 ### 3D Editor
 
