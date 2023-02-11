@@ -5,6 +5,7 @@ hidetoc: true
 authors:
   - Wackyblocks
   - JannisX11
+  - TDY2012
 ---
 
 # Blockbench Format Features
@@ -48,7 +49,7 @@ Multiple textures support|x| | | | | |x|
 | | | | | | | |
 Rotations| | | | | | | |
 Bone rotations| |x|x|x|x|x|x|x
-Induvidual cube rotations|x|x| |x| |x|x|x
+Individual cube rotations|x|x| |x| |x|x|x
 Cube axis rotations|1|3| |3| |3|3|3
 Rotation angle limits|22.5°|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited
 | | | | | | | |
@@ -63,7 +64,7 @@ Snowstorm particle rendering| |x|x| | | | |x
 Sound/Particle/Custom Keyframes| |x|x| | | |x|x
 
 ### Notes
-- ¹ Experiemental feature
+- ¹ Experimental feature
 - ² Only exports item display settings json (to control how items look in guis and hand)
 - ³ Use [GeckoLib](https://github.com/bernie-g/geckolib/wiki) to run Blockbench animations in Minecraft mods
 - ⁴ Optifine entities support expression based animations. Requires the [CEM Template Loader Plugin](https://www.blockbench.net/plugins/cem_template_loader) to be able to edit and preview inside Blockbench. [Documentation](https://www.wynem.com/?cem_animation_doc)
