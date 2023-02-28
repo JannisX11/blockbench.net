@@ -11,7 +11,7 @@ Creates a new AnimationControllerState
 * `controller`: [AnimationController](animation_controller#animationcontroller)
 * `options`: AnimationControllerStateOptions (Optional)
 	* `name`: *string* (Optional)
-	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L1) (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L1) (Optional)
 	* `transitions`: Array of *object* (Optional)
 	* `sounds`: Array of *object* (Optional)
 	* `particles`: Array of *object* (Optional)
@@ -26,10 +26,10 @@ Creates a new AnimationControllerState
 | controller | [AnimationController](animation_controller#animationcontroller) |  |
 | uuid | *string* |  |
 | name | *string* |  |
-| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L33) |  |
-| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L41) |  |
+| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L33) |  |
+| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L41) |  |
 | playing_sounds | Array of [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) |  |
-| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L9) |  |
+| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L9) |  |
 | transitions | Array of *object* |  |
 | sounds | Array of *object* |  |
 | particles | Array of *object* |  |
@@ -42,7 +42,7 @@ Creates a new AnimationControllerState
 ##### Arguments:
 * `data`: AnimationControllerStateOptions
 	* `name`: *string* (Optional)
-	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L1) (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L1) (Optional)
 	* `transitions`: Array of *object* (Optional)
 	* `sounds`: Array of *object* (Optional)
 	* `particles`: Array of *object* (Optional)
@@ -97,12 +97,12 @@ Returns: *object*
 
 ### addParticle( [options] )
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L68) (Optional)
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L68) (Optional)
 
 
 ### addSound( [options] )
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation_controller.d.ts#L69) (Optional)
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation_controller.d.ts#L69) (Optional)
 
 
 ### openMenu( event )
@@ -119,6 +119,8 @@ Returns: *number*
 
 ## AnimationController
 Extends: [AnimationItem](animation#animationitem)
+
+Animation Controllers are state machines used for Minecraft: Bedrock Edition models to control and blend between animations.
 
 ### new AnimationController( data )
 Creates a new AnimationController
@@ -172,21 +174,23 @@ Returns: [AnimationController](animation_controller#animationcontroller)
 ##### Arguments:
 * `references`: Array of [AnimationController](animation_controller#animationcontroller)
 
-Returns: *any*
+Returns: *string* or *boolean*
 
 ### rename()
 
 Returns: [AnimationController](animation_controller#animationcontroller)
 
 ### add( undo )
+Adds the animation controller to the current project and to the interface
+
 ##### Arguments:
-* `undo`: *any*
+* `undo`: *any* - If true, the addition of the animation controller will be registered as an edit
 
 Returns: [AnimationController](animation_controller#animationcontroller)
 
-### remove( undo[, remove_from_file] )
+### remove( [undo, remove_from_file] )
 ##### Arguments:
-* `undo`: *any*
+* `undo`: *boolean* (Optional)
 * `remove_from_file`: *boolean* (Optional)
 
 Returns: [AnimationController](animation_controller#animationcontroller)

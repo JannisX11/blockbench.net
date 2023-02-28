@@ -36,7 +36,7 @@ Creates a new ResizeLine
 
 ### setPosition( data )
 ##### Arguments:
-* `data`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/interface.d.ts#L19)
+* `data`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/interface.d.ts#L19)
 
 
 
@@ -45,13 +45,13 @@ Creates a new ResizeLine
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/interface.d.ts#L25) |  |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/interface.d.ts#L25) |  |
 | left_bar_width | *number* |  |
 | right_bar_width | *number* |  |
 | top_panel_height | *number* |  |
 | bottom_panel_height | *number* |  |
-| Resizers | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/interface.d.ts#L42) |  |
-| status_bar | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/interface.d.ts#L51) |  |
+| Resizers | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/interface.d.ts#L42) |  |
+| status_bar | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/interface.d.ts#L51) |  |
 | text_edit_menu | [Menu](menu#menu-1) |  |
 | center_screen | [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
 | page_wrapper | [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |

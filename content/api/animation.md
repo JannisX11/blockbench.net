@@ -33,7 +33,7 @@ Creates a new Animation
 ##### Arguments:
 * `data`: AnimationOptions
 	* `name`: *string* (Optional)
-	* `loop`: *string* (Optional)
+	* `loop`: `"once"` or `"hold"` or `"loop"` (Optional)
 	* `override`: *boolean* (Optional)
 	* `anim_time_update`: *string* (Optional)
 	* `blend_weight`: *string* (Optional)
@@ -44,7 +44,7 @@ Creates a new Animation
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | name | *string* |  |
-| loop | *string* |  |
+| loop | `"once"` or `"hold"` or `"loop"` |  |
 | override | *boolean* |  |
 | anim_time_update | *string* |  |
 | blend_weight | *string* |  |
@@ -56,7 +56,7 @@ Creates a new Animation
 | playing | *boolean* |  |
 | saved | *boolean* |  |
 | markers | Array of [TimelineMarker](animation#timelinemarker) |  |
-| animators | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation.d.ts#L60) |  |
+| animators | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation.d.ts#L76) |  |
 | saved_name | *string* |  |
 | selected | *boolean* |  |
 | type | *string* |  |
@@ -66,7 +66,7 @@ Creates a new Animation
 ##### Arguments:
 * `data`: AnimationOptions
 	* `name`: *string* (Optional)
-	* `loop`: *string* (Optional)
+	* `loop`: `"once"` or `"hold"` or `"loop"` (Optional)
 	* `override`: *boolean* (Optional)
 	* `anim_time_update`: *string* (Optional)
 	* `blend_weight`: *string* (Optional)
@@ -75,14 +75,16 @@ Creates a new Animation
 
 Returns: [_Animation](animation#animation-1)
 
-### getUndoCopy( options, save )
+### getUndoCopy( [options, save] )
 ##### Arguments:
-* `options`: *any*
-* `save`: *any*
+* `options`: [See types]() (Optional)
+* `save`: *any* (Optional)
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation.d.ts#L19)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation.d.ts#L19)
 
 ### compileBedrockAnimation()
+Compiles the JSON tree of the animation for the Minecraft Bedrock Edition animation format.
+
 
 Returns: *object*
 
@@ -122,14 +124,18 @@ Returns: *any*
 Returns: [_Animation](animation#animation-1)
 
 ### getBoneAnimator( group )
-##### Arguments:
-* `group`: *any*
+Returns (if necessary creates) the animator of a specific bone of the animation
 
-Returns: *any*
+##### Arguments:
+* `group`: [OutlinerNode](outliner#outlinernode)
+
+Returns: [BoneAnimator](animation#boneanimator)
 
 ### add( undo )
+Adds the animation to the current project and to the interface
+
 ##### Arguments:
-* `undo`: *any*
+* `undo`: *any* - If true, the addition of the animation will be registered as an edit
 
 Returns: [_Animation](animation#animation-1)
 
@@ -142,7 +148,7 @@ Returns: [_Animation](animation#animation-1)
 
 ### getMaxLength()
 
-Returns: *any*
+Returns: *number*
 
 ### setLoop( value, undo )
 ##### Arguments:
@@ -151,10 +157,14 @@ Returns: *any*
 
 
 ### calculateSnappingFromKeyframes()
+Calculate the snapping value that the animation should use, based on the time codes of the keyframes that it holds. Directly updates the value, but also returns it as a number (snaps per second)
 
-Returns: *any*
+
+Returns: *number*
 
 ### propertiesDialog()
+Opens the properties dialog
+
 
 
 ### all
@@ -240,7 +250,7 @@ Returns: [GeneralAnimator](animation#generalanimator)
 
 ### addKeyframe( data, uuid )
 ##### Arguments:
-* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/keyframe.d.ts#L7)
+* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/keyframe.d.ts#L7)
 * `uuid`: *string*
 
 Returns: [Keyframe](#Keyframe)
@@ -251,7 +261,7 @@ Returns: [Keyframe](#Keyframe)
 
 ### getOrMakeKeyframe()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation.d.ts#L107)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation.d.ts#L123)
 
 ### toggleMuted( channel )
 ##### Arguments:
@@ -305,7 +315,7 @@ Returns: [BoneAnimator](animation#boneanimator)
 
 ### addKeyframe( data, uuid )
 ##### Arguments:
-* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/keyframe.d.ts#L7)
+* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/keyframe.d.ts#L7)
 * `uuid`: *string*
 
 Returns: [Keyframe](#Keyframe)
@@ -316,7 +326,7 @@ Returns: [Keyframe](#Keyframe)
 
 ### getOrMakeKeyframe()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation.d.ts#L107)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation.d.ts#L123)
 
 ### toggleMuted( channel )
 ##### Arguments:
@@ -399,7 +409,7 @@ Returns: [NullObjectAnimator](animation#nullobjectanimator)
 
 ### addKeyframe( data, uuid )
 ##### Arguments:
-* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/keyframe.d.ts#L7)
+* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/keyframe.d.ts#L7)
 * `uuid`: *string*
 
 Returns: [Keyframe](#Keyframe)
@@ -410,7 +420,7 @@ Returns: [Keyframe](#Keyframe)
 
 ### getOrMakeKeyframe()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation.d.ts#L107)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation.d.ts#L123)
 
 ### toggleMuted( channel )
 ##### Arguments:
@@ -480,7 +490,7 @@ Returns: [EffectAnimator](animation#effectanimator)
 
 ### addKeyframe( data, uuid )
 ##### Arguments:
-* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/keyframe.d.ts#L7)
+* `data`: [KeyframeOptions](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/keyframe.d.ts#L7)
 * `uuid`: *string*
 
 Returns: [Keyframe](#Keyframe)
@@ -491,7 +501,7 @@ Returns: [Keyframe](#Keyframe)
 
 ### getOrMakeKeyframe()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/animation.d.ts#L107)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/animation.d.ts#L123)
 
 ### toggleMuted( channel )
 ##### Arguments:

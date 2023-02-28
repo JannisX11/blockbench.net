@@ -4,6 +4,8 @@ title: Project
 
 # Project
 ## ModelProject
+A project instance. The tab bar can be used to switch between projects.
+
 ### new ModelProject( options )
 Creates a new ModelProject
 
@@ -33,20 +35,20 @@ Creates a new ModelProject
 | mode | *string* |  |
 | view_mode | *string* |  |
 | display_uv | *string* |  |
-| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/project.d.ts#L36) |  |
+| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/project.d.ts#L39) |  |
 | EditSession | [EditSession](project#editsession) |  |
 | elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | groups | Array of [Group](group#group-1) |  |
 | selected_elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | selected_group | [Group](group#group-1) |  |
-| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/project.d.ts#L45) |  |
+| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/project.d.ts#L48) |  |
 | selected_faces | Array |  |
 | textures | Array of [Texture](textures#texture) |  |
 | selected_texture | [Texture](textures#texture) |  |
 | outliner | Array of [OutlinerNode](outliner#outlinernode) |  |
 | animations | Array of [Animation](#Animation) |  |
 | timeline_animators | Array |  |
-| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/project.d.ts#L58) |  |
+| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/project.d.ts#L61) |  |
 
 ### getDisplayName()
 
@@ -57,7 +59,7 @@ Returns: *string*
 
 ### whenNextOpen( callback )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/project.d.ts#L77)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/project.d.ts#L80)
 
 
 ### select()
@@ -95,7 +97,9 @@ Type: Array of [ModelProject](project#modelproject)
 ## Project
 #### Global Variable
 
-Type: [ModelProject](project#modelproject) or `null`
+Type: [ModelProject](project#modelproject) or `0`
+
+Global variable and shortcut to get the currently opened project. If no project is open, or the New Tab is open, this value is falsy.
 
 
 ## setupProject( format )
@@ -133,6 +137,8 @@ Returns: *boolean*
 
 
 ## EditSession
+An edit session instance. Edit sessions can be attached to a project to collaborate on it with multiple users via P2P connections.
+
 ### new EditSession()
 Creates a new EditSession
 
@@ -192,7 +198,7 @@ Returns: *any*
 
 ### sendEdit( entry )
 ##### Arguments:
-* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/undo.d.ts#L37)
+* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L50)
 
 
 ### receiveData( tag )

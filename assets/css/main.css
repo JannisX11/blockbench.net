@@ -68,18 +68,24 @@ a {
 	text-decoration: underline;
 }
 h1, h2, h3, h4 {
-	padding-top: 16px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	margin-bottom: 4px;
 	font-weight: 400;
 }
 h1 {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 16px;
+	padding-bottom: 2px;
+	margin-bottom: 14px;
 	border-bottom: 1px solid var(--light-border);
 	text-align: center;
 }
 h2 {
-	padding-top: 30px;
+	padding-top: 32px;
+	margin-bottom: 8px;
+	border-bottom: 1px solid var(--light-border);
+}
+h3 {
+	padding-top: 10px;
 }
 h1 {font-size: 2.2em;}
 h2 {font-size: 1.9em;}

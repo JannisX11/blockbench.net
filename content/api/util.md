@@ -44,7 +44,7 @@ Adds an event listener to an element, except that is supports multiple event typ
 ##### Arguments:
 * `element`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) - Target Element
 * `events`: *string* - Event types, separated by space characters
-* `func`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/util.d.ts#L50) - Function
+* `func`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/util.d.ts#L50) - Function
 * `option`: *any* (Optional) - Option
 
 Returns: *any*

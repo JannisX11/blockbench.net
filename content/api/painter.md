@@ -6,9 +6,11 @@ title: Painter
 ## Painter
 #### Namespace
 
+A global namespace containing various functionality for Blockbench's 2D and 3D paint tools and texture editor
+
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| currentPixel | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L3) |  |
+| currentPixel | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/outliner.d.ts#L3) |  |
 | brushChanges | *boolean* |  |
 | current | *object* |  |
 | selection | *object* |  |
@@ -20,7 +22,7 @@ title: Painter
 ### edit( texture, callback, options )
 ##### Arguments:
 * `texture`: [Texture](textures#texture)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/painter.d.ts#L12)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/painter.d.ts#L14)
 * `options`: TextureEditOptions
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created
@@ -49,20 +51,20 @@ Returns: *number*
 
 ### combineColors( base, added, opacity )
 ##### Arguments:
-* `base`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L104)
-* `added`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L104)
+* `base`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L124)
+* `added`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L124)
 * `opacity`: *number*
 
-Returns: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L104)
+Returns: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L124)
 
 ### blendColors( base, added, opacity, blend_mode )
 ##### Arguments:
-* `base`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L104)
-* `added`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L104)
+* `base`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L124)
+* `added`: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L124)
 * `opacity`: *number*
 * `blend_mode`: *string*
 
-Returns: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L104)
+Returns: [RGBAColor](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L124)
 
 ### getMirrorElement( element, symmetry_axes )
 ##### Arguments:
@@ -90,7 +92,7 @@ Returns: [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HT
 * `y`: *number*
 * `w`: *number*
 * `h`: *number*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/painter.d.ts#L22)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/painter.d.ts#L24)
 
 
 ### getPixelColor( ctx, x, y )
@@ -107,7 +109,7 @@ Returns: [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HT
 * `y`: *number*
 * `w`: *number*
 * `h`: *number*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/painter.d.ts#L24)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/painter.d.ts#L26)
 
 
 ### editCircle( ctx, x, y, r, softness, editPx )
@@ -117,7 +119,7 @@ Returns: [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HT
 * `y`: *number*
 * `r`: *number*
 * `softness`: *number*
-* `editPx`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/painter.d.ts#L25)
+* `editPx`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/painter.d.ts#L27)
 
 
 ### editSquare( ctx, x, y, r, softness, editPx )
@@ -127,7 +129,7 @@ Returns: [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HT
 * `y`: *number*
 * `r`: *number*
 * `softness`: *number*
-* `editPx`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/painter.d.ts#L26)
+* `editPx`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/painter.d.ts#L28)
 
 
 ### openBrushOptions()

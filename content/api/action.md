@@ -6,7 +6,7 @@ title: Action
 ## BarItems
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L4)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L4)
 
 Registry of all toolbar items, such as actions, tools, etc.
 
@@ -77,17 +77,23 @@ Creates a new BarItem
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -122,8 +128,8 @@ Creates a new Action
 	* `category`: *string* (Optional)
 	* `keybind`: [Keybind](action#keybind) (Optional)
 	* `click`: Function
-	* `color`: *string* (Optional)
-	* `linked_setting`: *string* (Optional)
+	* `color`: *string* (Optional) - Icon color. Can be a CSS color string, or an axis letter to use an axis color.
+	* `linked_setting`: *string* (Optional) - ID of a setting that the action is slinked to
 	* `children`: Array of *object* (Optional)
 	* `label`: *boolean* (Optional) - Show the full label in toolbars
 
@@ -137,17 +143,23 @@ Creates a new Action
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -204,8 +216,8 @@ Creates a new Toggle
 	* `category`: *string* (Optional)
 	* `keybind`: [Keybind](action#keybind) (Optional)
 	* `click`: Function
-	* `color`: *string* (Optional)
-	* `linked_setting`: *string* (Optional)
+	* `color`: *string* (Optional) - Icon color. Can be a CSS color string, or an axis letter to use an axis color.
+	* `linked_setting`: *string* (Optional) - ID of a setting that the action is slinked to
 	* `children`: Array of *object* (Optional)
 	* `label`: *boolean* (Optional) - Show the full label in toolbars
 	* `default`: *boolean* (Optional) - Default value of the toggle
@@ -221,17 +233,23 @@ Creates a new Toggle
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -293,8 +311,8 @@ Creates a new Tool
 	* `category`: *string* (Optional)
 	* `keybind`: [Keybind](action#keybind) (Optional)
 	* `click`: Function
-	* `color`: *string* (Optional)
-	* `linked_setting`: *string* (Optional)
+	* `color`: *string* (Optional) - Icon color. Can be a CSS color string, or an axis letter to use an axis color.
+	* `linked_setting`: *string* (Optional) - ID of a setting that the action is slinked to
 	* `children`: Array of *object* (Optional)
 	* `label`: *boolean* (Optional) - Show the full label in toolbars
 	* `selectFace`: *boolean* (Optional)
@@ -304,7 +322,7 @@ Creates a new Tool
 	* `toolbar`: *string* (Optional)
 	* `alt_tool`: *string* (Optional)
 	* `modes`: Array of *string* (Optional)
-	* `allowed_view_modes`: [ViewMode](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L105) (Optional)
+	* `allowed_view_modes`: [ViewMode](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L125) (Optional)
 	* `paintTool`: *boolean* (Optional)
 	* `brush`: BrushOptions (Optional)
 		* `blend_modes`: *boolean* - Enable the input for blend modes when this tool is selected
@@ -313,7 +331,7 @@ Creates a new Tool
 		* `softness`: *boolean* - Enable the input for softness when this tool is selected
 		* `opacity`: *boolean* - Enable the input for opacity when this tool is selected
 		* `offset_even_radius`: *boolean* - When the brush size is an even number, offset the snapping by half a pixel so that even size brush strokes can be correctly centered
-		* `floor_coordinates`: *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L168) - Set whether the brush coordinates get floored to snap to the nearest pixel.
+		* `floor_coordinates`: *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L188) - Set whether the brush coordinates get floored to snap to the nearest pixel.
 		* `changePixel`: Function
 		* `onStrokeStart`: Function
 		* `onStrokeMove`: Function
@@ -330,17 +348,23 @@ Creates a new Tool
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -402,17 +426,23 @@ Creates a new Widget
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -444,17 +474,23 @@ Creates a new NumSlider
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -480,7 +516,7 @@ Returns: [NumSlider](action#numslider)
 ##### Arguments:
 * `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 
-Returns: *any*
+Returns: *number*
 
 ### slide( clientX, event )
 ##### Arguments:
@@ -520,7 +556,7 @@ Returns: [NumSlider](action#numslider)
 
 ### get()
 
-Returns: *any*
+Returns: *number*
 
 ### update()
 
@@ -546,17 +582,23 @@ Creates a new BarSlider
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -574,12 +616,12 @@ Returns: [BarSlider](action#barslider)
 
 ### set( value )
 ##### Arguments:
-* `value`: *any*
+* `value`: *number*
 
 
 ### get()
 
-Returns: *any*
+Returns: *number*
 
 ### delete()
 
@@ -602,17 +644,23 @@ Creates a new BarSelect
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -642,19 +690,19 @@ Returns: [BarSelect](action#barselect)
 
 ### getNameFor( key )
 ##### Arguments:
-* `key`: *any*
+* `key`: *string*
 
-Returns: *any*
+Returns: *string*
 
 ### set( key )
 ##### Arguments:
-* `key`: *any*
+* `key`: *string*
 
 Returns: [BarSelect](action#barselect)
 
 ### get()
 
-Returns: *any*
+Returns: *string*
 
 ### delete()
 
@@ -677,17 +725,23 @@ Creates a new BarText
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -735,17 +789,23 @@ Creates a new ColorPicker
 
 Returns: *boolean*
 
-### addLabel( in_bar, action )
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
 ##### Arguments:
-* `in_bar`: *any*
-* `action`: *any*
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 
 ### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
+
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
 ### toElement( destination )
+Appends the bar item to a HTML element
+
 ##### Arguments:
 * `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
 
@@ -844,9 +904,9 @@ Returns: [Toolbar](action#toolbar)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L280) |  |
+| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L300) |  |
 | editing_bar | *undefined* or [Toolbar](action#toolbar) |  |
-| action_definers | Array of [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L282) |  |
+| action_definers | Array of [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L302) |  |
 
 ### defineActions( definer )
 ##### Arguments:
@@ -921,9 +981,9 @@ Stores and handles keybinds
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | actions | Array of [BarItem](action#baritem) |  |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L310) |  |
-| extra | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L311) |  |
-| structure | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/action.d.ts#L312) |  |
+| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L330) |  |
+| extra | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L331) |  |
+| structure | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/action.d.ts#L332) |  |
 
 ### save()
 

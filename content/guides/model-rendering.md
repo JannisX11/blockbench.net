@@ -26,9 +26,9 @@ The first step is choosing a rendering program. Usually, The higher the render q
 |**Platforms**		|Windows		|Web		|Windows, Mac|Windows, Linux, Mac|
 |**Price**			|Free			|Free		|Freemium		|Free			|
 
-<p style="background-color: rgba(50, 255, 100, 0.2); border: 1px solid #20f477; padding: 10px; margin-top: 20px;">
+<div class="block-info">
     Raytracing is a rendering technique where light rays, emitted from a light source, bounce around the model and are reflected and occluded by objects in the scene. In regular real-time renderers, shadows are calculated from the object shape and blurred on the edges, and ambient occlusion is faked based on the shape of the model. Compared to that, raytracing produces a much more realistic and appealing result because it closely simulates how light works in the real world.
-</p>
+</div>
 
 
 ### Windows 3D Viewer

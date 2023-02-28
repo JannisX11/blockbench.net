@@ -27,7 +27,7 @@ Creates a new codec
 	* `afterSave`: Function (Optional)
 	* `extension`: *string*
 	* `remember`: *boolean* - Whether to remember the models exported using this codec
-	* `load_filter`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/codec.d.ts#L23) (Optional)
+	* `load_filter`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/codec.d.ts#L23) (Optional)
 	* `export_action`: [Action](action#action-1) (Optional)
 
 
@@ -92,7 +92,7 @@ Write the content of this file to the selected location. The default method can 
 ##### Arguments:
 * `content`: *any*
 * `path`: *string*
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/codec.d.ts#L78)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/codec.d.ts#L78)
 
 
 ### afterDownload( path )
@@ -110,7 +110,7 @@ Adds an event listener to the codec
 
 ##### Arguments:
 * `event_name`: *string* - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/codec.d.ts#L87) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/codec.d.ts#L87) -
 
 
 ### removeListener( event_name, callback )
@@ -118,7 +118,7 @@ Removes an event listener from the codec
 
 ##### Arguments:
 * `event_name`: *string* -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/codec.d.ts#L93) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/codec.d.ts#L93) -
 
 
 ### dispatchEvent( data )
@@ -139,5 +139,5 @@ Returns: Array of *string*
 ## Codecs
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/codec.d.ts#L119)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/codec.d.ts#L119)
 

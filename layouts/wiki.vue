@@ -48,6 +48,7 @@ export default {
 		overflow: auto;
 		max-width: 100vw;
 		margin: 0 -20px;
+		margin-bottom: 10px;
 		padding: 0px 20px;
 	}
 	#wiki_wrapper .nuxt-content-highlight {
@@ -56,6 +57,18 @@ export default {
 		max-width: 100vw;
 		margin: 0 -20px;
 		padding: 0px 20px;
+	}
+	.block-info {
+		margin-bottom: 8px;
+		padding: 14px 12px;
+		background-color: var(--light-background);
+		border-left: 10px solid var(--accent);
+	}
+	.block-warning {
+		margin-bottom: 8px;
+		padding: 14px 12px;
+		background-color: var(--light-background);
+		border-left: 10px solid #f53040e0;
 	}
 
 	/* TOC */

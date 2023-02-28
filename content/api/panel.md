@@ -4,6 +4,8 @@ title: Panel
 
 # Panel
 ## Panel
+Panels are interface sections in Blockbench, that are always visible (in a specific format and mode), and can be added to the sidebars, above or below the 3D viewport, or used as free floating above the UI. Examples are the Outliner or the UV editor.
+
 ### new Panel( id, options )
 Creates a new Panel
 
@@ -19,8 +21,8 @@ Creates a new Panel
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `display_condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `expand_button`: *boolean*
-	* `toolbars`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L11)
-	* `default_position`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L14)
+	* `toolbars`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L11)
+	* `default_position`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L14)
 	* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html)
 	* `default_side`: `"left"` or `"right"`
 	* `insert_before`: *string*
@@ -73,7 +75,7 @@ Returns: [Panel](panel#panel-1)
 
 ### dispatchEvent( event_name[, data] )
 ##### Arguments:
-* `event_name`: [PanelEvent](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L28)
+* `event_name`: [PanelEvent](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L28)
 * `data`: *any* (Optional)
 
 
@@ -81,14 +83,14 @@ Returns: [Panel](panel#panel-1)
 Add an event listener
 
 ##### Arguments:
-* `event_name`: [PanelEvent](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L28)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L48)
+* `event_name`: [PanelEvent](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L28)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L51)
 
 
 ### removeListener( event_name, callback )
 ##### Arguments:
-* `event_name`: [PanelEvent](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L28)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/panel.d.ts#L49)
+* `event_name`: [PanelEvent](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L28)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/panel.d.ts#L52)
 
 
 ### delete()

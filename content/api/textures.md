@@ -4,6 +4,8 @@ title: Textures
 
 # Textures
 ## Texture
+A texture combines the functionality of material, texture, and image, in one. Textures can be linked to files on the local hard drive, or hold the information in RAM.
+
 ### new Texture( data[, uuid] )
 Creates a new Texture
 
@@ -55,7 +57,7 @@ Returns: [Texture](textures#texture)
 Loads the texture from it's current source
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/textures.d.ts#L53) (Optional) - Callback function
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/textures.d.ts#L56) (Optional) - Callback function
 
 Returns: [Texture](textures#texture)
 
@@ -68,7 +70,7 @@ Returns: [Texture](textures#texture)
 
 ### fromFile( file )
 ##### Arguments:
-* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/textures.d.ts#L55)
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/textures.d.ts#L58)
 
 Returns: [Texture](textures#texture)
 
@@ -134,7 +136,7 @@ Adds texture to the textures list and initializes it
 ##### Arguments:
 * `undo`: *boolean* (Optional) - If true, an undo point is created
 
-Returns: *any*
+Returns: [Texture](textures#texture)
 
 ### remove( [no_update] )
 Removes the texture
@@ -210,7 +212,7 @@ Returns: *string*
 Wrapper to do edits to the texture.
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/textures.d.ts#L125) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/textures.d.ts#L128) -
 * `options`: TextureEditOptions - Editing options
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created

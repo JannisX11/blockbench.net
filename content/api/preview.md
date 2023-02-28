@@ -6,6 +6,8 @@ title: Preview
 ## Preview
 Extends: [Deletable](misc#deletable)
 
+Previews are 3D viewports, that can either be used as a viewport for the user, or as an offscreen view to record media.
+
 ### new Preview( options )
 Creates a new Preview
 
@@ -30,7 +32,7 @@ Creates a new Preview
 | controls | *object* |  |
 | annotations | *object* |  |
 | renderer | [WebGLRenderer](#WebGLRenderer) |  |
-| background | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/preview.d.ts#L48) |  |
+| background | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/preview.d.ts#L51) |  |
 | raycaster | [Raycaster](#Raycaster) |  |
 
 ### delete()
@@ -40,7 +42,7 @@ Creates a new Preview
 ##### Arguments:
 * `event`: [MouseEvent](#MouseEvent)
 
-Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/preview.d.ts#L16)
+Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/preview.d.ts#L16)
 
 ### render()
 
@@ -65,9 +67,9 @@ Returns: [Preview](preview#preview-1)
 ### loadAnglePreset( angle_preset )
 ##### Arguments:
 * `angle_preset`: AnglePreset
-	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L2)
-	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L2) (Optional)
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/outliner.d.ts#L2) (Optional)
+	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/outliner.d.ts#L2)
+	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/outliner.d.ts#L2) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/outliner.d.ts#L2) (Optional)
 	* `projection`: `"perspective"` or `"unset"` or `"orthographic"`
 	* `zoom`: *number* (Optional)
 	* `focal_length`: *number* (Optional)

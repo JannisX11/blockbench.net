@@ -41,9 +41,9 @@ Creates a new Property
 	* `exposed`: *boolean* (Optional)
 	* `label`: *string* (Optional)
 	* `options`: *object* (Optional) - Options used for select types
-	* `merge`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L114) (Optional)
-	* `reset`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L115) (Optional)
-	* `merge_validation`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L116) (Optional)
+	* `merge`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/misc.d.ts#L114) (Optional)
+	* `reset`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/misc.d.ts#L115) (Optional)
+	* `merge_validation`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/misc.d.ts#L116) (Optional)
 
 
 | Property | Type | Description |
@@ -59,7 +59,7 @@ Creates a new Property
 | isArray | *boolean* |  |
 | isVector | *boolean* |  |
 | isVector2 | *boolean* |  |
-| merge_validation | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L136) |  |
+| merge_validation | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/misc.d.ts#L136) |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | exposed | *boolean* |  |
 | label | *any* |  |
@@ -114,7 +114,7 @@ Returns: *string*
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L159) | Translation data for the current language |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/misc.d.ts#L159) | Translation data for the current language |
 | code | *string* | Two letter code indicating the currently selected language |
 
 ### addTranslations( language, strings )
@@ -122,7 +122,7 @@ Add translations for custom translation strings
 
 ##### Arguments:
 * `language`: *string* - Two letter language code, e. G. 'en'
-* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/e85d652/types/misc.d.ts#L171) - Object listing the translation keys and values
+* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/misc.d.ts#L171) - Object listing the translation keys and values
 
 Returns: *any*
 

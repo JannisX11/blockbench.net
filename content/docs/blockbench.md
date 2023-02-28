@@ -112,41 +112,69 @@ Removes an event listener using the `event_id` and `callback`. Should be used in
 
 | Event ID | Description
 |-|-
-| remove_animation	| Emitted after a user removes an animation
-| display_animation_frame	| Emitted when Blockbench renders a frame of an animation
-| before_closing	| 
-| create_session	| 
-| join_session		| 
-| quit_session		| 
-| send_session_data		| 
-| receive_session_data	| 
-| user_joins_session	| 
-| user_leaves_session	| 
-| process_chat_message	| 
-| update_settings		| 
-| update_project_settings	|
-| save_project	| 
-| load_project	| 
-| new_project	| 
-| reset_project	|  
-| close_project	| 
-| add_cube		| 
-| add_group		| 
-| update_selection	| 
-| update_keyframe_selection	| 
-| select_all		| 
-| added_to_selection| 
-| invert_selection	| 
-| canvas_select		| 
-| canvas_click		| 
-| change_texture_path	| 
-| add_texture		| 
-| finish_edit		| 
-| finished_edit		| 
-| undo				| 
-| redo				| 
-| select_mode		| 
-| unselect_mode		| 
+| `remove_animation`	| Emitted after a user removes an animation
+| `display_animation_frame`	| Emitted when Blockbench renders a frame of an animation
+| `before_closing` | 
+| `create_session` | User creates an edit session
+| `join_session` | User joins an edit session
+| `quit_session` | User quits an edit session
+| `send_session_data` | Session data is transmitted, e. G. for chat communication or model edits
+| `receive_session_data` | Session data is received
+| `user_joins_session` | User joins a session
+| `user_leaves_session` | User leaves a session
+| `process_chat_message` |
+| `update_settings` | The settings are updated
+| `update_project_settings` | The project settings are updated
+| `save_project` | A project is saved as bbmodel
+| `load_project` | A project is loaded from bbmodel
+| `new_project` | A new project was created
+| `close_project` | A project is closed
+| `saved_state_changed` | A project gets marked as either saved or unsaved
+| `add_cube` | A new cube is added via Add Cube
+| `add_mesh` | A new mesh is added via Add Mesh
+| `add_group` | A new group is added via Add Group
+| `add_texture_mesh` | A new texture mesh is added via Add Texture Mesh
+| `group_elements` | The selected are wrapped into a new group via Group Elements
+| `update_selection` | The selection was changed and the interface gets updated
+| `update_keyframe_selection` | The keyframe selection was changed and the interface gets updated
+| `select_all` | The select all action was used to select all of something, depending on context
+| `added_to_selection` | An element was selected or added to the selection
+| `invert_selection` | The selection was inverted
+| `canvas_select` | An element is selected by clicking in the 3D viewport
+| `canvas_click` | 
+| `change_texture_path` | The source file of a texture was changed
+| `add_texture` | A texture was imported
+| `finish_edit` | An edit was just finished
+| `finished_edit` | An edit was just finished and added to the undo history
+| `undo` | User used Undo
+| `redo` | User used Redo
+| `load_undo_save` | The state of an undo save is loaded
+| `change_color` | The main color got changed
+| `select_mode` | A mode got selected
+| `unselect_mode` | A mode got unselected
+| `change_active_panel` | The panel that the user is active in was changed, e. G. by clicking inside a new panel
+| `resize_window` | The window size is updated, by resizing the window or updating sidebars, etc.
+| `press_key` | A key was pressed
+| `select_format` | A format was selected
+| `convert_format` | A model is converted into another format
+| `construct_format` | A new format is created by a plugin
+| `delete_format` | A format is deleted by a plugin, e. G. through uninstalling
+| `select_project` | User selected a project
+| `unselect_project` | User unselected a project
+| `setup_project` | A new project is set up to load a model from a file or session
+| `update_project_resolution` | The project texture resolution is changed
+| `merge_project` | A project is merged into another project
+| `update_view` | The view is updated by using the Canvas.updateView API
+| `update_camera_position` | The camera position is updated
+| `render_frame` | A frame was rendered
+| `construct_model_loader` | A new model loader is created by a plugin
+| `delete_model_loader` | A model loader is deleted by a plugin, e. G. through uninstalling
+| `update_recent_project_data` | The list of recent projects and their data is getting updated
+| `update_recent_project_thumbnail` | The recent project thumbnail of a project is getting updated
+| `load_from_recent_project_data` | Cached data such as textures and animation are loaded from a recent project entry
+| `edit_animation_properties` | The properties of an animaiton were edited by user
+| `select_preview_scene` | A preview scene was selected
+| `unselect_preview_scene` | A preview scene was unselected
 
 
 ## Drag and Drop Files
