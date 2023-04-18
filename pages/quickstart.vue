@@ -25,7 +25,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=aaJ8XgMAOno">Modeling and Implementation Tutorial</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Cw8PPPEl_IQ">Modeling and Implementation Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dFRRinZMNNM">Modeling and Implementation Tutorial with OptiFine CIT</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=wm-giZnkUk4&list=PL9GkT_XFhyAJNg2EZvvp1X25oMdy1jfRW">Comprehensive Resource Pack and Model Tutorial Playlist (Not including Blockbench)</a></li>
 					</ul>

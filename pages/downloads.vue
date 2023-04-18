@@ -76,20 +76,20 @@
 				</section>
 			</div>
 
-			<h3>Hardware Requirements</h3>
+			<h3>System Requirements</h3>
 			<div class="column_left">
 				<h4>Minimum</h4>
 				<ul>
 					<li>
 						Desktop App
 						<ul>
-							<li><b>Windows</b> 7 or newer</li>
+							<li><b>Windows</b> 10 or newer</li>
 							<li><b>macOS</b> 10.10 Yosemite or newer</li>
 							<li><b>Ubuntu</b> 12.04, Debian 8, Fedora 21 or newer</li>
-							<li>1+ GB of empty storage space</li>
+							<li>2+ GB of empty storage space</li>
 						</ul>
 					</li>
-					<li>1 GB of RAM</li>
+					<li>4 GB of RAM</li>
 					<li>1280 x 720 display</li>
 					<li>Intel HD Graphics 4000 or Nvidia/AMD equivalent, or newer</li>
 				</ul>
