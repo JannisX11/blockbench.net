@@ -73,6 +73,9 @@
 						<li>On Android, go to&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Chrome. A pop-up will appear, asking you whether to add Blockbench.</li>
 						<li>On iOS, open&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Safari. Press the share button and select “Add to Home Screen”</li>
 					</ul>
+
+					<h4>Windows 7 & 8</h4>
+					<p>The last version that runs on Windows 7 and 8 is Blockbench 4.6.5. To use Blockbench on Windows 7 or 8, download the version from the <a target="_blank" href="https://www.blockbench.net/downloads#v4.6.5">4.6.5 download page</a> and disable Automatic Updates in File > Preferences > Settings > Application.</p>
 				</section>
 			</div>
 
