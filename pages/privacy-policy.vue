@@ -45,7 +45,7 @@
 			</ul>
 			
 			<h2>Data Collection</h2>
-			<p>We do not knowingly collect any personally identifiable data. We may collect certain anonymized usage data such as installation count that can not be traced back to a certain Device or User.</p>
+			<p>We do not knowingly collect any personally identifiable data. We may collect certain anonymized usage data such as installation count that can not be traced back to an individual Device or User.</p>
 
 			<p>If you choose to use the Model Sharing feature (in Blockbench under File > Export > Share...), we will store your model data for the amount of time that was selected by You. You can contact Us if you would like your data to be removed ahead of time.</p>
 			
@@ -53,12 +53,11 @@
 			
 			<h2>Local Storage and Cookies</h2>
 			<p>We use technology such as Local Storage and Cookies to improve Your experience using Our Services. These technologies are used only for functionality purposes, such as remembering Your user preferences, and are only stored locally on Your Device.</p>
-			<p>If you choose to use third party services that integrate with Our Services, these services will have different policies. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
+			<p>If you choose to use third party services that integrate with Our Services, these services will have different policies. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
 
 
 			<h2>Children's Privacy</h2>
 			<p>We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-			<p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
 			
 			
 			<h2>Links to Other Websites</h2>
