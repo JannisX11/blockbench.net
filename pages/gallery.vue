@@ -18,6 +18,21 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
+				<img src="~assets/gallery/4.7.png" />
+				<h2>Splash Art Contest 4.7 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Neptune_Coffee">NeptuneCoffee</a> & <a target="_blank" rel="noopener" href="https://twitter.com/Dxnkbarkeit">Dankbarkeit</a>, April 2023</label>
+				<p>The theme for the 14th Splash Art Contest was simply "Train". NeptuneCoffee and Dankbarkeit won first place with their beautiful overgrown train station!</p>
+				<p>The 4.7 Splash Art Contest was very successful, with 26 submissions in total up for vote, and so many of them deserving of being featured on the splash screen. That's why, in addition to the winning piece, we decided to feature the first 5 places on the Blockbench splash screen as a slideshow.</p>
+			</section>
+
+			<section v-if="showImage(['mesh'])">
+				<img src="~assets/gallery/ds_lite.png" />
+				<h2>Nintendo DS Lite</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/violxiv">Violet</a>, February 2023</label>
+				<p>Violet created this awesome DS Lite low-poly model as part of a series of retro tech and game consoles! The <a target="_blank" rel="noopener" href="https://twitter.com/violxiv/status/1621154673238609922">tweet</a> was seen by over 3.5 million people on Twitter and introduced many new 3D and pixel artists to the capabilities of Blockbench.</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle'])">
 				<img src="~assets/gallery/4.6.png" />
 				<h2>Splash Art Contest 4.6 Winner</h2>
@@ -304,9 +319,6 @@ export default {
 		width: calc(100% + 48px);
 		margin-right: -24px;
 		margin-left: -24px;
-	}
-	h2 {
-		margin-bottom: 0;
 	}
 	label {
 		color: var(--light-subtle);
