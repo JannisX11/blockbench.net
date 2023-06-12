@@ -46,11 +46,11 @@
 						<div class="install_os">
 							<fa :icon="['fab', 'apple']" />
 							<h3>macOS</h3>
-							<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_x64_${version}.dmg`" target="_blank" rel="noopener">
-								<label>macOS Intel</label>
-							</a>
 							<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_arm64_${version}.dmg`" target="_blank" rel="noopener">
 								<label>macOS Apple Silicon</label>
+							</a>
+							<a class="blockbench_download mac" :href="`${path}/v${version}/Blockbench_x64_${version}.dmg`" target="_blank" rel="noopener">
+								<label>macOS Intel</label>
 							</a>
 						</div>
 						
