@@ -43,20 +43,6 @@ export default {
 			plugin: plugins[params.pathMatch]
 		};
 	},
-	methods: {
-		getTagColor(tag) {
-			let lowercase = tag.toLowerCase();
-			if (lowercase.substr(0, 9) == 'minecraft') {
-				return 'var(--color-tag-mc)'
-			}
-		},
-		getTagDarkText(tag) {
-			let lowercase = tag.toLowerCase();
-			if (lowercase.substr(0, 9) == 'minecraft') {
-				return true;
-			}
-		}
-	},
 	computed: {
 		filteredPlugins() {
 			let term = this.search_term.toUpperCase();

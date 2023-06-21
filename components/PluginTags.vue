@@ -13,13 +13,16 @@ export default {
 	methods: {
 		getTagColor(tag) {
 			let lowercase = tag.toLowerCase();
-			if (lowercase.substr(0, 9) == 'minecraft') {
+			if (lowercase.startsWith('minecraft')) {
 				return 'var(--color-tag-mc)'
+			}
+			if (lowercase == 'deprecated') {
+				return 'var(--color-tag-deprecated)'
 			}
 		},
 		getTagDarkText(tag) {
 			let lowercase = tag.toLowerCase();
-			if (lowercase.substr(0, 9) == 'minecraft') {
+			if (lowercase.startsWith('minecraft')) {
 				return true;
 			}
 		}
@@ -35,6 +38,7 @@ export default {
 		line-height: 0;
 		margin-left: -4px;
 		--color-tag-mc: #73e473;
+		--color-tag-deprecated: #ff3467;
 		--color-tag-misc: var(--accent);
 	}
 	.plugin_tag_list li {

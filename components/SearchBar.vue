@@ -3,7 +3,7 @@
 		<input type="text" placeholder="Search..." :value="value" @input="change($event.target.value)">
 		<div :title="value ? 'Search' : 'Clear'" :class="{clickable: !!value}" @click="change('')">
 			<fa v-if="!value" icon="magnifying-glass" />
-			<fa v-else icon="times" />
+			<fa v-else icon="xmark" />
 		</div>
 	</div>
 </template>
