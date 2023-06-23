@@ -88,6 +88,28 @@ Upon clicking this prompt, we are redirected to the Sketchfab website where we c
 
 Currently, you should have a screen similar to this:
 
-image here
+![Model on Sketchfab](/images/wiki/guides/emissive-textures-renders/sketchfab-model-uploaded.png)
 
-<!-- Next step: Add some missing images -->
+To get started with rendering your model, press the blue `Edit 3D Settings` button at the top right of the screen. Here, we'll be met with a bunch of panels accompanied with our 3D model, all of which are rendering settings and options that you can configure. For now we'll bypass the other rendering options and get straight to using our emissive texture.
+
+Everything regarding emissive textures is located in the `Materials` tab, as marked in the image. This tab not only allows us to configure our emissive texture, but also stuff like opacity. Each one of the collapsible categories are different types of settings we can configure for our model. For now, scroll down until you find the `Emission` category:
+
+![Location of emissive tab](/images/wiki/guides/emissive-textures-renders/sketchfab-emissive-feature.png)
+
+Next, we'll need to upload our emissive texture which is saved on our computer. To do this, click the color picker, select the `Texture` panel, and click `Manage Textures`.
+
+![Manage textures](/images/wiki/guides/emissive-textures-renders/sketchfab-manage-textures.png)
+
+Once you find yourself in this menu, click the blue `Import Texture` button and import your texture. And ta-da, we have ourselves a working emissive texture!
+
+![Our model with an emissive texture + bloom](/images/wiki/guides/emissive-textures-renders/sketchfab-bloom.png)
+
+From here, feel free to mess around with any of the other settings provided to you to touch up and finalize your render. For example, you may consider changing the background image, adding bloom, or maybe adding some drop shadows. For example, the image above is the emissive texture applied with bloom.
+
+It's also important to mention that Sketchfab gives us easy ways to manipulate the way the emissive texture applies to the model. For example, the default render mode is "trilinear", but we can change it to "nearest" as well.
+
+![Different rendering settings](/images/wiki/guides/emissive-textures-renders/sketchfab-nearest.png)
+
+And here's our final result!
+
+![Sketchfab final result](/images/wiki/guides/emissive-textures-renders/sketchfab-finished.png)
