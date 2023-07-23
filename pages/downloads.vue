@@ -75,7 +75,7 @@
 					</ul>
 
 					<h4>Windows 7 & 8</h4>
-					<p>The last version that runs on Windows 7 and 8 is Blockbench 4.6.5. To use Blockbench on Windows 7 or 8, download the version from the <a target="_blank" href="https://www.blockbench.net/downloads#v4.6.5">4.6.5 download page</a> and disable Automatic Updates in File > Preferences > Settings > Application.</p>
+					<p>The last version that runs on Windows 7 and 8 (and Windows 10 32-bit) is Blockbench 4.6.5. To use Blockbench on Windows 7 or 8, download the version from the <a target="_blank" href="https://www.blockbench.net/downloads#v4.6.5">4.6.5 download page</a> and disable Automatic Updates in File > Preferences > Settings > Application.</p>
 				</section>
 			</div>
 
@@ -86,13 +86,13 @@
 					<li>
 						Desktop App
 						<ul>
-							<li><b>Windows</b> 10 or newer</li>
+							<li><b>Windows</b> 10 or newer (64 bit)</li>
 							<li><b>macOS</b> 10.10 Yosemite or newer</li>
 							<li><b>Ubuntu</b> 12.04, Debian 8, Fedora 21 or newer</li>
 							<li>2+ GB of empty storage space</li>
 						</ul>
 					</li>
-					<li>4 GB of RAM</li>
+					<li>4 GB RAM</li>
 					<li>1280 x 720 display</li>
 					<li>Intel HD Graphics 4000 or Nvidia/AMD equivalent, or newer</li>
 				</ul>
@@ -102,7 +102,7 @@
 				<ul>
 					<li>Windows, macOS, or Linux computer</li>
 					<li>Mouse and keyboard</li>
-					<li>8 GB of RAM</li>
+					<li>8 GB RAM</li>
 					<li>1920 x 1080 display</li>
 					<li>10 GB of empty storage space</li>
 				</ul>

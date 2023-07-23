@@ -16,7 +16,7 @@
 				<h4>Rendering Models</h4>
 				<p>Make beautiful renders of your models!</p>
 			</nuxt-link>
-			<nuxt-link to="/wiki/api/plugin">
+			<nuxt-link to="/wiki/docs/plugin">
 				<h4>Creating a Plugin</h4>
 				<p>Learn how to write, test, and submit a Blockbench plugin</p>
 			</nuxt-link>
