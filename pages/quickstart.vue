@@ -98,6 +98,31 @@
 					</ul>
 				</template>
 
+				<template v-if="page == 'mc_legends'">
+					<h4 class="suggestion">The following format was suggested for you:</h4>
+					<h2>Bedrock Entity</h2>
+					<p>With the Legends Exporter plugin you can export Bedrock entity models to Minecraft Legends</p>
+
+					<h3>Quick Info</h3>
+					<ul>
+						<li>Download the plugin here: <a href="https://github.com/Mojang/legends-blockbench-plugin">https://github.com/Mojang/legends-blockbench-plugin</a></li>
+						<li>Discord Help Forum: <a href="https://discord.gg/J6Wj5ayEmZ" class="channel">#help-minecraft-bedrock</a></li>
+						<li>Addons are similar to Minecraft Bedrock Add-Ons, but also different in a lot of ways.</li>
+					</ul>
+
+					<h3>Caveats</h3>
+					<ul>
+						<li>Legends modding is still fairly new. Creating mods and finding resources may be more challenging compared to Java or Bedrock Edition.</li>
+					</ul>
+
+					<h3>Resources</h3>
+					<ul>
+						<li><a target="_blank" rel="noopener" href="https://github.com/Mojang/minecraft-legends-docs">Official Documentation</a></li>
+						<li><a target="_blank" rel="noopener" href="https://legendsmodding.github.io/ModdingDocs">Community Documentation</a></li>
+						<li><a target="_blank" rel="noopener" href="https://discord.gg/5CksE8CVjE">Discord Modding Community</a></li>
+					</ul>
+				</template>
+
 				<template v-if="page == 'cem'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>OptiFine Entity (CEM)</h2>
@@ -243,6 +268,7 @@
 
 					<div class="answer" @click="loadPage('q_java_type')">Minecraft: Java Edition</div>
 					<div class="answer" @click="loadPage('q_bedrock_type')">Minecraft: Bedrock Edition</div>
+					<div class="answer" @click="loadPage('mc_legends')">Minecraft Legends</div>
 					<div class="answer" @click="loadPage('hytale')">Hytale</div>
 					<div class="answer" @click="loadPage('generic')">Rendering / Game Engine</div>
 					<div class="answer" @click="loadPage('generic')">Just for fun</div>
