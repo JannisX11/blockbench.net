@@ -23,7 +23,7 @@ Creates a new ModelFormat
 	* `show_on_start_screen`: *boolean* (Optional)
 	* `format_page`: FormatPage (Optional)
 		* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L3) (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L3) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
@@ -37,6 +37,7 @@ Creates a new ModelFormat
 	* `bone_rig`: *boolean* (Optional)
 	* `centered_grid`: *boolean* (Optional)
 	* `rotate_cubes`: *boolean* (Optional)
+	* `stretch_cubes`: *boolean* (Optional)
 	* `integer_size`: *boolean* (Optional)
 	* `meshes`: *boolean* (Optional)
 	* `texture_meshes`: *boolean* (Optional)
@@ -55,9 +56,9 @@ Creates a new ModelFormat
 	* `animation_mode`: *boolean* (Optional)
 	* `pose_mode`: *boolean* (Optional)
 	* `cube_size_limiter`: CubeSizeLimiter (Optional)
-		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L16)
-		* `move`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L20)
-		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L24)
+		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L16)
+		* `move`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L20)
+		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L24)
 		* `rotation_affected`: *boolean* (Optional) - Set to true to tell Blockbench to check and adjust the cube limit after rotating a cube
 		* `coordinate_limits`: Array (Optional) - Optionally set the coordinate limits of cubes in local space
 	* `codec`: [Codec](codec#codec-1) (Optional)
@@ -79,7 +80,7 @@ Creates a new ModelFormat
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L1) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L1) |  |
 | box_uv | *boolean* |  |
 | optional_box_uv | *boolean* |  |
 | single_texture | *boolean* |  |
@@ -90,6 +91,7 @@ Creates a new ModelFormat
 | bone_rig | *boolean* |  |
 | centered_grid | *boolean* |  |
 | rotate_cubes | *boolean* |  |
+| stretch_cubes | *boolean* |  |
 | integer_size | *boolean* |  |
 | meshes | *boolean* |  |
 | texture_meshes | *boolean* |  |
@@ -107,7 +109,7 @@ Creates a new ModelFormat
 | display_mode | *boolean* |  |
 | animation_mode | *boolean* |  |
 | pose_mode | *boolean* |  |
-| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L12) |  |
+| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L12) |  |
 
 ### onFormatPage()
 
@@ -162,7 +164,7 @@ Creates a new ModelLoader
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `format_page`: FormatPage (Optional)
 		* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L3) (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L3) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
@@ -182,7 +184,7 @@ Creates a new ModelLoader
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/format.d.ts#L1) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/format.d.ts#L1) |  |
 
 ### onFormatPage()
 

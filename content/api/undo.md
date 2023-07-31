@@ -29,7 +29,7 @@ Starts an edit to the current project by saving the state of the provided aspect
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L50)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L50)
 
 ### finishEdit( action[, aspects] )
 Finishes an edit by saving the state of the project after it was changed
@@ -52,7 +52,7 @@ Finishes an edit by saving the state of the project after it was changed
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L50)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L50)
 
 ### cancelEdit()
 Cancels an event before it was finished and reset the project to the state before
@@ -92,15 +92,15 @@ Provides a menu to amend the latest edit with slightly changed values
 ##### Arguments:
 * `form`: AmendEditForm
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
-	* `type`: `"number"` (Optional)
+	* `type`: `"number"` or `"checkbox"` (Optional)
 	* `label`: *string*
 	* `interval_type`: `"position"` or `"rotation"`
-	* `getInterval`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L61) (Optional)
+	* `getInterval`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L61) (Optional)
 	* `value`: *string* or *number* (Optional)
 	* `min`: *number* (Optional)
 	* `max`: *number* (Optional)
 	* `step`: *number* (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L104)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L104)
 
 Returns: *any*
 
@@ -108,8 +108,8 @@ Returns: *any*
 Loads a specific undo save
 
 ##### Arguments:
-* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L29) - The undo save to load
-* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/undo.d.ts#L29) - The current undo save for reference
+* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L29) - The undo save to load
+* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L29) - The current undo save for reference
 * `mode`: `"session"` (Optional) - The load save modes
 
 

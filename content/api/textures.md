@@ -30,6 +30,32 @@ Creates a new Texture
 | frameCount | *number* |  |
 | display_height | *number* |  |
 | ratio | *number* |  |
+| path | *string* |  |
+| name | *string* |  |
+| folder | *string* | Relative path to the file's directory, used by some formats such as Java Block/Item |
+| namespace | *string* |  |
+| id | *string* | Texture ID or key, used by some formats. By default this is a number that increases with every texture that is added |
+| particle | *boolean* | Whether the texture is used for the models particle system. Used by some formats such as Java Block/Item |
+| render_mode | *string* |  |
+| render_sides | *string* |  |
+| frame_time | *number* | Texture animation frame time |
+| frame_order_type | `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` |  |
+| frame_order | *string* | Custom frame order |
+| frame_interpolate | *boolean* | Interpolate between frames |
+| source | *string* | HTML-style source of the texture's displayed data. Can be a path (desktop app only), or a base64 data URL |
+| selected | *boolean* |  |
+| show_icon | *boolean* |  |
+| error | *number* |  |
+| visible | *boolean* | Whether the texture is visible. Used for layered textures mode |
+| display_canvas | *boolean* | Whether the texture canvas is displayed in the UV/2D editor, for live feedback |
+| width | *number* |  |
+| height | *number* |  |
+| currentFrame | *number* |  |
+| saved | *boolean* |  |
+| mode | `"link"` or `"bitmap"` | Whether the latest version of the texture is currently loaded from and linked to a file on disk, or held in memory as bitmap data |
+| uuid | *string* |  |
+| canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | The texture's associated canvas. Note: This may not always be up to date with the texture data |
+| img | [HTMLImageElement](#HTMLImageElement) | Texture image element |
 | menu | [Menu](menu#menu-1) |  |
 
 ### getErrorMessage()
@@ -57,7 +83,7 @@ Returns: [Texture](textures#texture)
 Loads the texture from it's current source
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/textures.d.ts#L56) (Optional) - Callback function
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/textures.d.ts#L102) (Optional) - Callback function
 
 Returns: [Texture](textures#texture)
 
@@ -70,7 +96,7 @@ Returns: [Texture](textures#texture)
 
 ### fromFile( file )
 ##### Arguments:
-* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/textures.d.ts#L58)
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/textures.d.ts#L104)
 
 Returns: [Texture](textures#texture)
 
@@ -212,7 +238,7 @@ Returns: *string*
 Wrapper to do edits to the texture.
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/textures.d.ts#L128) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/textures.d.ts#L174) -
 * `options`: TextureEditOptions - Editing options
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created

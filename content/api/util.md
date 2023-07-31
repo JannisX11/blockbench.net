@@ -44,7 +44,7 @@ Adds an event listener to an element, except that is supports multiple event typ
 ##### Arguments:
 * `element`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) - Target Element
 * `events`: *string* - Event types, separated by space characters
-* `func`: [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/util.d.ts#L50) - Function
+* `func`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/util.d.ts#L50) - Function
 * `option`: *any* (Optional) - Option
 
 Returns: *any*
@@ -80,6 +80,8 @@ Returns: *number*
 ## Reusable
 #### Namespace
 
+Reusable data types that can be used by anything, but should not be used to store data between function calls. Can be used to save memory on frequent function calls.
+
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | vec1 | [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3) |  |
@@ -94,4 +96,56 @@ Returns: *number*
 | quat2 | [THREE.Quaternion](https://threejs.org/docs/index.html#api/en/math/Quaternion) |  |
 | euler1 | [THREE.Euler](https://threejs.org/docs/index.html#api/en/math/Euler) |  |
 | euler2 | [THREE.Euler](https://threejs.org/docs/index.html#api/en/math/Euler) |  |
+
+
+## Merge
+#### Namespace
+
+Merge the value under a certain key from one object into another
+
+### number( target, source, key )
+##### Arguments:
+* `target`: *object*
+* `source`: *object*
+* `key`: *string* or *number*
+
+
+### string( target, source, key[, validate] )
+##### Arguments:
+* `target`: *object*
+* `source`: *object*
+* `key`: *string* or *number*
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/util.d.ts#L80) (Optional)
+
+
+### molang( target, source, key )
+##### Arguments:
+* `target`: *object*
+* `source`: *object*
+* `key`: *string* or *number*
+
+
+### boolean( target, source, key[, validate] )
+##### Arguments:
+* `target`: *object*
+* `source`: *object*
+* `key`: *string* or *number*
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/util.d.ts#L82) (Optional)
+
+
+### arrayVector( target, source, key[, validate] )
+##### Arguments:
+* `target`: *object*
+* `source`: *object*
+* `key`: *string* or *number*
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/util.d.ts#L83) (Optional)
+
+
+### arrayVector2( target, source, key[, validate] )
+##### Arguments:
+* `target`: *object*
+* `source`: *object*
+* `key`: *string* or *number*
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/util.d.ts#L84) (Optional)
+
 

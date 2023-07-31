@@ -55,5 +55,5 @@ Type: [Mode](mode#mode-1)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/95ce15c/types/mode.d.ts#L31) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/mode.d.ts#L31) |  |
 

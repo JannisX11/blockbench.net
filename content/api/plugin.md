@@ -22,6 +22,7 @@ Creates a new BBPlugin
 	* `min_version`: *string* (Optional) - Minimum Blockbench version in which the plugin can be installed
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
 	* `await_loading`: *string* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
+	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
 	* `oninstall`: Function (Optional)
@@ -55,6 +56,7 @@ Creates a new BBPlugin
 	* `min_version`: *string* (Optional) - Minimum Blockbench version in which the plugin can be installed
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
 	* `await_loading`: *string* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
+	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
 	* `oninstall`: Function (Optional)
@@ -88,6 +90,7 @@ Returns: [BBPlugin](plugin#bbplugin)
 	* `min_version`: *string* (Optional) - Minimum Blockbench version in which the plugin can be installed
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
 	* `await_loading`: *string* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
+	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
 	* `oninstall`: Function (Optional)
