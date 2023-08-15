@@ -56,7 +56,7 @@ When you are finished, position the camera how you’d like and hit F12 to rende
 
 In order for Sketchfab to know what parts need to glow, you need to make something called an emissive texture. This texture will tell Sketchfab what parts it needs to consider emissive, and what parts it should not.
 
-To make an emissive texture, start by duplicating your texture. We will make changes to this new texture while leaving the main texture undisturbed. To help distinguish between the two, it is recommended to rename the emissive texture to something else (for example, you can append `_emissive` to the name of the texture).
+To make an emissive texture, start by duplicating your texture. We will make changes to this new texture while leaving the main texture undisturbed. To distinguish between the two, it is recommended to rename the emissive texture to something else (for example, you can append `-emissive` to the name of the texture).
 
 ![Duplicate textures](/images/wiki/guides/emissive-textures-renders/sketchfab-duplicate-texture.png)
 
@@ -64,23 +64,34 @@ In order to visually see the changes we make to the texture on the model, we nee
 
 ![Apply emissive texture to model](/images/wiki/guides/emissive-textures-renders/sketchfab-apply-emissive-texture.png)
 
-Our emissive texture is the exact same as our regular texture (which is why we duplicated our original texture), *but* will only contain the parts we want glowing. You can do this in Blockbench or using an external image editor. Make sure that you only erase the parts you don’t want to be emissive and keep the rest the same. It’s important to keep the UV mapping and position of where the emissive parts are the *exact* same in both textures.
+Our emissive texture is the exact same as our regular texture (which is why we duplicated our original texture), but will only highlight the parts we want emissive. There are many ways to go about doing this; this guide covers the built-in and usually preferred way of making an emissive texture.
 
-After making these changes to the texture, here is what our lamp now looks like:
+To start, we need to tell Blockbench that our duplicated texture needs to be emissive. To do this, simply right click the duplicated texture and set the `Render Mode` to `Emissive`.
 
-![Configured emissive texture](/images/wiki/guides/emissive-textures-renders/sketchfab-configured-emissive.png)
+![Set the render mode to emissive](/images/wiki/guides/emissive-textures-renders/sketchfab-render-mode.png)
 
-Again, note that the emissive texture is completely separate from our normal texture, therefore there should be two textures in the project.
+Next, we need to mark the elements we want to make emissive. To do this, select the eraser tool at the top toolbar, lower the opacity anywhere to around 1-247 (the higher it is, the stronger you will see the emissive effect in Blockbench), and erase the pixels you want emissive. This will cause the pixels to light up. It's extremely important you lower down the opacity of the eraser, or else you'll be undesirably completely erasing the emissive pixels!
 
-After you have made these changes to your textures, make sure to save them on your computer. We will later use them once we export our model to Sketchfab.
+![Eraser settings](/images/wiki/guides/emissive-textures-renders/sketchfab-eraser.png)
+
+TIP: In order to better see your changes to the emissive texture, lower down the brightness of Blockbench's preview in `File > Preferences > Settings`.
+
+If you've done everything correctly, you should see something like this - the parts we want emissive should be brighter than the rest of the model:
+
+![In-Blockbench emissive texture](/images/wiki/guides/emissive-textures-renders/sketchfab-bb-emissive.png)
+
+Lastly, to export the emissive texture, right click the texture and select `Export Emission Map`. Keep the settings as default, *but* make sure to check the `Flip Y-Axis` checkbox since Sketchfab automatically does this with our regular texture.
+
+![Export emission map](/images/wiki/guides/emissive-textures-renders/sketchfab-export-emission.png)
+![Emission settings](/images/wiki/guides/emissive-textures-renders/sketchfab-emission-settings.png)
 
 ### 2. Exporting to Sketchfab
 
-Currently, our model still has the emissive texture applied to it. To make the model apply the original texture we made, we need to do the same thing as before: press `Ctrl + A` to select the whole model, right click the cubes, and click `Texture > [Original Texture Name]`. The model should look like what it was before, with the entire texture applied to it instead of just the emissive parts.
+Currently, our model still has the emissive texture applied to it. To make the model apply the original texture we made, we need to do the same thing as before: press `Ctrl + A` to select the whole model, right click the cubes, and click `Texture > [Original Texture Name]`. The model should look like what it was before without the emissive parts being brighter than the rest of the model.
 
 ![Apply back default texture](/images/wiki/guides/emissive-textures-renders/sketchfab-apply-default.png)
 
-We can now export our model to Sketchfab. Luckily, Blockbench provides a quick way to do so. Simply go to `File > Export`, fill out the required information, and then press `Confirm`. Doing this should show a prompt which allows you to view your model on Sketchfab.
+We can now export our model to Sketchfab. Luckily, Blockbench provides a quick way to do so. Simply go to `File > Export > Upload to Sketchfab`, fill out the required information, and then press `Confirm`. Doing this should show a prompt which allows you to view your model on Sketchfab.
 
 ![Export to Sketchfab](/images/wiki/guides/emissive-textures-renders/sketchfab-export.png)
 
