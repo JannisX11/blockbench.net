@@ -58,6 +58,8 @@ In order for Sketchfab to know what parts need to glow, you need to make somethi
 
 To make an emissive texture, start by duplicating your texture. We will make changes to this new texture while leaving the main texture undisturbed. To distinguish between the two, it is recommended to rename the emissive texture to something else (for example, you can append `-emissive` to the name of the texture).
 
+Important: Before duplicating, make sure the dimensions of the textures are a power of 2. It will not work correctly otherwise! (If they are not, you can resize the texture by right clicking it and selecting `Resize`, and creating a new template texture to make sure the UVs are fine.)
+
 ![Duplicate textures](/images/wiki/guides/emissive-textures-renders/sketchfab-duplicate-texture.png)
 
 In order to visually see the changes we make to the texture on the model, we need to tell Blockbench to apply the texture to the model, as currently it's still applying the main one. To do this, select your whole model using `Ctrl + A`, and right click the cubes in the outliner. Then, select `Texture > [Your Emissive Texture Name]`, as shown in the screenshot. Now, all changes we make to the emissive texture will be reflected visually on our model.
