@@ -40,7 +40,7 @@ The easiest way to get your model, textures and animations into Blender is by ex
 
 ### 3. Configuring
 
-For this example we will enable cycles instead of eevee<sub>1</sub> since it has light path tracing. If you want to know more about the differences between eevee and cycles, check out the [Blender Wiki](https://docs.blender.org/manual/en/latest/render/eevee/introduction.html).
+For this example we will enable CYCLES instead of EEVEE<sub>1</sub> since it has light path tracing. If you want to know more about the differences between EEVEE and CYCLES, check out the [Blender Wiki](https://docs.blender.org/manual/en/latest/render/eevee/introduction.html).
 
 Navigate to the shading tab<sub>2</sub> and click the object you want to be emissive. Nodes should appear at the bottom (if they don’t, make sure the “Use Nodes” toggle<sub>3</sub> is enabled). Next, drag the color output of the base color node to the emission input on the PrincipledBSDF node, which will make the object glow! If needed, adjust the emission strength you want accordingly, which you can find under the emission input.
 
