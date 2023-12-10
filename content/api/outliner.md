@@ -102,7 +102,7 @@ Returns: [OutlinerNode](outliner#outlinernode)
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
 
 
 
@@ -213,13 +213,13 @@ Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
 
 
 ### fromSave
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L71)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
 
 
 ### isParent
@@ -236,7 +236,7 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new Locator
 
 ##### Arguments:
-* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L75)
+* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L75)
 * `uuid`: *string* (Optional)
 
 
@@ -336,7 +336,7 @@ Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object
 
 ### extend( options )
 ##### Arguments:
-* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L75)
+* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L75)
 
 Returns: *any*
 
@@ -354,13 +354,13 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
 
 
 ### fromSave
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L71)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
 
 
 ### isParent
@@ -384,13 +384,13 @@ Type: Array of [Locator](outliner#locator)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L90)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L90)
 
 
 ### hasSelected
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L92)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L92)
 
 
 
@@ -401,7 +401,7 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new NullObject
 
 ##### Arguments:
-* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L96)
+* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L96)
 * `uuid`: *string* (Optional)
 
 
@@ -414,7 +414,7 @@ Creates a new NullObject
 | parent | [Group](group#group-1) or `"root"` |  |
 | selected | *boolean* |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
-| position | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2) |  |
+| position | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
 | ik_target | *string* |  |
 | lock_ik_target_rotation | *boolean* |  |
 
@@ -504,7 +504,7 @@ Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object
 
 ### extend( options )
 ##### Arguments:
-* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L96)
+* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L96)
 
 Returns: *any*
 
@@ -522,13 +522,13 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
 
 
 ### fromSave
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L71)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
 
 
 ### isParent
@@ -552,13 +552,13 @@ Type: Array of [NullObject](outliner#nullobject)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L116)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L116)
 
 
 ### hasSelected
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L118)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L118)
 
 
 
@@ -569,7 +569,7 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new TextureMesh
 
 ##### Arguments:
-* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L122)
+* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L122)
 * `uuid`: *string* (Optional)
 
 
@@ -583,8 +583,8 @@ Creates a new TextureMesh
 | selected | *boolean* |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
 | texture_name | *string* |  |
-| local_pivot | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2) |  |
-| scale | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2) |  |
+| local_pivot | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
+| scale | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
 
 ### init()
 Initializes the node. This should always be called when creating nodes that will be used in the outliner.
@@ -672,7 +672,7 @@ Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object
 
 ### extend( options )
 ##### Arguments:
-* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L122)
+* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L122)
 
 Returns: *any*
 
@@ -689,7 +689,7 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 
 ### moveVector( offset, axis[, update] )
 ##### Arguments:
-* `offset`: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3) or [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2)
+* `offset`: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3) or [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2)
 * `axis`: *number*
 * `update`: *boolean* (Optional)
 
@@ -697,13 +697,13 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
 
 
 ### fromSave
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L71)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
 
 
 ### isParent
@@ -738,5 +738,5 @@ Type: Array of [TextureMesh](outliner#texturemesh)
 ## markerColors
 #### Global Variable
 
-Type: Array of [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L153)
+Type: Array of [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L153)
 

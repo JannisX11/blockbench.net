@@ -23,6 +23,7 @@ Creates a new ModelProject
 | uuid | *string* |  |
 | selected | *boolean* |  |
 | model_identifier | *string* |  |
+| parent | *string* |  |
 | locked | *boolean* | When set to true, the project tab can no longer be selected or unselected |
 | thumbnail | *string* |  |
 | saved | *boolean* |  |
@@ -35,20 +36,23 @@ Creates a new ModelProject
 | mode | *string* |  |
 | view_mode | *string* |  |
 | display_uv | *string* |  |
-| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/project.d.ts#L39) |  |
+| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L40) |  |
 | EditSession | [EditSession](project#editsession) |  |
 | elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | groups | Array of [Group](group#group-1) |  |
 | selected_elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | selected_group | [Group](group#group-1) |  |
-| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/project.d.ts#L48) |  |
+| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L49) |  |
 | selected_faces | Array |  |
 | textures | Array of [Texture](textures#texture) |  |
 | selected_texture | [Texture](textures#texture) |  |
 | outliner | Array of [OutlinerNode](outliner#outlinernode) |  |
-| animations | Array of [Animation](#Animation) |  |
+| animations | Array of [_Animation](animation#animation-1) |  |
 | timeline_animators | Array |  |
-| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/project.d.ts#L61) |  |
+| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L62) |  |
+| ambientocclusion | *boolean* |  |
+| front_gui_light | *boolean* |  |
+| overrides | *any* |  |
 
 ### getDisplayName()
 
@@ -59,7 +63,7 @@ Returns: *string*
 
 ### whenNextOpen( callback )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/project.d.ts#L80)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L85)
 
 
 ### select()
@@ -198,7 +202,7 @@ Returns: *any*
 
 ### sendEdit( entry )
 ##### Arguments:
-* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/undo.d.ts#L50)
+* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L50)
 
 
 ### receiveData( tag )

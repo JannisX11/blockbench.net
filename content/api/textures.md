@@ -47,14 +47,21 @@ Creates a new Texture
 | show_icon | *boolean* |  |
 | error | *number* |  |
 | visible | *boolean* | Whether the texture is visible. Used for layered textures mode |
-| display_canvas | *boolean* | Whether the texture canvas is displayed in the UV/2D editor, for live feedback |
 | width | *number* |  |
 | height | *number* |  |
+| uv_width | *number* |  |
+| uv_height | *number* |  |
 | currentFrame | *number* |  |
 | saved | *boolean* |  |
 | mode | `"link"` or `"bitmap"` | Whether the latest version of the texture is currently loaded from and linked to a file on disk, or held in memory as bitmap data |
+| internal | *boolean* | If true, the texture is loaded internally. If false, the texture is loaded directly from a file |
 | uuid | *string* |  |
-| canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | The texture's associated canvas. Note: This may not always be up to date with the texture data |
+| selection | [IntMatrix](textures#intmatrix) | Texture selection in paint mode |
+| layers | Array of [TextureLayer](texture_layers#texturelayer) |  |
+| layers_enabled | *boolean* |  |
+| sync_to_project | *string* | The UUID of the project to sync the texture to |
+| canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | The texture's associated canvas. Since 4.9, this is the main source of truth for textures in internal mode. |
+| ctx | [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) | The 2D context of the texture's associated canvas. |
 | img | [HTMLImageElement](#HTMLImageElement) | Texture image element |
 | menu | [Menu](menu#menu-1) |  |
 
@@ -79,11 +86,53 @@ Returns: *string*
 
 Returns: [Texture](textures#texture)
 
+### getUVWidth()
+Get the UV width of the texture if the format uses per texture UV size, otherwise get the project texture width
+
+
+Returns: *number*
+
+### getUVHeight()
+Get the UV height of the texture if the format uses per texture UV size, otherwise get the project texture height
+
+
+Returns: *number*
+
+### getUndoCopy( [bitmap] )
+##### Arguments:
+* `bitmap`: *boolean* (Optional)
+
+Returns: *object*
+
+### getSaveCopy( [bitmap] )
+##### Arguments:
+* `bitmap`: *boolean* (Optional)
+
+Returns: *object*
+
+### startWatcher()
+Start listening for changes to the linked file. Desktop only
+
+
+Returns: *any*
+
+### stopWatcher()
+Stop listening for changes to the linked file. Desktop only
+
+
+Returns: *any*
+
+### generateFolder()
+Generate the Java Block/Item folder property from the file path
+
+
+Returns: *any*
+
 ### load( [cb] )
 Loads the texture from it's current source
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/textures.d.ts#L102) (Optional) - Callback function
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L148) (Optional) - Callback function
 
 Returns: [Texture](textures#texture)
 
@@ -96,7 +145,7 @@ Returns: [Texture](textures#texture)
 
 ### fromFile( file )
 ##### Arguments:
-* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/textures.d.ts#L104)
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L150)
 
 Returns: [Texture](textures#texture)
 
@@ -229,7 +278,13 @@ Scroll the texture list to this texture
 Returns: [Texture](textures#texture)
 
 ### getBase64()
-Returns the content of the texture as a base64 encoded string
+Returns the content of the texture as PNG as a base64 encoded string
+
+
+Returns: *string*
+
+### getDataURL()
+Returns the content of the texture as PNG as a base64 encoded data URL
 
 
 Returns: *string*
@@ -238,7 +293,7 @@ Returns: *string*
 Wrapper to do edits to the texture.
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/textures.d.ts#L174) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L224) -
 * `options`: TextureEditOptions - Editing options
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created
@@ -248,6 +303,75 @@ Wrapper to do edits to the texture.
 	* `no_undo_init`: *boolean* (Optional)
 	* `no_undo_finish`: *boolean* (Optional)
 
+
+### getActiveLayer()
+Get the selected layer. If no layer is selected, returns the bottom layer
+
+
+Returns: [TextureLayer](texture_layers#texturelayer)
+
+### activateLayers( [undo] )
+##### Arguments:
+* `undo`: *boolean* (Optional)
+
+
+### selectionToLayer( [undo, clone] )
+Turns the texture selection into a layer
+
+##### Arguments:
+* `undo`: *boolean* (Optional) - Whether to create an undo entry
+* `clone`: *boolean* (Optional) - When true, the selection is copied into the new layer and also left on the original layer
+
+
+### javaTextureLink()
+
+Returns: *string*
+
+### getMCMetaContent()
+
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L239)
+
+### getAnimationFrameIndices()
+
+Returns: Array of *number*
+
+### exportEmissionMap()
+
+
+### convertToInternal( [data_url] )
+##### Arguments:
+* `data_url`: *string* (Optional)
+
+Returns: [Texture](textures#texture)
+
+### updateLayerChanges( [update_data_url] )
+Redraws the texture content from the layers
+
+##### Arguments:
+* `update_data_url`: *boolean* (Optional) - If true, the texture source gets updated as well. This is slower, but is necessary at the end of an edit. During an edit, to preview changes, this can be false
+
+
+### updateChangesAfterEdit()
+Update everything after a content edit to the texture or one of the layers. Updates the material, the layers, marks the texture as unsaved, syncs changes to other projects
+
+
+
+### updateImageFromCanvas()
+Update the attached img element with the content from the texture's canvas
+
+
+
+### getActiveCanvas()
+If layers are enabled, returns the active layer, otherwise returns the texture. Either way, the 'canvas', 'ctx', and 'offset' properties can be used from the returned object
+
+
+Returns: [Texture](textures#texture) or [TextureLayer](texture_layers#texturelayer)
+
+### syncToOtherProject()
+When editing the same texture in different tabs (via Edit In Blockbench option), sync changes that were made to the texture to other projects
+
+
+Returns: [Texture](textures#texture)
 
 ### Texture.getDefault()
 
@@ -283,6 +407,132 @@ Update the draggable/sortable functionality of the texture list
 
 Unselect all textures
 
+
+
+
+## IntMatrix
+An Int Matrix holds an int (unsigned 8 bit) for each pixel in a matrix, via array. The override property can be used to set an override value for the entire area. This is used for texture selections.
+
+### new IntMatrix( width, height )
+Creates a new IntMatrix
+
+##### Arguments:
+* `width`: *number*
+* `height`: *number*
+
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| width | *number* |  |
+| height | *number* |  |
+| array | [Int8Array](#Int8Array) |  |
+| override | *boolean* | The override can be set to true to indicate that the whole texture is selected, or false, which indicates that nothing is selected. Null indicates a custom selection |
+| is_custom | *boolean* | True if there is a custom selection |
+
+### activate()
+The array does not exist by default to save memory, this activates it.
+
+
+
+### get( x, y )
+Get the value at the specified pixel
+
+##### Arguments:
+* `x`: *any* - X coordinate
+* `y`: *any* - Y coordinate
+
+Returns: *number* or *boolean*
+
+### allow( x, y )
+Test whether painting is allowed at a specific pixel
+
+##### Arguments:
+* `x`: *any* - X coordinate
+* `y`: *any* - Y coordinate
+
+Returns: *number* or *boolean*
+
+### getDirect( x, y )
+Get the value at the specified pixel directly without override and bounds check
+
+##### Arguments:
+* `x`: *number* - X coordinate
+* `y`: *number* - Y coordinate
+
+Returns: *number*
+
+### getBoundingRect( respect_empty )
+Return the smallest possible rectangle that contains all of the selection
+
+##### Arguments:
+* `respect_empty`: *any* - If true, if there is no selection, the bounding box will still cover the entire area
+
+Returns: [Rectangle](util#rectangle)
+
+### hasSelection()
+Checks whether a selection is present and contains selected pixels
+
+
+Returns: *boolean*
+
+### set( x, y, value )
+Set the value at a specified pixel
+
+##### Arguments:
+* `x`: *number* - X coordinate
+* `y`: *number* - Y coordinate
+* `value`: *number* -
+
+Returns: *any*
+
+### clear()
+If there was a selection, whether override or not, clear it
+
+
+
+### setOverride( value )
+Change override mode
+
+##### Arguments:
+* `value`: *boolean* -
+
+
+### changeSize( width, height )
+Change the size of the matrix. Unless using overrides, the selection gets lost.
+
+##### Arguments:
+* `width`: *number* -
+* `height`: *number* -
+
+
+### forEachPixel( callback )
+Run a method on each pixel, whether selected or not
+
+##### Arguments:
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L370) - Function to run per pixel
+
+Returns: *any*
+
+### translate( offset_x, offset_y )
+Shift custom selections by a specified offset
+
+##### Arguments:
+* `offset_x`: *number* -
+* `offset_y`: *number* -
+
+
+### toBoxes()
+Return the selection simplified into non-overlapping boxes. Boxes are [x, y, width, height].
+
+
+Returns: Array of Array
+
+### maskCanvas( ctx, offset )
+Mask the provided canvas using the selection
+
+##### Arguments:
+* `ctx`: [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) - Canvas 2D context
+* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) - Position offset of the canvas, e. g. when using a layer
 
 
 

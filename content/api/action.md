@@ -6,7 +6,7 @@ title: Action
 ## BarItems
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L4)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L4)
 
 Registry of all toolbar items, such as actions, tools, etc.
 
@@ -108,24 +108,24 @@ Returns: [BarItem](action#baritem)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -203,24 +203,24 @@ Returns: [Action](action#action-1)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -322,24 +322,24 @@ Returns: [Toggle](action#toggle)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -409,7 +409,7 @@ Creates a new Tool
 	* `toolbar`: *string* (Optional)
 	* `alt_tool`: *string* (Optional)
 	* `modes`: Array of *string* (Optional)
-	* `allowed_view_modes`: [ViewMode](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L146) (Optional)
+	* `allowed_view_modes`: [ViewMode](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L146) (Optional)
 	* `paintTool`: *boolean* (Optional)
 	* `brush`: BrushOptions (Optional)
 		* `blend_modes`: *boolean* - Enable the input for blend modes when this tool is selected
@@ -418,7 +418,7 @@ Creates a new Tool
 		* `softness`: *boolean* - Enable the input for softness when this tool is selected
 		* `opacity`: *boolean* - Enable the input for opacity when this tool is selected
 		* `offset_even_radius`: *boolean* - When the brush size is an even number, offset the snapping by half a pixel so that even size brush strokes can be correctly centered
-		* `floor_coordinates`: *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L209) - Set whether the brush coordinates get floored to snap to the nearest pixel.
+		* `floor_coordinates`: *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L209) - Set whether the brush coordinates get floored to snap to the nearest pixel.
 		* `changePixel`: Function
 		* `onStrokeStart`: Function
 		* `onStrokeMove`: Function
@@ -466,24 +466,24 @@ Returns: [Tool](action#tool)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -573,24 +573,24 @@ Returns: [Widget](action#widget)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -650,24 +650,24 @@ Returns: [NumSlider](action#numslider)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -787,24 +787,24 @@ Returns: [BarSlider](action#barslider)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -878,24 +878,24 @@ Returns: [BarSelect](action#barselect)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -988,24 +988,24 @@ Returns: [BarText](action#bartext)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -1081,24 +1081,24 @@ Returns: [ColorPicker](action#colorpicker)
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
 
 
 ### dispatchEvent( data )
@@ -1205,9 +1205,9 @@ Returns: [Toolbar](action#toolbar)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L340) |  |
+| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L340) |  |
 | editing_bar | *undefined* or [Toolbar](action#toolbar) |  |
-| action_definers | Array of [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L342) |  |
+| action_definers | Array of [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L342) |  |
 
 ### defineActions( definer )
 ##### Arguments:
@@ -1282,9 +1282,9 @@ Stores and handles keybinds
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | actions | Array of [BarItem](action#baritem) |  |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L370) |  |
-| extra | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L371) |  |
-| structure | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/action.d.ts#L372) |  |
+| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L370) |  |
+| extra | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L371) |  |
+| structure | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L372) |  |
 
 ### save()
 

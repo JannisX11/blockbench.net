@@ -10,15 +10,15 @@ Extends: [OutlinerNode](outliner#outlinernode)
 Creates a new Group
 
 ##### Arguments:
-* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/group.d.ts#L1)
+* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L1)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | name | *string* |  |
 | children | Array of [OutlinerNode](outliner#outlinernode) |  |
-| origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2) |  |
-| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2) |  |
+| origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
+| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
 | reset | *boolean* |  |
 | shade | *boolean* |  |
 | selected | *boolean* |  |
@@ -34,7 +34,7 @@ Creates a new Group
 
 ### extend( options )
 ##### Arguments:
-* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/group.d.ts#L1)
+* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L1)
 
 Returns: [Group](group#group-1)
 
@@ -82,7 +82,7 @@ Returns: Array of [OutlinerNode](outliner#outlinernode)
 Move the origin of a bone to a specific location without visually affecting the position of it's content.
 
 ##### Arguments:
-* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L2)
+* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2)
 
 Returns: [Group](group#group-1)
 
@@ -114,7 +114,7 @@ Returns: *object*
 
 ### forEachChild( callback[, type, for_self] )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/group.d.ts#L75)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L75)
 * `type`: *any* (Optional)
 * `for_self`: *boolean* (Optional)
 
@@ -209,12 +209,12 @@ Type: Array of [Group](group#group-1)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/group.d.ts#L27)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L27)
 
 
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
 
 

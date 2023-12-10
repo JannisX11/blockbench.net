@@ -16,24 +16,25 @@ Creates a new Dialog
 	* `id`: *string*
 	* `confirmIndex`: *number* (Optional) - Default button to press to confirm the dialog. Defaults to the first button.
 	* `cancelIndex`: *number* (Optional) - Default button to press to cancel the dialog. Defaults to the last button.
-	* `onConfirm`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L48) (Optional)
+	* `onConfirm`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L69) (Optional)
 	* `onCancel`: Function (Optional)
-	* `onButton`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L56) (Optional)
-	* `onFormChange`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L60) (Optional)
-	* `lines`: Array of *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L64) (Optional) - Array of HTML object strings for each line of content in the dialog.
-	* `form`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L68) (Optional) - Creates a form in the dialog
+	* `onButton`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L77) (Optional)
+	* `onFormChange`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L81) (Optional)
+	* `lines`: Array of *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L85) (Optional) - Array of HTML object strings for each line of content in the dialog.
+	* `form`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L89) (Optional) - Creates a form in the dialog
 	* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional) - Vue component
 	* `part_order`: Array of *string* (Optional) - Order that the different interface types appear in the dialog. Default is 'form', 'lines', 'component'.
 	* `form_first`: *boolean* (Optional)
 	* `sidebar`: DialogSidebarOptions (Optional) - Creates a dialog sidebar
-		* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L217) (Optional)
+		* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L239) (Optional)
 		* `page`: *string* (Optional)
-		* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L27) (Optional)
-		* `onPageSwitch`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L222) (Optional)
+		* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L48) (Optional)
+		* `onPageSwitch`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L244) (Optional)
 	* `title_menu`: [Menu](menu#menu-1) (Optional) - Menu in the handle bar
 	* `singleButton`: *boolean* (Optional) - If true, the dialog will only have one button to close it
 	* `buttons`: Array of *string* (Optional) - List of buttons
 	* `cancel_on_click_outside`: *boolean* (Optional) - Unless set to false, clicking on the darkened area outside of the dialog will cancel the dialog.
+	* `width`: *number* (Optional)
 
 ### new Dialog( options )
 *Alternative constructor signature*
@@ -80,13 +81,13 @@ Closes the dialog using the index of the pressed button
 If the dialog contains a form, return the current values of the form
 
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L129)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L151)
 
 ### setFormValues( values )
 Set the values of the dialog form inputs
 
 ##### Arguments:
-* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L135)
+* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L157)
 
 
 ### delete()
@@ -121,9 +122,9 @@ Creates a new ShapelessDialog
 	* `title`: *string*
 	* `confirmIndex`: *number* (Optional) - Default button to press to confirm the dialog. Defaults to the first button.
 	* `cancelIndex`: *number* (Optional) - Default button to press to cancel the dialog. Defaults to the last button.
-	* `onConfirm`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L161) (Optional)
+	* `onConfirm`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L183) (Optional)
 	* `onCancel`: Function (Optional)
-	* `onClose`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L169) (Optional)
+	* `onClose`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L191) (Optional)
 	* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional) - Vue component
 	* `cancel_on_click_outside`: *boolean* (Optional) - Unless set to false, clicking on the darkened area outside of the dialog will cancel the dialog.
 
@@ -169,13 +170,13 @@ Closes the dialog using the index of the pressed button
 If the dialog contains a form, return the current values of the form
 
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L203)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L225)
 
 ### setFormValues( values )
 Set the values of the dialog form inputs
 
 ##### Arguments:
-* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L209)
+* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L231)
 
 
 ### delete()
@@ -204,15 +205,15 @@ Creates a new DialogSidebar
 
 ##### Arguments:
 * `options`: DialogSidebarOptions
-	* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L217) (Optional)
+	* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L239) (Optional)
 	* `page`: *string* (Optional)
-	* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L27) (Optional)
-	* `onPageSwitch`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L222) (Optional)
+	* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L48) (Optional)
+	* `onPageSwitch`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L244) (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| pages | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/dialog.d.ts#L227) |  |
+| pages | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/dialog.d.ts#L249) |  |
 | page | *string* |  |
 | actions | Array of *string* or [Action](action#action-1) |  |
 

@@ -15,9 +15,9 @@ Creates a new Menu
 
 ##### Arguments:
 * `id`: *string*
-* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/menu.d.ts#L18) or [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/menu.d.ts#L29)
+* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L18) or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L29)
 * `options`: MenuOptions (Optional)
-	* `onOpen`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/menu.d.ts#L20) (Optional)
+	* `onOpen`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L20) (Optional)
 	* `onClose`: Function (Optional)
 	* `keep_open`: *boolean* (Optional)
 	* `searchable`: *boolean* (Optional)
@@ -68,7 +68,7 @@ Creates a new BarMenu
 
 ##### Arguments:
 * `id`: *string*
-* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/menu.d.ts#L18)
+* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L18)
 * `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 
 
@@ -116,7 +116,7 @@ Visually highlights an action within the menu, until the user opens the menu
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/menu.d.ts#L67) |  |
+| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L67) |  |
 
 ### addAction( action[, path] )
 Adds an action to the menu structure

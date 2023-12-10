@@ -33,7 +33,7 @@ Creates a new Property
 
 ##### Arguments:
 * `target_class`: *any*
-* `type`: [PropertyType](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L118)
+* `type`: [PropertyType](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L118)
 * `name`: *string*
 * `options`: PropertyOptions (Optional)
 	* `default`: *any* (Optional)
@@ -42,16 +42,16 @@ Creates a new Property
 	* `label`: *string* (Optional)
 	* `options`: *object* (Optional) - Options used for select types
 	* `values`: Array of *string* - Enum possible values
-	* `merge`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L132) (Optional)
-	* `reset`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L133) (Optional)
-	* `merge_validation`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L134) (Optional)
+	* `merge`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L132) (Optional)
+	* `reset`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L133) (Optional)
+	* `merge_validation`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L134) (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | class | *any* |  |
 | name | *string* |  |
-| type | [PropertyType](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L118) |  |
+| type | [PropertyType](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L118) |  |
 | default | *any* |  |
 | isString | *boolean* |  |
 | isEnum | *boolean* |  |
@@ -63,7 +63,7 @@ Creates a new Property
 | isVector2 | *boolean* |  |
 | isInstance | *boolean* |  |
 | enum_values | Array of *string* |  |
-| merge_validation | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L157) |  |
+| merge_validation | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L157) |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | exposed | *boolean* |  |
 | label | *any* |  |
@@ -118,7 +118,7 @@ Returns: *string*
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L180) | Translation data for the current language |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L180) | Translation data for the current language |
 | code | *string* | Two letter code indicating the currently selected language |
 
 ### addTranslations( language, strings )
@@ -126,7 +126,7 @@ Add translations for custom translation strings
 
 ##### Arguments:
 * `language`: *string* - Two letter language code, e. G. 'en'
-* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/639b9fd/types/misc.d.ts#L192) - Object listing the translation keys and values
+* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L192) - Object listing the translation keys and values
 
 Returns: *any*
 

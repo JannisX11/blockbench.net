@@ -21,7 +21,7 @@ Creates a new BBPlugin
 	* `variant`: `"both"` or `"desktop"` or `"web"` - Where the plugin can be installed. Desktop refers to the electron app, web refers to the web app and PWA
 	* `min_version`: *string* (Optional) - Minimum Blockbench version in which the plugin can be installed
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
-	* `await_loading`: *string* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
+	* `await_loading`: *boolean* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
 	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
@@ -55,7 +55,7 @@ Creates a new BBPlugin
 	* `variant`: `"both"` or `"desktop"` or `"web"` - Where the plugin can be installed. Desktop refers to the electron app, web refers to the web app and PWA
 	* `min_version`: *string* (Optional) - Minimum Blockbench version in which the plugin can be installed
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
-	* `await_loading`: *string* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
+	* `await_loading`: *boolean* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
 	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
@@ -89,7 +89,7 @@ Returns: [BBPlugin](plugin#bbplugin)
 	* `variant`: `"both"` or `"desktop"` or `"web"` - Where the plugin can be installed. Desktop refers to the electron app, web refers to the web app and PWA
 	* `min_version`: *string* (Optional) - Minimum Blockbench version in which the plugin can be installed
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
-	* `await_loading`: *string* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
+	* `await_loading`: *boolean* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
 	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)

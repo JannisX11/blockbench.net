@@ -9,12 +9,12 @@ title: Timeline
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | animators | Array of [GeneralAnimator](animation#generalanimator) |  |
-| selected | Array of [Keyframe](#Keyframe) |  |
+| selected | Array of [_Keyframe](keyframe#keyframe-1) |  |
 | playing_sounds | Array of *any* |  |
 | playback_speed | *number* |  |
 | time | *number* | Current time |
 | playing | *boolean* |  |
-| keyframes | Array of [Keyframe](#Keyframe) |  |
+| keyframes | Array of [_Keyframe](keyframe#keyframe-1) |  |
 | menu | [Menu](menu#menu-1) |  |
 
 ### setTime( time, editing )
