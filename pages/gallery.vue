@@ -4,7 +4,7 @@
 			
 			<h1>Gallery</h1>
 
-			<p>This page lists some of the best creations in Blockbench history, from contest winners to new technique and otherwise notable models.</p>
+			<p>This page lists some of the best creations in Blockbench history, from contest winners to new techniques and otherwise notable models.</p>
 
 			<h4>Filter by Tag</h4>
 			<ul id="filter_list">
@@ -17,6 +17,21 @@
 				<li :class="{selected: filter == 'city'}" @click="filter = 'city';">City</li>
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
+
+			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
+				<img src="~assets/gallery/4.9.png" />
+				<h2>Splash Art Contest 4.9 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/OrangewithMC">morange</a> & <a target="_blank" rel="noopener" href="https://twitter.com/PeacedoveWum">PeacedoveWum</a>, November 2023</label>
+				<p>The theme for this contest ("Fantasy") was determined by a poll on the Discord server, winning against ATV and Race Track.</p>
+				<p>This model and render of a beautiful palace between two rocky islands won first place with 1441 votes! The piece was featured on the 4.9 Blockbench Splash Screen along with the second place by Wacky and the 3rd place by David Grindholmen and Quinten Bench.</p>
+			</section>
+
+			<section v-if="showImage(['splashart', 'winner', 'vehicle', 'mesh'])">
+				<img src="~assets/gallery/4.8.png" />
+				<h2>Splash Art Contest 4.8 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/kaneki_akira">KanekiAkira</a> & <a target="_blank" rel="noopener" href="https://jumi-pf.com">Jumi</a>, July 2023</label>
+				<p>There were many really beautiful models and renders for this Splash Art Contest with the theme "Camping Vehicle"! This submission stood out because of its innovative and very meta approach of incorporating elements of the 3D editor into the render, and it won with first place with 1106 votes! It appeared on the splash screen along with the 4 other top voted renders.</p>
+			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
 				<img src="~assets/gallery/4.7.png" />
