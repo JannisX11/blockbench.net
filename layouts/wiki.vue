@@ -76,6 +76,7 @@ export default {
 		#wiki_wrapper .content_wrapper {
 			--toc-width: 212px;
 			flex-grow: 1;
+			overflow: hidden;
 		}
 		#wiki_wrapper .content_wrapper .content {
 			float: left;

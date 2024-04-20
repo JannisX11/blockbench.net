@@ -20,13 +20,13 @@ Minecraft: Java Edition|x| | |x|x|x| |x³
 Minecraft: Bedrock Edition| |x|x| | | | |
 Other| | | | | | |x|
 | | | | | | | |
-Type of model| | | | | | | |
+**Type of model**| | | | | | | |
 Block models|x|x¹| |x| | | |x²
 Item models|x| | |x| | | |x
 Entity models| |x|x|x|x| | |x
 Armor models| |x|x|x| | | |x
 | | | | | | | |
-Export Formats| | | | | | | |
+**Export Formats**| | | | | | | |
 .json (java blockmodel)|x| | | | | | |x
 .json (bedrock geo)| |x|x| | | | |x
 .json (bedrock animation)| |x|x| | | |x|x
@@ -37,7 +37,7 @@ Export Formats| | | | | | | |
 .gltf|x|x|x|x|x|x|x|x
 .bbmodel|x|x|x|x|x|x|x|x
 | | | | | | | |
-General| | | | | | | |
+**General**| | | | | | | |
 Size limit (Blocks)|3x3x3|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited
 Per-face UV|x|x| | |x|x|x|x
 Box UV|x|x|x|x|x|x|x|x
@@ -47,14 +47,14 @@ Unrestricted cube sizing ⁵|x|x|x| | |x|x|x
 Double sided face rendering| |x|x|x|x|x|x|x
 Multiple textures support|x| | | | | |x|
 | | | | | | | |
-Rotations| | | | | | | |
+**Rotations**| | | | | | | |
 Bone rotations| |x|x|x|x|x|x|x
 Individual cube rotations|x|x| |x| |x|x|x
 Cube axis rotations|1|3| |3| |3|3|3
 Rotation angle limits|22.5°|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited
 | | | | | | | |
-Animations| | | | | | | |
-Model animations| |x|x| |x⁴| |x|x
+**Animations**| | | | | | | |
+Model animations| |x|x|x|x⁴| |x|x
 Texture animations|x|x|x| | | | |
 MoLang| |x|x| | | |x|x
 Hold-on-last| |x|x| | | |x|

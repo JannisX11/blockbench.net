@@ -2,7 +2,7 @@
 title: Undo
 ---
 
- Undo
+# Undo
 
 ## Creating an undo point
 

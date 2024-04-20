@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@nuxt/markdown": "0.0.21",
 		"core-js": "^3.9.1",
-		"nuxt": "^2.15.8"
+		"nuxt": "^2.17.1"
 	},
 	"devDependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.2.0",

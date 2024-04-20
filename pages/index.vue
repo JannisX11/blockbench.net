@@ -96,7 +96,6 @@
 				<div class="text_body">
 					<h3>Animations</h3>
 					<p>Blockbench comes with a powerful animation editor. Rig your model, then use position, rotation and scale keyframes to bring it to life. Use the graph editor to fine-tune your creation.</p>
-					<p>Animations can later be exported to Minecraft: Bedrock Edition, rendered in Blender or Maya, or shared on Sketchfab.</p>
 					<p><a target="_blank" rel="noopener" href="https://sketchfab.com/jannisx11/collections/blockbench-animations">View Blockbench animations...</a></p>
 				</div>
 				<div>

@@ -48,7 +48,7 @@ If this doesn't help, it might be an individual problem with your graphics drive
 
 ### What limitations does the web-app have?
 
-The web-app is a fully-functional version of the app. Only some import / export features require extra steps due to security features in browsers. Model import is still possible, but the textures have to be loaded manually in many cases.
+The web-app is a fully-functional version of the app. Only some import / export features require extra steps due to security restrictions in browsers. Model import is still possible, but the textures have to be loaded manually in many cases.
 
 
 ### Is Blockbench available as a Mobile App?
@@ -67,7 +67,7 @@ Blockbench is built on web technologies. This allows it to work seamlessly acros
 
 The program is mainly written in Javascript, the it renders the 3D preview in WebGL with the help of THREE.JS. The customizable interface is mainly written in Javascript, with some of the dynamic components, such as the Outliner, using Vue.js 2 for dynamic rendering.
 
-The desktop apps on Windows, Linux, and Mac, are created with Electron.
+The desktop apps on Windows, Linux, and Mac are created with Electron.
 
 Blockbench also uses a variety of other open source libraries. A full list can be found in Help > About.
 
