@@ -1294,8 +1294,8 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.10.1.exe">Windows 64bit Installer</a></li>
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_32bit_1.10.1.exe">Windows 32bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.10.1.exe">Windows 64bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_32bit_1.10.1.exe">Windows 32bit Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1319,7 +1319,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.10.0.exe">Windows 64bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.10.0.exe">Windows 64bit Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1340,8 +1340,8 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.9.1.exe">Windows 64bit Installer</a></li>
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_32bit_1.9.1.exe">Windows 32bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.9.1.exe">Windows 64bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_32bit_1.9.1.exe">Windows 32bit Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1370,7 +1370,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.9.0.exe">Windows 64bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.9.0.exe">Windows 64bit Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1389,8 +1389,8 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.8.2.exe">Windows 64bit Installer</a></li>
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_32bit_1.8.2.exe">Windows 32bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.8.2.exe">Windows 64bit Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_32bit_1.8.2.exe">Windows 32bit Installer</a></li>
 <li><a class="link" href="file:///P://blockbench.net/api/installers/Blockbench_1.8.2.dmg">macOS Installer</a></li>
 </ul>
 </div>
@@ -1412,7 +1412,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.8.1.exe">Windows Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.8.1.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1444,7 +1444,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://blockbench.net/api/installers/Blockbench_1.8.0.exe">Windows Installer</a></li>
+<li><a class="link" href="https://blockbench.net/api/installers/Blockbench_1.8.0.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1474,8 +1474,8 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://server.zofenia.de/blockbench/api/download/blockbench%201.7.0%20Setup.exe">Windows Installer</a></li>
-<li><a class="link" href="http://www.mediafire.com/file/sutlu727k3qcv9a/blockbench_mac_1.7.zip">Mac OS App</a></li>
+<li><a class="link" href="">Windows Installer (not available)</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/sutlu727k3qcv9a/blockbench_mac_1.7.zip">Mac OS App</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1501,7 +1501,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/igxv7vks0b9g7pm/blockbench+Setup+1.6.5.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/igxv7vks0b9g7pm/blockbench+Setup+1.6.5.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1530,7 +1530,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/7vnkrm7xn93su37/blockbench+Setup+1.6.0.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/7vnkrm7xn93su37/blockbench+Setup+1.6.0.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1553,7 +1553,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/01ba11z8232ojwb/blockbench+Setup+1.5.0.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/01ba11z8232ojwb/blockbench+Setup+1.5.0.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1568,7 +1568,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/lapf1dyy204chu8/blockbench+Setup+1.4.2.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/lapf1dyy204chu8/blockbench+Setup+1.4.2.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1612,7 +1612,7 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/bpup4fh8ji6u9ut/blockbench+Setup+1.4.0.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/bpup4fh8ji6u9ut/blockbench+Setup+1.4.0.exe">Windows Installer</a></li>
 </ul>
 </div>
 <div class="textbox wow fadeInUp">
@@ -1634,14 +1634,14 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/bblln3ll2a5q226/blockbench+Setup+1.3.0.exe">Windows Installer</a></li>
-<li><a class="link" href="http://www.mediafire.com/file/b54774dj66a8ne0/blockbench+mac+1.3.0.zip">Mac Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/bblln3ll2a5q226/blockbench+Setup+1.3.0.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/b54774dj66a8ne0/blockbench+mac+1.3.0.zip">Mac Installer</a></li>
 </ul>
 </div>
 <h3 id="1.2"><span class="ez-toc-section" id="12_-_The_First_Update"></span>1.2 – The First Update<span class="ez-toc-section-end"></span></h3>
 <h5>Changes</h5>
 <ul class="list">
-<li>Official Discord for Blockbench and other related things: http://discord.gg/fZQbxbg</li>
+<li>Official Discord for Blockbench and other related things: https://discord.gg/fZQbxbg</li>
 <li>Added View menu and new camera angles</li>
 <li>Added arrows for block translation, scaling and origin</li>
 <li>Made rotation slider update instantly</li>
@@ -1656,11 +1656,11 @@ This page lists the versions and changelogs prior to switching to Github Release
 </ul>
 <h5>Downloads</h5>
 <ul class="list">
-<li><a class="link" href="http://www.mediafire.com/file/em78a4sk9wjwdb7/blockbench+Setup+1.2.0.exe">Windows Installer</a></li>
+<li><a class="link" href="https://www.mediafire.com/file/em78a4sk9wjwdb7/blockbench+Setup+1.2.0.exe">Windows Installer</a></li>
 </ul>
 <h2 id="1.1.1"><span class="ez-toc-section" id="111_-_The_Original"></span>1.1.1 – The Original<span class="ez-toc-section-end"></span></h2>
 <p>5. May. 2017</p>
 <h5>Downloads</h5>
 <ul class="list">
-	<li><a class="link" href="http://www.mediafire.com/file/ke51stesm8ea0ga/blockbench+Setup+1.1.1.exe">Windows Installer</a></li>
+	<li><a class="link" href="https://www.mediafire.com/file/ke51stesm8ea0ga/blockbench+Setup+1.1.1.exe">Windows Installer</a></li>
 </ul>

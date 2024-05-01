@@ -45,6 +45,6 @@ If you are new to CSS and you want to learn more, check out the [W3Schools CSS T
 
 Once you are happy with your theme, you can export it as a file using the `Export Theme` button in the dialog handle bar.
 You can personally share the file with friends.
-If you want to share the theme with the Blockbench community, you can post it in the #bb-themes channel on the [Blockbench Discord server](http://discord.blockbench.net).
+If you want to share the theme with the Blockbench community, you can post it in the #bb-themes channel on the [Blockbench Discord server](https://discord.blockbench.net).
 Make sure to include a name, description and preview image.
 

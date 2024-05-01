@@ -10,7 +10,7 @@ authors:
 ## Community
 
 ### Discord
-Join the [Blockbench Discord server](http://discord.blockbench.net/), it is the heart of the Blockbench community! You can discuss WIP projects, share finished models, ask questions, collaborate, participate in events, or just hang out with the community.
+Join the [Blockbench Discord server](https://discord.blockbench.net/), it is the heart of the Blockbench community! You can discuss WIP projects, share finished models, ask questions, collaborate, participate in events, or just hang out with the community.
 
 ### Sketchfab
 Sketchfab is a platform to publish, share, discover, buy and sell 3D, VR and AR content. Many Blockbench artists already use it to showcase their work.
