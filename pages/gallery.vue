@@ -18,6 +18,14 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner'])">
+				<img src="~assets/gallery/4.10.webp" />
+				<h2>Splash Art Contest 4.10 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Tiffany85635656">skeleton_tiffay</a>, May 2024</label>
+				<p>For this contest, the theme was "Underwater". It was the first ever contest that was hosted on the <a  target="_blank" rel="noopener" href="https://blockbench-splash-art-contests.ewanhowell.com/artists/1121588370183827517">Blockbench Splash Art Contest platform</a> by Ewan Howell.</p>
+				<p>This beautiful underwater city won the contest 525 votes, leading the second place by 126 points! The piece is featured on the 4.10 Blockbench Splash Screen along with four other entries.</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
 				<img src="~assets/gallery/4.9.png" />
 				<h2>Splash Art Contest 4.9 Winner</h2>
