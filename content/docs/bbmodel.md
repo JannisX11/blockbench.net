@@ -24,10 +24,11 @@ The following section describes recent breaking changes within the format:
 Note that additions and non-breaking changes are not listed on this page. This includes new features that have been added to the format, but don't impact how the rest of the format works.
 
 * ### 4.10
-	To be released with Blockbench 4.10
+	Released with Blockbench 4.10, May 9th 2024
 
 	* Fixed an issue with relative texture paths. Relative paths used to be relative to the .bbmodel file as if is was a directory, now they are correctly saved as relative to the directory that the .bbmodel file is in.
 	* The "name" field is now ignored and overwritten with the .bbmodel file name, if the project was loaded from a file.
+	* Fixed an issue with textures in formats that have a default texture. Textures are no longer specified per face if they were not explicitly assigned to the face.
 
 * ### 4.9
 	Released with Blockbench 4.9, December 2nd 2023

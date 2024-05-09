@@ -17,10 +17,6 @@ When passing parameters, make sure to encode them correctly using [encodeURIComp
 
 ### Files
 
-<div class="block-warning">
-    Load file parameters are only available in Blockbench 4.10 and later!
-</div>
-
 **Parameters**: `loadtype`, `loadname`, `loaddata`
 
 You can create a link to open a specific model in Blockbench, using a combination of these parameters:
