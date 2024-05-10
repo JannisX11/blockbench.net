@@ -6,9 +6,9 @@ title: Action
 ## BarItems
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L4)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L5)
 
-Registry of all toolbar items, such as actions, tools, etc.
+<reference path="./blockbench.d.ts"/>
 
 
 ## Keybind
@@ -20,17 +20,32 @@ Creates a new Keybind
 ##### Arguments:
 * `keys`: KeybindKeys
 	* `key`: *string* or *number* - Main key, can be a numeric keycode or a lower case character
-	* `ctrl`: *boolean* (Optional)
-	* `shift`: *boolean* (Optional)
-	* `alt`: *boolean* (Optional)
-	* `meta`: *boolean* (Optional)
+	* `ctrl`: `null` or *boolean* (Optional)
+	* `shift`: `null` or *boolean* (Optional)
+	* `alt`: `null` or *boolean* (Optional)
+	* `meta`: `null` or *boolean* (Optional)
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| key | *number* |  |
+| ctrl | *boolean* |  |
+| shift | *boolean* |  |
+| alt | *boolean* |  |
+
+### getCode()
+Get the name of the bound key
+
+
+Returns: *string*
 
 
 ## KeybindItem
 Extends: [Deletable](misc#deletable)
 
 Extended by: [BarItem](action#baritem), [Mode](mode#mode-1)
+
+<reference path="./blockbench.d.ts"/>
 
 ### new KeybindItem( id, options )
 Creates a new KeybindItem
@@ -40,6 +55,10 @@ Creates a new KeybindItem
 * `options`: KeybindItemOptions
 	* `keybind`: [Keybind](action#keybind) (Optional)
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
 
 ### delete()
 
@@ -72,10 +91,28 @@ Creates a new BarItem
 	* `category`: *string* (Optional)
 	* `keybind`: [Keybind](action#keybind) (Optional)
 
+### new BarItem( id, options )
+*Alternative constructor signature*
+
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -90,7 +127,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [BarItem](action#baritem)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -103,29 +152,33 @@ Returns: [BarItem](action#baritem)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -159,18 +212,31 @@ Creates a new Action
 	* `click`: Function
 	* `color`: *string* (Optional) - Icon color. Can be a CSS color string, or an axis letter to use an axis color.
 	* `linked_setting`: *string* (Optional) - ID of a setting that the action is slinked to
-	* `children`: Array of *object* (Optional)
+	* `children`: Array of *any* (Optional)
 	* `label`: *boolean* (Optional) - Show the full label in toolbars
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 | nodes | Array of [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
 | side_menu | [Menu](menu#menu-1) | Provide a menu that belongs to the action, and gets displayed as a small arrow next to it in toolbars. |
+| click | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L128) |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -185,7 +251,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [Action](action#action-1)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -198,29 +276,33 @@ Returns: [Action](action#action-1)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -228,11 +310,15 @@ Removes an event listener from the item
 * `data`: *object*
 
 
-### trigger( event )
+### condition()
+
+Returns: *boolean*
+
+### trigger( [event] )
 Trigger to run or select the action. This is the equivalent of clicking or using a keybind to trigger it. Also checks if the condition is met.
 
 ##### Arguments:
-* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) (Optional)
 
 Returns: *boolean*
 
@@ -276,7 +362,7 @@ Creates a new Toggle
 	* `click`: Function
 	* `color`: *string* (Optional) - Icon color. Can be a CSS color string, or an axis letter to use an axis color.
 	* `linked_setting`: *string* (Optional) - ID of a setting that the action is slinked to
-	* `children`: Array of *object* (Optional)
+	* `children`: Array of *any* (Optional)
 	* `label`: *boolean* (Optional) - Show the full label in toolbars
 	* `default`: *boolean* (Optional) - Default value of the toggle
 	* `onChange`: Function (Optional)
@@ -284,12 +370,25 @@ Creates a new Toggle
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 | nodes | Array of [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
 | side_menu | [Menu](menu#menu-1) | Provide a menu that belongs to the action, and gets displayed as a small arrow next to it in toolbars. |
+| click | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L128) |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -304,7 +403,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [Toggle](action#toggle)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -317,29 +428,33 @@ Returns: [Toggle](action#toggle)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -347,11 +462,15 @@ Removes an event listener from the item
 * `data`: *object*
 
 
-### trigger( event )
+### condition()
+
+Returns: *boolean*
+
+### trigger( [event] )
 Trigger to run or select the action. This is the equivalent of clicking or using a keybind to trigger it. Also checks if the condition is met.
 
 ##### Arguments:
-* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) (Optional)
 
 Returns: *boolean*
 
@@ -400,7 +519,7 @@ Creates a new Tool
 	* `click`: Function
 	* `color`: *string* (Optional) - Icon color. Can be a CSS color string, or an axis letter to use an axis color.
 	* `linked_setting`: *string* (Optional) - ID of a setting that the action is slinked to
-	* `children`: Array of *object* (Optional)
+	* `children`: Array of *any* (Optional)
 	* `label`: *boolean* (Optional) - Show the full label in toolbars
 	* `selectFace`: *boolean* (Optional)
 	* `selectElements`: *boolean* (Optional)
@@ -409,7 +528,7 @@ Creates a new Tool
 	* `toolbar`: *string* (Optional)
 	* `alt_tool`: *string* (Optional)
 	* `modes`: Array of *string* (Optional)
-	* `allowed_view_modes`: [ViewMode](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L146) (Optional)
+	* `allowed_view_modes`: [ViewMode](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L187) (Optional)
 	* `paintTool`: *boolean* (Optional)
 	* `brush`: BrushOptions (Optional)
 		* `blend_modes`: *boolean* - Enable the input for blend modes when this tool is selected
@@ -418,7 +537,7 @@ Creates a new Tool
 		* `softness`: *boolean* - Enable the input for softness when this tool is selected
 		* `opacity`: *boolean* - Enable the input for opacity when this tool is selected
 		* `offset_even_radius`: *boolean* - When the brush size is an even number, offset the snapping by half a pixel so that even size brush strokes can be correctly centered
-		* `floor_coordinates`: *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L209) - Set whether the brush coordinates get floored to snap to the nearest pixel.
+		* `floor_coordinates`: *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L250) - Set whether the brush coordinates get floored to snap to the nearest pixel.
 		* `changePixel`: Function
 		* `onStrokeStart`: Function
 		* `onStrokeMove`: Function
@@ -428,12 +547,26 @@ Creates a new Tool
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 | nodes | Array of [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
 | side_menu | [Menu](menu#menu-1) | Provide a menu that belongs to the action, and gets displayed as a small arrow next to it in toolbars. |
+| click | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L128) |  |
+| animation_channel | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -448,7 +581,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [Tool](action#tool)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -461,35 +606,43 @@ Returns: [Tool](action#tool)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
 ##### Arguments:
 * `data`: *object*
 
+
+### condition()
+
+Returns: *boolean*
 
 ### updateKeybindingLabel()
 
@@ -509,7 +662,7 @@ Change the icon of the action
 
 ### select()
 
-Returns: [Tool](action#tool)
+Returns: *undefined* or [Tool](action#tool)
 
 ### trigger( event )
 Trigger to run or select the action. This is the equivalent of clicking or using a keybind to trigger it. Also checks if the condition is met.
@@ -535,12 +688,27 @@ Creates a new Widget
 
 ##### Arguments:
 * `id`: *string*
-* `options`: *object*
+* `options`: *any*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -555,7 +723,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [Widget](action#widget)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -568,29 +748,33 @@ Returns: [Widget](action#widget)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -612,12 +796,27 @@ Creates a new NumSlider
 
 ##### Arguments:
 * `id`: *string*
-* `options`: *object*
+* `options`: *any*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -632,7 +831,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [NumSlider](action#numslider)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -645,29 +856,33 @@ Returns: [NumSlider](action#numslider)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -749,12 +964,27 @@ Creates a new BarSlider
 
 ##### Arguments:
 * `id`: *string*
-* `options`: *object*
+* `options`: *any*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -769,7 +999,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [BarSlider](action#barslider)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -782,29 +1024,33 @@ Returns: [BarSlider](action#barslider)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -840,12 +1086,27 @@ Creates a new BarSelect
 
 ##### Arguments:
 * `id`: *string*
-* `options`: *object*
+* `options`: *any*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -860,7 +1121,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [BarSelect](action#barselect)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -873,29 +1146,33 @@ Returns: [BarSelect](action#barselect)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -912,7 +1189,7 @@ Removes an event listener from the item
 ##### Arguments:
 * `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
 
-Returns: *boolean*
+Returns: *undefined* or *boolean*
 
 ### change( event )
 ##### Arguments:
@@ -950,12 +1227,27 @@ Creates a new BarText
 
 ##### Arguments:
 * `id`: *string*
-* `options`: *object*
+* `options`: *any*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -970,7 +1262,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [BarText](action#bartext)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -983,29 +1287,33 @@ Returns: [BarText](action#bartext)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -1043,12 +1351,27 @@ Creates a new ColorPicker
 
 ##### Arguments:
 * `id`: *string*
-* `options`: *object*
+* `options`: *any*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
 
 ### conditionMet()
 
 Returns: *boolean*
+### conditionMet()
+
+Returns: *boolean*
+
+### addLabel( [in_bar, action] )
+Adds a label to the HTML element of the bar item
+
+##### Arguments:
+* `in_bar`: *boolean* (Optional) - Set to true to generate an in-bar label, as opposed to a regular on-hover label
+* `action`: *any* (Optional) - Provide the action to generate the label. This defaults to self and is only needed in special cases
 
 ### addLabel( [in_bar, action] )
 Adds a label to the HTML element of the bar item
@@ -1063,7 +1386,19 @@ Gets a copy of the elements HTML node that is not yet in use.
 
 
 Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+### getNode()
+Gets a copy of the elements HTML node that is not yet in use.
 
+
+Returns: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+### toElement( destination )
+Appends the bar item to a HTML element
+
+##### Arguments:
+* `destination`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement)
+
+Returns: [ColorPicker](action#colorpicker)
 ### toElement( destination )
 Appends the bar item to a HTML element
 
@@ -1076,29 +1411,33 @@ Returns: [ColorPicker](action#colorpicker)
 ##### Arguments:
 * `bar`: *any*
 
+### pushToolbar( bar )
+##### Arguments:
+* `bar`: *any*
+
 
 ### on( event_name, callback )
 Adds an event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L70) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L91) -
 
 
 ### once( event_name, callback )
 Adds a single-use event listener to the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L76) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) - The event type to listen for
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L97) -
 
 
 ### removeListener( event_name, callback )
 Removes an event listener from the item
 
 ##### Arguments:
-* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L34) -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L82) -
+* `event_name`: [ActionEventName](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L44) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L103) -
 
 
 ### dispatchEvent( data )
@@ -1205,9 +1544,10 @@ Returns: [Toolbar](action#toolbar)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L340) |  |
+| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L418) |  |
 | editing_bar | *undefined* or [Toolbar](action#toolbar) |  |
-| action_definers | Array of [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L342) |  |
+| action_definers | Array of [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/action.d.ts#L420) |  |
+| condition | *any* |  |
 
 ### defineActions( definer )
 ##### Arguments:
@@ -1282,9 +1622,9 @@ Stores and handles keybinds
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | actions | Array of [BarItem](action#baritem) |  |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L370) |  |
-| extra | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L371) |  |
-| structure | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/action.d.ts#L372) |  |
+| stored | [Record](#Record) |  |
+| extra | [Record](#Record) |  |
+| structure | *any* |  |
 
 ### save()
 

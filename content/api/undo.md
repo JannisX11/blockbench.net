@@ -9,6 +9,11 @@ Creates a new UndoSystem
 
 
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| history | Array of [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51) |  |
+| index | *number* |  |
+
 ### initEdit( aspects )
 Starts an edit to the current project by saving the state of the provided aspects
 
@@ -29,7 +34,7 @@ Starts an edit to the current project by saving the state of the provided aspect
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L50)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51)
 
 ### finishEdit( action[, aspects] )
 Finishes an edit by saving the state of the project after it was changed
@@ -52,7 +57,7 @@ Finishes an edit by saving the state of the project after it was changed
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L50)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51)
 
 ### cancelEdit()
 Cancels an event before it was finished and reset the project to the state before
@@ -79,12 +84,6 @@ Redoes the latest edit
 ##### Arguments:
 * `remote`: *boolean* (Optional)
 
-### redo( [remote] )
-Redoes the latest edit
-
-##### Arguments:
-* `remote`: *boolean* (Optional)
-
 
 ### amendEdit( form, callback )
 Provides a menu to amend the latest edit with slightly changed values
@@ -95,21 +94,20 @@ Provides a menu to amend the latest edit with slightly changed values
 	* `type`: `"number"` or `"checkbox"` (Optional)
 	* `label`: *string*
 	* `interval_type`: `"position"` or `"rotation"`
-	* `getInterval`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L61) (Optional)
+	* `getInterval`: Function (Optional)
 	* `value`: *string* or *number* (Optional)
 	* `min`: *number* (Optional)
 	* `max`: *number* (Optional)
 	* `step`: *number* (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L104)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L101)
 
-Returns: *any*
 
 ### loadSave( save, reference[, mode] )
 Loads a specific undo save
 
 ##### Arguments:
-* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L29) - The undo save to load
-* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L29) - The current undo save for reference
+* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L30) - The undo save to load
+* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L30) - The current undo save for reference
 * `mode`: `"session"` (Optional) - The load save modes
 
 
@@ -133,4 +131,15 @@ var other_cube = new Cube({name: 'lars'}).init();
 
 Undo.finishEdit('add new cubes', {elements: [new_cube, other_cube]});
 ```
+
+
+## compileJSON( json[, options] )
+#### Global Function
+
+##### Arguments:
+* `json`: *any*
+* `options`: CompileJSONOptions (Optional)
+	* `small`: *boolean* (Optional)
+
+Returns: *string* or [ArrayBuffer](#ArrayBuffer)
 

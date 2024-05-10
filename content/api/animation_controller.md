@@ -11,10 +11,10 @@ Creates a new AnimationControllerState
 * `controller`: [AnimationController](animation_controller#animationcontroller)
 * `options`: AnimationControllerStateOptions (Optional)
 	* `name`: *string* (Optional)
-	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L1) (Optional)
-	* `transitions`: Array of *object* (Optional)
-	* `sounds`: Array of *object* (Optional)
-	* `particles`: Array of *object* (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L3) (Optional)
+	* `transitions`: Array of *any* (Optional)
+	* `sounds`: Array of *any* (Optional)
+	* `particles`: Array of *any* (Optional)
 	* `on_entry`: *string* (Optional)
 	* `on_exit`: *string* (Optional)
 	* `blend_transition`: *number* (Optional)
@@ -26,13 +26,13 @@ Creates a new AnimationControllerState
 | controller | [AnimationController](animation_controller#animationcontroller) |  |
 | uuid | *string* |  |
 | name | *string* |  |
-| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L33) |  |
-| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L41) |  |
+| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L38) |  |
+| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L46) |  |
 | playing_sounds | Array of [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) |  |
-| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L9) |  |
-| transitions | Array of *object* |  |
-| sounds | Array of *object* |  |
-| particles | Array of *object* |  |
+| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L14) |  |
+| transitions | Array of *any* |  |
+| sounds | Array of *any* |  |
+| particles | Array of *any* |  |
 | on_entry | *string* |  |
 | on_exit | *string* |  |
 | blend_transition | *number* |  |
@@ -42,10 +42,10 @@ Creates a new AnimationControllerState
 ##### Arguments:
 * `data`: AnimationControllerStateOptions
 	* `name`: *string* (Optional)
-	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L1) (Optional)
-	* `transitions`: Array of *object* (Optional)
-	* `sounds`: Array of *object* (Optional)
-	* `particles`: Array of *object* (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L3) (Optional)
+	* `transitions`: Array of *any* (Optional)
+	* `sounds`: Array of *any* (Optional)
+	* `particles`: Array of *any* (Optional)
 	* `on_entry`: *string* (Optional)
 	* `on_exit`: *string* (Optional)
 	* `blend_transition`: *number* (Optional)
@@ -54,11 +54,11 @@ Creates a new AnimationControllerState
 
 ### getUndoCopy()
 
-Returns: *object*
+Returns: *any*
 
 ### compileForBedrock()
 
-Returns: *object*
+Returns: *any*
 
 ### select( [force] )
 ##### Arguments:
@@ -97,12 +97,12 @@ Returns: *object*
 
 ### addParticle( [options] )
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L68) (Optional)
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L73) (Optional)
 
 
 ### addSound( [options] )
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/animation_controller.d.ts#L69) (Optional)
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/animation_controller.d.ts#L74) (Optional)
 
 
 ### openMenu( event )
@@ -122,12 +122,13 @@ Extends: [AnimationItem](animation#animationitem)
 
 Animation Controllers are state machines used for Minecraft: Bedrock Edition models to control and blend between animations.
 
-### new AnimationController( data )
+### new AnimationController( [data] )
 Creates a new AnimationController
 
 ##### Arguments:
-* `data`: AnimationControllerOptions
+* `data`: AnimationControllerOptions (Optional)
 	* `name`: *string* (Optional)
+	* `uuid`: *string* (Optional)
 	* `path`: *string* (Optional)
 	* `initial_state`: *string* (Optional)
 
@@ -143,12 +144,13 @@ Creates a new AnimationController
 | saved_name | *string* |  |
 | states | Array of [AnimationControllerState](animation_controller#animationcontrollerstate) |  |
 | initial_state | *string* |  |
-| selected_state | [AnimationControllerState](animation_controller#animationcontrollerstate) |  |
+| selected_state | `null` or [AnimationControllerState](animation_controller#animationcontrollerstate) |  |
 
 ### extend( data )
 ##### Arguments:
 * `data`: AnimationControllerOptions
 	* `name`: *string* (Optional)
+	* `uuid`: *string* (Optional)
 	* `path`: *string* (Optional)
 	* `initial_state`: *string* (Optional)
 
@@ -156,19 +158,19 @@ Returns: [AnimationController](animation_controller#animationcontroller)
 
 ### getUndoCopy()
 
-Returns: *object*
+Returns: *any*
 
 ### compileForBedrock()
 
-Returns: *object*
+Returns: *any*
 
 ### save()
 
-Returns: [AnimationController](animation_controller#animationcontroller)
+Returns: *undefined* or [AnimationController](animation_controller#animationcontroller)
 
 ### select()
 
-Returns: [AnimationController](animation_controller#animationcontroller)
+Returns: *undefined* or [AnimationController](animation_controller#animationcontroller)
 
 ### createUniqueName( references )
 ##### Arguments:
@@ -180,11 +182,11 @@ Returns: *string* or *boolean*
 
 Returns: [AnimationController](animation_controller#animationcontroller)
 
-### add( undo )
+### add( [undo] )
 Adds the animation controller to the current project and to the interface
 
 ##### Arguments:
-* `undo`: *any* - If true, the addition of the animation controller will be registered as an edit
+* `undo`: *boolean* (Optional) - If true, the addition of the animation controller will be registered as an edit
 
 Returns: [AnimationController](animation_controller#animationcontroller)
 
@@ -217,12 +219,12 @@ Returns: *boolean*
 ### all
 Static Property
 
-Type: Array of [AnimationItem](animation#animationitem)
+Type: Array of [_Animation](animation#animation-1)
 
 
 ### selected
 Static Property
 
-Type: [AnimationItem](animation#animationitem)
+Type: `null` or [_Animation](animation#animation-1)
 
 

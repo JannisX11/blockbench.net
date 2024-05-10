@@ -6,6 +6,8 @@ title: Timeline
 ## Timeline
 #### Namespace
 
+<reference path="./blockbench.d.ts"/>
+
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | animators | Array of [GeneralAnimator](animation#generalanimator) |  |
@@ -16,13 +18,14 @@ title: Timeline
 | playing | *boolean* |  |
 | keyframes | Array of [_Keyframe](keyframe#keyframe-1) |  |
 | menu | [Menu](menu#menu-1) |  |
+| selected_animator | [GeneralAnimator](animation#generalanimator) or `null` |  |
 
-### setTime( time, editing )
+### setTime( time[, editing] )
 Set the timeline to a specific time
 
 ##### Arguments:
 * `time`: *number* - Time in seconds
-* `editing`: *boolean* - If true, don't update the timeline timecode, because it is currently edited by the user
+* `editing`: *boolean* (Optional) - If true, don't update the timeline timecode, because it is currently edited by the user
 
 
 ### revealTime( time )
@@ -44,7 +47,7 @@ Converts the input time to a time that is snapped to the current timeline snappi
 
 ##### Arguments:
 * `time`: *number* - Input time in seconds
-* `animation`: [Animation](#Animation) (Optional) - Animation to use the snapping setting from. If unspecified, uses the selected animation
+* `animation`: [_Animation](animation#animation-1) (Optional) - Animation to use the snapping setting from. If unspecified, uses the selected animation
 
 Returns: *number*
 

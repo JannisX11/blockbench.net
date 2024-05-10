@@ -3,6 +3,14 @@ title: Settings
 ---
 
 # Settings
+## settings
+#### Global Variable
+
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/settings.d.ts#L2)
+
+<reference path="./blockbench.d.ts"/>
+
+
 ## Setting
 Extends: [Deletable](misc#deletable)
 
@@ -25,8 +33,8 @@ Creates a new Setting
 	* `step`: *number* (Optional)
 	* `icon`: *string* (Optional)
 	* `click`: Function (Optional)
-	* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L14) (Optional)
-	* `onChange`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L17) (Optional)
+	* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/settings.d.ts#L19) (Optional)
+	* `onChange`: Function (Optional)
 
 
 | Property | Type | Description |
@@ -45,9 +53,9 @@ Creates a new Setting
 | max | *number* |  |
 | step | *number* |  |
 | icon | *string* |  |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L52) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/settings.d.ts#L56) |  |
 | hidden | *boolean* |  |
-| onChange | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L56) |  |
+| onChange | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/settings.d.ts#L60) |  |
 
 ### delete()
 
@@ -70,18 +78,16 @@ Triggers the setting, as if selected in action control. This toggles boolean set
 ## Settings
 #### Namespace
 
-Global namespace handling data and functionality related to settings.
-
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| structure | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L73) |  |
-| stored | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L74) |  |
+| structure | [Record](#Record) |  |
+| stored | [Record](#Record) |  |
 
 ### open( [options] )
 Opens the settings dialog
 
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L79) (Optional) -
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/settings.d.ts#L84) (Optional) -
 
 
 ### saveLocalStorages()
@@ -101,10 +107,4 @@ Returns the value of the specified setting
 * `setting_id`: *string*
 
 Returns: *any*
-
-
-## settings
-#### Global Variable
-
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/settings.d.ts#L97)
 

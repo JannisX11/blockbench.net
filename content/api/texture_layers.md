@@ -13,8 +13,8 @@ Creates a new TextureLayer
 * `data`: TextureLayerData
 	* `name`: *string* (Optional)
 	* `in_limbo`: *boolean* (Optional)
-	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) (Optional)
-	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) (Optional)
+	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) (Optional)
+	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) (Optional)
 	* `opacity`: *number* (Optional)
 	* `visible`: *boolean* (Optional)
 	* `blend_mode`: `"add"` or `"default"` or `"color"` or `"difference"` or `"multiply"` or `"screen"` or `"set_opacity"` (Optional)
@@ -32,9 +32,9 @@ Creates a new TextureLayer
 | canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) |  |
 | ctx | [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) |  |
 | in_limbo | *boolean* |  |
-| img | [HTMLImageElement](#HTMLImageElement) |  |
-| offset | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) | Layer offset from the top left corner of the texture to the top left corner of the layer |
-| scale | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) | Layer scale. This is only used by the layer transform tool and should be applied and reset to 1x1 before doing further changes |
+| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/global.d.ts#L30) |  |
+| offset | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) | Layer offset from the top left corner of the texture to the top left corner of the layer |
+| scale | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) | Layer scale. This is only used by the layer transform tool and should be applied and reset to 1x1 before doing further changes |
 | opacity | *number* |  |
 | visible | *boolean* |  |
 | blend_mode | `"add"` or `"default"` or `"color"` or `"difference"` or `"multiply"` or `"screen"` or `"set_opacity"` |  |
@@ -44,8 +44,8 @@ Creates a new TextureLayer
 * `data`: TextureLayerData
 	* `name`: *string* (Optional)
 	* `in_limbo`: *boolean* (Optional)
-	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) (Optional)
-	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) (Optional)
+	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) (Optional)
+	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) (Optional)
 	* `opacity`: *number* (Optional)
 	* `visible`: *boolean* (Optional)
 	* `blend_mode`: `"add"` or `"default"` or `"color"` or `"difference"` or `"multiply"` or `"screen"` or `"set_opacity"` (Optional)
@@ -89,7 +89,7 @@ Set the layer into a limbo state, where clicking Place or clicking next to the l
 Resolves the limbo state by turning the limbo layer into a full layer, or merging it into the layer below
 
 ##### Arguments:
-* `keep_separate`: *any* - If true, the layer is kept as a separate layer
+* `keep_separate`: *boolean* - If true, the layer is kept as a separate layer
 
 
 ### setSize( width, height )
@@ -126,7 +126,7 @@ Merge this texture onto the texture below
 Expand the layer to include the listed pixels
 
 ##### Arguments:
-* `points`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) -
+* `points`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) -
 
 
 ### flip( axis, undo )
@@ -134,7 +134,7 @@ Flip the texture along an axis
 
 ##### Arguments:
 * `axis`: *number* - Flip axis, where 0 is X and 1 is Y
-* `undo`: *any* - Create an undo entry
+* `undo`: *boolean* - Create an undo entry
 
 
 ### rotate( angle, undo )

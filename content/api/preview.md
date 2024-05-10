@@ -25,14 +25,14 @@ Creates a new Preview
 | width | *number* |  |
 | node | [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
 | isOrtho | *boolean* | True if the preview is in orthographic camera mode |
-| angle | *number* | Angle, when in a specific side view |
+| angle | `null` or *number* | Angle, when in a specific side view |
 | camera | [THREE.PerspectiveCamera](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) or [THREE.OrthographicCamera](https://threejs.org/docs/index.html#api/en/cameras/OrthographicCamera) |  |
 | camPers | [THREE.PerspectiveCamera](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) |  |
 | camOrtho | [THREE.OrthographicCamera](https://threejs.org/docs/index.html#api/en/cameras/OrthographicCamera) |  |
-| controls | *object* |  |
-| annotations | *object* |  |
+| controls | *any* |  |
+| annotations | *any* |  |
 | renderer | [THREE.WebGLRenderer](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) |  |
-| background | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/preview.d.ts#L51) |  |
+| background | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/preview.d.ts#L52) |  |
 | raycaster | [Raycaster](#Raycaster) |  |
 
 ### delete()
@@ -42,7 +42,7 @@ Creates a new Preview
 ##### Arguments:
 * `event`: [MouseEvent](#MouseEvent)
 
-Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/preview.d.ts#L16)
+Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/preview.d.ts#L17)
 
 ### render()
 
@@ -67,9 +67,9 @@ Returns: [Preview](preview#preview-1)
 ### loadAnglePreset( angle_preset )
 ##### Arguments:
 * `angle_preset`: AnglePreset
-	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2)
-	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
+	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3)
+	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
 	* `projection`: `"perspective"` or `"unset"` or `"orthographic"`
 	* `zoom`: *number* (Optional)
 	* `focal_length`: *number* (Optional)
@@ -101,6 +101,9 @@ Returns: [Preview](preview#preview-1)
 
 Returns: [Preview](preview#preview-1)
 
+### loadBackground()
+
+
 ### all
 Static Property
 
@@ -115,5 +118,11 @@ Static Property
 Type: [Preview](preview#preview-1)
 
 The last used preview
+
+
+
+## animate()
+#### Global Function
+
 
 

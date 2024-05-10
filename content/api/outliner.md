@@ -3,21 +3,30 @@ title: Outliner
 ---
 
 # Outliner
+## elements
+#### Global Variable
+
+Type: Array of [OutlinerNode](outliner#outlinernode)
+
+
 ## OutlinerNode
 Extended by: [OutlinerElement](outliner#outlinerelement), [Group](group#group-1)
 
-### new OutlinerNode()
+### new OutlinerNode( uuid )
 Creates a new OutlinerNode
 
+##### Arguments:
+* `uuid`: *string*
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| uuid | *string* |  |
 | name | *string* |  |
+| uuid | *string* |  |
 | export | *boolean* |  |
 | locked | *boolean* |  |
-| parent | [Group](group#group-1) or `"root"` |  |
+| parent | `"root"` or [Group](group#group-1) |  |
+| menu | [Menu](menu#menu-1) |  |
 
 ### init()
 Initializes the node. This should always be called when creating nodes that will be used in the outliner.
@@ -66,15 +75,19 @@ Marks the name of the group or element in the outliner for renaming.
 
 Returns: [OutlinerNode](outliner#outlinernode)
 
-### saveName()
+### saveName( [save] )
 Saves the changed name of the element by creating an undo point and making the name unique if necessary.
 
+##### Arguments:
+* `save`: *boolean* (Optional)
 
 Returns: [OutlinerNode](outliner#outlinernode)
 
-### createUniqueName()
+### createUniqueName( [others] )
 Create a unique name for the group or element by adding a number at the end or increasing it.
 
+##### Arguments:
+* `others`: Array of [OutlinerNode](outliner#outlinernode) (Optional)
 
 Returns: [OutlinerNode](outliner#outlinernode)
 
@@ -99,10 +112,26 @@ Displays the context menu of the element
 
 Returns: [OutlinerNode](outliner#outlinernode)
 
+### getSaveCopy( [project] )
+##### Arguments:
+* `project`: *boolean* (Optional)
+
+Returns: [OutlinerNode](outliner#outlinernode)
+
+### sanitizeName()
+
+Returns: *string*
+
+### properties
+Static Property
+
+Type: [Record](#Record)
+
+
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L63)
 
 
 
@@ -111,18 +140,22 @@ Extends: [OutlinerNode](outliner#outlinernode)
 
 Extended by: [Locator](outliner#locator), [NullObject](outliner#nullobject), [TextureMesh](outliner#texturemesh), [Cube](cube#cube-1), [Mesh](mesh#mesh-1)
 
-### new OutlinerElement()
+### new OutlinerElement( data, uuid )
 Creates a new OutlinerElement
 
+##### Arguments:
+* `data`: *any*
+* `uuid`: *string*
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| uuid | *string* |  |
 | name | *string* |  |
+| uuid | *string* |  |
 | export | *boolean* |  |
 | locked | *boolean* |  |
-| parent | [Group](group#group-1) or `"root"` |  |
+| parent | `"root"` or [Group](group#group-1) |  |
+| menu | [Menu](menu#menu-1) |  |
 | selected | *boolean* |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
 
@@ -173,15 +206,19 @@ Marks the name of the group or element in the outliner for renaming.
 
 Returns: [OutlinerElement](outliner#outlinerelement)
 
-### saveName()
+### saveName( [save] )
 Saves the changed name of the element by creating an undo point and making the name unique if necessary.
 
+##### Arguments:
+* `save`: *boolean* (Optional)
 
 Returns: [OutlinerElement](outliner#outlinerelement)
 
-### createUniqueName()
+### createUniqueName( [others] )
 Create a unique name for the group or element by adding a number at the end or increasing it.
 
+##### Arguments:
+* `others`: Array of [OutlinerNode](outliner#outlinernode) (Optional)
 
 Returns: [OutlinerElement](outliner#outlinerelement)
 
@@ -206,26 +243,82 @@ Displays the context menu of the element
 
 Returns: [OutlinerElement](outliner#outlinerelement)
 
-### getMesh()
+### getSaveCopy( [project] )
+##### Arguments:
+* `project`: *boolean* (Optional)
 
-Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1)
+Returns: [OutlinerNode](outliner#outlinernode)
+
+### sanitizeName()
+
+Returns: *string*
+
+### OutlinerElement.fromSave( data[, keep_uuid] )
+##### Arguments:
+* `data`: *any*
+* `keep_uuid`: *boolean* (Optional)
+
+Returns: [OutlinerElement](outliner#outlinerelement)
+
+### OutlinerElement.registerType( constructor, id )
+##### Arguments:
+* `constructor`: *any*
+* `id`: *string*
+
+
+### select( [event, isOutlinerClick] )
+##### Arguments:
+* `event`: *any* (Optional)
+* `isOutlinerClick`: *boolean* (Optional)
+
+Returns: *void* or [OutlinerElement](outliner#outlinerelement)
+
+### unselect( args )
+##### Arguments:
+* `args`: Array of *any*
+
+Returns: *void* or [OutlinerElement](outliner#outlinerelement)
+
+### properties
+Static Property
+
+Type: [Record](#Record)
+
 
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L63)
 
 
-### fromSave
+### animator
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
+Type: [BoneAnimator](animation#boneanimator)
 
 
 ### isParent
 Static Property
 
 Type: `false`
+
+
+### types
+Static Property
+
+Type: [Record](#Record)
+
+
+### all
+Static Property
+
+Type: Array of [OutlinerElement](outliner#outlinerelement)
+
+
+### selected
+Static Property
+
+Type: Array of [OutlinerElement](outliner#outlinerelement)
 
 
 
@@ -236,19 +329,20 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new Locator
 
 ##### Arguments:
-* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L75)
+* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L86)
 * `uuid`: *string* (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | uuid | *string* |  |
-| name | *string* |  |
 | export | *boolean* |  |
 | locked | *boolean* |  |
-| parent | [Group](group#group-1) or `"root"` |  |
+| parent | `"root"` or [Group](group#group-1) |  |
+| menu | [Menu](menu#menu-1) |  |
 | selected | *boolean* |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
+| name | *string* |  |
 
 ### init()
 Initializes the node. This should always be called when creating nodes that will be used in the outliner.
@@ -297,15 +391,19 @@ Marks the name of the group or element in the outliner for renaming.
 
 Returns: [Locator](outliner#locator)
 
-### saveName()
+### saveName( [save] )
 Saves the changed name of the element by creating an undo point and making the name unique if necessary.
 
+##### Arguments:
+* `save`: *boolean* (Optional)
 
 Returns: [Locator](outliner#locator)
 
-### createUniqueName()
+### createUniqueName( [others] )
 Create a unique name for the group or element by adding a number at the end or increasing it.
 
+##### Arguments:
+* `others`: Array of [OutlinerNode](outliner#outlinernode) (Optional)
 
 Returns: [Locator](outliner#locator)
 
@@ -330,15 +428,46 @@ Displays the context menu of the element
 
 Returns: [Locator](outliner#locator)
 
-### getMesh()
+### getSaveCopy( [project] )
+##### Arguments:
+* `project`: *boolean* (Optional)
 
-Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1)
+Returns: [OutlinerNode](outliner#outlinernode)
+
+### sanitizeName()
+
+Returns: *string*
+
+### Locator.fromSave( data[, keep_uuid] )
+##### Arguments:
+* `data`: *any*
+* `keep_uuid`: *boolean* (Optional)
+
+Returns: [OutlinerElement](outliner#outlinerelement)
+
+### Locator.registerType( constructor, id )
+##### Arguments:
+* `constructor`: *any*
+* `id`: *string*
+
+
+### select( [event, isOutlinerClick] )
+##### Arguments:
+* `event`: *any* (Optional)
+* `isOutlinerClick`: *boolean* (Optional)
+
+Returns: *void* or [Locator](outliner#locator)
+
+### unselect( args )
+##### Arguments:
+* `args`: Array of *any*
+
+Returns: *void* or [Locator](outliner#locator)
 
 ### extend( options )
 ##### Arguments:
-* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L75)
+* `options`: [LocatorOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L86)
 
-Returns: *any*
 
 ### flip( axis, center )
 ##### Arguments:
@@ -351,22 +480,34 @@ Returns: [Locator](outliner#locator)
 
 Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3)
 
+### properties
+Static Property
+
+Type: [Record](#Record)
+
+
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L63)
 
 
-### fromSave
+### animator
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
+Type: [BoneAnimator](animation#boneanimator)
 
 
 ### isParent
 Static Property
 
 Type: `false`
+
+
+### types
+Static Property
+
+Type: [Record](#Record)
 
 
 ### all
@@ -384,13 +525,13 @@ Type: Array of [Locator](outliner#locator)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L90)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L101)
 
 
 ### hasSelected
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L92)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L103)
 
 
 
@@ -401,20 +542,21 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new NullObject
 
 ##### Arguments:
-* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L96)
+* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L106)
 * `uuid`: *string* (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| uuid | *string* |  |
 | name | *string* |  |
+| uuid | *string* |  |
 | export | *boolean* |  |
 | locked | *boolean* |  |
-| parent | [Group](group#group-1) or `"root"` |  |
+| parent | `"root"` or [Group](group#group-1) |  |
+| menu | [Menu](menu#menu-1) |  |
 | selected | *boolean* |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
-| position | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
+| position | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
 | ik_target | *string* |  |
 | lock_ik_target_rotation | *boolean* |  |
 
@@ -465,15 +607,19 @@ Marks the name of the group or element in the outliner for renaming.
 
 Returns: [NullObject](outliner#nullobject)
 
-### saveName()
+### saveName( [save] )
 Saves the changed name of the element by creating an undo point and making the name unique if necessary.
 
+##### Arguments:
+* `save`: *boolean* (Optional)
 
 Returns: [NullObject](outliner#nullobject)
 
-### createUniqueName()
+### createUniqueName( [others] )
 Create a unique name for the group or element by adding a number at the end or increasing it.
 
+##### Arguments:
+* `others`: Array of [OutlinerNode](outliner#outlinernode) (Optional)
 
 Returns: [NullObject](outliner#nullobject)
 
@@ -498,15 +644,46 @@ Displays the context menu of the element
 
 Returns: [NullObject](outliner#nullobject)
 
-### getMesh()
+### getSaveCopy( [project] )
+##### Arguments:
+* `project`: *boolean* (Optional)
 
-Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1)
+Returns: [OutlinerNode](outliner#outlinernode)
+
+### sanitizeName()
+
+Returns: *string*
+
+### NullObject.fromSave( data[, keep_uuid] )
+##### Arguments:
+* `data`: *any*
+* `keep_uuid`: *boolean* (Optional)
+
+Returns: [OutlinerElement](outliner#outlinerelement)
+
+### NullObject.registerType( constructor, id )
+##### Arguments:
+* `constructor`: *any*
+* `id`: *string*
+
+
+### select( [event, isOutlinerClick] )
+##### Arguments:
+* `event`: *any* (Optional)
+* `isOutlinerClick`: *boolean* (Optional)
+
+Returns: *void* or [NullObject](outliner#nullobject)
+
+### unselect( args )
+##### Arguments:
+* `args`: Array of *any*
+
+Returns: *void* or [NullObject](outliner#nullobject)
 
 ### extend( options )
 ##### Arguments:
-* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L96)
+* `options`: [NullObjectOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L106)
 
-Returns: *any*
 
 ### flip( axis, center )
 ##### Arguments:
@@ -519,22 +696,34 @@ Returns: [NullObject](outliner#nullobject)
 
 Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3)
 
+### properties
+Static Property
+
+Type: [Record](#Record)
+
+
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L63)
 
 
-### fromSave
+### animator
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
+Type: [BoneAnimator](animation#boneanimator)
 
 
 ### isParent
 Static Property
 
 Type: `false`
+
+
+### types
+Static Property
+
+Type: [Record](#Record)
 
 
 ### all
@@ -552,13 +741,13 @@ Type: Array of [NullObject](outliner#nullobject)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L116)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L125)
 
 
 ### hasSelected
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L118)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L127)
 
 
 
@@ -569,22 +758,23 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new TextureMesh
 
 ##### Arguments:
-* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L122)
+* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L130)
 * `uuid`: *string* (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| uuid | *string* |  |
 | name | *string* |  |
+| uuid | *string* |  |
 | export | *boolean* |  |
 | locked | *boolean* |  |
-| parent | [Group](group#group-1) or `"root"` |  |
+| parent | `"root"` or [Group](group#group-1) |  |
+| menu | [Menu](menu#menu-1) |  |
 | selected | *boolean* |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
 | texture_name | *string* |  |
-| local_pivot | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
-| scale | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
+| local_pivot | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
+| scale | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
 
 ### init()
 Initializes the node. This should always be called when creating nodes that will be used in the outliner.
@@ -633,15 +823,19 @@ Marks the name of the group or element in the outliner for renaming.
 
 Returns: [TextureMesh](outliner#texturemesh)
 
-### saveName()
+### saveName( [save] )
 Saves the changed name of the element by creating an undo point and making the name unique if necessary.
 
+##### Arguments:
+* `save`: *boolean* (Optional)
 
 Returns: [TextureMesh](outliner#texturemesh)
 
-### createUniqueName()
+### createUniqueName( [others] )
 Create a unique name for the group or element by adding a number at the end or increasing it.
 
+##### Arguments:
+* `others`: Array of [OutlinerNode](outliner#outlinernode) (Optional)
 
 Returns: [TextureMesh](outliner#texturemesh)
 
@@ -666,15 +860,46 @@ Displays the context menu of the element
 
 Returns: [TextureMesh](outliner#texturemesh)
 
-### getMesh()
+### getSaveCopy( [project] )
+##### Arguments:
+* `project`: *boolean* (Optional)
 
-Returns: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1)
+Returns: [OutlinerNode](outliner#outlinernode)
+
+### sanitizeName()
+
+Returns: *string*
+
+### TextureMesh.fromSave( data[, keep_uuid] )
+##### Arguments:
+* `data`: *any*
+* `keep_uuid`: *boolean* (Optional)
+
+Returns: [OutlinerElement](outliner#outlinerelement)
+
+### TextureMesh.registerType( constructor, id )
+##### Arguments:
+* `constructor`: *any*
+* `id`: *string*
+
+
+### select( [event, isOutlinerClick] )
+##### Arguments:
+* `event`: *any* (Optional)
+* `isOutlinerClick`: *boolean* (Optional)
+
+Returns: *void* or [TextureMesh](outliner#texturemesh)
+
+### unselect( args )
+##### Arguments:
+* `args`: Array of *any*
+
+Returns: *void* or [TextureMesh](outliner#texturemesh)
 
 ### extend( options )
 ##### Arguments:
-* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L122)
+* `options`: [TextureMeshOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L130)
 
-Returns: *any*
 
 ### flip( axis, center )
 ##### Arguments:
@@ -689,27 +914,39 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 
 ### moveVector( offset, axis[, update] )
 ##### Arguments:
-* `offset`: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3) or [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2)
+* `offset`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) or [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3)
 * `axis`: *number*
 * `update`: *boolean* (Optional)
+
+
+### properties
+Static Property
+
+Type: [Record](#Record)
 
 
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L63)
 
 
-### fromSave
+### animator
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L71)
+Type: [BoneAnimator](animation#boneanimator)
 
 
 ### isParent
 Static Property
 
 Type: `false`
+
+
+### types
+Static Property
+
+Type: [Record](#Record)
 
 
 ### all
@@ -733,10 +970,32 @@ Type: Array of [TextureMesh](outliner#texturemesh)
 | root | Array of [OutlinerNode](outliner#outlinernode) |  |
 | elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | selected | Array of [OutlinerElement](outliner#outlinerelement) |  |
+| control_menu_group | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L19) |  |
+| buttons | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L158) |  |
 
 
 ## markerColors
 #### Global Variable
 
-Type: Array of [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L153)
+Type: Array of [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L168)
+
+
+## compileGroups( undo[, lut] )
+#### Global Function
+
+##### Arguments:
+* `undo`: *boolean*
+* `lut`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L174) (Optional)
+
+Returns: Array of *any*
+
+
+## parseGroups( array[, import_reference, startIndex] )
+#### Global Function
+
+##### Arguments:
+* `array`: Array of *any*
+* `import_reference`: *any* (Optional)
+* `startIndex`: *number* (Optional)
+
 

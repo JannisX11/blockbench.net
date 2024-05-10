@@ -22,12 +22,15 @@ Creates a new Texture
 	* `saved`: *boolean* (Optional)
 	* `keep_size`: *boolean* (Optional)
 	* `source`: *string* (Optional)
+	* `width`: *number* (Optional)
+	* `height`: *number* (Optional)
+	* `standalone`: *boolean* (Optional)
 * `uuid`: *string* (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| frameCount | *number* |  |
+| frameCount | *undefined* or *number* |  |
 | display_height | *number* |  |
 | ratio | *number* |  |
 | path | *string* |  |
@@ -62,7 +65,8 @@ Creates a new Texture
 | sync_to_project | *string* | The UUID of the project to sync the texture to |
 | canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | The texture's associated canvas. Since 4.9, this is the main source of truth for textures in internal mode. |
 | ctx | [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) | The 2D context of the texture's associated canvas. |
-| img | [HTMLImageElement](#HTMLImageElement) | Texture image element |
+| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/global.d.ts#L30) | Texture image element |
+| relative_path | *string* |  |
 | menu | [Menu](menu#menu-1) |  |
 
 ### getErrorMessage()
@@ -83,6 +87,9 @@ Returns: *string*
 	* `saved`: *boolean* (Optional)
 	* `keep_size`: *boolean* (Optional)
 	* `source`: *string* (Optional)
+	* `width`: *number* (Optional)
+	* `height`: *number* (Optional)
+	* `standalone`: *boolean* (Optional)
 
 Returns: [Texture](textures#texture)
 
@@ -102,37 +109,37 @@ Returns: *number*
 ##### Arguments:
 * `bitmap`: *boolean* (Optional)
 
-Returns: *object*
+Returns: *any*
+### getUndoCopy()
+
+Returns: [Texture](textures#texture)
 
 ### getSaveCopy( [bitmap] )
 ##### Arguments:
 * `bitmap`: *boolean* (Optional)
 
-Returns: *object*
+Returns: *any*
 
 ### startWatcher()
 Start listening for changes to the linked file. Desktop only
 
 
-Returns: *any*
 
 ### stopWatcher()
 Stop listening for changes to the linked file. Desktop only
 
 
-Returns: *any*
 
 ### generateFolder()
 Generate the Java Block/Item folder property from the file path
 
 
-Returns: *any*
 
 ### load( [cb] )
 Loads the texture from it's current source
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L148) (Optional) - Callback function
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/textures.d.ts#L153) (Optional) - Callback function
 
 Returns: [Texture](textures#texture)
 
@@ -145,7 +152,7 @@ Returns: [Texture](textures#texture)
 
 ### fromFile( file )
 ##### Arguments:
-* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L150)
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/textures.d.ts#L155)
 
 Returns: [Texture](textures#texture)
 
@@ -163,7 +170,7 @@ Returns: [Texture](textures#texture)
 
 ### fromDefaultPack()
 
-Returns: `true`
+Returns: *undefined* or `true`
 
 ### loadEmpty( [error_id] )
 Loads the default white error texture
@@ -293,7 +300,7 @@ Returns: *string*
 Wrapper to do edits to the texture.
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L224) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/textures.d.ts#L230) -
 * `options`: TextureEditOptions - Editing options
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created
@@ -329,7 +336,7 @@ Returns: *string*
 
 ### getMCMetaContent()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L239)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/textures.d.ts#L247)
 
 ### getAnimationFrameIndices()
 
@@ -365,7 +372,7 @@ Update the attached img element with the content from the texture's canvas
 If layers are enabled, returns the active layer, otherwise returns the texture. Either way, the 'canvas', 'ctx', and 'offset' properties can be used from the returned object
 
 
-Returns: [Texture](textures#texture) or [TextureLayer](texture_layers#texturelayer)
+Returns: [TextureLayer](texture_layers#texturelayer) or [Texture](textures#texture)
 
 ### syncToOtherProject()
 When editing the same texture in different tabs (via Edit In Blockbench option), sync changes that were made to the texture to other projects
@@ -425,8 +432,8 @@ Creates a new IntMatrix
 | -------- | ---- | ----------- |
 | width | *number* |  |
 | height | *number* |  |
-| array | [Int8Array](#Int8Array) |  |
-| override | *boolean* | The override can be set to true to indicate that the whole texture is selected, or false, which indicates that nothing is selected. Null indicates a custom selection |
+| array | `null` or [Int8Array](#Int8Array) |  |
+| override | `null` or *boolean* | The override can be set to true to indicate that the whole texture is selected, or false, which indicates that nothing is selected. Null indicates a custom selection |
 | is_custom | *boolean* | True if there is a custom selection |
 
 ### activate()
@@ -438,8 +445,8 @@ The array does not exist by default to save memory, this activates it.
 Get the value at the specified pixel
 
 ##### Arguments:
-* `x`: *any* - X coordinate
-* `y`: *any* - Y coordinate
+* `x`: *number* - X coordinate
+* `y`: *number* - Y coordinate
 
 Returns: *number* or *boolean*
 
@@ -447,8 +454,8 @@ Returns: *number* or *boolean*
 Test whether painting is allowed at a specific pixel
 
 ##### Arguments:
-* `x`: *any* - X coordinate
-* `y`: *any* - Y coordinate
+* `x`: *number* - X coordinate
+* `y`: *number* - Y coordinate
 
 Returns: *number* or *boolean*
 
@@ -465,7 +472,7 @@ Returns: *number*
 Return the smallest possible rectangle that contains all of the selection
 
 ##### Arguments:
-* `respect_empty`: *any* - If true, if there is no selection, the bounding box will still cover the entire area
+* `respect_empty`: *boolean* - If true, if there is no selection, the bounding box will still cover the entire area
 
 Returns: [Rectangle](util#rectangle)
 
@@ -483,7 +490,6 @@ Set the value at a specified pixel
 * `y`: *number* - Y coordinate
 * `value`: *number* -
 
-Returns: *any*
 
 ### clear()
 If there was a selection, whether override or not, clear it
@@ -494,7 +500,7 @@ If there was a selection, whether override or not, clear it
 Change override mode
 
 ##### Arguments:
-* `value`: *boolean* -
+* `value`: `null` or *boolean* -
 
 
 ### changeSize( width, height )
@@ -509,9 +515,8 @@ Change the size of the matrix. Unless using overrides, the selection gets lost.
 Run a method on each pixel, whether selected or not
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/textures.d.ts#L370) - Function to run per pixel
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/textures.d.ts#L380) - Function to run per pixel
 
-Returns: *any*
 
 ### translate( offset_x, offset_y )
 Shift custom selections by a specified offset
@@ -532,7 +537,7 @@ Mask the provided canvas using the selection
 
 ##### Arguments:
 * `ctx`: [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) - Canvas 2D context
-* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L3) - Position offset of the canvas, e. g. when using a layer
+* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L4) - Position offset of the canvas, e. g. when using a layer
 
 
 

@@ -11,20 +11,25 @@ Extended by: [BarMenu](menu#barmenu)
 Use the Menu class to create a context menu. Menus can contain custom entries and hierarchy, or existing actions and tools.
 
 ### new Menu( id, template[, options] )
-Creates a new Menu
+Creates a new context menu
 
 ##### Arguments:
 * `id`: *string*
-* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L18) or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L29)
+* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L19) or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L36)
 * `options`: MenuOptions (Optional)
-	* `onOpen`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L20) (Optional)
+	* `onOpen`: Function (Optional)
 	* `onClose`: Function (Optional)
 	* `keep_open`: *boolean* (Optional)
 	* `searchable`: *boolean* (Optional)
+	* `class`: *string* (Optional)
 
 ### new Menu( template[, options] )
 *Alternative constructor signature*
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| structure | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L19) |  |
 
 ### open( position[, context] )
 Opens the menu somewhere
@@ -46,7 +51,7 @@ Adds an action to the menu structure
 
 ##### Arguments:
 * `action`: [Action](action#action-1) - Action to add
-* `path`: *string* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `export.0`  places the action at the top position of the Export submenu.
+* `path`: *string* or *number* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `export.0`  places the action at the top position of the Export submenu.
 
 
 ### removeAction( path )
@@ -68,9 +73,17 @@ Creates a new BarMenu
 
 ##### Arguments:
 * `id`: *string*
-* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L18)
+* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L19)
 * `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| type | `"bar_menu"` |  |
+| id | *string* |  |
+| condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
+| name | *string* |  |
+| structure | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L19) |  |
 
 ### open( position[, context] )
 Opens the menu somewhere
@@ -92,7 +105,7 @@ Adds an action to the menu structure
 
 ##### Arguments:
 * `action`: [Action](action#action-1) - Action to add
-* `path`: *string* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `export.0`  places the action at the top position of the Export submenu.
+* `path`: *string* or *number* (Optional) - Path pointing to the location. Use the ID of each level of the menu, or index within a level, separated by a point. For example,  `export.0`  places the action at the top position of the Export submenu.
 
 
 ### removeAction( path )
@@ -116,7 +129,7 @@ Visually highlights an action within the menu, until the user opens the menu
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/menu.d.ts#L67) |  |
+| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/menu.d.ts#L82) |  |
 
 ### addAction( action[, path] )
 Adds an action to the menu structure
@@ -130,7 +143,6 @@ Adds an action to the menu structure
 ##### Arguments:
 * `path`: *string* - Path pointing to the location. Use the ID of each level of the menu, or index or group within a level, or item ID, separated by a point. For example,  `export.export_special_format`  removes the action "Export Special Format" from the Export submenu.
 
-Returns: *any*
 
 ### update()
 Update the menu bar

@@ -3,8 +3,34 @@ title: Misc
 ---
 
 # Misc
+## Object()
+#### Global Function
+
+Provides functionality common to all JavaScript objects.
+
+
+Returns: *any*
+## Object( value )
+#### Global Function
+
+Provides functionality common to all JavaScript objects.
+
+##### Arguments:
+* `value`: *any*
+
+Returns: *any*
+
+Extended by: [KeyframeDataPoint](keyframe#keyframedatapoint)
+
+
+## Blockbench
+#### Global Reference
+
+
 ## Deletable
 Extended by: [KeybindItem](action#keybinditem), [Codec](codec#codec-1), [ModelFormat](format#modelformat), [ModelLoader](format#modelloader), [Menu](menu#menu-1), [Preview](preview#preview-1), [Setting](settings#setting), [ValidatorCheck](validator#validatorcheck), [Property](misc#property)
+
+<reference path="./blockbench.d.ts"/>
 
 ### new Deletable()
 Creates a new Deletable
@@ -33,26 +59,27 @@ Creates a new Property
 
 ##### Arguments:
 * `target_class`: *any*
-* `type`: [PropertyType](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L118)
+* `type`: [T](#T)
 * `name`: *string*
 * `options`: PropertyOptions (Optional)
 	* `default`: *any* (Optional)
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `exposed`: *boolean* (Optional)
 	* `label`: *string* (Optional)
-	* `options`: *object* (Optional) - Options used for select types
-	* `values`: Array of *string* - Enum possible values
-	* `merge`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L132) (Optional)
-	* `reset`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L133) (Optional)
-	* `merge_validation`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L134) (Optional)
+	* `options`: *any* (Optional) - Options used for select types
+	* `values`: Array of *string* (Optional) - Enum possible values
+	* `merge`: Function (Optional)
+	* `reset`: Function (Optional)
+	* `merge_validation`: Function (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | class | *any* |  |
 | name | *string* |  |
-| type | [PropertyType](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L118) |  |
-| default | *any* |  |
+| type | [T](#T) |  |
+| default |  |  |
+| export | *boolean* |  |
 | isString | *boolean* |  |
 | isEnum | *boolean* |  |
 | isMolang | *boolean* |  |
@@ -63,7 +90,7 @@ Creates a new Property
 | isVector2 | *boolean* |  |
 | isInstance | *boolean* |  |
 | enum_values | Array of *string* |  |
-| merge_validation | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L157) |  |
+| merge_validation | *undefined* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/misc.d.ts#L205) |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | exposed | *boolean* |  |
 | label | *any* |  |
@@ -73,25 +100,25 @@ Creates a new Property
 
 ### merge( instance, data )
 ##### Arguments:
-* `instance`: *any*
-* `data`: *object*
+* `instance`: 
+* `data`: 
 
 
 ### reset( instance )
 ##### Arguments:
-* `instance`: *any*
+* `instance`: 
 
 
 ### getDefault( instance )
 ##### Arguments:
-* `instance`: *any*
+* `instance`: 
 
-Returns: *any*
+Returns: 
 
 ### copy( instance, target )
 ##### Arguments:
-* `instance`: *any*
-* `target`: *any*
+* `instance`: 
+* `target`: 
 
 
 
@@ -118,7 +145,7 @@ Returns: *string*
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L180) | Translation data for the current language |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/misc.d.ts#L228) | Translation data for the current language |
 | code | *string* | Two letter code indicating the currently selected language |
 
 ### addTranslations( language, strings )
@@ -126,7 +153,18 @@ Add translations for custom translation strings
 
 ##### Arguments:
 * `language`: *string* - Two letter language code, e. G. 'en'
-* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/misc.d.ts#L192) - Object listing the translation keys and values
+* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/misc.d.ts#L240) - Object listing the translation keys and values
 
-Returns: *any*
+
+
+## LZUTF8
+#### Global Variable
+
+Type: *any*
+
+
+## unselectAllElements()
+#### Global Function
+
+
 

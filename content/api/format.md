@@ -6,6 +6,8 @@ title: Format
 ## ModelFormat
 Extends: [Deletable](misc#deletable)
 
+<reference path="./blockbench.d.ts"/>
+
 ### new ModelFormat( id, options )
 Creates a new ModelFormat
 
@@ -22,15 +24,21 @@ Creates a new ModelFormat
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `show_on_start_screen`: *boolean* (Optional)
 	* `format_page`: FormatPage (Optional)
-		* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L3) (Optional)
+		* `component`: *any* (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L6) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
+	* `onSetup`: Function (Optional)
+	* `convertTo`: Function (Optional)
 	* `box_uv`: *boolean* (Optional)
 	* `optional_box_uv`: *boolean* (Optional)
 	* `single_texture`: *boolean* (Optional)
+	* `single_texture_default`: *boolean* (Optional)
+	* `per_group_texture`: *boolean* (Optional)
+	* `per_texture_uv_size`: *boolean* (Optional)
 	* `model_identifier`: *boolean* (Optional)
+	* `legacy_editable_file_name`: *boolean* (Optional)
 	* `parent_model_id`: *boolean* (Optional)
 	* `vertex_color_ambient_occlusion`: *boolean* (Optional)
 	* `animated_textures`: *boolean* (Optional)
@@ -43,9 +51,11 @@ Creates a new ModelFormat
 	* `texture_meshes`: *boolean* (Optional)
 	* `locators`: *boolean* (Optional)
 	* `rotation_limit`: *boolean* (Optional)
+	* `rotation_snap`: *boolean* (Optional)
 	* `uv_rotation`: *boolean* (Optional)
 	* `java_face_properties`: *boolean* (Optional)
 	* `select_texture_for_particles`: *boolean* (Optional)
+	* `texture_mcmeta`: *boolean* (Optional)
 	* `bone_binding_expression`: *boolean* (Optional)
 	* `animation_files`: *boolean* (Optional)
 	* `texture_folder`: *boolean* (Optional)
@@ -55,10 +65,12 @@ Creates a new ModelFormat
 	* `display_mode`: *boolean* (Optional)
 	* `animation_mode`: *boolean* (Optional)
 	* `pose_mode`: *boolean* (Optional)
+	* `animation_controllers`: *boolean* (Optional)
+	* `render_sides`: `"front"` (Optional)
 	* `cube_size_limiter`: CubeSizeLimiter (Optional)
-		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L16)
-		* `move`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L20)
-		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L24)
+		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L21)
+		* `move`: Function
+		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L32)
 		* `rotation_affected`: *boolean* (Optional) - Set to true to tell Blockbench to check and adjust the cube limit after rotating a cube
 		* `coordinate_limits`: Array (Optional) - Optionally set the coordinate limits of cubes in local space
 	* `codec`: [Codec](codec#codec-1) (Optional)
@@ -80,11 +92,15 @@ Creates a new ModelFormat
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L1) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L3) |  |
 | box_uv | *boolean* |  |
 | optional_box_uv | *boolean* |  |
 | single_texture | *boolean* |  |
+| single_texture_default | *boolean* |  |
+| per_group_texture | *boolean* |  |
+| per_texture_uv_size | *boolean* |  |
 | model_identifier | *boolean* |  |
+| legacy_editable_file_name | *boolean* |  |
 | parent_model_id | *boolean* |  |
 | vertex_color_ambient_occlusion | *boolean* |  |
 | animated_textures | *boolean* |  |
@@ -97,9 +113,11 @@ Creates a new ModelFormat
 | texture_meshes | *boolean* |  |
 | locators | *boolean* |  |
 | rotation_limit | *boolean* |  |
+| rotation_snap | *boolean* |  |
 | uv_rotation | *boolean* |  |
 | java_face_properties | *boolean* |  |
 | select_texture_for_particles | *boolean* |  |
+| texture_mcmeta | *boolean* |  |
 | bone_binding_expression | *boolean* |  |
 | animation_files | *boolean* |  |
 | texture_folder | *boolean* |  |
@@ -109,12 +127,16 @@ Creates a new ModelFormat
 | display_mode | *boolean* |  |
 | animation_mode | *boolean* |  |
 | pose_mode | *boolean* |  |
-| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L12) |  |
+| codec | [Codec](codec#codec-1) |  |
+| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L17) |  |
 
 ### onFormatPage()
 
 
 ### onStart()
+
+
+### onSetup()
 
 
 ### select()
@@ -145,8 +167,16 @@ Type: [ModelFormat](format#modelformat)
 The current format
 
 
+## Formats
+#### Global Variable
+
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L182)
+
+
 ## ModelLoader
 Extends: [Deletable](misc#deletable)
+
+<reference path="./blockbench.d.ts"/>
 
 ### new ModelLoader( id, options )
 Creates a new ModelLoader
@@ -163,8 +193,8 @@ Creates a new ModelLoader
 	* `confidential`: *boolean* (Optional)
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `format_page`: FormatPage (Optional)
-		* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L3) (Optional)
+		* `component`: *any* (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L6) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
@@ -184,7 +214,7 @@ Creates a new ModelLoader
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/format.d.ts#L1) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L3) |  |
 
 ### onFormatPage()
 

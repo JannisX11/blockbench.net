@@ -10,15 +10,15 @@ Extends: [OutlinerNode](outliner#outlinernode)
 Creates a new Group
 
 ##### Arguments:
-* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L1)
+* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/group.d.ts#L1)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | name | *string* |  |
 | children | Array of [OutlinerNode](outliner#outlinernode) |  |
-| origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
-| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
+| origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
+| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
 | reset | *boolean* |  |
 | shade | *boolean* |  |
 | selected | *boolean* |  |
@@ -27,14 +27,22 @@ Creates a new Group
 | isOpen | *boolean* |  |
 | ik_enabled | *boolean* |  |
 | ik_chain_length | *number* |  |
+| texture | *string* |  |
+| skin_original_origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
+| bedrock_binding | *string* |  |
+| cem_animations | Array of *any* |  |
+| cem_attach | *boolean* |  |
+| cem_scale | *number* |  |
+| mesh | [Mesh](mesh#mesh-1) |  |
 | uuid | *string* |  |
 | export | *boolean* |  |
 | locked | *boolean* |  |
-| parent | [Group](group#group-1) or `"root"` |  |
+| parent | `"root"` or [Group](group#group-1) |  |
+| menu | [Menu](menu#menu-1) |  |
 
 ### extend( options )
 ##### Arguments:
-* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L1)
+* `options`: [GroupOptions](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/group.d.ts#L1)
 
 Returns: [Group](group#group-1)
 
@@ -50,9 +58,16 @@ Returns: [Group](group#group-1)
 
 Returns: [Group](group#group-1)
 
+### select( [event, isOutlinerClick] )
+##### Arguments:
+* `event`: *any* (Optional)
+* `isOutlinerClick`: *boolean* (Optional)
+
+Returns: *void* or [Group](group#group-1)
+
 ### unselect()
 
-Returns: [Group](group#group-1)
+Returns: *void* or [Group](group#group-1)
 
 ### matchesSelection()
 
@@ -82,7 +97,7 @@ Returns: Array of [OutlinerNode](outliner#outlinernode)
 Move the origin of a bone to a specific location without visually affecting the position of it's content.
 
 ##### Arguments:
-* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2)
+* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3)
 
 Returns: [Group](group#group-1)
 
@@ -100,7 +115,7 @@ Returns: [Group](group#group-1)
 
 ### getSaveCopy()
 
-Returns: *object*
+Returns: *any*
 
 ### getChildlessCopy()
 
@@ -110,15 +125,14 @@ Returns: [Group](group#group-1)
 ##### Arguments:
 * `undo`: *boolean*
 
-Returns: *object*
+Returns: *any*
 
 ### forEachChild( callback[, type, for_self] )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L75)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/group.d.ts#L86)
 * `type`: *any* (Optional)
 * `for_self`: *boolean* (Optional)
 
-Returns: *any*
 
 ### init()
 Initializes the node. This should always be called when creating nodes that will be used in the outliner.
@@ -161,15 +175,19 @@ Marks the name of the group or element in the outliner for renaming.
 
 Returns: [Group](group#group-1)
 
-### saveName()
+### saveName( [save] )
 Saves the changed name of the element by creating an undo point and making the name unique if necessary.
 
+##### Arguments:
+* `save`: *boolean* (Optional)
 
 Returns: [Group](group#group-1)
 
-### createUniqueName()
+### createUniqueName( [others] )
 Create a unique name for the group or element by adding a number at the end or increasing it.
 
+##### Arguments:
+* `others`: Array of [OutlinerNode](outliner#outlinernode) (Optional)
 
 Returns: [Group](group#group-1)
 
@@ -194,6 +212,10 @@ Displays the context menu of the element
 
 Returns: [Group](group#group-1)
 
+### sanitizeName()
+
+Returns: *string*
+
 ### selected
 Static Property
 
@@ -206,15 +228,33 @@ Static Property
 Type: Array of [Group](group#group-1)
 
 
+### animator
+Static Property
+
+Type: [BoneAnimator](animation#boneanimator)
+
+
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/group.d.ts#L27)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/group.d.ts#L28)
+
+
+### preview_controller
+Static Property
+
+Type: [NodePreviewController](canvas#nodepreviewcontroller)
+
+
+### properties
+Static Property
+
+Type: [Record](#Record)
 
 
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L58)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L63)
 
 

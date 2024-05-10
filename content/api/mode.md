@@ -6,6 +6,8 @@ title: Mode
 ## Mode
 Extends: [KeybindItem](action#keybinditem)
 
+<reference path="./blockbench.d.ts"/>
+
 ### new Mode( id, options )
 Creates a new Mode
 
@@ -20,10 +22,16 @@ Creates a new Mode
 	* `hide_sidebars`: *boolean* (Optional)
 	* `hide_status_bar`: *boolean* (Optional)
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
-	* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
+	* `component`: *any* (Optional)
 	* `onSelect`: Function (Optional)
 	* `onUnselect`: Function (Optional)
 
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| keybind | [Keybind](action#keybind) |  |
+| id | *string* |  |
+| name | *string* |  |
 
 ### delete()
 
@@ -43,6 +51,12 @@ Activates the mode
 
 
 
+### onSelect()
+
+
+### onUnselect()
+
+
 ### selected
 Static Property
 
@@ -55,6 +69,6 @@ Type: [Mode](mode#mode-1)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/mode.d.ts#L31) |  |
-| selected | [Mode](mode#mode-1) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/mode.d.ts#L39) |  |
+| selected | [Mode](mode#mode-1) or `false` or *undefined* |  |
 

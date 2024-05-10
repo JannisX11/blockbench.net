@@ -6,7 +6,9 @@ title: Display Mode
 ## DisplayMode
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/display_mode.d.ts#L1)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/display_mode.d.ts#L2)
+
+<reference path="./blockbench.d.ts"/>
 
 
 ## DisplaySlot
@@ -18,17 +20,17 @@ Creates a new DisplaySlot
 ##### Arguments:
 * `id`: *string*
 * `data`: DisplaySlotOptions
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
-	* `translation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
-	* `scale`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `translation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `scale`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
 	* `mirror`: Array (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
-| translation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
-| scale | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) |  |
+| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
+| translation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
+| scale | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
 | mirror | Array |  |
 
 ### default()
@@ -40,22 +42,22 @@ Returns: [DisplaySlot](display_mode#displayslot)
 ### extend( data )
 ##### Arguments:
 * `data`: DisplaySlotOptions
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
-	* `translation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
-	* `scale`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/outliner.d.ts#L2) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `translation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `scale`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
 	* `mirror`: Array (Optional)
 
 Returns: [DisplaySlot](display_mode#displayslot)
 
 ### copy()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/display_mode.d.ts#L26)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/display_mode.d.ts#L27)
 
 ### export()
 Generate the values of the slot for export
 
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/display_mode.d.ts#L35)
+Returns: *undefined* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/display_mode.d.ts#L37)
 
 ### update()
 Visually update the UI with the data from this slot if selected

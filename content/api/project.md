@@ -36,23 +36,28 @@ Creates a new ModelProject
 | mode | *string* |  |
 | view_mode | *string* |  |
 | display_uv | *string* |  |
-| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L40) |  |
+| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L44) |  |
 | EditSession | [EditSession](project#editsession) |  |
 | elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | groups | Array of [Group](group#group-1) |  |
 | selected_elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
-| selected_group | [Group](group#group-1) |  |
-| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L49) |  |
-| selected_faces | Array |  |
+| selected_group | `null` or [Group](group#group-1) |  |
+| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L53) |  |
+| selected_faces | Array of *any* |  |
 | textures | Array of [Texture](textures#texture) |  |
-| selected_texture | [Texture](textures#texture) |  |
+| selected_texture | `null` or [Texture](textures#texture) |  |
 | outliner | Array of [OutlinerNode](outliner#outlinernode) |  |
 | animations | Array of [_Animation](animation#animation-1) |  |
 | timeline_animators | Array |  |
-| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L62) |  |
+| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L66) |  |
+| overrides | *any* |  |
+| exploded_view | *boolean* |  |
+| tool | *string* |  |
+| uv_viewport | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L78) |  |
+| backgrounds | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L83) |  |
+| unhandled_root_fields | *any* |  |
 | ambientocclusion | *boolean* |  |
 | front_gui_light | *boolean* |  |
-| overrides | *any* |  |
 
 ### getDisplayName()
 
@@ -63,7 +68,7 @@ Returns: *string*
 
 ### whenNextOpen( callback )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/project.d.ts#L85)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L100)
 
 
 ### select()
@@ -78,6 +83,18 @@ Returns: *boolean*
 * `force`: *any*
 
 Returns: [Promise](#Promise)
+
+### saveEditorState()
+
+
+### loadEditorState()
+
+
+### properties
+Static Property
+
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/project.d.ts#L11)
+
 
 ### model_3d
 Accessor
@@ -101,16 +118,17 @@ Type: Array of [ModelProject](project#modelproject)
 ## Project
 #### Global Variable
 
-Type: [ModelProject](project#modelproject) or `0`
+Type: [ModelProject](project#modelproject) or `null` or *undefined*
 
 Global variable and shortcut to get the currently opened project. If no project is open, or the New Tab is open, this value is falsy.
 
 
-## setupProject( format )
+## setupProject( format[, uuid] )
 #### Global Function
 
 ##### Arguments:
 * `format`: *string* or [ModelFormat](format#modelformat)
+* `uuid`: *string* (Optional)
 
 Returns: *boolean*
 
@@ -156,7 +174,7 @@ Creates a new EditSession
 | client_count | *number* |  |
 | data_queue | Array |  |
 | chat_history | Array |  |
-| Project | [ModelProject](project#modelproject) |  |
+| Project | `null` or [ModelProject](project#modelproject) |  |
 
 ### updateClientCound()
 
@@ -171,7 +189,6 @@ Creates a new EditSession
 * `username`: *string*
 * `token`: *string*
 
-Returns: *any*
 
 ### quit()
 
@@ -202,17 +219,17 @@ Returns: *any*
 
 ### sendEdit( entry )
 ##### Arguments:
-* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/9449dd3/types/undo.d.ts#L50)
+* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51)
 
 
 ### receiveData( tag )
 ##### Arguments:
-* `tag`: *object*
+* `tag`: *any*
 
 
 ### processData( tag )
 ##### Arguments:
-* `tag`: *object*
+* `tag`: *any*
 
 
 ### catchUp()
