@@ -160,7 +160,7 @@
 						<li>Discord Help Forum: <a href="https://discord.gg/2MBR98rKwn" class="channel">#help-minecraft-java</a></li>
 						<li>Files are saved with the extension .java</li>
 						<li>Models are written in Java code instead of dedicated data structures like all other Blockbench export formats</li>
-						<li>Blockbench animations can be loaded with <a href="https://geckolib.com/en/latest/">GeckoLib</a></li>
+						<li>Keyframe animations are supported in 1.19 or later</li>
 					</ul>
 
 					<h3>Caveats</h3>
@@ -172,7 +172,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" rel="noopener" href="https://github.com/bernie-g/geckolib/wiki/Getting-Started">GeckoLib Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/oCgoldUc6UQ">Forge Tutorial on Entity Implementation</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
 						<li><a target="_blank" rel="noopener" href="https://discord.mcmoddev.com/">Mod Development Discord Server</a></li>
 					</ul>
@@ -181,19 +181,19 @@
 				<template v-if="page == 'generic'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>Generic Model</h2>
-					<p>This format can be used to create custom models for the use in Blender, in games and game engines or just for showcase on Sketchfab. It unlocks most of the restrictions from dedicated Minecraft formats.</p>
+					<p>This format can be used to create custom models for the use in game engines and custom games, to port into other software, render, or just for showcase on Sketchfab. It supports all the things you need, like meshes, texture editing, and animations.</p>
 
 					<h3>Quick Info</h3>
 					<ul>
 						<li>Discord Help Forum: <a href="https://discord.gg/Bswa9MJ8v3" class="channel">#help-lowpoly</a></li>
 						<li>Models can be made with custom meshes or with cubes.</li>
-						<li>Models can be exported as .obj, dae (Collada), or .glTF</li>
+						<li>Models can be exported as .obj, dae (Collada), FBX, or .glTF</li>
 					</ul>
 
 					<h3>Tutorials</h3>
 					<ul>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=WbyCbA1c8BM">Low Poly Modeling Tutorial</a></li>
-						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://youtu.be/GukhptdHlPk?si=tL8p33cmzxE5oxAy">Low Poly Tutorial by Brandon James Greer</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 					</ul>
 				</template>
@@ -216,8 +216,7 @@
 
 					<h3>Tutorials</h3>
 					<ul>
-						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=qT8cnXuUPnI">Hytale Modeling and Art-Style Tutorial</a></li>
-						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLjl_U0ndTXFc--5aIGQhcKQd8pOa99iK-">Everbloom Blockbench Tutorials</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 					</ul>
 				</template>
 
@@ -266,12 +265,12 @@
 					<h2>Platform</h2>
 					<p>Which target platform do you want to create a model for?</p>
 
+					<div class="answer" @click="loadPage('generic')">Game Engine (Godot, Unity, Unreal Engine etc.)</div>
 					<div class="answer" @click="loadPage('q_java_type')">Minecraft: Java Edition</div>
 					<div class="answer" @click="loadPage('q_bedrock_type')">Minecraft: Bedrock Edition</div>
 					<div class="answer" @click="loadPage('mc_legends')">Minecraft Legends</div>
 					<div class="answer" @click="loadPage('hytale')">Hytale</div>
-					<div class="answer" @click="loadPage('generic')">Rendering / Game Engine</div>
-					<div class="answer" @click="loadPage('generic')">Just for fun</div>
+					<div class="answer" @click="loadPage('generic')">For rendering / Just for fun</div>
 				</template>
 
 				<template v-if="page == 'q_java_type'">
