@@ -19,7 +19,7 @@
 				<a class="menu_icon" href="https://twitter.com/blockbench" target="_blank" rel="noopener" title="Twitter"><fa :icon="['fab', 'twitter']" /></a>
 				<a class="menu_icon" href="https://reddit.com/r/blockbench" target="_blank" rel="noopener" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a>
 				<a class="menu_icon" href="https://github.com/JannisX11/blockbench" target="_blank" rel="noopener" title="Github"><fa :icon="['fab', 'github']" /></a>
-				<a class="menu_icon" href="https://discord.blockbench.net" target="_blank" rel="noopener" title="Discord"><fa :icon="['fab', 'discord']" /></a>
+				<a class="menu_icon" href="https://discord.gg/blockbench" target="_blank" rel="noopener" title="Discord"><fa :icon="['fab', 'discord']" /></a>
 
 				<div class="menu_icon" id="color_mode_toggle" :title="colorThemeTitle" @click="toggleColorMode()">
 					<fa :icon="['fa', ($colorMode.preference == 'dark' ? 'moon' : ($colorMode.preference == 'light' ? 'sun' : 'lightbulb'))]" />

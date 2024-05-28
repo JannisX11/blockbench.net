@@ -25,4 +25,4 @@ The updates in the language files will not appear in Blockbench right away. Inst
 ## Let’s Translate!
 If you want to help, it starts with the following link. I am happy about every contributor! [Blockbench Translation Project](https://poeditor.com/join/project/EFP1ygSsn7)
 
-Do you have any questions? Message me on the Blockbench Discord server: [discord.blockbench.net](https://discord.blockbench.net/)
+Do you have any questions? Message me on the Blockbench Discord server: [discord.gg/blockbench](https://discord.gg/blockbench/)
