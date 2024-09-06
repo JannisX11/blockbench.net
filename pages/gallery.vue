@@ -19,7 +19,7 @@
 			</ul>
 
 			<section v-if="showImage(['splashart', 'winner'])">
-				<img src="~assets/gallery/4.10.webp" />
+				<img loading="lazy" src="~assets/gallery/4.10.webp" alt="Splash Art Contest 4.10 Winner" />
 				<h2>Splash Art Contest 4.10 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Tiffany85635656">skeleton_tiffay</a>, May 2024</label>
 				<p>For this contest, the theme was "Underwater". It was the first ever contest that was hosted on the <a  target="_blank" rel="noopener" href="https://blockbench-splash-art-contests.ewanhowell.com/artists/1121588370183827517">Blockbench Splash Art Contest platform</a> by Ewan Howell.</p>
@@ -27,7 +27,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
-				<img src="~assets/gallery/4.9.png" />
+				<img loading="lazy" src="~assets/gallery/4.9.png" alt="Splash Art Contest 4.9 Winner" />
 				<h2>Splash Art Contest 4.9 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/OrangewithMC">morange</a> & <a target="_blank" rel="noopener" href="https://twitter.com/PeacedoveWum">PeacedoveWum</a>, November 2023</label>
 				<p>The theme for this contest ("Fantasy") was determined by a poll on the Discord server, winning against ATV and Race Track.</p>
@@ -35,14 +35,14 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle', 'mesh'])">
-				<img src="~assets/gallery/4.8.png" />
+				<img loading="lazy" src="~assets/gallery/4.8.png" alt="Splash Art Contest 4.8 Winner" />
 				<h2>Splash Art Contest 4.8 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/kaneki_akira">KanekiAkira</a> & <a target="_blank" rel="noopener" href="https://jumi-pf.com">Jumi</a>, July 2023</label>
 				<p>There were many really beautiful models and renders for this Splash Art Contest with the theme "Camping Vehicle"! This submission stood out because of its innovative and very meta approach of incorporating elements of the 3D editor into the render, and it won with first place with 1106 votes! It appeared on the splash screen along with the 4 other top voted renders.</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
-				<img src="~assets/gallery/4.7.png" />
+				<img loading="lazy" src="~assets/gallery/4.7.png" alt="Splash Art Contest 4.7 Winner" />
 				<h2>Splash Art Contest 4.7 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Neptune_Coffee">NeptuneCoffee</a> & <a target="_blank" rel="noopener" href="https://twitter.com/Dxnkbarkeit">Dankbarkeit</a>, April 2023</label>
 				<p>The theme for the 14th Splash Art Contest was simply "Train". NeptuneCoffee and Dankbarkeit won first place with their beautiful overgrown train station!</p>
@@ -50,14 +50,14 @@
 			</section>
 
 			<section v-if="showImage(['mesh'])">
-				<img src="~assets/gallery/ds_lite.png" />
+				<img loading="lazy" src="~assets/gallery/ds_lite.png" alt="Nintendo DS Lite" />
 				<h2>Nintendo DS Lite</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/violxiv">Violet</a>, February 2023</label>
 				<p>Violet created this awesome DS Lite low-poly model as part of a series of retro tech and game consoles! The <a target="_blank" rel="noopener" href="https://twitter.com/violxiv/status/1621154673238609922">tweet</a> was seen by over 3.5 million people on Twitter and introduced many new 3D and pixel artists to the capabilities of Blockbench.</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle'])">
-				<img src="~assets/gallery/4.6.png" />
+				<img loading="lazy" src="~assets/gallery/4.6.png" alt="Splash Art Contest 4.6 Winner" />
 				<h2>Splash Art Contest 4.6 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/wackyblocks">Wacky</a>, January 2023</label>
 				<p>The theme for the 13th Splash Art Contest was "Arctic Exploration Vehicle". When Wacky enters a contest, it is tough to beat him. Even though Jonny324 and DrRuan's entry came close with 1151 votes, Wacky ultimately took the win with 1475 votes!</p>
@@ -65,7 +65,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle'])">
-				<img src="~assets/gallery/4.5.png" />
+				<img loading="lazy" src="~assets/gallery/4.5.png" alt="Splash Art Contest 4.5 Winner" />
 				<h2>Splash Art Contest 4.5 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wan_w1n">Wan_win</a>, July 2022</label>
 				<p>The Splash Art Contest for Blockbench 4.5 marked the very first Runner-Up Splash Art Contest! All entries of previous contests that landed on second place were up against each other.</p>
@@ -73,7 +73,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh', 'vehicle', 'city'])">
-				<img src="~assets/gallery/4.4.png" />
+				<img loading="lazy" src="~assets/gallery/4.4.png" alt="Splash Art Contest 4.4 Winner" />
 				<h2>Splash Art Contest 4.4 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/wackyblocks">Wacky</a>, September 2022</label>
 				<p>The theme for the 11th Splash Art Contest was "Ice Cream Truck". Wacky entered and won the contest with 1730 votes, ahead of the second place by Eisenbart and Dankbarkeit with 1359 votes.</p>
@@ -81,7 +81,7 @@
 			</section>
 			
 			<section v-if="showImage(['splashart', 'winner'])">
-				<img src="~assets/gallery/4.3.png" />
+				<img loading="lazy" src="~assets/gallery/4.3.png" alt="Splash Art Contest 4.3 Winner" />
 				<h2>Splash Art Contest 4.3 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/MisterGriimm">MisterGriimm</a> and <a target="_blank" rel="noopener" href="https://twitter.com/MidnitePixel_">MidnitePixel</a>, July 2022</label>
 				<p>The theme for the Splash Art Contest for 4.3 was "Aviation". MidnitePixel and MisterGriimm decided to take a bit of a different approach to the theme and created a model Leonardo da Vinci's flying machine, suspended from the roof of his workshop</p>
@@ -89,14 +89,14 @@
 			</section>
 
 			<section v-if="showImage(['minecraft'])">
-				<img src="~assets/gallery/spongebob.jpg" />
+				<img loading="lazy" src="~assets/gallery/spongebob.jpg" alt="SpongeBob SquarePants" />
 				<h2>SpongeBob SquarePants</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/pixelstoriez">Pixelstories</a>, July 2022</label>
 				<p>The SpongeBob SquarePants DLC for Minecraft was released in July 2022, and of course the iconic characters were all modeled in Blockbench!</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
-				<img src="~assets/gallery/4.2.png" />
+				<img loading="lazy" src="~assets/gallery/4.2.png" alt="Splash Art Contest 4.2 Winner" />
 				<h2>Splash Art Contest 4.2 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/ShroomyArts">Shroomy</a> and <a target="_blank" rel="noopener" href="https://twitter.com/Redstone_mvv">RedstoneMvv</a>, March 2022</label>
 				<p>The theme for the Splash Art Contest was "Cozy Cabin". Shroomy and RedstoneMvv created not only a cabin, but also an entire landscape around it.</p>
@@ -104,7 +104,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
-				<img src="~assets/gallery/4.1.png" />
+				<img loading="lazy" src="~assets/gallery/4.1.png" alt="Splash Art Contest 4.1 Winner" />
 				<h2>Splash Art Contest 4.1 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/MisterGriimm">MisterGriimm</a> and <a target="_blank" rel="noopener" href="https://twitter.com/MidnitePixel_">MidnitePixel</a>, December 2021</label>
 				<p>The 4.1 update of Blockbench was set to release right before Chrismas, so naturally the theme would have to be "Santa's Sleigh"!</p>
@@ -113,7 +113,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'mesh', 'city', 'vehicle'])">
-				<img src="~assets/gallery/4.0.png" />
+				<img loading="lazy" src="~assets/gallery/4.0.png" alt="Splash Art Contest 4.0 Winner" />
 				<h2>Splash Art Contest 4.0 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wackyblocks">Wacky</a>, October 2021</label>
 				<p>The 7th Splash Art Contest was hosted during the beta phase of 4.0 and it's new mesh tools.
@@ -126,7 +126,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'mesh', 'city', 'vehicle'])">
-				<img src="~assets/gallery/city_scene.jpg" />
+				<img loading="lazy" src="~assets/gallery/city_scene.jpg" alt="Masteriano's City Scene" />
 				<h2>Masteriano's City Scene</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/MasterianoX">MasterianoX</a> and <a target="_blank" rel="noopener" href="https://twitter.com/hapico_lb">Hapico</a>, October 2021</label>
 				<p>The City Scene for the 4.0 update Splash Screen contest by Masteriano and Hapico did not end up winning the contest, but that doesn't make it any less impressive!</p>
@@ -134,21 +134,21 @@
 			</section>
 
 			<section v-if="showImage(['mesh'])">
-				<img src="~assets/gallery/fox.png" />
+				<img loading="lazy" src="~assets/gallery/fox.png" alt="Low Poly Fox" />
 				<h2>Low Poly Fox</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a>, October 2021</label>
 				<p>The Low Poly Fox was created during development of the new Blockbench mesh tools. It was made as a test for the brand new model style and the color-only template generator.</p>
 			</section>
 
 			<section v-if="showImage(['vehicle', 'city'])">
-				<img src="~assets/gallery/gas_station.jpg" />
+				<img loading="lazy" src="~assets/gallery/gas_station.jpg" alt="Gas Station" />
 				<h2>Gas Station</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/GrafischMC">Jelle</a>, August 2021</label>
 				<p>The Gas Station was the first installment of Jelle's city scene series. The quality and attention-to-detail makes these scenes some of the best Blockbench models ever created!</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle', 'scifi'])">
-				<img src="~assets/gallery/3.9.png" />
+				<img loading="lazy" src="~assets/gallery/3.9.png" alt="Splash Art Contest 3.9 Winner" />
 				<h2>Splash Art Contest 3.9 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/LorenOLoren1">Loren</a> and <a target="_blank" rel="noopener" href="https://twitter.com/Dxnkbarkeit">Dankbarkeit</a>, June 2021</label>
 				<p>18 entries were submitted for the 6th Splash Art Contest with the theme "Off Road Pickup Truck". Ultimately, it was a head-to-head race between Wacky's submission, and this entry.
@@ -156,14 +156,14 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'scifi', 'vehicle'])">
-				<img src="~assets/gallery/wacky_3.9.png" />
+				<img loading="lazy" src="~assets/gallery/wacky_3.9.png" alt="Splash Art Contest 3.9: Wacky's Submission" />
 				<h2>Splash Art Contest 3.9: Wacky's Submission</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wackyblocks">Wacky</a>, June 2021</label>
 				<p>This was the first ever contest that Wacky joined but did not win. Still, the model is too good to not include in the gallery!</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'vehicle'])">
-				<img src="~assets/gallery/3.8.png" />
+				<img loading="lazy" src="~assets/gallery/3.8.png" alt="Splash Art for 3.8" />
 				<h2>Splash Art for 3.8</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a>, March 2021</label>
 				<p>I created this MB Trac with log trailer model personally as a new "figure-head model", for the 3.8 Splash Screen, as well as for various marketing screenshots, including the program screenshots on the website and the Github page.</p>
@@ -171,7 +171,7 @@
 			</section>
 
 			<section v-if="showImage(['winner', 'vehicle', 'scifi'])">
-				<img src="~assets/gallery/wayfarer.png" />
+				<img loading="lazy" src="~assets/gallery/wayfarer.png" alt="The Wayfarer" />
 				<h2>The Wayfarer</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Ycarx">Ycar</a>, January 2021</label>
 				<p>In January, Sketchfab and Blockbench joined forces to create the first ever <a target="_blank" rel="noopener" href="https://sketchfab.com/blogs/community/sketchfab-blockbench-challenge-alien-moon-landing/">Sketchfab X Blockbench Modeling Challenge.</a>
@@ -181,14 +181,14 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
-				<img src="~assets/gallery/3.7.png" />
+				<img loading="lazy" src="~assets/gallery/3.7.png" alt="Splash Art Contest 3.7 Winner" />
 				<h2>Splash Art Contest 3.7 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/GrafischMC">Jelle</a>, October 2020</label>
 				<p>The theme for the 5th Splash Art Contest was "Snow Plow", continuing the series of construction and utility vehicles on splash screens. Jelle took it to the next level and submitted two snow plows in one!</p>
 			</section>
 
 			<section v-if="showImage([])">
-				<img src="~assets/gallery/trading_post.jpg" />
+				<img loading="lazy" src="~assets/gallery/trading_post.jpg" alt="Trading Post" />
 				<h2>Trading Post</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Ycarx">Ycar</a>, October 2020</label>
 				<p>The Trading Post was one in a series of models that Ycar created for the low-poly automation game <a target="_blank" rel="noopener" href="https://store.steampowered.com/app/860890/Factory_Town/">Factory Town</a>!</p>
@@ -196,7 +196,7 @@
 			</section>
 
 			<section v-if="showImage(['minecraft'])">
-				<img src="~assets/gallery/goat.png" />
+				<img loading="lazy" src="~assets/gallery/goat.png" alt="Minecraft Goat" />
 				<h2>Minecraft Goat</h2>
 				<label>By <a target="_blank" rel="noopener" href="twitter.com/Mojang">Mojang Studios</a>, October 2020</label>
 				<p>The Goat was one of the first vanilla Minecraft models that was created in Blockbench!
@@ -204,7 +204,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
-				<img src="~assets/gallery/3.6.jpg" />
+				<img loading="lazy" src="~assets/gallery/3.6.jpg" alt="Splash Art Contest 3.6 Winner" />
 				<h2>Splash Art Contest 3.6 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wackyblocks">Wacky</a>, July 2020</label>
 				<p>The Theme for this contest was "Fire Truck" with the only requirement being that it would not be an American-style fire engine.
@@ -212,14 +212,14 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'vehicle'])">
-				<img src="~assets/gallery/3.5.png" />
+				<img loading="lazy" src="~assets/gallery/3.5.png" alt="Splash Art 3.5" />
 				<h2>Splash Art 3.5</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a>, April 2020</label>
 				<p>The fuel truck for the 3.5 Splash Art was another repurposed model that I created. It's from the "Planes" map by Spark Universe. The truck fit nicely into the series of construction and utility vehicles on the splash screen.</p>
 			</section>
 
 			<section v-if="showImage(['splashart', 'vehicle'])">
-				<img src="~assets/gallery/3.2.png" />
+				<img loading="lazy" src="~assets/gallery/3.2.png" alt="Splash Art 3.2" />
 				<h2>Splash Art 3.2</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a>, December 2019</label>
 				<p>Sometimes, the update is ready, and there is no time left to host a major contest or design a new model.
@@ -229,7 +229,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
-				<img src="~assets/gallery/3.0.png" />
+				<img loading="lazy" src="~assets/gallery/3.0.png" alt="Splash Art Contest 3.0 Winner" />
 				<h2>Splash Art Contest 3.0 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wackyblocks">Wacky</a>, July 2019</label>
 				<p>The theme for the 3.0 Splash Art Contest was "forklift", or alternatively a telehandler or skid steer.
@@ -237,7 +237,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle'])">
-				<img src="~assets/gallery/2.6.png" />
+				<img loading="lazy" src="~assets/gallery/2.6.png" alt="Splash Art Contest 2.6 Winner" />
 				<h2>Splash Art Contest 2.6 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Wackyblocks">Wacky</a>, April 2019</label>
 				<p>This was the first Splash Art Contest ever! The process and rules were very different back then, but this one started the tradition of Splash Art Contests to determine the Splash Art for an update.
@@ -246,7 +246,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'vehicle'])">
-				<img src="~assets/gallery/2.0.png" />
+				<img loading="lazy" src="~assets/gallery/2.0.png" alt="Splash Art 2.0" />
 				<h2>Splash Art 2.0</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a> and <a target="_blank" rel="noopener" href="https://twitter.com/LNeoX_Designs">LNeoX</a>, October 2018</label>
 				<p>Version 2.0 was a big update for Blockbench, it featured multi-language support, a more extendable and customizable UI and backend, and quad view mode.
@@ -255,14 +255,14 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'vehicle'])">
-				<img src="~assets/gallery/red_excavator.png" />
+				<img loading="lazy" src="~assets/gallery/red_excavator.png" alt="Red Excavator" />
 				<h2>Red Excavator</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a>, August 2017</label>
 				<p>This Red Excavator appeared on the first ever Blockbench splash screen, in version 1.9! The Splash Screen used to look surprisingly similar to the one in modern Blockbench versions, just a lot smaller.</p>
 			</section>
 
 			<section v-if="showImage(['minecraft', 'vehicle'])">
-				<img src="~assets/gallery/unimog.png" />
+				<img loading="lazy" src="~assets/gallery/unimog.png" alt="Unimog U2150" />
 				<h2>Unimog U2150</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/JannisX11">Jannis</a>, July 2017</label>
 				<p>The Unimog was the first ever figure-head model for Blockbench. It was meant to showcase what's possible in Blockbench, and to be used in other marketing and documentation screenshots.</p>
