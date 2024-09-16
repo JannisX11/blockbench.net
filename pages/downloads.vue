@@ -18,10 +18,10 @@
 						<div class="install_os">
 							<fa :icon="['fab', 'windows']" />
 							<h3>Windows</h3>
-							<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_x64_${version}.exe`" target="_blank" rel="noopener">
+							<a class="blockbench_download win64" :href="`${path}/v${version}/Blockbench_${has_windows_arm ? 'x64_' : ''}${version}.exe`" target="_blank" rel="noopener">
 								<label>Installer (Intel/AMD)</label>
 							</a>
-							<a class="blockbench_download win_arm" :href="`${path}/v${version}/Blockbench_arm64_${version}.exe`" target="_blank" rel="noopener">
+							<a class="blockbench_download win_arm" :href="`${path}/v${version}/Blockbench_arm64_${version}.exe`" v-if="has_windows_arm" target="_blank" rel="noopener">
 								<label>Installer (ARM)</label>
 							</a>
 							<a class="blockbench_download portable" :href="`${path}/v${version}/Blockbench_${version}_portable.exe`" target="_blank" rel="noopener">
@@ -121,6 +121,7 @@ const data = {
 	path,
 	version: '1.0.0',
 	name: '',
+	has_windows_arm: true,
 	type: 'Latest Version',
 };
 
@@ -128,11 +129,35 @@ export default {
 	data() {return data},
 	async fetch(context) {
 		data.version = '1.1.1';
+		function isNewerThan(string1/*new*/, string2/*old*/) {
+			// Is string1 newer than string2 ?
+			let arr1 = string1.split(/[.-]/);
+			let arr2 = string2.split(/[.-]/);
+			let i = 0;
+			let num1 = 0;
+			let num2 = 0;
+			while (i < Math.max(arr1.length, arr2.length)) {
+				num1 = arr1[i];
+				num2 = arr2[i];
+				if (num1 == 'beta') num1 = -1;
+				if (num2 == 'beta') num2 = -1;
+				num1 = parseInt(num1) || 0;
+				num2 = parseInt(num2) || 0;
+				if (num1 > num2) {
+					return true;
+				} else if (num1 < num2) {
+					return false
+				}
+				i++;
+			}
+			return false;
+		}
 		if (typeof location != 'undefined' && location.hash.length > 5 && location.hash.substr(1, 1) == 'v') {
 			
 			data.version = location.hash.substr(2)
 			data.name = location.hash.substr(2)
 			data.type = 'Selected Version';
+			data.has_windows_arm = isNewerThan(data.version, '4.10.99')
 
 		} else if (typeof location != 'undefined' && (location.hash.substr(1, 4) == 'beta' || location.hash.substr(1, 4) == 'pre')) {
 			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases?per_page=1');
