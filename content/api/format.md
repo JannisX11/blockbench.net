@@ -25,7 +25,7 @@ Creates a new ModelFormat
 	* `show_on_start_screen`: *boolean* (Optional)
 	* `format_page`: FormatPage (Optional)
 		* `component`: *any* (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L6) (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L6) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
@@ -66,11 +66,14 @@ Creates a new ModelFormat
 	* `animation_mode`: *boolean* (Optional)
 	* `pose_mode`: *boolean* (Optional)
 	* `animation_controllers`: *boolean* (Optional)
-	* `render_sides`: `"front"` (Optional)
+	* `box_uv_float_size`: *boolean*
+	* `java_cube_shading_properties`: *boolean*
+	* `cullfaces`: *boolean*
+	* `render_sides`: `"double"` or `"front"` or `"back"` or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L102) (Optional)
 	* `cube_size_limiter`: CubeSizeLimiter (Optional)
-		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L21)
+		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L21)
 		* `move`: Function
-		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L32)
+		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L32)
 		* `rotation_affected`: *boolean* (Optional) - Set to true to tell Blockbench to check and adjust the cube limit after rotating a cube
 		* `coordinate_limits`: Array (Optional) - Optionally set the coordinate limits of cubes in local space
 	* `codec`: [Codec](codec#codec-1) (Optional)
@@ -92,7 +95,7 @@ Creates a new ModelFormat
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L3) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L3) |  |
 | box_uv | *boolean* |  |
 | optional_box_uv | *boolean* |  |
 | single_texture | *boolean* |  |
@@ -127,8 +130,13 @@ Creates a new ModelFormat
 | display_mode | *boolean* |  |
 | animation_mode | *boolean* |  |
 | pose_mode | *boolean* |  |
+| box_uv_float_size | *boolean* |  |
+| java_cube_shading_properties | *boolean* |  |
+| cullfaces | *boolean* |  |
+| animation_controllers | *boolean* |  |
+| render_sides | `"double"` or `"front"` or `"back"` or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L167) |  |
 | codec | [Codec](codec#codec-1) |  |
-| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L17) |  |
+| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L17) |  |
 
 ### onFormatPage()
 
@@ -170,7 +178,7 @@ The current format
 ## Formats
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L182)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L191)
 
 
 ## ModelLoader
@@ -194,7 +202,7 @@ Creates a new ModelLoader
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `format_page`: FormatPage (Optional)
 		* `component`: *any* (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L6) (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L6) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
@@ -214,7 +222,7 @@ Creates a new ModelLoader
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/format.d.ts#L3) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L3) |  |
 
 ### onFormatPage()
 

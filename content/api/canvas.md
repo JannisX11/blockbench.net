@@ -10,10 +10,10 @@ A global namespace handling miscellaneous functionality related to the 3D previe
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| materials | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L50) |  |
-| emptyMaterials | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L53) |  |
-| meshes | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L56) |  |
-| bones | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L59) |  |
+| materials | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L50) |  |
+| emptyMaterials | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L53) |  |
+| meshes | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L56) |  |
+| bones | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L59) |  |
 | scene | [THREE.Scene](#THREE.Scene) | Main scene, shared across all tabs |
 | gizmos | Array | List of the gizmos (control and UI elements) in the 3D scene |
 | outlineMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) | The material used for all selection outlines |
@@ -44,7 +44,7 @@ Returns: *any*
 Execute the callback function without any gizmos, grids and helpers visible
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L105)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L105)
 
 
 ### clear()
@@ -64,7 +64,7 @@ Updates selected aspects of the preview
 ##### Arguments:
 * `options`: UpdateViewOptions -
 	* `elements`: Array of [OutlinerElement](outliner#outlinerelement) (Optional) - List of elements to update
-	* `element_aspects`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L10) (Optional) - Which aspects of the elements to update
+	* `element_aspects`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L10) (Optional) - Which aspects of the elements to update
 	* `groups`: Array of [Group](group#group-1) (Optional) - Groups to update
 	* `selection`: *boolean* (Optional) - Whether to update the selection (updates the selection outlines and interface)
 
@@ -237,7 +237,7 @@ Creates a new NodePreviewController
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | type |  |  |
-| events | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L243) |  |
+| events | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L243) |  |
 
 ### dispatchEvent( event_name, data )
 ##### Arguments:
@@ -250,7 +250,7 @@ Adds an event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L250)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L250)
 
 
 ### once( event_name, cb )
@@ -258,7 +258,7 @@ Adds a single-use event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L254)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L254)
 
 
 ### removeListener( event_name, cb )
@@ -266,7 +266,7 @@ Removes an event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/canvas.d.ts#L258)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L258)
 
 
 ### setup( element )

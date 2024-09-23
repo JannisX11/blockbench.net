@@ -90,7 +90,7 @@ Creates a new Property
 | isVector2 | *boolean* |  |
 | isInstance | *boolean* |  |
 | enum_values | Array of *string* |  |
-| merge_validation | *undefined* or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/misc.d.ts#L205) |  |
+| merge_validation | *undefined* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L205) |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | exposed | *boolean* |  |
 | label | *any* |  |
@@ -145,7 +145,7 @@ Returns: *string*
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/misc.d.ts#L228) | Translation data for the current language |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L228) | Translation data for the current language |
 | code | *string* | Two letter code indicating the currently selected language |
 
 ### addTranslations( language, strings )
@@ -153,7 +153,7 @@ Add translations for custom translation strings
 
 ##### Arguments:
 * `language`: *string* - Two letter language code, e. G. 'en'
-* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/misc.d.ts#L240) - Object listing the translation keys and values
+* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L240) - Object listing the translation keys and values
 
 
 

@@ -36,7 +36,7 @@ SharedActions.add('duplicate', {
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| checks | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/shared_actions.d.ts#L30) |  |
+| checks | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/shared_actions.d.ts#L30) |  |
 
 ### add( action_id, handler )
 Add a new handler to a shared action
@@ -47,7 +47,7 @@ Add a new handler to a shared action
 	* `priority`: *number*
 	* `subject`: *string*
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1)
-	* `run`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/shared_actions.d.ts#L84)
+	* `run`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/shared_actions.d.ts#L84)
 
 Returns: [Deletable](misc#deletable)
 
@@ -89,5 +89,5 @@ Find the active handler in the current situation for a shared action
 * `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) (Optional) -
 * `context`: *any* (Optional) -
 
-Returns: [SharedActionHandler](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/shared_actions.d.ts#L80) or `null`
+Returns: [SharedActionHandler](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/shared_actions.d.ts#L80) or `null`
 

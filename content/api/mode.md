@@ -69,6 +69,6 @@ Type: [Mode](mode#mode-1)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/mode.d.ts#L39) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/mode.d.ts#L39) |  |
 | selected | [Mode](mode#mode-1) or `false` or *undefined* |  |
 

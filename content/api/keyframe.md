@@ -320,12 +320,12 @@ Returns: Array of *string*
 
 ### extend( data )
 ##### Arguments:
-* `data`: [KeyframeDataPointData](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L3)
+* `data`: [KeyframeDataPointData](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L3)
 
 
 ### getUndoCopy()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L10)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L10)
 
 ### properties
 Static Property
@@ -347,10 +347,10 @@ Creates a new Keyframe
 	* `uniform`: *boolean* (Optional)
 	* `interpolation`: *string* (Optional)
 	* `bezier_linked`: *boolean* (Optional)
-	* `bezier_left_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `bezier_left_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `bezier_right_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `bezier_right_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `bezier_left_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `bezier_left_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `bezier_right_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `bezier_right_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
 * `uuid`: *any*
 
 
@@ -366,10 +366,10 @@ Creates a new Keyframe
 | interpolation | `"linear"` or `"step"` or `"catmullrom"` or `"bezier"` |  |
 | cooldown | *boolean* |  |
 | bezier_linked | *boolean* |  |
-| bezier_left_time | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
-| bezier_right_time | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
-| bezier_left_value | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
-| bezier_right_value | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) |  |
+| bezier_left_time | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) |  |
+| bezier_right_time | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) |  |
+| bezier_left_value | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) |  |
+| bezier_right_value | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) |  |
 
 ### extend( data )
 ##### Arguments:
@@ -381,30 +381,30 @@ Creates a new Keyframe
 	* `uniform`: *boolean* (Optional)
 	* `interpolation`: *string* (Optional)
 	* `bezier_linked`: *boolean* (Optional)
-	* `bezier_left_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `bezier_left_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `bezier_right_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `bezier_right_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `bezier_left_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `bezier_left_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `bezier_right_time`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `bezier_right_value`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
 
 Returns: [_Keyframe](keyframe#keyframe-1)
 
 ### get( axis[, data_point] )
 ##### Arguments:
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 * `data_point`: *number* (Optional)
 
 Returns: *string* or *number*
 
 ### calc( axis[, data_point] )
 ##### Arguments:
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 * `data_point`: *number* (Optional)
 
 Returns: *number*
 
 ### set( axis, value[, data_point] )
 ##### Arguments:
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 * `value`: *any*
 * `data_point`: *number* (Optional)
 
@@ -412,21 +412,21 @@ Returns: [_Keyframe](keyframe#keyframe-1)
 
 ### offset( axis, amount[, data_point] )
 ##### Arguments:
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 * `amount`: *any*
 * `data_point`: *number* (Optional)
 
 
 ### flip( axis )
 ##### Arguments:
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 
 Returns: [_Keyframe](keyframe#keyframe-1)
 
 ### getLerp( other, axis, amount[, allow_expression] )
 ##### Arguments:
 * `other`: *any*
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 * `amount`: *any*
 * `allow_expression`: *boolean* (Optional)
 
@@ -438,7 +438,7 @@ Returns: *number*
 * `before`: [_Keyframe](keyframe#keyframe-1)
 * `after`: [_Keyframe](keyframe#keyframe-1)
 * `after_plus`: [_Keyframe](keyframe#keyframe-1)
-* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L29)
+* `axis`: [axisLetter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L29)
 * `alpha`: *number*
 
 Returns: *number*
@@ -490,7 +490,7 @@ Returns: [_Keyframe](keyframe#keyframe-1)
 
 ### forSelected( callback, undo_tag )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L76)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L76)
 * `undo_tag`: *any*
 
 Returns: Array of [_Keyframe](keyframe#keyframe-1)
@@ -499,7 +499,7 @@ Returns: Array of [_Keyframe](keyframe#keyframe-1)
 ##### Arguments:
 * `save`: *any*
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/keyframe.d.ts#L77)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/keyframe.d.ts#L77)
 
 ### selected
 Static Property

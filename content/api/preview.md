@@ -32,7 +32,7 @@ Creates a new Preview
 | controls | *any* |  |
 | annotations | *any* |  |
 | renderer | [THREE.WebGLRenderer](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) |  |
-| background | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/preview.d.ts#L52) |  |
+| background | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/preview.d.ts#L52) |  |
 | raycaster | [Raycaster](#Raycaster) |  |
 
 ### delete()
@@ -42,7 +42,7 @@ Creates a new Preview
 ##### Arguments:
 * `event`: [MouseEvent](#MouseEvent)
 
-Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/preview.d.ts#L17)
+Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/preview.d.ts#L17)
 
 ### render()
 
@@ -67,9 +67,9 @@ Returns: [Preview](preview#preview-1)
 ### loadAnglePreset( angle_preset )
 ##### Arguments:
 * `angle_preset`: AnglePreset
-	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3)
-	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/outliner.d.ts#L3) (Optional)
+	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3)
+	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L3) (Optional)
 	* `projection`: `"perspective"` or `"unset"` or `"orthographic"`
 	* `zoom`: *number* (Optional)
 	* `focal_length`: *number* (Optional)

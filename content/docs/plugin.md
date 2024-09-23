@@ -29,10 +29,10 @@ Plugin.register('plugin_id', {
 	}
 });
 ```
+
 * `title: String` Plugin title as shown in the store in Blockbench
 * `author: String` Author name or names 
 * `description: String` Plugin description for the store in Blockbench
-* `about: String` Longer Plugin description or instructions, can be unfolded in the store. Supports Markdown
 * `icon: String` Blockbench icon string, see [Blockbench#icons](blockbench#icons)
 * `tags: String Array` Plugin tags that will be displayed in the store. You can have up to 3. Plugins specifically designed for Minecraft must one of the following tags: 'Minecraft', 'Minecraft: Java Edition', or 'Minecraft: Bedrock Edition'.
 * `version: String` Version number for your plugin using [semver](https://semver.org) 
@@ -44,19 +44,20 @@ Plugin.register('plugin_id', {
 * `oninstall()` Runs when the player installs the plugin
 * `onuninstall()` Runs when the player uninstalls the plugin
 
-If you want to declare variables that can be used anywhere within the plugin, you can wrap your whole within a self-invoking function and create variables like this:
+You can find more plugin metadata options in the [Plugin API Refererence](https://www.blockbench.net/wiki/api/plugin).
+
+The variable context of a plugin file is isolated, so you can declare variables like this without polluting the global object.
 ```javascript
-(function() {
-	var plugin_variable_1;
 
-	Plugin.register('plugin_id', {
-		onload() {
-			plugin_variable_1 = 'foo';
-		},
-		...
-	});
+let plugin_variable_1;
 
-})();
+Plugin.register('plugin_id', {
+	onload() {
+		plugin_variable_1 = 'foo';
+	},
+	...
+});
+
 ```
 
 
@@ -80,11 +81,10 @@ In this example we are going to create a small silly plugin that will randomize 
 
 ### Structure
 
-First, create a new file named `height_randomizer.js`. Open the file and create a self-invoking function to create a scope for global variables. Inside the function, create the variable `button`.
+First, create a new file named `height_randomizer.js`. Open the file and define the variable `button`.
 ```javascript
-(function() {
-	var button;
-})();
+let button;
+
 ```
 Now we need to register the plugin. This process will give Blockbench all the required information to handle the plugin.
 In case the user is offline or loads the plugin from the computer, this will also provide the plugin metadata such as name and author for the plugin store.
@@ -114,42 +114,39 @@ You can check the other pages to learn about interface functionality and differe
 If you have followed the steps above, you should end up with something like this:
 
 ```javascript
-(function() {
-	var button;
+let button;
 
-	Plugin.register('height_randomizer', {
-		title: 'Height Randomizer',
-		author: 'YourName',
-		description: 'This plugin can randomize the height of all selected cubes',
-		icon: 'bar_chart',
-		version: '0.0.1',
-		variant: 'both',
-		onload() {
-			button = new Action('randomize_height', {
-				name: 'Randomize Height',
-				description: 'Randomize the height of all selected elements',
-				icon: 'bar_chart',
-				click: function() {
-					Undo.initEdit({elements: Cube.selected});
-					Cube.selected.forEach(cube => {
-						cube.to[1] = cube.from[0] + Math.floor(Math.random()*8);
-					});
-					Canvas.updateView({
-						elements: Cube.selected,
-						element_aspects: {geometry: true},
-						selection: true
-					});
-					Undo.finishEdit('Randomize cube height');
-				}
-			});
-			MenuBar.addAction(button, 'filter');
-		},
-		onunload() {
-			button.delete();
-		}
-	});
-
-})();
+Plugin.register('height_randomizer', {
+	title: 'Height Randomizer',
+	author: 'YourName',
+	description: 'This plugin can randomize the height of all selected cubes',
+	icon: 'bar_chart',
+	version: '0.0.1',
+	variant: 'both',
+	onload() {
+		button = new Action('randomize_height', {
+			name: 'Randomize Height',
+			description: 'Randomize the height of all selected elements',
+			icon: 'bar_chart',
+			click: function() {
+				Undo.initEdit({elements: Cube.selected});
+				Cube.selected.forEach(cube => {
+					cube.to[1] = cube.from[0] + Math.floor(Math.random()*8);
+				});
+				Canvas.updateView({
+					elements: Cube.selected,
+					element_aspects: {geometry: true},
+					selection: true
+				});
+				Undo.finishEdit('Randomize cube height');
+			}
+		});
+		MenuBar.addAction(button, 'filter');
+	},
+	onunload() {
+		button.delete();
+	}
+});
 ```
 
 

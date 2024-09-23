@@ -9,15 +9,15 @@ Creates a new DialogSidebar
 
 ##### Arguments:
 * `options`: DialogSidebarOptions
-	* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L200) (Optional)
+	* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L209) (Optional)
 	* `page`: *string* (Optional)
-	* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L96) (Optional)
+	* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L96) (Optional)
 	* `onPageSwitch`: Function (Optional)
 
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| pages | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L210) |  |
+| pages | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L219) |  |
 | page | *string* |  |
 | actions | Array of *string* or [Action](action#action-1) |  |
 
@@ -60,20 +60,21 @@ Creates a new Dialog
 	* `onCancel`: Function (Optional)
 	* `onButton`: Function (Optional)
 	* `onFormChange`: Function (Optional)
-	* `lines`: Array of *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [Comment](#Comment) or [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L145) (Optional) - Array of HTML any strings for each line of content in the dialog.
-	* `form`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L155) (Optional) - Creates a form in the dialog
+	* `lines`: Array of *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [Comment](#Comment) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L145) (Optional) - Array of HTML any strings for each line of content in the dialog.
+	* `form`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L155) (Optional) - Creates a form in the dialog
 	* `component`: *any* (Optional) - Vue component
 	* `part_order`: Array of *string* (Optional) - Order that the different interface types appear in the dialog. Default is 'form', 'lines', 'component'.
 	* `form_first`: *boolean* (Optional)
 	* `sidebar`: DialogSidebarOptions (Optional) - Creates a dialog sidebar
-		* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L200) (Optional)
+		* `pages`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L209) (Optional)
 		* `page`: *string* (Optional)
-		* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L96) (Optional)
+		* `actions`: Array of *string* or [Action](action#action-1) or [ActionInterface](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L96) (Optional)
 		* `onPageSwitch`: Function (Optional)
 	* `title_menu`: [Menu](menu#menu-1) (Optional) - Menu in the handle bar
+	* `progress_bar`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L178) (Optional) - Display a progress bar in the dialog
 	* `singleButton`: *boolean* (Optional) - If true, the dialog will only have one button to close it
 	* `buttons`: Array of *string* (Optional) - List of buttons
-	* `keyboard_actions`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L186) (Optional) - A list of keyboard shortcuts that only work inside the dialog
+	* `keyboard_actions`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L195) (Optional) - A list of keyboard shortcuts that only work inside the dialog
 	* `resizable`: *boolean* or `"x"` or `"y"` or `"xy"` (Optional) - Select on which axes the dialog can be resized. None by default
 
 ### new Dialog( options )
@@ -86,6 +87,7 @@ Creates a new Dialog
 | component | *any* |  |
 | sidebar | `null` or [DialogSidebar](dialog#dialogsidebar) |  |
 | content_vue | `null` or [Vue](#Vue) |  |
+| progress_bar | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L238) |  |
 | confirmIndex | *number* |  |
 | cancelIndex | *number* |  |
 
@@ -123,7 +125,7 @@ Closes the dialog using the index of the pressed button
 If the dialog contains a form, return the current values of the form
 
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L250)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L274)
 
 ### onOpen()
 Function to execute when the dialog is opened
@@ -154,14 +156,23 @@ Triggered when the user presses a specific button
 Function to run when anything in the form is changed
 
 ##### Arguments:
-* `form_result`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L272)
+* `form_result`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L296)
 
 
-### setFormValues( values )
+### setFormValues( values, update )
 Set the values of the dialog form inputs
 
 ##### Arguments:
-* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L276)
+* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L302) - The values to set, by form input key
+* `update`: *boolean* - Whether to update the dialog (call onFormChange) after setting the values. Default is true. Set to false when called from onFormChange
+
+
+### setFormToggles( values, update )
+Set whether the dialog form inputs are toggled on or off. See "toggle_enabled"
+
+##### Arguments:
+* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L308) -
+* `update`: *boolean* - Whether to update the dialog (call onFormChange) after setting the values. Default is true. Set to false when called from onFormChange
 
 
 ### delete()
@@ -207,6 +218,7 @@ Creates a new ShapelessDialog
 | -------- | ---- | ----------- |
 | sidebar | `null` or [DialogSidebar](dialog#dialogsidebar) |  |
 | content_vue | `null` or [Vue](#Vue) |  |
+| progress_bar | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L238) |  |
 | confirmIndex | *number* |  |
 | cancelIndex | *number* |  |
 | id | *string* |  |
@@ -241,7 +253,15 @@ Triggered when the user presses a specific button
 Function to run when anything in the form is changed
 
 ##### Arguments:
-* `form_result`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L272)
+* `form_result`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L296)
+
+
+### setFormToggles( values, update )
+Set whether the dialog form inputs are toggled on or off. See "toggle_enabled"
+
+##### Arguments:
+* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L308) -
+* `update`: *boolean* - Whether to update the dialog (call onFormChange) after setting the values. Default is true. Set to false when called from onFormChange
 
 
 ### show()
@@ -278,13 +298,13 @@ Closes the dialog using the index of the pressed button
 If the dialog contains a form, return the current values of the form
 
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L343)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L375)
 
 ### setFormValues( values )
 Set the values of the dialog form inputs
 
 ##### Arguments:
-* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/dialog.d.ts#L349)
+* `values`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/dialog.d.ts#L381)
 
 
 ### delete()

@@ -28,8 +28,8 @@ Creates a new codec
 	* `dispatchEvent`: Function (Optional)
 	* `extension`: *string*
 	* `remember`: *boolean* - Whether to remember the models exported using this codec
-	* `load_filter`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L25) (Optional)
-	* `export_options`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L33) (Optional) - List of export option inputs, based on the Dialog form API
+	* `load_filter`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L25) (Optional)
+	* `export_options`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L33) (Optional) - List of export option inputs, based on the Dialog form API
 	* `export_action`: [Action](action#action-1) (Optional) - Default action that is used to export to the codec
 
 
@@ -39,7 +39,7 @@ Creates a new codec
 | extension | *string* | The default file extension that the codec uses |
 | remember | *boolean* | Whether to remember files that use this codec in the recent models list |
 | export_action | [Action](action#action-1) | If available, the action that is used to export files using this codec |
-| export_options | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L142) | List of export option inputs |
+| export_options | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L142) | List of export option inputs |
 | format | [ModelFormat](format#modelformat) |  |
 
 ### load( model, file[, add] )
@@ -97,7 +97,7 @@ Write the content of this file to the selected location. The default method can 
 ##### Arguments:
 * `content`: *any*
 * `path`: *string*
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L89)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L89)
 
 
 ### afterDownload( path )
@@ -114,7 +114,7 @@ Write the content of this file to the selected location. The default method can 
 Return the stored export option values of the current project
 
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L96)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L96)
 
 ### promptExportOptions()
 Prompt the user to enter their preferred export settings into the dialog
@@ -127,7 +127,7 @@ Adds an event listener to the codec
 
 ##### Arguments:
 * `event_name`: *string* - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L107) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L107) -
 
 
 ### once( event_name, callback )
@@ -135,7 +135,7 @@ Adds a single-use event listener to the codec
 
 ##### Arguments:
 * `event_name`: *string* - The event type to listen for
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L113) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L113) -
 
 
 ### removeListener( event_name, callback )
@@ -143,7 +143,7 @@ Removes an event listener from the codec
 
 ##### Arguments:
 * `event_name`: *string* -
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L119) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L119) -
 
 
 ### dispatchEvent( event_name, data )
@@ -165,5 +165,5 @@ Returns: Array of *string*
 ## Codecs
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/codec.d.ts#L154)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/codec.d.ts#L154)
 

@@ -11,7 +11,7 @@ Creates a new UndoSystem
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| history | Array of [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51) |  |
+| history | Array of [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/undo.d.ts#L51) |  |
 | index | *number* |  |
 
 ### initEdit( aspects )
@@ -34,7 +34,7 @@ Starts an edit to the current project by saving the state of the provided aspect
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/undo.d.ts#L51)
 
 ### finishEdit( action[, aspects] )
 Finishes an edit by saving the state of the project after it was changed
@@ -57,7 +57,7 @@ Finishes an edit by saving the state of the project after it was changed
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L51)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/undo.d.ts#L51)
 
 ### cancelEdit()
 Cancels an event before it was finished and reset the project to the state before
@@ -99,15 +99,15 @@ Provides a menu to amend the latest edit with slightly changed values
 	* `min`: *number* (Optional)
 	* `max`: *number* (Optional)
 	* `step`: *number* (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L101)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/undo.d.ts#L101)
 
 
 ### loadSave( save, reference[, mode] )
 Loads a specific undo save
 
 ##### Arguments:
-* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L30) - The undo save to load
-* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/undo.d.ts#L30) - The current undo save for reference
+* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/undo.d.ts#L30) - The undo save to load
+* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/undo.d.ts#L30) - The current undo save for reference
 * `mode`: `"session"` (Optional) - The load save modes
 
 
@@ -126,8 +126,8 @@ Blockbench's undo system of the current project to register edits to the project
 ```javascript
 Undo.initEdit({elements: []});
 
-var new_cube = new Cube({name: 'kevin'}).init();
-var other_cube = new Cube({name: 'lars'}).init();
+let new_cube = new Cube({name: 'kevin'}).init();
+let other_cube = new Cube({name: 'lars'}).init();
 
 Undo.finishEdit('add new cubes', {elements: [new_cube, other_cube]});
 ```

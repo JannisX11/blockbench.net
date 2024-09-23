@@ -24,9 +24,12 @@ Creates a new BBPlugin
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
 	* `await_loading`: *boolean* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
 	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
-	* `contributes`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/plugin.d.ts#L45) (Optional) - Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed.
+	* `contributes`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/plugin.d.ts#L45) (Optional) - Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed.
 	* `has_changelog`: *boolean* (Optional)
 	* `deprecation_note`: *string* (Optional) - In combination with a "Deprecated" tag, this can be used to provide context on why a plugin is deprecated
+	* `website`: *string* (Optional) - Link to the plugin's website
+	* `repository`: *string* (Optional) - Link to the repository that contains the source for the plugin
+	* `bug_tracker`: *string* (Optional) - Link to where users can report issues with the plugin
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
 	* `oninstall`: Function (Optional)
@@ -47,9 +50,12 @@ Creates a new BBPlugin
 | min_version | *string* |  |
 | max_version | *string* |  |
 | tags | Array of *string* |  |
-| contributes | [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/plugin.d.ts#L100) | Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed. |
+| contributes | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/plugin.d.ts#L112) | Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed. |
 | has_changelog | *boolean* |  |
 | deprecation_note | *string* | In combination with a "Deprecated" tag, this can be used to provide context on why a plugin is deprecated |
+| website | *string* |  |
+| repository | *string* | Link to the plugin's website |
+| bug_tracker | *string* | Link to the repository that contains the source for the plugin |
 
 ### extend( options )
 ##### Arguments:
@@ -66,9 +72,12 @@ Creates a new BBPlugin
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
 	* `await_loading`: *boolean* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
 	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
-	* `contributes`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/plugin.d.ts#L45) (Optional) - Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed.
+	* `contributes`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/plugin.d.ts#L45) (Optional) - Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed.
 	* `has_changelog`: *boolean* (Optional)
 	* `deprecation_note`: *string* (Optional) - In combination with a "Deprecated" tag, this can be used to provide context on why a plugin is deprecated
+	* `website`: *string* (Optional) - Link to the plugin's website
+	* `repository`: *string* (Optional) - Link to the repository that contains the source for the plugin
+	* `bug_tracker`: *string* (Optional) - Link to where users can report issues with the plugin
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
 	* `oninstall`: Function (Optional)
@@ -77,6 +86,8 @@ Creates a new BBPlugin
 Returns: [BBPlugin](plugin#bbplugin)
 
 ### onload()
+Link to where users can report issues with the plugin
+
 
 
 ### onunload()
@@ -104,9 +115,12 @@ Returns: [BBPlugin](plugin#bbplugin)
 	* `max_version`: *string* (Optional) - Maximum Blockbench version in which the plugin can be installed
 	* `await_loading`: *boolean* (Optional) - Set to true if the plugin must finish loading before a project is opened, i. e. because it adds a format
 	* `new_repository_format`: *boolean* (Optional) - Use the new repository format where plugin, iron, and about are stored in a separate folder
-	* `contributes`: [See types](https://github.com/JannisX11/blockbench-types/blob/c2ec864/types/plugin.d.ts#L45) (Optional) - Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed.
+	* `contributes`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/plugin.d.ts#L45) (Optional) - Can be used to specify which features a plugin adds. This allows Blockbench to be aware of and suggest even plugins that are not installed.
 	* `has_changelog`: *boolean* (Optional)
 	* `deprecation_note`: *string* (Optional) - In combination with a "Deprecated" tag, this can be used to provide context on why a plugin is deprecated
+	* `website`: *string* (Optional) - Link to the plugin's website
+	* `repository`: *string* (Optional) - Link to the repository that contains the source for the plugin
+	* `bug_tracker`: *string* (Optional) - Link to where users can report issues with the plugin
 	* `onload`: Function (Optional)
 	* `onunload`: Function (Optional)
 	* `oninstall`: Function (Optional)
