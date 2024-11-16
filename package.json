@@ -15,7 +15,7 @@
 		"nuxt": "^2.17.1"
 	},
 	"devDependencies": {
-		"@fortawesome/free-brands-svg-icons": "^6.2.0",
+		"@fortawesome/free-brands-svg-icons": "^6.6.0",
 		"@fortawesome/free-solid-svg-icons": "^6.2.0",
 		"@nuxt/content": "^1.15.1",
 		"@nuxtjs/color-mode": "^2.0.8",
