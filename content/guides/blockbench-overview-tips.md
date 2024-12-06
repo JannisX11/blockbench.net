@@ -83,15 +83,28 @@ The interface modes offer a variety of tools for the different parts of the crea
 * Edit Mode: designing and positioning models and setting up their UV mapping and bone structure
 * Paint Mode: creating and editing textures
 * Animate Mode: animating models (in formats that allow it)
-* Display Mode: specific to the Minecraft Java format; used for defining how the model gets displayed in game (in hand, in item frames and in the inventory)
+* Display Mode: specific to the Minecraft block formats; used for defining how the model gets displayed in game (in hand, in item frames, in the inventory etc,)
 
 ### Status Bar
 The Status Bar contains sidebar toggle arrows and easily accessible information about the model.
 * Toggle Sidebar: left and right arrow for hiding and revealing the left and right sidebar respectively
-* Save Status: icon that lets you know whether the model is saved (✓) or not (X)
 * Format Icon: icon that tells you the format of the model (hover to read)
 * Model Identifier: text that states the name of the model identifier (it can be edited in "File" > "Project...")
+* Available modifier keys for the current tool, if available
+* Automatic warnings or errors regarding the current model
 * FPS Indicator: number of frames per second displayed in Blockbench at any given moment
+
+### Sliders
+The interface contains numeric sliders in various places and for various purposes, for example to adjust element transformation, to control the brush size, etc.
+Sliders are a combo input type that supports various methods of input:
+* **Sliding**: Move your mouse cursor (or finger on touch) over the number in the center. Slide to the right to increase and to the left to decrease the value. Depending on input type, you can hold Shift or Control to adjust the increment.
+* **Arrows**: Hover over the input. Two arrows pointing to the right and left appear. Press those arrows to increase and decrease the value.
+* **Manual Input**: Click the number once to activate text editing. Enter a new numeric value. Press Enter of click elsewhere to confirm the change.
+* **Double Click**: Double-click the number to reset the value back to 0 or the respective default value.
+* **Expressions**: Click the number once to activate text editing. Manual input supports math expressions using [MolangJS](https://github.com/JannisX11/MolangJS) [syntax](https://bedrock.dev/docs/stable/Molang).
+    The advantage of this is that the expression will be applied to each instance separately. For example, you can enter `math.random(-30, 30)` into the rotation value of your selected cubes. This will randomize the rotation for all cubes, and each cube will end up with a different rotation.
+    You can prefix your expression with `+`, `+-`, `*` or `/` to add to, subtract from, multiply, or divide by the previous value respectively. For example, typing `*2` into a size input field will double the size value of all selected elements.
+    You can also use `val` or `n` in your expression as a placeholder for the previous value.
 
 ## General
 
