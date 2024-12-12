@@ -18,6 +18,14 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner', 'scifi'])">
+				<img loading="lazy" src="~assets/gallery/4.11.webp" alt="Splash Art Contest 4.11 Winner" />
+				<h2>Splash Art Contest 4.11 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/bonogakure">BonoGakure</a> &amp; <a target="_blank" rel="noopener" href="https://twitter.com/glenn_turu">GlenFebrian</a>, May 2024</label>
+				<p>We saw a close race for first palce between two submissions in the 4.11 Splash Art Contest.</p>
+				<p>Ultimately, this fantastic submission of a solar-powered orange-picking robot in a lush orchard won with 381 votes, and made its way onto the 4.11 Splash Screen along with two other entries.</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner'])">
 				<img loading="lazy" src="~assets/gallery/4.10.webp" alt="Splash Art Contest 4.10 Winner" />
 				<h2>Splash Art Contest 4.10 Winner</h2>
