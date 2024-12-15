@@ -40,16 +40,25 @@ export default {
 		};
 	},
 	head() {
+		let description = this.doc.description;
+		if (!description) {
+			// defaults
+			if (this.doc.path.includes('/api/')) {
+				description = 'Blockbench API Reference';
+			} else {
+				description = 'Blockbench Wiki';
+			}
+		}
 		return {
 			title: `${this.doc.title} - Blockbench Wiki`,
 			meta: [
-				{ hid: 'description', name: 'description', content: this.doc.description },
+				{ hid: 'description', name: 'description', content: description },
 				// Open Graph
 				{ hid: 'og:title', property: 'og:title', content: `${this.doc.title} - Blockbench Wiki` },
-				{ hid: 'og:description', property: 'og:description', content: this.doc.description },
+				{ hid: 'og:description', property: 'og:description', content: description },
 				// Twitter Card
 				{ hid: 'twitter:title', name: 'twitter:title', content: `${this.doc.title} - Blockbench Wiki` },
-				{ hid: 'twitter:description', name: 'twitter:description', content: this.doc.description },
+				{ hid: 'twitter:description', name: 'twitter:description', content: description },
 				{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.blockbench.net/images/wiki/wiki.png' },
 				{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' }
 			]
