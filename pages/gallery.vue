@@ -18,6 +18,13 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner'])">
+				<img loading="lazy" src="~assets/gallery/4.12.webp" alt="Splash Art Contest 4.12 Winner" />
+				<h2>Splash Art Contest 4.12 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/_2Lein">Handon_撼动</a> &amp; <a target="_blank" rel="noopener" href="https://twitter.com/Picasso114514">PICASSO</a>, January 2025</label>
+				<p>For this Splash Art Contest with the theme "Treasure", 17 entries were submitted. This submission of an adventurer and a monkey escaping a jungle temple started out in third place in the first hour, but caught up during the voting phase and ended up winning with 513 votes!</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner', 'scifi'])">
 				<img loading="lazy" src="~assets/gallery/4.11.webp" alt="Splash Art Contest 4.11 Winner" />
 				<h2>Splash Art Contest 4.11 Winner</h2>
