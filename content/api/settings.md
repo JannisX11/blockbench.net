@@ -6,7 +6,7 @@ title: Settings
 ## settings
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/settings.d.ts#L2)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/settings.d.ts#L2)
 
 <reference path="./blockbench.d.ts"/>
 
@@ -23,7 +23,7 @@ Creates a new Setting
 * `id`: *string*
 * `options`: SettingOptions
 	* `name`: *string*
-	* `type`: `"string"` or `"number"` or `"boolean"` or `"select"` or `"click"` or `"password"` (Optional)
+	* `type`: `"number"` or `"toggle"` or `"select"` or `"text"` or `"click"` or `"password"` (Optional)
 	* `value`: *string* or *number* or *boolean*
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `category`: *string*
@@ -33,7 +33,7 @@ Creates a new Setting
 	* `step`: *number* (Optional)
 	* `icon`: *string* (Optional)
 	* `click`: Function (Optional)
-	* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/settings.d.ts#L19) (Optional)
+	* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/settings.d.ts#L19) (Optional)
 	* `onChange`: Function (Optional)
 
 
@@ -53,9 +53,9 @@ Creates a new Setting
 | max | *number* |  |
 | step | *number* |  |
 | icon | *string* |  |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/settings.d.ts#L56) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/settings.d.ts#L56) |  |
 | hidden | *boolean* |  |
-| onChange | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/settings.d.ts#L60) |  |
+| onChange | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/settings.d.ts#L60) |  |
 
 ### delete()
 
@@ -87,7 +87,7 @@ Triggers the setting, as if selected in action control. This toggles boolean set
 Opens the settings dialog
 
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/settings.d.ts#L84) (Optional) -
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/settings.d.ts#L84) (Optional) -
 
 
 ### saveLocalStorages()

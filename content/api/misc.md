@@ -49,6 +49,12 @@ Type: *boolean*
 True if Blockbench runs as a native app
 
 
+## VuePrismEditor
+#### Global Variable
+
+Type: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html)
+
+
 ## Property
 Extends: [Deletable](misc#deletable)
 
@@ -90,7 +96,7 @@ Creates a new Property
 | isVector2 | *boolean* |  |
 | isInstance | *boolean* |  |
 | enum_values | Array of *string* |  |
-| merge_validation | *undefined* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L205) |  |
+| merge_validation | *undefined* or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L209) |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | exposed | *boolean* |  |
 | label | *any* |  |
@@ -145,7 +151,7 @@ Returns: *string*
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L228) | Translation data for the current language |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L232) | Translation data for the current language |
 | code | *string* | Two letter code indicating the currently selected language |
 
 ### addTranslations( language, strings )
@@ -153,7 +159,7 @@ Add translations for custom translation strings
 
 ##### Arguments:
 * `language`: *string* - Two letter language code, e. G. 'en'
-* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L240) - Object listing the translation keys and values
+* `strings`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L244) - Object listing the translation keys and values
 
 
 
@@ -167,4 +173,37 @@ Type: *any*
 #### Global Function
 
 
+
+
+## updateCubeHighlights( hover_cube, force_off )
+#### Global Function
+
+##### Arguments:
+* `hover_cube`: [Cube](cube#cube-1)
+* `force_off`: *boolean*
+
+
+
+## getRescalingFactor( angle )
+#### Global Function
+
+##### Arguments:
+* `angle`: *number*
+
+Returns: *number*
+
+
+## Pressing
+#### Global Variable
+
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L268)
+
+
+## isStringNumber( value )
+#### Global Function
+
+##### Arguments:
+* `value`: *any*
+
+Returns: *boolean*
 

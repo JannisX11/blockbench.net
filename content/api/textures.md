@@ -6,21 +6,27 @@ title: Textures
 ## Texture
 A texture combines the functionality of material, texture, and image, in one. Textures can be linked to files on the local hard drive, or hold the information in RAM.
 
-### new Texture( data[, uuid] )
+### new Texture( [data, uuid] )
 Creates a new Texture
 
 ##### Arguments:
-* `data`: TextureData
+* `data`: TextureData (Optional)
 	* `path`: *string* (Optional)
 	* `name`: *string* (Optional)
-	* `folder`: *string* (Optional)
+	* `folder`: *string* (Optional) - Relative path to the file's directory, used by some formats such as Java Block/Item
 	* `namespace`: *string* (Optional)
-	* `id`: *string* (Optional)
-	* `particle`: *boolean* (Optional)
+	* `id`: *string* (Optional) - Texture ID or key, used by some formats. By default this is a number that increases with every texture that is added
+	* `particle`: *boolean* (Optional) - Whether the texture is used for the models particle system. Used by some formats such as Java Block/Item
 	* `visible`: *boolean* (Optional)
-	* `mode`: *string* (Optional)
-	* `saved`: *boolean* (Optional)
-	* `keep_size`: *boolean* (Optional)
+	* `render_mode`: *string* (Optional)
+	* `render_sides`: *string* (Optional)
+	* `pbr_channel`: `"normal"` or `"height"` or `"color"` or `"mer"` (Optional)
+	* `frame_time`: *number* (Optional) - Texture animation frame time
+	* `frame_order_type`: `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` (Optional)
+	* `frame_order`: *string* (Optional) - Custom frame order
+	* `frame_interpolate`: *boolean* (Optional) - Interpolate between frames
+	* `saved`: *boolean* (Optional) - Whether the texture is saved
+	* `keep_size`: *boolean* (Optional) - Flag to indicate that the texture was manually resized, and on load it should not try to automatically adjust UV size
 	* `source`: *string* (Optional)
 	* `width`: *number* (Optional)
 	* `height`: *number* (Optional)
@@ -41,6 +47,7 @@ Creates a new Texture
 | particle | *boolean* | Whether the texture is used for the models particle system. Used by some formats such as Java Block/Item |
 | render_mode | *string* |  |
 | render_sides | *string* |  |
+| pbr_channel | `"normal"` or `"height"` or `"color"` or `"mer"` |  |
 | frame_time | *number* | Texture animation frame time |
 | frame_order_type | `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` |  |
 | frame_order | *string* | Custom frame order |
@@ -65,8 +72,9 @@ Creates a new Texture
 | sync_to_project | *string* | The UUID of the project to sync the texture to |
 | canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | The texture's associated canvas. Since 4.9, this is the main source of truth for textures in internal mode. |
 | ctx | [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) | The 2D context of the texture's associated canvas. |
-| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/global.d.ts#L30) | Texture image element |
+| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/global.d.ts#L27) | Texture image element |
 | relative_path | *string* |  |
+| material | [ShaderMaterial](#ShaderMaterial) |  |
 | menu | [Menu](menu#menu-1) |  |
 
 ### getErrorMessage()
@@ -78,14 +86,20 @@ Returns: *string*
 * `data`: TextureData
 	* `path`: *string* (Optional)
 	* `name`: *string* (Optional)
-	* `folder`: *string* (Optional)
+	* `folder`: *string* (Optional) - Relative path to the file's directory, used by some formats such as Java Block/Item
 	* `namespace`: *string* (Optional)
-	* `id`: *string* (Optional)
-	* `particle`: *boolean* (Optional)
+	* `id`: *string* (Optional) - Texture ID or key, used by some formats. By default this is a number that increases with every texture that is added
+	* `particle`: *boolean* (Optional) - Whether the texture is used for the models particle system. Used by some formats such as Java Block/Item
 	* `visible`: *boolean* (Optional)
-	* `mode`: *string* (Optional)
-	* `saved`: *boolean* (Optional)
-	* `keep_size`: *boolean* (Optional)
+	* `render_mode`: *string* (Optional)
+	* `render_sides`: *string* (Optional)
+	* `pbr_channel`: `"normal"` or `"height"` or `"color"` or `"mer"` (Optional)
+	* `frame_time`: *number* (Optional) - Texture animation frame time
+	* `frame_order_type`: `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` (Optional)
+	* `frame_order`: *string* (Optional) - Custom frame order
+	* `frame_interpolate`: *boolean* (Optional) - Interpolate between frames
+	* `saved`: *boolean* (Optional) - Whether the texture is saved
+	* `keep_size`: *boolean* (Optional) - Flag to indicate that the texture was manually resized, and on load it should not try to automatically adjust UV size
 	* `source`: *string* (Optional)
 	* `width`: *number* (Optional)
 	* `height`: *number* (Optional)
@@ -139,7 +153,7 @@ Generate the Java Block/Item folder property from the file path
 Loads the texture from it's current source
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/textures.d.ts#L153) (Optional) - Callback function
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L186) (Optional) - Callback function
 
 Returns: [Texture](textures#texture)
 
@@ -152,7 +166,7 @@ Returns: [Texture](textures#texture)
 
 ### fromFile( file )
 ##### Arguments:
-* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/textures.d.ts#L155)
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L188)
 
 Returns: [Texture](textures#texture)
 
@@ -203,12 +217,22 @@ Reloads the texture. Only works in the desktop app
 
 
 ### getMaterial()
+Get the material that the texture displays. When previewing PBR, this will return the shared PBR material
 
-Returns: [MeshLambertMaterial](#MeshLambertMaterial)
+
+Returns: [ShaderMaterial](#ShaderMaterial) or [MeshStandardMaterial](#MeshStandardMaterial)
+
+### getOwnMaterial()
+Get the texture's own material
+
+
+Returns: [ShaderMaterial](#ShaderMaterial)
 
 ### select( [event] )
+Selects the texture
+
 ##### Arguments:
-* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) (Optional)
+* `event`: [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) (Optional) - Click event during selection
 
 Returns: [Texture](textures#texture)
 
@@ -300,7 +324,7 @@ Returns: *string*
 Wrapper to do edits to the texture.
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/textures.d.ts#L230) -
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L274) -
 * `options`: TextureEditOptions - Editing options
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created
@@ -336,7 +360,7 @@ Returns: *string*
 
 ### getMCMetaContent()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/textures.d.ts#L247)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L291)
 
 ### getAnimationFrameIndices()
 
@@ -515,7 +539,7 @@ Change the size of the matrix. Unless using overrides, the selection gets lost.
 Run a method on each pixel, whether selected or not
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/textures.d.ts#L380) - Function to run per pixel
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L424) - Function to run per pixel
 
 
 ### translate( offset_x, offset_y )
@@ -537,7 +561,7 @@ Mask the provided canvas using the selection
 
 ##### Arguments:
 * `ctx`: [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) - Canvas 2D context
-* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/outliner.d.ts#L4) - Position offset of the canvas, e. g. when using a layer
+* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) - Position offset of the canvas, e. g. when using a layer
 
 
 

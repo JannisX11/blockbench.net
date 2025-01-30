@@ -10,10 +10,10 @@ A global namespace handling miscellaneous functionality related to the 3D previe
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| materials | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L50) |  |
-| emptyMaterials | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L53) |  |
-| meshes | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L56) |  |
-| bones | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L59) |  |
+| materials | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L50) |  |
+| emptyMaterials | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L53) |  |
+| meshes | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L56) |  |
+| bones | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L59) |  |
 | scene | [THREE.Scene](#THREE.Scene) | Main scene, shared across all tabs |
 | gizmos | Array | List of the gizmos (control and UI elements) in the 3D scene |
 | outlineMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) | The material used for all selection outlines |
@@ -30,7 +30,7 @@ A global namespace handling miscellaneous functionality related to the 3D previe
 | pivot_marker | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) |  |
 | global_light_color | [THREE.Color](#THREE.Color) |  |
 | global_light_side | *number* |  |
-| face_order | Array of *string* |  |
+| face_order | Array |  |
 
 ### raycast( event )
 Raycast on the currently selected preview
@@ -44,7 +44,7 @@ Returns: *any*
 Execute the callback function without any gizmos, grids and helpers visible
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L105)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L105)
 
 
 ### clear()
@@ -64,7 +64,7 @@ Updates selected aspects of the preview
 ##### Arguments:
 * `options`: UpdateViewOptions -
 	* `elements`: Array of [OutlinerElement](outliner#outlinerelement) (Optional) - List of elements to update
-	* `element_aspects`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L10) (Optional) - Which aspects of the elements to update
+	* `element_aspects`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L10) (Optional) - Which aspects of the elements to update
 	* `groups`: Array of [Group](group#group-1) (Optional) - Groups to update
 	* `selection`: *boolean* (Optional) - Whether to update the selection (updates the selection outlines and interface)
 
@@ -114,11 +114,11 @@ Redraw the selected elements in the scene
 * `arr`: *any* - Optionally specify an array of elements to update
 
 
-### updatePositions( y )
+### updatePositions( [y] )
 Update positions and shapes of the selected elements
 
 ##### Arguments:
-* `y`: *number*
+* `y`: *number* (Optional)
 
 
 ### updateSelectedFaces()
@@ -219,8 +219,15 @@ Marks a specific aspect of the interface to be updated in the next tick. Useful 
 Creates a new NodePreviewController
 
 ##### Arguments:
-* `type`: 
+* `type`:  or 
 * `options`: NodePreviewControllerOptions
+	* `mesh`: [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) (Optional) - NOTE: This option is just for type checking and should not be set in the options object. It should be set inside of the setup function via  `this.mesh` 
+
+ ```
+setup(element) {
+   this.mesh = new THREE.Mesh()
+}
+```
 	* `setup`: Function (Optional)
 	* `remove`: Function (Optional)
 	* `updateAll`: Function (Optional)
@@ -237,7 +244,8 @@ Creates a new NodePreviewController
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | type |  |  |
-| events | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L243) |  |
+| events | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L253) |  |
+| mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
 
 ### dispatchEvent( event_name, data )
 ##### Arguments:
@@ -250,7 +258,7 @@ Adds an event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L250)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L261)
 
 
 ### once( event_name, cb )
@@ -258,7 +266,7 @@ Adds a single-use event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L254)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L265)
 
 
 ### removeListener( event_name, cb )
@@ -266,7 +274,7 @@ Removes an event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/canvas.d.ts#L258)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L269)
 
 
 ### setup( element )
@@ -319,8 +327,9 @@ Removes an event listener
 * `instance`: [OutlinerNode](outliner#outlinernode)
 
 
-### updateHighlight( instance )
+### updateHighlight( instance, args )
 ##### Arguments:
 * `instance`: [OutlinerNode](outliner#outlinernode)
+* `args`: Array of *any*
 
 

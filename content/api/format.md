@@ -4,7 +4,7 @@ title: Format
 
 # Format
 ## ModelFormat
-Extends: [Deletable](misc#deletable)
+Extends: [FormatOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L48), [Deletable](misc#deletable)
 
 <reference path="./blockbench.d.ts"/>
 
@@ -13,72 +13,7 @@ Creates a new ModelFormat
 
 ##### Arguments:
 * `id`: *string*
-* `options`: FormatOptions
-	* `id`: *string*
-	* `icon`: *string*
-	* `name`: *string* (Optional)
-	* `description`: *string* (Optional)
-	* `category`: *string* (Optional)
-	* `target`: *string* or Array of *string* (Optional)
-	* `confidential`: *boolean* (Optional)
-	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
-	* `show_on_start_screen`: *boolean* (Optional)
-	* `format_page`: FormatPage (Optional)
-		* `component`: *any* (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L6) (Optional)
-		* `button_text`: *string* (Optional)
-	* `onFormatPage`: Function (Optional)
-	* `onStart`: Function (Optional)
-	* `onSetup`: Function (Optional)
-	* `convertTo`: Function (Optional)
-	* `box_uv`: *boolean* (Optional)
-	* `optional_box_uv`: *boolean* (Optional)
-	* `single_texture`: *boolean* (Optional)
-	* `single_texture_default`: *boolean* (Optional)
-	* `per_group_texture`: *boolean* (Optional)
-	* `per_texture_uv_size`: *boolean* (Optional)
-	* `model_identifier`: *boolean* (Optional)
-	* `legacy_editable_file_name`: *boolean* (Optional)
-	* `parent_model_id`: *boolean* (Optional)
-	* `vertex_color_ambient_occlusion`: *boolean* (Optional)
-	* `animated_textures`: *boolean* (Optional)
-	* `bone_rig`: *boolean* (Optional)
-	* `centered_grid`: *boolean* (Optional)
-	* `rotate_cubes`: *boolean* (Optional)
-	* `stretch_cubes`: *boolean* (Optional)
-	* `integer_size`: *boolean* (Optional)
-	* `meshes`: *boolean* (Optional)
-	* `texture_meshes`: *boolean* (Optional)
-	* `locators`: *boolean* (Optional)
-	* `rotation_limit`: *boolean* (Optional)
-	* `rotation_snap`: *boolean* (Optional)
-	* `uv_rotation`: *boolean* (Optional)
-	* `java_face_properties`: *boolean* (Optional)
-	* `select_texture_for_particles`: *boolean* (Optional)
-	* `texture_mcmeta`: *boolean* (Optional)
-	* `bone_binding_expression`: *boolean* (Optional)
-	* `animation_files`: *boolean* (Optional)
-	* `texture_folder`: *boolean* (Optional)
-	* `image_editor`: *boolean* (Optional)
-	* `edit_mode`: *boolean* (Optional)
-	* `paint_mode`: *boolean* (Optional)
-	* `display_mode`: *boolean* (Optional)
-	* `animation_mode`: *boolean* (Optional)
-	* `pose_mode`: *boolean* (Optional)
-	* `animation_controllers`: *boolean* (Optional)
-	* `box_uv_float_size`: *boolean*
-	* `java_cube_shading_properties`: *boolean*
-	* `cullfaces`: *boolean*
-	* `render_sides`: `"double"` or `"front"` or `"back"` or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L102) (Optional)
-	* `cube_size_limiter`: CubeSizeLimiter (Optional)
-		* `test`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L21)
-		* `move`: Function
-		* `clamp`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L32)
-		* `rotation_affected`: *boolean* (Optional) - Set to true to tell Blockbench to check and adjust the cube limit after rotating a cube
-		* `coordinate_limits`: Array (Optional) - Optionally set the coordinate limits of cubes in local space
-	* `codec`: [Codec](codec#codec-1) (Optional)
-	* `onActivation`: Function (Optional)
-	* `onDeactivation`: Function (Optional)
+* `options`: [FormatOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L48)
 
 ### new ModelFormat( options )
 *Alternative constructor signature*
@@ -86,6 +21,46 @@ Creates a new ModelFormat
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
+| box_uv | *boolean* | Enables Box UV on cubes by default |
+| optional_box_uv | *boolean* | If true, box UV is optional and can be toggled on the project or per cube |
+| single_texture | *boolean* | If true, only one texture can be assigned to the model at a time, instead of textures being assigned per face |
+| single_texture_default | *boolean* | If true, a single texture is used as default, but textures can still be assigned to faces |
+| per_group_texture | *boolean* | If true, textures can be assigned per group instead of per face |
+| per_texture_uv_size | *boolean* | If true, UV size (the size of the texture in UV space) will be defined per texture and not per project |
+| model_identifier | *boolean* | Enable a model identifier field in the project settings. Default is true |
+| legacy_editable_file_name | *boolean* | If true, the file name of a project will be editable in the project settings |
+| parent_model_id | *boolean* | If true, enables a field in the project settings to set a parent model ID |
+| vertex_color_ambient_occlusion | *boolean* | Adds a toggle in the project settings to enable project wide vertex color ambient occlusion |
+| animated_textures | *boolean* | Enable flipbook animated textures |
+| bone_rig | *boolean* | Enable groups to work as bones and rig the model |
+| centered_grid | *boolean* | Align the grid center with the model origin, instead of the grid corner |
+| rotate_cubes | *boolean* | Add the ability to rotate cubes |
+| stretch_cubes | *boolean* | Add the ability to stretch cubes. Stretch scales cubes from the center without affecting UV |
+| integer_size | *boolean* | If true, cube sizes are limited to integer values |
+| meshes | *boolean* | Enable mesh elements |
+| texture_meshes | *boolean* | Enable texture meshes |
+| locators | *boolean* | Enable locators |
+| rotation_limit | *boolean* | Enforces a rotation limit for cubes of up to 45 degrees in either direction and one axis at a time |
+| rotation_snap | *boolean* | Forces cube rotations to snap to 22.5 degree increments |
+| uv_rotation | *boolean* | Allows cube UVs to be rotated |
+| java_face_properties | *boolean* | Enables Minecraft Java block/item model specific cube face features (tint and export) |
+| select_texture_for_particles | *boolean* | Allows assigning one texture to be used as a texture for particles related to the model |
+| texture_mcmeta | *boolean* | Enable mcmeta files for animated texture files |
+| bone_binding_expression | *boolean* | Enables an option to set an expression for bone bindings |
+| animation_files | *boolean* | If true, animations will be saved into files |
+| texture_folder | *boolean* | Enables a folder path per texture that can be set in the texture properties window |
+| image_editor | *boolean* | Enables the 2D image editor |
+| edit_mode | *boolean* | Enables edit mode. Default is true |
+| paint_mode | *boolean* | Enables paint mode. Default is true |
+| display_mode | *boolean* | Enables display mode |
+| animation_mode | *boolean* | Emaböes animation mode |
+| pose_mode | *boolean* | Enables pose mode |
+| animation_controllers | *boolean* | Enables animation controllers |
+| box_uv_float_size | *boolean* | If true, cube sizes will not be floored to calculate UV sizes with box UV. This can result in UVs not aligning with pixel edges |
+| java_cube_shading_properties | *boolean* | Enables properties for Minecraft Java block/item models related to block shading (shading option and light emission value) |
+| cullfaces | *boolean* | Enables cullfaces, the ability on faces in Minecraft block models to set a direction, that, if covered by another block, will cause the face to unrender |
+| node_name_regex | *string* | A set of characters that is allowed in node names (names of elements and groups that can be referenced externally, this does not apply to cubes or meshes) |
+| render_sides | `"double"` or `"front"` or `"back"` or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L223) | Set the default render sides for textures |
 | id | *string* |  |
 | icon | *string* |  |
 | name | *string* |  |
@@ -95,48 +70,15 @@ Creates a new ModelFormat
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L3) |  |
-| box_uv | *boolean* |  |
-| optional_box_uv | *boolean* |  |
-| single_texture | *boolean* |  |
-| single_texture_default | *boolean* |  |
-| per_group_texture | *boolean* |  |
-| per_texture_uv_size | *boolean* |  |
-| model_identifier | *boolean* |  |
-| legacy_editable_file_name | *boolean* |  |
-| parent_model_id | *boolean* |  |
-| vertex_color_ambient_occlusion | *boolean* |  |
-| animated_textures | *boolean* |  |
-| bone_rig | *boolean* |  |
-| centered_grid | *boolean* |  |
-| rotate_cubes | *boolean* |  |
-| stretch_cubes | *boolean* |  |
-| integer_size | *boolean* |  |
-| meshes | *boolean* |  |
-| texture_meshes | *boolean* |  |
-| locators | *boolean* |  |
-| rotation_limit | *boolean* |  |
-| rotation_snap | *boolean* |  |
-| uv_rotation | *boolean* |  |
-| java_face_properties | *boolean* |  |
-| select_texture_for_particles | *boolean* |  |
-| texture_mcmeta | *boolean* |  |
-| bone_binding_expression | *boolean* |  |
-| animation_files | *boolean* |  |
-| texture_folder | *boolean* |  |
-| image_editor | *boolean* |  |
-| edit_mode | *boolean* |  |
-| paint_mode | *boolean* |  |
-| display_mode | *boolean* |  |
-| animation_mode | *boolean* |  |
-| pose_mode | *boolean* |  |
-| box_uv_float_size | *boolean* |  |
-| java_cube_shading_properties | *boolean* |  |
-| cullfaces | *boolean* |  |
-| animation_controllers | *boolean* |  |
-| render_sides | `"double"` or `"front"` or `"back"` or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L167) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L3) |  |
 | codec | [Codec](codec#codec-1) |  |
-| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L17) |  |
+| cube_size_limiter | [CubeSizeLimiter](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L17) | Options to limit the size of cubes |
+
+### onActivation()
+
+
+### onDeactivation()
+
 
 ### onFormatPage()
 
@@ -178,7 +120,7 @@ The current format
 ## Formats
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L191)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L277)
 
 
 ## ModelLoader
@@ -201,8 +143,8 @@ Creates a new ModelLoader
 	* `confidential`: *boolean* (Optional)
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 	* `format_page`: FormatPage (Optional)
-		* `component`: *any* (Optional)
-		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L6) (Optional)
+		* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
+		* `content`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L6) (Optional)
 		* `button_text`: *string* (Optional)
 	* `onFormatPage`: Function (Optional)
 	* `onStart`: Function (Optional)
@@ -222,7 +164,7 @@ Creates a new ModelLoader
 | confidential | *boolean* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | show_on_start_screen | *boolean* |  |
-| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/format.d.ts#L3) |  |
+| format_page | [FormatPage](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/format.d.ts#L3) |  |
 
 ### onFormatPage()
 

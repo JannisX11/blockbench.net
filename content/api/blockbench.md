@@ -6,7 +6,7 @@ title: Blockbench
 ## NativeGlobals
 #### Global Variable
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L501)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L506)
 
 
 ## Blockbench
@@ -18,7 +18,7 @@ Type: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/typ
 | -------- | ---- | ----------- |
 | platform | `"web"` or `"win32"` or `"darwin"` or `"linux"` |  |
 | version | *string* | Blockbench version number |
-| queries | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L174) or *undefined* | URL queries when opened as web app using a link that contained queries |
+| queries | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L174) or *undefined* | URL queries when opened as web app using a link that contained queries |
 | openTime | [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | Time when Blockbench was opened |
 
 ### reload()
@@ -99,16 +99,16 @@ Opens a message box
 	* `message`: *string* (Optional)
 	* `icon`: *string* (Optional)
 	* `width`: *number* (Optional)
-	* `commands`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L131) (Optional) - Display a list of actions to do in the dialog. When clicked, the message box closes with the string ID of the command as first argument.
-	* `checkboxes`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L142) (Optional) - Adds checkboxes to the bottom of the message box
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L242) (Optional)
+	* `commands`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L133) (Optional) - Display a list of actions to do in the dialog. When clicked, the message box closes with the string ID of the command as first argument.
+	* `checkboxes`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L146) (Optional) - Adds checkboxes to the bottom of the message box
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L242) (Optional)
 
 
 ### textPrompt( title, value, callback )
 ##### Arguments:
 * `title`: *string*
 * `value`: *string*
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L252)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L252)
 
 
 ### showToastMessage()
@@ -174,7 +174,7 @@ Blockbench.addListener<EventName>(...)
 
 ##### Arguments:
 * `event_names`: [E](#E)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L298)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L298)
 
 
 ### on( event_names, callback )
@@ -188,10 +188,10 @@ Blockbench.on<EventName>(...)
 
 ##### Arguments:
 * `event_names`: [E](#E)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L307)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L307)
 
 
-### removeListener( event_names )
+### removeListener( event_names, callback )
 Removes a listener from a Blockbench event.
 If you're using TypeScript, You can call this with the type param <EventName> to get the default event names in Blockbench, or leave the param blank for custom events.
 
@@ -202,6 +202,7 @@ Blockbench.removeListener<EventName>(...)
 
 ##### Arguments:
 * `event_names`: [E](#E)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L318)
 
 
 ### findFileFromContent( base_directories, options, check_file )
@@ -224,8 +225,8 @@ Reads the content from the specified files. Desktop app only.
 
 ##### Arguments:
 * `files`: Array of *string*
-* `options`: [ReadOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L81) (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/file_system.d.ts#L39) (Optional)
+* `options`: [ReadOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L81) (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/file_system.d.ts#L39) (Optional)
 
 ### read( files[, options, callback] )
 Reads the content from the specified files. Desktop app only.
@@ -233,9 +234,9 @@ Reads the content from the specified files. Desktop app only.
 ##### Arguments:
 * `files`: Array of *string*
 * `options`: ReadOptions (Optional)
-	* `readtype`: [ReadType](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L80) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L82) (Optional)
+	* `readtype`: [ReadType](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L80) or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L82) (Optional)
 	* `errorbox`: *boolean* (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L324) (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L327) (Optional)
 
 
 ### readFile( files[, options, callback] )
@@ -243,8 +244,8 @@ Reads the content from the specified files. Desktop app only.
 
 ##### Arguments:
 * `files`: Array of *string*
-* `options`: [ReadOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L81) (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/file_system.d.ts#L47) (Optional)
+* `options`: [ReadOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L81) (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/file_system.d.ts#L47) (Optional)
 
 ### readFile( files[, options, callback] )
 Reads the content from the specified files. Desktop app only.
@@ -252,9 +253,9 @@ Reads the content from the specified files. Desktop app only.
 ##### Arguments:
 * `files`: Array of *string*
 * `options`: ReadOptions (Optional)
-	* `readtype`: [ReadType](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L80) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L82) (Optional)
+	* `readtype`: [ReadType](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L80) or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L82) (Optional)
 	* `errorbox`: *boolean* (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L332) (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L335) (Optional)
 
 
 ### writeFile( file_path, options[, callback] )
@@ -262,8 +263,8 @@ Writes a file to the file system. Desktop app only.
 
 ##### Arguments:
 * `file_path`: *string*
-* `options`: [WriteOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L86)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/file_system.d.ts#L62) (Optional)
+* `options`: [WriteOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L86)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/file_system.d.ts#L62) (Optional)
 
 ### writeFile( file_path, options[, callback] )
 Writes a file to the file system. Desktop app only.
@@ -272,16 +273,16 @@ Writes a file to the file system. Desktop app only.
 * `file_path`: *string*
 * `options`: WriteOptions
 	* `content`: *string* or [ArrayBuffer](#ArrayBuffer) (Optional)
-	* `savetype`: [WriteType](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L85) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L88) (Optional)
+	* `savetype`: [WriteType](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L85) or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L88) (Optional)
 	* `custom_writer`: Function (Optional)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L341) (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L344) (Optional)
 
 
 ### pickDirectory( options )
 Pick a directory. Desktop app only.
 
 ##### Arguments:
-* `options`: [PickDirOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L91)
+* `options`: [PickDirOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L91)
 
 Returns: *string* or *undefined*
 ### pickDirectory( options )
@@ -299,23 +300,23 @@ Returns: *any*
 @ts-ignore
 
 ##### Arguments:
-* `options`: [ImportOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L102)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/file_system.d.ts#L104) (Optional)
+* `options`: [ImportOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L102)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/file_system.d.ts#L104) (Optional)
 
 Returns: *any*
 
 ### export( options[, callback] )
 ##### Arguments:
-* `options`: [ExportOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L124)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/file_system.d.ts#L129) (Optional)
+* `options`: [ExportOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L124)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/file_system.d.ts#L129) (Optional)
 
 Returns: *any*
 
 ### addDragHandler( id, options[, callback] )
 ##### Arguments:
 * `id`: *string*
-* `options`: [DragHandlerOptions](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L146)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/file_system.d.ts#L156) (Optional)
+* `options`: [DragHandlerOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L146)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/file_system.d.ts#L156) (Optional)
 
 Returns: [Deletable](misc#deletable)
 ### addDragHandler( id, options[, callback] )
@@ -324,13 +325,13 @@ Adds a drag handler that handles dragging and dropping files into Blockbench
 ##### Arguments:
 * `id`: *string*
 * `options`: DragHandlerOptions
-	* `readtype`: [ReadType](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L80) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L82) (Optional)
+	* `readtype`: [ReadType](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L80) or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L82) (Optional)
 	* `errorbox`: *boolean* (Optional)
-	* `extensions`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L150) - Allowed file extensions
+	* `extensions`: Array of *string* or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L150) - Allowed file extensions
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional) - Whether or not to enable the drag handler
-	* `element`: *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L158) (Optional) - Drop target element
+	* `element`: *string* or [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L158) (Optional) - Drop target element
 	* `propagate`: *boolean* (Optional) - If true, the drop will work on all child elements of the specified element
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/blockbench.d.ts#L374) (Optional)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/blockbench.d.ts#L377) (Optional)
 
 Returns: [Deletable](misc#deletable)
 
@@ -350,7 +351,7 @@ Returns: [Deletable](misc#deletable)
 	* `icon`: *string* (Optional)
 	* `expire`: *number* (Optional)
 	* `color`: *string* (Optional)
-	* `click`: [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/misc.d.ts#L254) (Optional)
+	* `click`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/misc.d.ts#L258) (Optional)
 
 Returns: [Deletable](misc#deletable)
 
@@ -423,6 +424,10 @@ Variable
 
 
 ### NodePreviewController
+Variable
+
+
+### Collection
 Variable
 
 

@@ -15,7 +15,7 @@ Creates a new context menu
 
 ##### Arguments:
 * `id`: *string*
-* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/menu.d.ts#L19) or [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/menu.d.ts#L36)
+* `template`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/menu.d.ts#L19) or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/menu.d.ts#L36)
 * `options`: MenuOptions (Optional)
 	* `onOpen`: Function (Optional)
 	* `onClose`: Function (Optional)
@@ -29,7 +29,7 @@ Creates a new context menu
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| structure | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/menu.d.ts#L19) |  |
+| structure | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/menu.d.ts#L19) |  |
 
 ### open( position[, context] )
 Opens the menu somewhere
@@ -73,7 +73,7 @@ Creates a new BarMenu
 
 ##### Arguments:
 * `id`: *string*
-* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/menu.d.ts#L19)
+* `structure`: Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/menu.d.ts#L19)
 * `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
 
 
@@ -83,7 +83,7 @@ Creates a new BarMenu
 | id | *string* |  |
 | condition | [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) |  |
 | name | *string* |  |
-| structure | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/menu.d.ts#L19) |  |
+| structure | Array of [MenuItem](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/menu.d.ts#L19) |  |
 
 ### open( position[, context] )
 Opens the menu somewhere
@@ -129,7 +129,7 @@ Visually highlights an action within the menu, until the user opens the menu
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/menu.d.ts#L82) |  |
+| menus | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/menu.d.ts#L82) |  |
 
 ### addAction( action[, path] )
 Adds an action to the menu structure

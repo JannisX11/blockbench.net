@@ -22,7 +22,7 @@ Creates a new Mode
 	* `hide_sidebars`: *boolean* (Optional)
 	* `hide_status_bar`: *boolean* (Optional)
 	* `condition`: [ConditionResolvable](https://github.com/JannisX11/blockbench-types/blob/main/types/util.d.ts#L1) (Optional)
-	* `component`: *any* (Optional)
+	* `component`: [Vue.Component](https://v2.vuejs.org/v2/guide/components.html) (Optional)
 	* `onSelect`: Function (Optional)
 	* `onUnselect`: Function (Optional)
 
@@ -30,6 +30,7 @@ Creates a new Mode
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | keybind | [Keybind](action#keybind) |  |
+| variations | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/action.d.ts#L119) |  |
 | id | *string* |  |
 | name | *string* |  |
 
@@ -69,6 +70,11 @@ Type: [Mode](mode#mode-1)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/4306e32/types/mode.d.ts#L39) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mode.d.ts#L39) |  |
 | selected | [Mode](mode#mode-1) or `false` or *undefined* |  |
+| animate | *boolean* or *undefined* |  |
+| display | *boolean* or *undefined* |  |
+| edit | *boolean* or *undefined* |  |
+| paint | *boolean* or *undefined* |  |
+| pose | *boolean* or *undefined* |  |
 
