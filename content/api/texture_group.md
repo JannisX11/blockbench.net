@@ -10,13 +10,7 @@ A way to group textures. Texture groups can also be used to represent materials 
 Creates a new TextureGroup
 
 ##### Arguments:
-* `data`: TextureGroupData (Optional)
-	* `name`: *string* (Optional)
-	* `is_material`: *boolean* (Optional)
-	* `material_config`: TextureGroupMaterialConfigData (Optional)
-		* `color_value`: Array (Optional)
-		* `mer_value`: Array (Optional)
-		* `saved`: *boolean* (Optional)
+* `data`: [Omit](#Omit) (Optional)
 * `uuid`: *string* (Optional)
 
 
@@ -30,7 +24,8 @@ Creates a new TextureGroup
 
 ### extend( data )
 ##### Arguments:
-* `data`: TextureGroupData
+* `data`: TextureGroupOptions
+	* `uuid`: *string* (Optional)
 	* `name`: *string* (Optional)
 	* `is_material`: *boolean* (Optional)
 	* `material_config`: TextureGroupMaterialConfigData (Optional)
@@ -66,18 +61,24 @@ Returns: Array of [Texture](textures#texture)
 
 ### getUndoCopy()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/texture_group.d.ts#L34)
+Returns: [Required](#Required)
 
 ### getSaveCopy()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/texture_group.d.ts#L39)
+Returns: [Omit](#Omit)
 
 ### updateMaterial()
 
 
 ### getMaterial()
 
-Returns: [MeshStandardMaterial](#MeshStandardMaterial)
+Returns: [THREE.MeshStandardMaterial](https://threejs.org/docs/index.html?q=MeshStandardMaterial#api/en/materials/MeshStandardMaterial)
+
+### all
+Static Property
+
+Type: Array of [TextureGroup](texture_group#texturegroup)
+
 
 ### material
 Accessor
@@ -123,7 +124,7 @@ Returns: [See types]()
 
 ### compileForBedrock()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/texture_group.d.ts#L63)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/texture_group.d.ts#L58)
 
 ### getFilePath()
 

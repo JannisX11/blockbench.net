@@ -32,7 +32,7 @@ Creates a new Preview
 | controls | *any* |  |
 | annotations | *any* |  |
 | renderer | [THREE.WebGLRenderer](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer) |  |
-| background | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/preview.d.ts#L53) |  |
+| background | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/preview.d.ts#L53) |  |
 | raycaster | [Raycaster](#Raycaster) |  |
 | mouse | [Vector2](#Vector2) |  |
 
@@ -43,7 +43,7 @@ Creates a new Preview
 ##### Arguments:
 * `event`: [MouseEvent](#MouseEvent)
 
-Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/preview.d.ts#L17)
+Returns: `false` or [RaycastResult](https://github.com/JannisX11/blockbench-types/blob/8049169/types/preview.d.ts#L17)
 
 ### render()
 
@@ -68,10 +68,10 @@ Returns: [Preview](preview#preview-1)
 ### loadAnglePreset( angle_preset )
 ##### Arguments:
 * `angle_preset`: AnglePreset
-	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
-	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) (Optional)
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) (Optional)
-	* `projection`: `"perspective"` or `"unset"` or `"orthographic"`
+	* `position`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
+	* `target`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `projection`: `"unset"` or `"orthographic"` or `"perspective"`
 	* `zoom`: *number* (Optional)
 	* `focal_length`: *number* (Optional)
 	* `lockedAngle`: *number* (Optional)
@@ -90,7 +90,7 @@ Returns: `"east"` or `"west"` or `"south"` or `"north"`
 
 ### getFacingHeight()
 
-Returns: `"middle"` or `"up"` or `"down"`
+Returns: `"up"` or `"down"` or `"middle"`
 
 ### occupyTransformer()
 

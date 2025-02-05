@@ -11,7 +11,7 @@ Creates a new UndoSystem
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| history | Array of [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L100) |  |
+| history | Array of [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L100) |  |
 | index | *number* |  |
 
 ### initEdit( aspects )
@@ -34,7 +34,7 @@ Starts an edit to the current project by saving the state of the provided aspect
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L100)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L100)
 
 ### finishEdit( action[, aspects] )
 Finishes an edit by saving the state of the project after it was changed
@@ -57,7 +57,7 @@ Finishes an edit by saving the state of the project after it was changed
 	* `display_slots`: Array of *string* (Optional)
 	* `exploded_view`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L100)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L100)
 
 ### cancelEdit()
 Cancels an event before it was finished and reset the project to the state before
@@ -71,14 +71,14 @@ Add keyframes to the current edit that were indirectly removed by moving other k
 * `keyframes`: Array of [_Keyframe](keyframe#keyframe-1) -
 
 
-### initSelection( aspects )
+### initSelection( [aspects] )
 Starts a selection change in the current project
 
 ##### Arguments:
-* `aspects`: UndoSelectionAspects - Aspects to save
+* `aspects`: UndoSelectionAspects (Optional) - Aspects to save
 	* `texture_selection`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L100)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L100)
 
 ### finishSelection( action[, aspects] )
 Finishes a selection change in the current project
@@ -88,7 +88,7 @@ Finishes a selection change in the current project
 * `aspects`: UndoSelectionAspects (Optional)
 	* `texture_selection`: *boolean* (Optional)
 
-Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L100)
+Returns: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L100)
 
 ### cancelSelection( [revert_changes] )
 Cancel the selection changes
@@ -115,8 +115,8 @@ Redoes the latest edit
 Provides a menu to amend the latest edit with slightly changed values
 
 ##### Arguments:
-* `form`: [InputFormConfig](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/dialog.d.ts#L110)
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L161)
+* `form`: [InputFormConfig](https://github.com/JannisX11/blockbench-types/blob/8049169/types/dialog.d.ts#L110)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L160)
 
 
 ### closeAmendEditMenu()
@@ -128,8 +128,8 @@ Closes the amend edit menu
 Loads a specific undo save
 
 ##### Arguments:
-* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L33) - The undo save to load
-* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L33) - The current undo save for reference
+* `save`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L33) - The undo save to load
+* `reference`: [UndoSave](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L33) - The current undo save for reference
 * `mode`: `"session"` (Optional) - The load save modes
 
 

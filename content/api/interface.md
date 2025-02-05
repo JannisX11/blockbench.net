@@ -36,7 +36,7 @@ Creates a new ResizeLine
 
 ### setPosition( data )
 ##### Arguments:
-* `data`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/interface.d.ts#L21)
+* `data`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/interface.d.ts#L21)
 
 
 
@@ -45,14 +45,14 @@ Creates a new ResizeLine
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| data | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/interface.d.ts#L31) |  |
+| data | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/interface.d.ts#L31) |  |
 | left_bar_width | *number* |  |
 | right_bar_width | *number* |  |
 | top_panel_height | *number* |  |
 | bottom_panel_height | *number* |  |
-| Resizers | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/interface.d.ts#L48) |  |
-| status_bar | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/interface.d.ts#L57) |  |
-| Panels | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/interface.d.ts#L61) |  |
+| Resizers | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/interface.d.ts#L48) |  |
+| status_bar | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/interface.d.ts#L57) |  |
+| Panels | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/interface.d.ts#L61) |  |
 | text_edit_menu | [Menu](menu#menu-1) |  |
 | center_screen | [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
 | page_wrapper | [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) |  |
@@ -93,13 +93,13 @@ Returns: Array of [Panel](panel#panel-1)
 
 ### addSuggestedModifierKey( key, text )
 ##### Arguments:
-* `key`: `"shift"` or `"alt"` or `"ctrl"`
+* `key`: `"ctrl"` or `"shift"` or `"alt"`
 * `text`: *string*
 
 
 ### removeSuggestedModifierKey( key, text )
 ##### Arguments:
-* `key`: `"shift"` or `"alt"` or `"ctrl"`
+* `key`: `"ctrl"` or `"shift"` or `"alt"`
 * `text`: *string*
 
 

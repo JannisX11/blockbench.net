@@ -20,7 +20,7 @@ Returns: *boolean*
 #### Global Function
 
 ##### Arguments:
-* `condition`: *undefined* or *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L127) - Input condition. Can be undefined, a boolean, a function or a condition any
+* `condition`: *undefined* or *boolean* or [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L127) - Input condition. Can be undefined, a boolean, a function or a condition any
 * `context`: *any* - Reusable data types that can be used by anything, but should not be used to store data between function calls. Can be used to save memory on frequent function calls.
 
 Returns: *boolean*
@@ -74,7 +74,7 @@ Adds an event listener to an element, except that is supports multiple event typ
 ##### Arguments:
 * `element`: [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) - Target Element
 * `events`: *string* - Event types, separated by space characters
-* `func`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L59) - Function
+* `func`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L59) - Function
 * `option`: *any* (Optional) - Option
 
 ## addEventListeners( el, events, func, option )
@@ -196,7 +196,7 @@ Returns: *string*
 * `c`: *any*
 * `d`: *any*
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L80)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L80)
 
 
 ## doRectanglesOverlap( rect1, rect2 )
@@ -217,7 +217,7 @@ Returns: *boolean*
 * `keys`: *any*
 * `dual_level`: *boolean* (Optional)
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L91)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L91)
 
 
 ## get( options, name, defaultValue )
@@ -301,7 +301,7 @@ Returns: *string* or `""`
 ##### Arguments:
 * `int`: *any*
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L100)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L100)
 
 
 ## getAverageRGB( imgEl, blockSize )
@@ -311,7 +311,7 @@ Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/
 * `imgEl`: *any*
 * `blockSize`: *any*
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L109)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L109)
 
 
 ## stringifyLargeInt( int )
@@ -433,7 +433,7 @@ Merge the value under a certain key from one object into another
 * `target`: *object*
 * `source`: *object*
 * `key`: *string* or *number*
-* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L179) (Optional)
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L179) (Optional)
 
 
 ### molang( obj, source[, index] )
@@ -461,7 +461,7 @@ Merge the value under a certain key from one object into another
 * `target`: *object*
 * `source`: *object*
 * `key`: *string* or *number*
-* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L186) (Optional)
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L186) (Optional)
 
 
 ### function( obj, source[, index, validate] )
@@ -484,7 +484,7 @@ Merge the value under a certain key from one object into another
 * `target`: *object*
 * `source`: *object*
 * `key`: *string* or *number*
-* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L192) (Optional)
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L192) (Optional)
 
 
 ### arrayVector2( obj, source[, index, validate] )
@@ -499,7 +499,7 @@ Merge the value under a certain key from one object into another
 * `target`: *object*
 * `source`: *object*
 * `key`: *string* or *number*
-* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/util.d.ts#L198) (Optional)
+* `validate`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/util.d.ts#L198) (Optional)
 
 
 ### function
@@ -552,7 +552,7 @@ Creates a new Rectangle
 | start_y | *number* |  |
 | width | *number* |  |
 | height | *number* |  |
-| start | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) |  |
+| start | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) |  |
 | w | *number* |  |
 | h | *number* |  |
 | end_x | *number* |  |

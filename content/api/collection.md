@@ -95,26 +95,28 @@ Returns: [Collection](collection#collection-1)
 
 ### getUndoCopy()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/collection.d.ts#L54)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/collection.d.ts#L54)
 
 ### getSaveCopy()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/collection.d.ts#L59)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/collection.d.ts#L59)
 
 ### propertiesDialog()
 Opens the properties dialog
 
 
 
-### Collection.all()
-Get all collections
-
-
-Returns: Array of [Collection](collection#collection-1)
-
 ### Collection.selected()
 Get selected collections
 
 
 Returns: Array of [Collection](collection#collection-1)
+
+### all
+Static Property
+
+Type: Array of [Collection](collection#collection-1)
+
+Get all collections
+
 

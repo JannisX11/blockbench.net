@@ -12,6 +12,7 @@ Creates a new Texture
 ##### Arguments:
 * `data`: TextureData (Optional)
 	* `path`: *string* (Optional)
+	* `uuid`: *string* (Optional)
 	* `name`: *string* (Optional)
 	* `folder`: *string* (Optional) - Relative path to the file's directory, used by some formats such as Java Block/Item
 	* `namespace`: *string* (Optional)
@@ -20,9 +21,9 @@ Creates a new Texture
 	* `visible`: *boolean* (Optional)
 	* `render_mode`: *string* (Optional)
 	* `render_sides`: *string* (Optional)
-	* `pbr_channel`: `"normal"` or `"height"` or `"color"` or `"mer"` (Optional)
+	* `pbr_channel`: `"color"` or `"normal"` or `"height"` or `"mer"` (Optional)
 	* `frame_time`: *number* (Optional) - Texture animation frame time
-	* `frame_order_type`: `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` (Optional)
+	* `frame_order_type`: `"custom"` or `"loop"` or `"backwards"` or `"back_and_forth"` (Optional)
 	* `frame_order`: *string* (Optional) - Custom frame order
 	* `frame_interpolate`: *boolean* (Optional) - Interpolate between frames
 	* `saved`: *boolean* (Optional) - Whether the texture is saved
@@ -31,6 +32,7 @@ Creates a new Texture
 	* `width`: *number* (Optional)
 	* `height`: *number* (Optional)
 	* `standalone`: *boolean* (Optional)
+	* `relative_path`: *string* (Optional)
 * `uuid`: *string* (Optional)
 
 
@@ -47,9 +49,9 @@ Creates a new Texture
 | particle | *boolean* | Whether the texture is used for the models particle system. Used by some formats such as Java Block/Item |
 | render_mode | *string* |  |
 | render_sides | *string* |  |
-| pbr_channel | `"normal"` or `"height"` or `"color"` or `"mer"` |  |
+| pbr_channel | `"color"` or `"normal"` or `"height"` or `"mer"` |  |
 | frame_time | *number* | Texture animation frame time |
-| frame_order_type | `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` |  |
+| frame_order_type | `"custom"` or `"loop"` or `"backwards"` or `"back_and_forth"` |  |
 | frame_order | *string* | Custom frame order |
 | frame_interpolate | *boolean* | Interpolate between frames |
 | source | *string* | HTML-style source of the texture's displayed data. Can be a path (desktop app only), or a base64 data URL |
@@ -63,7 +65,7 @@ Creates a new Texture
 | uv_height | *number* |  |
 | currentFrame | *number* |  |
 | saved | *boolean* |  |
-| mode | `"link"` or `"bitmap"` | Whether the latest version of the texture is currently loaded from and linked to a file on disk, or held in memory as bitmap data |
+| mode | *never* | Whether the latest version of the texture is currently loaded from and linked to a file on disk, or held in memory as bitmap data |
 | internal | *boolean* | If true, the texture is loaded internally. If false, the texture is loaded directly from a file |
 | uuid | *string* |  |
 | selection | [IntMatrix](textures#intmatrix) | Texture selection in paint mode |
@@ -72,9 +74,8 @@ Creates a new Texture
 | sync_to_project | *string* | The UUID of the project to sync the texture to |
 | canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) | The texture's associated canvas. Since 4.9, this is the main source of truth for textures in internal mode. |
 | ctx | [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) | The 2D context of the texture's associated canvas. |
-| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/global.d.ts#L27) | Texture image element |
+| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/8049169/types/global.d.ts#L25) | Texture image element |
 | relative_path | *string* |  |
-| material | [ShaderMaterial](#ShaderMaterial) |  |
 | menu | [Menu](menu#menu-1) |  |
 
 ### getErrorMessage()
@@ -85,6 +86,7 @@ Returns: *string*
 ##### Arguments:
 * `data`: TextureData
 	* `path`: *string* (Optional)
+	* `uuid`: *string* (Optional)
 	* `name`: *string* (Optional)
 	* `folder`: *string* (Optional) - Relative path to the file's directory, used by some formats such as Java Block/Item
 	* `namespace`: *string* (Optional)
@@ -93,9 +95,9 @@ Returns: *string*
 	* `visible`: *boolean* (Optional)
 	* `render_mode`: *string* (Optional)
 	* `render_sides`: *string* (Optional)
-	* `pbr_channel`: `"normal"` or `"height"` or `"color"` or `"mer"` (Optional)
+	* `pbr_channel`: `"color"` or `"normal"` or `"height"` or `"mer"` (Optional)
 	* `frame_time`: *number* (Optional) - Texture animation frame time
-	* `frame_order_type`: `"backwards"` or `"custom"` or `"loop"` or `"back_and_forth"` (Optional)
+	* `frame_order_type`: `"custom"` or `"loop"` or `"backwards"` or `"back_and_forth"` (Optional)
 	* `frame_order`: *string* (Optional) - Custom frame order
 	* `frame_interpolate`: *boolean* (Optional) - Interpolate between frames
 	* `saved`: *boolean* (Optional) - Whether the texture is saved
@@ -104,6 +106,7 @@ Returns: *string*
 	* `width`: *number* (Optional)
 	* `height`: *number* (Optional)
 	* `standalone`: *boolean* (Optional)
+	* `relative_path`: *string* (Optional)
 
 Returns: [Texture](textures#texture)
 
@@ -153,7 +156,7 @@ Generate the Java Block/Item folder property from the file path
 Loads the texture from it's current source
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L186) (Optional) - Callback function
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/textures.d.ts#L194) (Optional) - Callback function
 
 Returns: [Texture](textures#texture)
 
@@ -166,13 +169,33 @@ Returns: [Texture](textures#texture)
 
 ### fromFile( file )
 ##### Arguments:
-* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L188)
+* `file`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/textures.d.ts#L196)
 
 Returns: [Texture](textures#texture)
 
 ### fromPath( path )
 ##### Arguments:
 * `path`: *string*
+
+Returns: [Texture](textures#texture)
+
+### loadContentFromPath( path )
+Loads file content **only**.
+
+Does not read 
+
+`png.mcmeta`
+
+, or attempt to overwrite an existing texture in the project with the same name.
+
+Used internally when loading 
+
+`.bbmodel`
+
+ files
+
+##### Arguments:
+* `path`: *string* -
 
 Returns: [Texture](textures#texture)
 
@@ -220,13 +243,13 @@ Reloads the texture. Only works in the desktop app
 Get the material that the texture displays. When previewing PBR, this will return the shared PBR material
 
 
-Returns: [ShaderMaterial](#ShaderMaterial) or [MeshStandardMaterial](#MeshStandardMaterial)
+Returns: [THREE.ShaderMaterial](https://threejs.org/docs/index.html?q=ShaderMaterial#api/en/materials/ShaderMaterial) or [THREE.MeshStandardMaterial](https://threejs.org/docs/index.html?q=MeshStandardMaterial#api/en/materials/MeshStandardMaterial)
 
 ### getOwnMaterial()
 Get the texture's own material
 
 
-Returns: [ShaderMaterial](#ShaderMaterial)
+Returns: [THREE.ShaderMaterial](https://threejs.org/docs/index.html?q=ShaderMaterial#api/en/materials/ShaderMaterial)
 
 ### select( [event] )
 Selects the texture
@@ -265,11 +288,11 @@ Enables 'particle' on this texture if it is not enabled on any other texture
 
 Returns: [Texture](textures#texture)
 
-### apply( all )
+### apply( [all] )
 Applies the texture to the selected elements
 
 ##### Arguments:
-* `all`: *boolean* or `"blank"` - If true, the texture is applied to all faces of the elements. If 'blank', the texture is only applied to blank faces
+* `all`: *boolean* or `"blank"` (Optional) - If true, the texture is applied to all faces of the elements. If 'blank', the texture is only applied to blank faces
 
 Returns: [Texture](textures#texture)
 
@@ -302,9 +325,9 @@ Scroll the texture list to this texture
 
 
 
-### save( as )
+### save( [as] )
 ##### Arguments:
-* `as`: *any*
+* `as`: *any* (Optional)
 
 Returns: [Texture](textures#texture)
 
@@ -320,12 +343,12 @@ Returns the content of the texture as PNG as a base64 encoded data URL
 
 Returns: *string*
 
-### edit( callback, options )
+### edit( [callback, options] )
 Wrapper to do edits to the texture.
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L274) -
-* `options`: TextureEditOptions - Editing options
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/textures.d.ts#L291) (Optional) -
+* `options`: TextureEditOptions (Optional) - Editing options
 	* `method`: `"canvas"` or `"jimp"` (Optional) - Edit method. 'canvas' is default
 	* `edit_name`: *string* (Optional) - Name of the undo entry that is created
 	* `use_cache`: *boolean* (Optional) - Whether to use the cached canvas/jimp instance
@@ -360,7 +383,7 @@ Returns: *string*
 
 ### getMCMetaContent()
 
-Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L291)
+Returns: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/textures.d.ts#L308)
 
 ### getAnimationFrameIndices()
 
@@ -396,7 +419,7 @@ Update the attached img element with the content from the texture's canvas
 If layers are enabled, returns the active layer, otherwise returns the texture. Either way, the 'canvas', 'ctx', and 'offset' properties can be used from the returned object
 
 
-Returns: [TextureLayer](texture_layers#texturelayer) or [Texture](textures#texture)
+Returns: [Texture](textures#texture) or [TextureLayer](texture_layers#texturelayer)
 
 ### syncToOtherProject()
 When editing the same texture in different tabs (via Edit In Blockbench option), sync changes that were made to the texture to other projects
@@ -407,6 +430,16 @@ Returns: [Texture](textures#texture)
 ### Texture.getDefault()
 
 Returns: [Texture](textures#texture)
+
+### selected
+Static Property
+
+Type: [Texture](textures#texture)
+
+
+### material
+Accessor
+
 
 ### all
 Static Property
@@ -539,7 +572,7 @@ Change the size of the matrix. Unless using overrides, the selection gets lost.
 Run a method on each pixel, whether selected or not
 
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/textures.d.ts#L424) - Function to run per pixel
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/textures.d.ts#L441) - Function to run per pixel
 
 
 ### translate( offset_x, offset_y )
@@ -561,7 +594,7 @@ Mask the provided canvas using the selection
 
 ##### Arguments:
 * `ctx`: [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) - Canvas 2D context
-* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) - Position offset of the canvas, e. g. when using a layer
+* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) - Position offset of the canvas, e. g. when using a layer
 
 
 

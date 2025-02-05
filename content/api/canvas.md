@@ -10,25 +10,25 @@ A global namespace handling miscellaneous functionality related to the 3D previe
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| materials | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L50) |  |
-| emptyMaterials | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L53) |  |
-| meshes | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L56) |  |
-| bones | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L59) |  |
-| scene | [THREE.Scene](#THREE.Scene) | Main scene, shared across all tabs |
+| materials | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L50) |  |
+| emptyMaterials | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L53) |  |
+| meshes | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L56) |  |
+| bones | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L59) |  |
+| scene | [THREE.Scene](https://threejs.org/docs/index.html?q=scene#api/en/scenes/Scene) | Main scene, shared across all tabs |
 | gizmos | Array | List of the gizmos (control and UI elements) in the 3D scene |
-| outlineMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) | The material used for all selection outlines |
-| meshOutlineMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) |  |
-| onionSkinEarlierMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) |  |
-| onionSkinLaterMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) |  |
-| wireframeMaterial | [THREE.MeshBasicMaterial](#THREE.MeshBasicMaterial) | The material used for the wireframe view |
-| solidMaterial | [THREE.ShaderMaterial](#THREE.ShaderMaterial) |  |
-| normalHelperMaterial | [THREE.ShaderMaterial](#THREE.ShaderMaterial) |  |
-| uvHelperMaterial | [THREE.ShaderMaterial](#THREE.ShaderMaterial) |  |
-| meshVertexMaterial | [THREE.PointsMaterial](#THREE.PointsMaterial) |  |
-| transparentMaterial | [THREE.MeshBasicMaterial](#THREE.MeshBasicMaterial) |  |
-| gridMaterial | [THREE.LineBasicMaterial](#THREE.LineBasicMaterial) | The material used for the grids |
+| outlineMaterial | [THREE.LineBasicMaterial](https://threejs.org/docs/index.html?q=LineBasicMaterial#api/en/materials/LineBasicMaterial) | The material used for all selection outlines |
+| meshOutlineMaterial | [THREE.LineBasicMaterial](https://threejs.org/docs/index.html?q=LineBasicMaterial#api/en/materials/LineBasicMaterial) |  |
+| onionSkinEarlierMaterial | [THREE.LineBasicMaterial](https://threejs.org/docs/index.html?q=LineBasicMaterial#api/en/materials/LineBasicMaterial) |  |
+| onionSkinLaterMaterial | [THREE.LineBasicMaterial](https://threejs.org/docs/index.html?q=LineBasicMaterial#api/en/materials/LineBasicMaterial) |  |
+| wireframeMaterial | [THREE.MeshBasicMaterial](https://threejs.org/docs/index.html?q=MeshBasicMaterial#api/en/materials/MeshBasicMaterial) | The material used for the wireframe view |
+| solidMaterial | [THREE.ShaderMaterial](https://threejs.org/docs/index.html?q=ShaderMaterial#api/en/materials/ShaderMaterial) |  |
+| normalHelperMaterial | [THREE.ShaderMaterial](https://threejs.org/docs/index.html?q=ShaderMaterial#api/en/materials/ShaderMaterial) |  |
+| uvHelperMaterial | [THREE.ShaderMaterial](https://threejs.org/docs/index.html?q=ShaderMaterial#api/en/materials/ShaderMaterial) |  |
+| meshVertexMaterial | [THREE.PointsMaterial](https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial) |  |
+| transparentMaterial | [THREE.MeshBasicMaterial](https://threejs.org/docs/index.html?q=MeshBasicMaterial#api/en/materials/MeshBasicMaterial) |  |
+| gridMaterial | [THREE.LineBasicMaterial](https://threejs.org/docs/index.html?q=LineBasicMaterial#api/en/materials/LineBasicMaterial) | The material used for the grids |
 | pivot_marker | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) |  |
-| global_light_color | [THREE.Color](#THREE.Color) |  |
+| global_light_color | [THREE.Color](https://threejs.org/docs/index.html?q=color#api/en/math/Color) |  |
 | global_light_side | *number* |  |
 | face_order | Array |  |
 
@@ -44,7 +44,7 @@ Returns: *any*
 Execute the callback function without any gizmos, grids and helpers visible
 
 ##### Arguments:
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L105)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L105)
 
 
 ### clear()
@@ -64,7 +64,7 @@ Updates selected aspects of the preview
 ##### Arguments:
 * `options`: UpdateViewOptions -
 	* `elements`: Array of [OutlinerElement](outliner#outlinerelement) (Optional) - List of elements to update
-	* `element_aspects`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L10) (Optional) - Which aspects of the elements to update
+	* `element_aspects`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L10) (Optional) - Which aspects of the elements to update
 	* `groups`: Array of [Group](group#group-1) (Optional) - Groups to update
 	* `selection`: *boolean* (Optional) - Whether to update the selection (updates the selection outlines and interface)
 
@@ -244,7 +244,7 @@ setup(element) {
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | type |  |  |
-| events | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L253) |  |
+| events | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L256) |  |
 | mesh | [THREE.Object3D](https://threejs.org/docs/index.html#api/en/core/Object3D) or [Mesh](mesh#mesh-1) |  |
 
 ### dispatchEvent( event_name, data )
@@ -258,7 +258,7 @@ Adds an event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L261)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L264)
 
 
 ### once( event_name, cb )
@@ -266,7 +266,7 @@ Adds a single-use event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L265)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L268)
 
 
 ### removeListener( event_name, cb )
@@ -274,7 +274,7 @@ Removes an event listener
 
 ##### Arguments:
 * `event_name`: *string*
-* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/canvas.d.ts#L269)
+* `cb`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/canvas.d.ts#L272)
 
 
 ### setup( element )

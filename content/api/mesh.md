@@ -14,7 +14,7 @@ Creates a new MeshFace
 * `data`: MeshFaceOptions
 	* `texture`: [Texture](textures#texture) (Optional)
 	* `vertices`: Array of *string*
-	* `uv`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L23)
+	* `uv`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L23)
 
 
 | Property | Type | Description |
@@ -22,7 +22,7 @@ Creates a new MeshFace
 | texture | *undefined* or *string* or `false` |  |
 | vertices | Array of *string* | The vertices that make up the face, as vertex keys. The vertices go around the face counter-clockwise when looking at the front side of the face. That also means that reversing the vertex order reverses the face direction. |
 | mesh | [Mesh](mesh#mesh-1) |  |
-| uv | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L32) |  |
+| uv | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L32) |  |
 
 ### getTexture()
 
@@ -56,7 +56,7 @@ Returns: [Face](cube#face)
 * `data`: MeshFaceOptions
 	* `texture`: [Texture](textures#texture) (Optional)
 	* `vertices`: Array of *string*
-	* `uv`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L23)
+	* `uv`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L23)
 
 
 ### getNormal( normalize[, alt_tri] )
@@ -66,17 +66,17 @@ Returns the face normal in mesh space as calculated from the vertex positions
 * `normalize`: *boolean* - If true, the values will be normalized.
 * `alt_tri`: *boolean* (Optional) - On quads, if true, this will return the normal of the second tri instead of the first
 
-Returns: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+Returns: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 
 ### getOccupationMatrix( [texture_space, start_offset, matrix] )
 Calculates which pixels the UV face occupies, and returns them as a map
 
 ##### Arguments:
 * `texture_space`: *boolean* (Optional)
-* `start_offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) (Optional)
-* `matrix`: [OccupationMatrix](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L2) (Optional)
+* `start_offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional)
+* `matrix`: [OccupationMatrix](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L2) (Optional)
 
-Returns: [OccupationMatrix](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L2)
+Returns: [OccupationMatrix](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L2)
 
 ### getUVIsland()
 Get the keys of this face and all faces that are connected with it on the UV map
@@ -115,7 +115,7 @@ Get the adjacent face in the specified side
 ##### Arguments:
 * `side_index`: *number*
 
-Returns: `null` or [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L75)
+Returns: `null` or [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L75)
 
 ### getFaceKey()
 Returns the face key
@@ -127,7 +127,7 @@ Returns: *string*
 Takes a UV coordinate and turns it into a 3D space coordinate in local space of the mesh. On quads, the first triangle is used for calculation, so the coordinates on warped quads may be inaccurate.
 
 ##### Arguments:
-* `uv`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4)
+* `uv`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4)
 
 Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3)
 
@@ -137,13 +137,13 @@ Takes a 3D coordinate in local space of the mesh, and turns it into a coordinate
 ##### Arguments:
 * `vector`: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3)
 
-Returns: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4)
+Returns: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4)
 
 ### getCenter()
 Get the face center by weight in local space
 
 
-Returns: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+Returns: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 
 
 ## Mesh
@@ -153,7 +153,7 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new Mesh
 
 ##### Arguments:
-* `options`: [MeshOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L10)
+* `options`: [MeshOptions](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L10)
 * `uuid`: *string* (Optional)
 
 
@@ -161,9 +161,9 @@ Creates a new Mesh
 | -------- | ---- | ----------- |
 | visibility | *boolean* |  |
 | color | *number* |  |
-| vertices | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L110) |  |
-| faces | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L113) |  |
-| seams | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L116) |  |
+| vertices | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L110) |  |
+| faces | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L113) |  |
+| seams | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L116) |  |
 | name | *string* |  |
 | uuid | *string* |  |
 | export | *boolean* |  |
@@ -175,7 +175,7 @@ Creates a new Mesh
 
 ### extend( options )
 ##### Arguments:
-* `options`: [MeshOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L10)
+* `options`: [MeshOptions](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L10)
 
 Returns: [Mesh](mesh#mesh-1)
 ### extend( data )
@@ -184,9 +184,9 @@ Returns: [Mesh](mesh#mesh-1)
 	* `name`: *string* (Optional)
 	* `color`: *number* (Optional)
 	* `visibility`: *boolean* (Optional)
-	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) (Optional)
-	* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) (Optional)
-	* `vertices`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L16) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `vertices`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L16) (Optional)
 
 
 ### getSelectedVertices( can_write )
@@ -214,15 +214,15 @@ Returns: Array of Array
 
 ### setSeam( edge, value )
 ##### Arguments:
-* `edge`: [MeshEdge](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L7)
+* `edge`: [MeshEdge](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L7)
 * `value`: *any*
 
 
 ### getSeam( edge )
 ##### Arguments:
-* `edge`: [MeshEdge](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L7)
+* `edge`: [MeshEdge](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L7)
 
-Returns: [MeshSeamValue](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L9)
+Returns: [MeshSeamValue](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L9)
 
 ### getWorldCenter( [ignore_mesh_selection] )
 ##### Arguments:
@@ -232,7 +232,7 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 
 ### addVertices( ArrayVector3 )
 ##### Arguments:
-* `ArrayVector3`: Array of [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+* `ArrayVector3`: Array of [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 
 Returns: Array of *string*
 
@@ -260,12 +260,12 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 
 ### forAllFaces( callback )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L147)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L147)
 
 
 ### transferOrigin( origin[, update] )
 ##### Arguments:
-* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 * `update`: *boolean* (Optional)
 
 
@@ -278,7 +278,7 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 ##### Arguments:
 * `axis`: *number*
 * `steps`: *number*
-* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) (Optional)
+* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
 
 
 ### flip( axis )
@@ -288,7 +288,7 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 
 ### moveVector( offset, axis[, update] )
 ##### Arguments:
-* `offset`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+* `offset`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 * `axis`: *number*
 * `update`: *boolean* (Optional)
 
@@ -392,9 +392,9 @@ Displays the context menu of the element
 
 Returns: [Mesh](mesh#mesh-1)
 
-### getSaveCopy( [project] )
+### getSaveCopy( args )
 ##### Arguments:
-* `project`: *boolean* (Optional)
+* `args`: Array of *any*
 
 Returns: [Record](#Record)
 
@@ -443,13 +443,13 @@ Type: Array of [Mesh](mesh#mesh-1)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L165)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L165)
 
 
 ### hasSelected
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mesh.d.ts#L167)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mesh.d.ts#L167)
 
 
 ### properties
@@ -461,7 +461,7 @@ Type: [Record](#Record)
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L64)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L64)
 
 
 ### animator

@@ -14,9 +14,12 @@ Creates a new Mode
 ##### Arguments:
 * `id`: *string*
 * `options`: ModeOptions
+	* `id`: *string*
 	* `name`: *string*
+	* `icon`: *string* (Optional)
 	* `default_tool`: *string* (Optional)
 	* `selectElements`: *boolean* (Optional)
+	* `category`: *string* (Optional)
 	* `hidden_node_types`: Array of *string* (Optional) - Hide certain types of nodes in the outliner, like cubes and meshes in animation mode
 	* `hide_toolbars`: *boolean* (Optional)
 	* `hide_sidebars`: *boolean* (Optional)
@@ -26,11 +29,14 @@ Creates a new Mode
 	* `onSelect`: Function (Optional)
 	* `onUnselect`: Function (Optional)
 
+### new Mode( options )
+*Alternative constructor signature*
+
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | keybind | [Keybind](action#keybind) |  |
-| variations | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/action.d.ts#L119) |  |
+| variations | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/action.d.ts#L131) |  |
 | id | *string* |  |
 | name | *string* |  |
 
@@ -70,7 +76,7 @@ Type: [Mode](mode#mode-1)
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| options | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/mode.d.ts#L39) |  |
+| options | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/mode.d.ts#L43) |  |
 | selected | [Mode](mode#mode-1) or `false` or *undefined* |  |
 | animate | *boolean* or *undefined* |  |
 | display | *boolean* or *undefined* |  |

@@ -36,25 +36,25 @@ Creates a new ModelProject
 | mode | *string* |  |
 | view_mode | *string* |  |
 | display_uv | *string* |  |
-| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L44) |  |
+| previews | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L44) |  |
 | EditSession | [EditSession](project#editsession) |  |
 | elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | groups | Array of [Group](group#group-1) |  |
 | selected_elements | Array of [OutlinerElement](outliner#outlinerelement) |  |
 | selected_group | `null` or [Group](group#group-1) |  |
-| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L53) |  |
+| mesh_selection | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L53) |  |
 | selected_faces | Array of *any* |  |
 | textures | Array of [Texture](textures#texture) |  |
 | selected_texture | `null` or [Texture](textures#texture) |  |
 | outliner | Array of [OutlinerNode](outliner#outlinernode) |  |
 | animations | Array of [_Animation](animation#animation-1) |  |
 | timeline_animators | Array |  |
-| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L66) |  |
+| display_settings | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L66) |  |
 | overrides | *any* |  |
 | exploded_view | *boolean* |  |
 | tool | *string* |  |
-| uv_viewport | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L78) |  |
-| backgrounds | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L83) |  |
+| uv_viewport | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L78) |  |
+| backgrounds | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L83) |  |
 | unhandled_root_fields | *any* |  |
 | ambientocclusion | *boolean* |  |
 | front_gui_light | *boolean* |  |
@@ -68,7 +68,7 @@ Returns: *string*
 
 ### whenNextOpen( callback )
 ##### Arguments:
-* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L97)
+* `callback`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L97)
 
 
 ### select()
@@ -93,7 +93,7 @@ Returns: [Promise](#Promise)
 ### properties
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/project.d.ts#L11)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/project.d.ts#L11)
 
 
 ### model_3d
@@ -215,7 +215,7 @@ Creates a new EditSession
 
 ### sendEdit( entry )
 ##### Arguments:
-* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/undo.d.ts#L100)
+* `entry`: [UndoEntry](https://github.com/JannisX11/blockbench-types/blob/8049169/types/undo.d.ts#L100)
 
 
 ### receiveData( tag )

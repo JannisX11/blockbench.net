@@ -11,7 +11,7 @@ Creates a new AnimationControllerState
 * `controller`: [AnimationController](animation_controller#animationcontroller)
 * `options`: AnimationControllerStateOptions (Optional)
 	* `name`: *string* (Optional)
-	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L3) (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L3) (Optional)
 	* `transitions`: Array of *any* (Optional)
 	* `sounds`: Array of *any* (Optional)
 	* `particles`: Array of *any* (Optional)
@@ -26,10 +26,10 @@ Creates a new AnimationControllerState
 | controller | [AnimationController](animation_controller#animationcontroller) |  |
 | uuid | *string* |  |
 | name | *string* |  |
-| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L38) |  |
-| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L46) |  |
+| fold | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L38) |  |
+| muted | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L46) |  |
 | playing_sounds | Array of [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) |  |
-| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L14) |  |
+| animations | Array of [StateAnimation](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L14) |  |
 | transitions | Array of *any* |  |
 | sounds | Array of *any* |  |
 | particles | Array of *any* |  |
@@ -42,7 +42,7 @@ Creates a new AnimationControllerState
 ##### Arguments:
 * `data`: AnimationControllerStateOptions
 	* `name`: *string* (Optional)
-	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L3) (Optional)
+	* `animations`: Array of [StateAnimationInput](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L3) (Optional)
 	* `transitions`: Array of *any* (Optional)
 	* `sounds`: Array of *any* (Optional)
 	* `particles`: Array of *any* (Optional)
@@ -97,12 +97,12 @@ Returns: *any*
 
 ### addParticle( [options] )
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L73) (Optional)
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L73) (Optional)
 
 
 ### addSound( [options] )
 ##### Arguments:
-* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/animation_controller.d.ts#L74) (Optional)
+* `options`: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/animation_controller.d.ts#L74) (Optional)
 
 
 ### openMenu( event )

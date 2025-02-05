@@ -10,7 +10,21 @@ Extends: [OutlinerElement](outliner#outlinerelement)
 Creates a new Cube
 
 ##### Arguments:
-* `options`: [ICubeOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L4)
+* `options`: ICubeOptions
+	* `name`: *string* (Optional)
+	* `autouv`: `0` or `2` or `1` (Optional)
+	* `shade`: *boolean* (Optional)
+	* `mirror_uv`: *boolean* (Optional)
+	* `inflate`: *number* (Optional)
+	* `color`: *number* (Optional)
+	* `visibility`: *boolean* (Optional)
+	* `from`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `to`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `box_uv`: *boolean* (Optional)
+	* `uv_offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional) - UV position for box UV mode
+	* `faces`: [Record](#Record) (Optional)
 * `uuid`: *string* (Optional)
 
 
@@ -24,14 +38,14 @@ Creates a new Cube
 | mirror_uv | *boolean* | UV mirror across the X axis when using Box UV |
 | inflate | *number* | Inflate adds an inflation value to all sides equally |
 | visibility | *boolean* | Visibility of the cube in the viewport |
-| from | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) |  |
-| to | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) |  |
-| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) |  |
-| origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) |  |
-| faces | [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L53) |  |
+| from | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) |  |
+| to | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) |  |
+| rotation | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) |  |
+| origin | [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) |  |
+| faces | [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L53) |  |
 | rescale | *boolean* |  |
 | rotation_axis | `"x"` or `"y"` or `"z"` |  |
-| uv_offset | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) | UV position for box UV mode |
+| uv_offset | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) | UV position for box UV mode |
 | mesh |  |  |
 | preview_controller | [NodePreviewController](canvas#nodepreviewcontroller) |  |
 | export | *boolean* |  |
@@ -42,7 +56,21 @@ Creates a new Cube
 
 ### extend( options )
 ##### Arguments:
-* `options`: [ICubeOptions](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L4)
+* `options`: ICubeOptions
+	* `name`: *string* (Optional)
+	* `autouv`: `0` or `2` or `1` (Optional)
+	* `shade`: *boolean* (Optional)
+	* `mirror_uv`: *boolean* (Optional)
+	* `inflate`: *number* (Optional)
+	* `color`: *number* (Optional)
+	* `visibility`: *boolean* (Optional)
+	* `from`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `to`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `rotation`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) (Optional)
+	* `box_uv`: *boolean* (Optional)
+	* `uv_offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional) - UV position for box UV mode
+	* `faces`: [Record](#Record) (Optional)
 
 Returns: [Cube](cube#cube-1)
 
@@ -53,7 +81,7 @@ Calculates and returns the size of a cube across a certain axis. If the axis arg
 * `axis`: *number* (Optional)
 * `floored`: *boolean* (Optional)
 
-Returns: *number* or [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+Returns: *number* or [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 
 ### rotationAxis()
 
@@ -76,7 +104,7 @@ Rotate the cube around axis in 90 degree steps
 ##### Arguments:
 * `axis`: *number* - Axis index
 * `steps`: *number* - Number of steps
-* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3) - Rotation pivot
+* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3) - Rotation pivot
 
 
 ### flip( axis, center[, skipUV] )
@@ -90,7 +118,7 @@ Rotate the cube around axis in 90 degree steps
 Transfer the origin to a new position, while updating from and to to keep the same visual position.
 
 ##### Arguments:
-* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+* `origin`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 * `update`: *boolean* (Optional)
 
 
@@ -100,7 +128,7 @@ Returns: [THREE.Vector3](https://threejs.org/docs/index.html#api/en/math/Vector3
 
 ### getGlobalVertexPositions()
 
-Returns: Array of [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+Returns: Array of [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 
 ### setUVMode( box_uv )
 ##### Arguments:
@@ -115,7 +143,7 @@ Returns: Array of [ArrayVector3](https://github.com/JannisX11/blockbench-types/b
 ### applyTexture( texture, faces )
 ##### Arguments:
 * `texture`: [Texture](textures#texture)
-* `faces`: *undefined* or `true` or Array of [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L137)
+* `faces`: *undefined* or `true` or Array of [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L137)
 
 
 ### mapAutoUV()
@@ -123,7 +151,7 @@ Returns: Array of [ArrayVector3](https://github.com/JannisX11/blockbench-types/b
 
 ### moveVector( offset, axis[, update] )
 ##### Arguments:
-* `offset`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L3)
+* `offset`: [ArrayVector3](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L3)
 * `axis`: *number*
 * `update`: *boolean* (Optional)
 
@@ -266,13 +294,13 @@ Type: Array of [Cube](cube#cube-1)
 ### hasAny
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L107)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L107)
 
 
 ### hasSelected
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L109)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L109)
 
 
 ### preview_controller
@@ -290,7 +318,7 @@ Type: [Record](#Record)
 ### uuids
 Static Property
 
-Type: [See types](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L64)
+Type: [See types](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L64)
 
 
 ### animator
@@ -359,13 +387,13 @@ Extends: [Face](cube#face)
 Creates a new CubeFace
 
 ##### Arguments:
-* `direction`: [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L137)
+* `direction`: [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L137)
 * `data`: CubeFaceOptions
 	* `texture`: [Texture](textures#texture) (Optional)
 	* `uv`: Array (Optional)
 	* `rotation`: *number* (Optional)
 	* `tint`: *number* (Optional)
-	* `cullface`: `""` or [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L137) (Optional)
+	* `cullface`: `""` or [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L137) (Optional)
 	* `material_name`: *string* (Optional)
 	* `enabled`: *boolean* (Optional)
 * `cube`: [Cube](cube#cube-1)
@@ -375,12 +403,12 @@ Creates a new CubeFace
 | -------- | ---- | ----------- |
 | texture | *undefined* or *string* or `false` |  |
 | cube | [Cube](cube#cube-1) |  |
-| direction | [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L137) |  |
+| direction | [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L137) |  |
 | uv | Array |  |
 | uv_size |  |  |
 | rotation | *number* |  |
 | tint | *number* |  |
-| cullface | `""` or [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L137) |  |
+| cullface | `""` or [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L137) |  |
 | material_name | *string* |  |
 | enabled | *boolean* |  |
 
@@ -418,7 +446,7 @@ Returns: [Face](cube#face)
 	* `uv`: Array (Optional)
 	* `rotation`: *number* (Optional)
 	* `tint`: *number* (Optional)
-	* `cullface`: `""` or [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/cube.d.ts#L137) (Optional)
+	* `cullface`: `""` or [CubeFaceDirection](https://github.com/JannisX11/blockbench-types/blob/8049169/types/cube.d.ts#L137) (Optional)
 	* `material_name`: *string* (Optional)
 	* `enabled`: *boolean* (Optional)
 

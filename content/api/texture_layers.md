@@ -13,11 +13,11 @@ Creates a new TextureLayer
 * `data`: TextureLayerData
 	* `name`: *string* (Optional)
 	* `in_limbo`: *boolean* (Optional)
-	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) (Optional)
-	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) (Optional)
+	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional)
+	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional)
 	* `opacity`: *number* (Optional)
 	* `visible`: *boolean* (Optional)
-	* `blend_mode`: `"add"` or `"default"` or `"color"` or `"difference"` or `"multiply"` or `"screen"` or `"set_opacity"` (Optional)
+	* `blend_mode`: `"default"` or `"color"` or `"set_opacity"` or `"multiply"` or `"add"` or `"screen"` or `"difference"` (Optional)
 	* `image_data`: [ImageData](#ImageData) (Optional)
 	* `data_url`: *string* (Optional)
 * `texture`: [Texture](textures#texture)
@@ -32,23 +32,23 @@ Creates a new TextureLayer
 | canvas | [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) |  |
 | ctx | [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) |  |
 | in_limbo | *boolean* |  |
-| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/global.d.ts#L27) |  |
-| offset | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) | Layer offset from the top left corner of the texture to the top left corner of the layer |
-| scale | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) | Layer scale. This is only used by the layer transform tool and should be applied and reset to 1x1 before doing further changes |
+| img | [HTMLImageElement](https://github.com/JannisX11/blockbench-types/blob/8049169/types/global.d.ts#L25) |  |
+| offset | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) | Layer offset from the top left corner of the texture to the top left corner of the layer |
+| scale | [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) | Layer scale. This is only used by the layer transform tool and should be applied and reset to 1x1 before doing further changes |
 | opacity | *number* |  |
 | visible | *boolean* |  |
-| blend_mode | `"add"` or `"default"` or `"color"` or `"difference"` or `"multiply"` or `"screen"` or `"set_opacity"` |  |
+| blend_mode | `"default"` or `"color"` or `"set_opacity"` or `"multiply"` or `"add"` or `"screen"` or `"difference"` |  |
 
 ### extend( data )
 ##### Arguments:
 * `data`: TextureLayerData
 	* `name`: *string* (Optional)
 	* `in_limbo`: *boolean* (Optional)
-	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) (Optional)
-	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) (Optional)
+	* `offset`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional)
+	* `scale`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) (Optional)
 	* `opacity`: *number* (Optional)
 	* `visible`: *boolean* (Optional)
-	* `blend_mode`: `"add"` or `"default"` or `"color"` or `"difference"` or `"multiply"` or `"screen"` or `"set_opacity"` (Optional)
+	* `blend_mode`: `"default"` or `"color"` or `"set_opacity"` or `"multiply"` or `"add"` or `"screen"` or `"difference"` (Optional)
 	* `image_data`: [ImageData](#ImageData) (Optional)
 	* `data_url`: *string* (Optional)
 
@@ -126,7 +126,7 @@ Merge this texture onto the texture below
 Expand the layer to include the listed pixels
 
 ##### Arguments:
-* `points`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/7f54313/types/outliner.d.ts#L4) -
+* `points`: [ArrayVector2](https://github.com/JannisX11/blockbench-types/blob/8049169/types/outliner.d.ts#L4) -
 
 
 ### flip( axis, undo )
