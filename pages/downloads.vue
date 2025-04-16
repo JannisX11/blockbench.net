@@ -90,8 +90,8 @@
 						Desktop App
 						<ul>
 							<li><b>Windows</b> 10 or newer (64 bit)</li>
-							<li><b>macOS</b> 10.15 (Catalina) or newer</li>
-							<li><b>Linux</b> Ubuntu 12.04, Debian 8, Fedora 21 or newer (64 bit)</li>
+							<li><b>macOS</b> 11 (Big Sur) or newer</li>
+							<li><b>Linux</b> Ubuntu 18.04, Debian 10, Fedora 32 or newer (64 bit)</li>
 							<li>2+ GB of empty storage space</li>
 						</ul>
 					</li>
