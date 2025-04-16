@@ -95,6 +95,15 @@
 							<li>2+ GB of empty storage space</li>
 						</ul>
 					</li>
+					<li>
+						Web App
+						<ul>
+							<li><b>Chrome/Edge</b> 80+</li>
+							<li><b>Firefox</b> 74+</li>
+							<li><b>Opera</b> 67+</li>
+							<li><b>Safari on iOS</b> 13.4+</li>
+						</ul>
+					</li>
 					<li>4 GB RAM</li>
 					<li>1280 x 720 display</li>
 					<li>Intel HD Graphics 4000 or Nvidia/AMD equivalent, or newer</li>
