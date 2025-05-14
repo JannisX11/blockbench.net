@@ -2,8 +2,10 @@
 	<div id="page_flow">
 		<content class="content error_page">
 			<img src="~assets/error.png" />
-			<h1>{{ (error.statusCode == 404 || error.statusCode == 500) ? 'Sorry, we could not find this page 😕' : error.message }}</h1>
+			<h1 v-if="error.statusCode == 404">Sorry, we could not find this page 😕</h1>
+			<h1 v-else>We encountered an error 😕</h1>
 			<p>{{ error.statusCode }}</p>
+			<p v-if="error.statusCode != 404">{{ error.message }}</p>
 		</content>
 	</div>
 </template>
