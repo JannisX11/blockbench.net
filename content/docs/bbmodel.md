@@ -23,6 +23,28 @@ The following section describes recent breaking changes within the format:
 
 Note that additions and non-breaking changes are not listed on this page. This includes new features that have been added to the format, but don't impact how the rest of the format works.
 
+* ### 5.0
+	Planned to release with Blockbench 5.0 in Summer 2025
+
+	* Groups and outliner hierarchy are now saved as separate fields. "groups" now saves groups, the outliner hierarchy is saved in "outliner" without any group data:
+		```js
+		"groups": [...],
+		"outliner": [
+			{
+				"uuid": "0396ecb8-33d8-ca4a-d1d2-d756c50123ae",
+				"isOpen": true,
+				"children": [
+					{
+						"uuid": "b147a4cf-3f58-9e94-8f4c-b7b0657c3c56",
+						"isOpen": true,
+						"children": ["36d606d8-1baa-08f0-e4e6-f70f2f2e3657", "7594f374-dece-aa7b-e553-4dca3c243b1f"]
+					}
+				]
+			}
+		]
+		```
+	* Keyframe value direction has been fixed. Values were inverted on the X axis for position keyframes and on the X and Y axis for rotation. Starting with this version, that is no longer the case.
+
 * ### 4.10
 	Released with Blockbench 4.10, May 9th 2024
 
