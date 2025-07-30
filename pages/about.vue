@@ -19,7 +19,8 @@
 			<h2>Contact</h2>
 			<p>For help with Blockbench, please use the help channels on the Blockbench Discord server.</p>
 			<p><a target="_blank" rel="noopener" href="https://discord.gg/blockbench">Discord Server</a></p>
-			<p>Business E-Mail: info@blockbench.net</p>
+			
+			<p>Or visit the subreddit: <a target="_blank" rel="noopener" href="https://www.reddit.com/r/Blockbench/">r/Blockbench</a></p>
 
 		</content>
 	</div>

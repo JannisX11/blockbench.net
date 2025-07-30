@@ -10,7 +10,7 @@
 			24991 Freienwill<br>
 			Germany</p>
 			<h4>Contact</h4>
-			<p>E-Mail: <a href="mailto:info@blockbench.net">info@blockbench.net</a>.</p>
+			<p>E-Mail: info (at) blockbench dot net</p>
 
 		</div>
 	</div>
