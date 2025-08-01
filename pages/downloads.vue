@@ -234,7 +234,8 @@ export default {
 		color: var(--dark-hover);
 	}
 	.install_os a:hover {
-		transform: scale(1.06);
+		text-decoration: underline;
+		transform: translateY(-1px);
 	}
 	a.blockbench_download > * {
 		cursor: inherit;

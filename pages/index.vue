@@ -205,7 +205,7 @@ export default {
 		transition: transform 800ms ease;
 	}
 	#front_page_app:hover {
-		transform: scale(1.08);
+		transform: translateY(-3px);
 	}
 	section.download button {
 		padding: 0;
@@ -272,7 +272,7 @@ export default {
 	}
 	#blockbench_user_list > a:hover {
 		background-color: var(--light-ui);
-		transform: scale(1.1);
+		transform: translateY(-3px);
 	}
 	#blockbench_user_list > a > img {
 		height: 60px;
