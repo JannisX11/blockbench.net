@@ -43,7 +43,7 @@ This is done using the function `invertMolang(molang: string | number)`, which i
 
 In past versions, all node APIs were available to plugins by default on the desktop version. This is changing in version 5.0 to give users more control and trust over what plugins can and cannot access.
 
-* The global variables to access these modules (such as `fs`) have been removed.
+* The global variables to access most modules (such as `fs`) have been removed. `PathModule` is still available to use the Node `path` module.
 * Some modules with limited abilities can still be accessed via `require()`. This list includes modules like "path", "url", and "timers".
 * Other APIs can be requested via `require()`, but open a prompt when called to let the user select their preference. Users can either allow, or deny a request, or always allow it for a certain plugin.
 * If the user accepts the request, the module will be returned synchronously. If not, the request will return `undefined`.

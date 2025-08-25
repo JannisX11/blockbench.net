@@ -172,6 +172,8 @@ export default {
 			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases?per_page=1');
 			let [release] = await response.json();
 
+			if (!release.tag_name) throw 'Cannot find selected version';
+
 			data.version = release.tag_name.replace(/^v/, '')
 			data.name = release.name
 			data.type = 'Latest Prerelease'
@@ -179,6 +181,8 @@ export default {
 		} else {
 			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
 			let release = await response.json();
+
+			if (!release.tag_name) throw 'Unable to access GitHub API';
 
 			data.version = release.tag_name.replace(/^v/, '')
 			data.name = release.name

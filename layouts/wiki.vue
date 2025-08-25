@@ -70,6 +70,12 @@ export default {
 		background-color: var(--light-background);
 		border-left: 10px solid #f53040e0;
 	}
+	blockquote {
+		margin-bottom: 8px;
+		padding: 18px 16px;
+		background-color: var(--light-background);
+		border-left: 4px solid var(--accent);
+	}
 
 	/* TOC */
 	@media only screen and (min-width: 800px) {
