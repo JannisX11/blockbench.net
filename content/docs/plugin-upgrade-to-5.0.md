@@ -59,7 +59,9 @@ const os = requireNativeModule('os');`
 
 You can add a custom message when requiring a module to let the user know what the permission will be used for:
 ```javascript
-const child_process = requireNativeModule('child_process', {message: 'This permission is required to open ffmpeg and encode the video.'});`
+const child_process = requireNativeModule('child_process', {
+	message: 'This permission is required to open ffmpeg and encode the video.'
+});`
 ```
 
 ### Scoped File System
@@ -85,6 +87,7 @@ This interface contains information that you might have otherwise needed the `os
 SystemInfo.platform: 'win32' | 'darwin' | 'linux'
 SystemInfo.home_directory: 'path/to/home'
 SystemInfo.arch: 'x64' | 'arm64'
+SystemInfo.appdata_directory: 'C:\\Users\\Name\\AppData\\Roaming'
 SystemInfo.os_version: 'Windows 11 Home' ...
 ```
 
@@ -170,5 +173,7 @@ You can install the types from `blockbench-types`. Use the tag `@beta` to instal
 ```batch
 npm i --save-dev blockbench-types@beta
 ```
+
+Check out this template repository if you want to learn how to set up your plugin project with typescript and esbuild: [bb-plugin-template-esbuild](https://github.com/JannisX11/bb-plugin-template-esbuild)
 
 Please reach out on the Discord Server if you have any feedback or questions about these changes.
