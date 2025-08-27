@@ -49,12 +49,17 @@ In past versions, all node APIs were available to plugins by default on the desk
 * If the user accepts the request, the module will be returned synchronously. If not, the request will return `undefined`.
 
 <div class="block-info">
-Modules should be requested on demand rather than on plugin load, so that users know what the permission is needed for and are not bombarded with dialogs when installing the plugin.
+Modules should be requested on demand rather than on plugin load if possible, so that users know what the permission is needed for and are not bombarded with dialogs when installing the plugin.
 </div>
 
 For better Typescript support, an alias has been added offers the same functionality but with better type support and no risk of being converted to import during transpilation or compilation:
 ```javascript
 const os = requireNativeModule('os');`
+```
+
+You can add a custom message when requiring a module to let the user know what the permission will be used for:
+```javascript
+const child_process = requireNativeModule('child_process', {message: 'This permission is required to open ffmpeg and encode the video.'});`
 ```
 
 ### Scoped File System
