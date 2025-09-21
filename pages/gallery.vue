@@ -18,6 +18,13 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner', 'scifi', 'mesh'])">
+				<img loading="lazy" src="~assets/gallery/5.0.webp" alt="Splash Art Contest 5.0 Winner" />
+				<h2>Splash Art Contest 5.0 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/ezoey_c">ZL GAMES</a> &amp; <a target="_blank" rel="noopener" href="https://www.youtube.com/@%E9%B8%BD%E5%AD%90%E7%AA%9D_11">fable</a>, September 2025</label>
+				<p>For the 20th Splash Art Contest, 19 submissions competed for 4 slots on the splash screen. Initially in third place, this render of a giant mech being assembled in a neon-lit factory building managed to pull ahead in the final hours of voting and secured its victory with 449 votes!</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner'])">
 				<img loading="lazy" src="~assets/gallery/4.12.webp" alt="Splash Art Contest 4.12 Winner" />
 				<h2>Splash Art Contest 4.12 Winner</h2>
@@ -29,7 +36,7 @@
 				<img loading="lazy" src="~assets/gallery/4.11.webp" alt="Splash Art Contest 4.11 Winner" />
 				<h2>Splash Art Contest 4.11 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/bonogakure">BonoGakure</a> &amp; <a target="_blank" rel="noopener" href="https://twitter.com/glenn_turu">GlenFebrian</a>, May 2024</label>
-				<p>We saw a close race for first palce between two submissions in the 4.11 Splash Art Contest.</p>
+				<p>We saw a close race for first place between two submissions in the 4.11 Splash Art Contest.</p>
 				<p>Ultimately, this fantastic submission of a solar-powered orange-picking robot in a lush orchard won with 381 votes, and made its way onto the 4.11 Splash Screen along with two other entries.</p>
 			</section>
 
@@ -37,7 +44,7 @@
 				<img loading="lazy" src="~assets/gallery/4.10.webp" alt="Splash Art Contest 4.10 Winner" />
 				<h2>Splash Art Contest 4.10 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Tiffany85635656">skeleton_tiffay</a>, May 2024</label>
-				<p>For this contest, the theme was "Underwater". It was the first ever contest that was hosted on the <a  target="_blank" rel="noopener" href="https://blockbench-splash-art-contests.ewanhowell.com/artists/1121588370183827517">Blockbench Splash Art Contest platform</a> by Ewan Howell.</p>
+				<p>For this contest, the theme was "Underwater". It was the first ever contest that was hosted on the <a  target="_blank" rel="noopener" href="https://contests.blockbench.net/">Blockbench Splash Art Contest platform</a> by Ewan Howell.</p>
 				<p>This beautiful underwater city won the contest 525 votes, leading the second place by 126 points! The piece is featured on the 4.10 Blockbench Splash Screen along with four other entries.</p>
 			</section>
 
