@@ -25,17 +25,6 @@
 				</li>
 			</ul>
 		</nav>
-		<!--
-			Home
-			API
-				- stuff
-					- headings
-			Guides
-				- MC Java
-				- MC Bedrock
-				- 
-
-		-->
 	</div>
 </template>
 
@@ -51,7 +40,6 @@ export default {
 			{id: 'guides', title: 'Guides', folded: false, pages: []},
 			{id: 'blockbench', title: 'Blockbench', folded: false, pages: []},
 			{id: 'docs', title: 'Documentation', folded: false, pages: []},
-			{id: 'api', title: 'API Reference', folded: false, pages: []},
 		],
 	}},
 	

@@ -44,7 +44,7 @@ Plugin.register('plugin_id', {
 * `oninstall()` Runs when the player installs the plugin
 * `onuninstall()` Runs when the player uninstalls the plugin
 
-You can find more plugin metadata options in the [Plugin API Refererence](https://www.blockbench.net/wiki/api/plugin).
+You can find more plugin metadata options in the [Plugin API Refererence](https://web.blockbench.net/docs).
 
 The variable context of a plugin file is isolated, so you can declare variables like this without polluting the global object.
 ```javascript

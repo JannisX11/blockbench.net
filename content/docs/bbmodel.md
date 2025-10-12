@@ -24,7 +24,7 @@ The following section describes recent breaking changes within the format:
 Note that additions and non-breaking changes are not listed on this page. This includes new features that have been added to the format, but don't impact how the rest of the format works.
 
 * ### 5.0
-	Planned to release with Blockbench 5.0 in Summer 2025
+	Released with Blockbench 5.0, October 12th 2025
 
 	* Groups and outliner hierarchy are now saved as separate fields. "groups" now saves groups, the outliner hierarchy is saved in "outliner" without any group data:
 		```js

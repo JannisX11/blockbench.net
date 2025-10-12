@@ -43,11 +43,7 @@ export default {
 		let description = this.doc.description;
 		if (!description) {
 			// defaults
-			if (this.doc.path.includes('/api/')) {
-				description = 'Blockbench API Reference';
-			} else {
-				description = 'Blockbench Wiki';
-			}
+			description = 'Blockbench Wiki';
 		}
 		return {
 			title: `${this.doc.title} - Blockbench Wiki`,
