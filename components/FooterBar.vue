@@ -6,7 +6,6 @@
 			</a>
 			<nav>
 				<nuxt-link to='/about'>About</nuxt-link>
-				<nuxt-link to='/imprint'>Imprint</nuxt-link>
 				<nuxt-link to='/privacy-policy'>Privacy Policy</nuxt-link>
 			</nav>
 		</div>
