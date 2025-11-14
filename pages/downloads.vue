@@ -89,19 +89,19 @@
 					<li>
 						Desktop App
 						<ul>
-							<li><b>Windows</b> 10 or newer (64 bit)</li>
-							<li><b>macOS</b> 11 (Big Sur) or newer</li>
-							<li><b>Linux</b> Ubuntu 18.04, Debian 10, Fedora 32 or newer (64 bit)</li>
+							<li><b>Windows</b> 10 or newer</li>
+							<li><b>macOS</b> 12 (Monterey) or newer</li>
+							<li><b>Linux</b> Ubuntu 20.04 or newer (or comparable) (x64, Wayland may not be supported in some cases)</li>
 							<li>2+ GB of empty storage space</li>
 						</ul>
 					</li>
 					<li>
 						Web App
 						<ul>
-							<li><b>Chrome/Edge</b> 80+</li>
-							<li><b>Firefox</b> 74+</li>
-							<li><b>Opera</b> 67+</li>
-							<li><b>Safari on iOS</b> 13.4+</li>
+							<li><b>Chrome/Edge</b> 92+</li>
+							<li><b>Firefox</b> 90+</li>
+							<li><b>Opera</b> 78+</li>
+							<li><b>Safari on iOS</b> 15.4+</li>
 						</ul>
 					</li>
 					<li>4 GB RAM</li>
