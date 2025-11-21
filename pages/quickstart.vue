@@ -201,17 +201,20 @@
 				<template v-if="page == 'hytale'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>Generic Model</h2>
-					<p>Hytale is not out yet, but the generic model format can be used to create Hytale-inspired models.</p>
+					<p>Blockbench will be used to create models and animations for Hytale.</p>
+					<p>Hytale and the Blockbench tools for it are not out yet, but the generic model format can be used to create Hytale-inspired models already that can be converted later.</p>
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Forum: <a href="https://discord.gg/Bswa9MJ8v3" class="channel">#help-lowpoly</a></li>
-						<li>Models can be exported as .obj or .gltf</li>
+						<li>Discord Help Forum: <a href="https://discord.gg/Bswa9MJ8v3" class="channel" target="_blank">#help-lowpoly</a></li>
+						<li>Hytale Discord Server: <a href="https://discord.gg/hytale" class="channel" target="_blank">Hytale</a></li>
+						<li>The default front direction for Hytale models is South, away from the N arrow on the grid.</li>
+						<li>The main block size for Hytale is 32 pixels. To make it easier to convert models, it is recommended to leave the grid snapping and pixel density at default values (16) and create the model at a larger scale, so that a pixel on the texture equals one unit on the model.</li>
 					</ul>
 
 					<h3>Caveats</h3>
 					<ul>
-						<li>Models cannot be exported in a Hytale-compatible format at the moment because the game has not been released yet.</li>
+						<li>Models cannot be exported in a Hytale-compatible format at the moment because the tools have not been released yet.</li>
 					</ul>
 
 					<h3>Tutorials</h3>
