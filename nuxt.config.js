@@ -19,8 +19,7 @@ export default {
 			{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
 		],
 		link: [
-			{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-			{ rel: 'alternate icon', type: 'image/png', href: '/favicon.png' }
+			{ rel: 'icon', type: 'image/png', href: '/favicon.png' }
 		]
 	},
 
