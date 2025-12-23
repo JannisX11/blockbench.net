@@ -201,25 +201,31 @@
 				<template v-if="page == 'hytale'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
 					<h2>Generic Model</h2>
-					<p>Blockbench will be used to create models and animations for Hytale.</p>
-					<p>Hytale and the Blockbench tools for it are not out yet, but the generic model format can be used to create Hytale-inspired models already that can be converted later.</p>
+					<p>Blockbench is the official modeling software for creating models and animations for Hytale.</p>
+					<p>Hytale will release on January 13th 2026, but the modeling tools are already available and models can be created.</p>
 
 					<h3>Quick Info</h3>
 					<ul>
-						<li>Discord Help Forum: <a href="https://discord.gg/Bswa9MJ8v3" class="channel" target="_blank">#help-lowpoly</a></li>
+						<li>The <a href="https://www.blockbench.net/plugins/hytale_plugin" target="_blank">Hytale Models plugin</a> is required to make models</li>
+						<li>Discord Help Forum: <a href="https://discord.gg/CBhgSJvuj5" class="channel" target="_blank">#help-hytale</a></li>
 						<li>Hytale Discord Server: <a href="https://discord.gg/hytale" class="channel" target="_blank">Hytale</a></li>
-						<li>Models are built with cubes in a hierarchy of groups, with cubes and quads (flat cubes with one face), make sure to use those instead of meshes.</li>
+						<li>Models are built with cubes in a hierarchy of groups, with cubes and quads (flat cubes with one face).</li>
 						<li>The default front direction for Hytale models is South, away from the N arrow on the grid.</li>
-						<li>The main block size for Hytale is 32 pixels for blocks and props, and 64 pixels for characters and attachments. To make it easier to convert models, it is recommended to leave the grid snapping and pixel density at default values (16) and create the model at a larger scale, so that a pixel on the texture equals one unit on the model.</li>
+						<li>The main block size for Hytale is 32 pixels for blocks and props, and 64 pixels for characters and attachments. Once you selected the correct Hytale format for your model, the base grid will represent the size of one block in-game.</li>
+						<li>Animations are supported and can be exported as .blockyanim files.</li>
 					</ul>
 
 					<h3>Caveats</h3>
 					<ul>
-						<li>Models cannot be exported in a Hytale-compatible format at the moment because the tools have not been released yet.</li>
+						<li>Models are limited to 255 nodes per model.</li>
+						<li>UV sizes are locked to cube size to ensure a consistent pixel ratio. Custom pixel density per cube is not possible except by stretching cubes.</li>
+						<li>Animation scaling is currently not fully supported, instead scale keyframes animate the "stretch" property of the main cube of the animated group. The main cube refers to the first cube that's parented to the group and does not have its own rotation applied.</li>
 					</ul>
 
 					<h3>Tutorials</h3>
 					<ul>
+						<li><a target="_blank" rel="noopener" href="https://hytale.com/news/2025/12/an-introduction-to-making-models-for-hytale">Hytale Modeling Introduction and Style Guide</a></li>
+						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Q07i3wmGy0Y">Official Model Making Tutorial</a></li>
 						<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U9FLteWmFzg&list=PLvULVkjBtg2SezfUA8kHcPUGpxIS26uJR">ArtsByKev Blockbench Tutorials</a></li>
 					</ul>
 				</template>
