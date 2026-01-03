@@ -91,7 +91,7 @@
 					<p>You can paint directly on the model in 3D space, use the 2D texture editor, or connect your favorite external image editor or pixel art software.</p>
 				</div>
 				<div>
-					<img src="~assets/features/texturing.png" alt="Texturing Illustration" />
+					<img loading="lazy" src="~assets/features/texturing.png" alt="Texturing Illustration" />
 				</div>
 			</content>
 
@@ -102,7 +102,7 @@
 					<p><a target="_blank" rel="noopener" href="https://sketchfab.com/jannisx11/collections/blockbench-animations">View Blockbench animations...</a></p>
 				</div>
 				<div>
-					<img src="~assets/features/animation.png" alt="Animation Illustration" />
+					<img loading="lazy" src="~assets/features/animation.png" alt="Animation Illustration" />
 				</div>
 			</content>
 
@@ -115,7 +115,7 @@
 					<p><nuxt-link to="/plugins">Browse Blockbench plugins...</nuxt-link></p>
 				</div>
 				<div>
-					<img src="~assets/features/plugins.png" alt="Plugin Illustration" />
+					<img loading="lazy" src="~assets/features/plugins.png" alt="Plugin Illustration" />
 				</div>
 			</content>
 
@@ -127,7 +127,7 @@
 					<p><a target="_blank" rel="noopener" href="https://github.com/JannisX11/blockbench">View the source code...</a></p>
 				</div>
 				<div>
-					<img src="~assets/features/open_source.png" alt="Open Source Illustration" />
+					<img loading="lazy" src="~assets/features/open_source.png" alt="Open Source Illustration" />
 				</div>
 			</content>
 		</section>
