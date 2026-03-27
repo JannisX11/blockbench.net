@@ -138,7 +138,7 @@
 
 export default {
 	data() {return {
-		sketchfab_cookies_accepted: true
+		sketchfab_cookies_accepted: false
 	}},
 	methods: {
 		acceptSketchfabCookies() {
