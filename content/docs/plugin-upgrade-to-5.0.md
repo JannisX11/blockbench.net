@@ -12,23 +12,6 @@ This update aims to bundle a number of potentially breaking changes together ins
 
 Generally, most plugins are expected to continue to work in the new version, but some plugins, especially larger ones, will need to be updated to continue working.
 
-This article will be updated during the beta phase, but most changes are expected to be in the first beta already.
-The beta for 5.0 will have an extended timeline to give everyone enough time to update their plugins and tools.
-
-While the beta is now yet, you can test these changes by launching Blockbench from the `next` branch. Follow the instructions in README.md to launch it.
-
-
-## Adding support for both versions
-In case you need to support a feature in both 5.0 and older versions, there is a way to detect the version and implement behavior conditionally.
-This can be useful if you want to update and release your plugin ahead of the release date of Blockbench 5.0 to ensure it works instantly and that it already works during the beta.
-
-```javascript
-if (Blockbench.isNewerThan('4.99')) {
-	// 5.0 behavior
-} else {
-	// 4.x behavior
-}
-```
 
 ## Keyframe Direction
 

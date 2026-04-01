@@ -4,7 +4,7 @@ title: Creating a Plugin
 
 # Creating a Plugin
 
-Welcome to the official Blockbench documentation. If you want to create a custom plugin, this is the place to start.
+This article will go over the basic steps needed to create your first plugin.
 
 ## Basics
 
@@ -102,11 +102,11 @@ Plugin.register('height_randomizer', {
 ```
 
 ### Functionality
-You can check the other pages to learn about interface functionality and different internal data types.
+The full API documentation can be found on [Blockbench Reference Docs](https://web.blockbench.net/docs).
 
-* In this case we are using an [Action](actions) to modify certain properties on a [Cube](outliner#cube).
-* We use the [Undo](undo) API to register our changes.
-* We use the [updateView](https://github.com/JannisX11/blockbench-types/blob/main/types/canvas.d.ts#L1) API to visually update the interface with our new changes
+* In this case we are using an [Action](https://web.blockbench.net/docs/classes/generated_interface_actions.Action.html) to modify certain properties on a [Cube](https://web.blockbench.net/docs/classes/custom_cube.Cube.html).
+* We use the [Undo](https://web.blockbench.net/docs/variables/custom_undo.Undo.html) API to register our changes.
+* We use the [updateView](https://web.blockbench.net/docs/functions/custom_canvas.Canvas.updateView.html) API to visually update the interface with our new changes
 
 
 ### Result
@@ -141,7 +141,7 @@ Plugin.register('height_randomizer', {
 				Undo.finishEdit('Randomize cube height');
 			}
 		});
-		MenuBar.addAction(button, 'filter');
+		MenuBar.menus.tools.addAction(button);
 	},
 	onunload() {
 		button.delete();

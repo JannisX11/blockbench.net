@@ -6,6 +6,10 @@ title: Blockbench
 
 The Blockbench object provides useful variables and methods to interact with general functionality of Blockbench.
 
+<div class="block-warning">
+    The information on this page may be in parts outdated. You can find the latest reference documentation on <a target="_blank" href="https://web.blockbench.net/docs/variables/generated_api.Blockbench.html">Blockbench Reference Docs</a>.
+</div>
+
 ## Information
 
 * `Blockbench.isWeb` true if Blockbench is used in a web browser
