@@ -43,9 +43,13 @@
 	</div>
 </template>
 
-<script>
+<script setup>
+//import Markdown from '@nuxt/markdown'
+import { useRoute } from 'vue-router'
 
-import Markdown from '@nuxt/markdown'
+const route = useRoute();
+let path_match = route.params.pathMatch instanceof Array ? route.params.pathMatch[0] : route.params.pathMatch;
+let plugin_id = path_match.replace(/[\\\/]+/, '');
 
 /**
  * Compare two versions
@@ -53,7 +57,7 @@ import Markdown from '@nuxt/markdown'
  * @param {string} version2 
  * @returns Whether version1 is higher/newer than version2
  */
- function compareVersions(version1, version2) {
+function compareVersions(version1, version2) {
 	var arr1 = version1.split(/[.-]/);
 	var arr2 = version2.split(/[.-]/);
 	var i = 0;
@@ -76,86 +80,89 @@ import Markdown from '@nuxt/markdown'
 	return false;
 }
 
-export default defineNuxtComponent({
-	async asyncData({params}) {
-		let plugin_id = params.pathMatch.replace(/[\\\/]+/, '');
-		let response = await fetch(`https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json`)
-		const plugins = await response.json();
+const { data } = await useAsyncData(`plugin-${plugin_id}`, async () => {
+	let response = await fetch(`https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json`)
+	const plugins = await response.json();
 
-		let commits_response = await fetch(`https://api.github.com/repos/JannisX11/blockbench-plugins/commits?path=plugins/${plugin_id}.js`);
-		let commits = await commits_response.json();
-		let last_modified;
-		if (commits && commits.length) {
-			let then = Date.parse(commits[0].commit.committer.date) / 60000;
-			let now = Date.now() / 60000;
-			let minutes = now - then;
+	let commits_response = await fetch(`https://api.github.com/repos/JannisX11/blockbench-plugins/commits?path=plugins/${plugin_id}.js`);
+	let commits = await commits_response.json();
+	let last_modified;
+	if (commits && commits.length) {
+		let then = Date.parse(commits[0].commit.committer.date) / 60000;
+		let now = Date.now() / 60000;
+		let minutes = now - then;
 
-			if (minutes >= 525600) {
-				last_modified = `${Math.floor(minutes / 525600)} years ago`
+		if (minutes >= 525600) {
+			last_modified = `${Math.floor(minutes / 525600)} years ago`
 
-			} else if (minutes >= 43200) {
-				last_modified = `${Math.floor(minutes / 43200)} months ago`
+		} else if (minutes >= 43200) {
+			last_modified = `${Math.floor(minutes / 43200)} months ago`
 
-			} else if (minutes >= 10080) {
-				last_modified = `${Math.floor(minutes / 10080)} weeks ago`
+		} else if (minutes >= 10080) {
+			last_modified = `${Math.floor(minutes / 10080)} weeks ago`
 
-			} else if (minutes >= 1440) {
-				last_modified = `${Math.floor(minutes / 1440)} days ago`
+		} else if (minutes >= 1440) {
+			last_modified = `${Math.floor(minutes / 1440)} days ago`
 
-			} else if (minutes >= 60) {
-				last_modified = `${Math.floor(minutes / 60)} hours ago`
+		} else if (minutes >= 60) {
+			last_modified = `${Math.floor(minutes / 60)} hours ago`
 
-			} else {
-				last_modified = `${Math.floor(minutes)} minutes ago`
+		} else {
+			last_modified = `${Math.floor(minutes)} minutes ago`
 
-			}
 		}
+	}
 
-		const plugin = plugins[plugin_id];
-		if (plugin.min_version && !compareVersions('4.8.0', plugin.min_version)) {
-			plugin.new_repository_format = true;
-		}
+	const plugin = plugins[plugin_id];
+	if (plugin.min_version && !compareVersions('4.8.0', plugin.min_version)) {
+		plugin.new_repository_format = true;
+	}
 
-		let about = plugin.about;
-		if (!about && plugin.new_repository_format) {
-			const api_path = 'https://cdn.jsdelivr.net/gh/JannisX11/blockbench-plugins/plugins';
-			let url = `${api_path}/${plugin_id}/about.md`;
-			let result = await fetch(url).catch(() => {
-				console.error('about.md missing for plugin ' + plugin_id);
-			});
-			if (result && result.ok) {
-				about = await result.text();
-			}
+	let about = plugin.about;
+	if (!about && plugin.new_repository_format) {
+		const api_path = 'https://cdn.jsdelivr.net/gh/JannisX11/blockbench-plugins/plugins';
+		let url = `${api_path}/${plugin_id}/about.md`;
+		let result = await fetch(url).catch(() => {
+			console.error('about.md missing for plugin ' + plugin_id);
+		});
+		if (result && result.ok) {
+			about = await result.text();
 		}
+	}
 
-		if (about) {
-			let md = new Markdown({ toc: false, sanitize: false });
-			about = await md.toMarkup(about);
-		}
+	if (about) {
+		//let md = new Markdown({ toc: false, sanitize: false });
+		//about = await md.toMarkup(about);
+	}
 
-		return {
-			plugins,
-			plugin_id,
-			last_modified,
-			about,
-			plugin
-		};
-	},
-	head() {
-		return {
-			title: `${this.plugin.title} - Blockbench Plugin`,
-			meta: [
-				{ hid: 'description', name: 'description', content: this.plugin.description },
-				// Open Graph
-				{ hid: 'og:title', property: 'og:title', content: `${this.plugin.title} - Blockbench` },
-				{ hid: 'og:description', property: 'og:description', content: this.plugin.description },
-				// Twitter Card
-				{ hid: 'twitter:title', name: 'twitter:title', content: `${this.plugin.title} - Blockbench` },
-				{ hid: 'twitter:description', name: 'twitter:description', content: this.plugin.description }
-			]
-		}
-	},
-})
+	return {
+		plugins,
+		plugin_id,
+		last_modified,
+		about,
+		plugin
+	};
+});
+
+
+// Expose values
+const plugins = computed(() => data.value?.plugins)
+const plugin = computed(() => data.value?.plugin)
+const about = computed(() => data.value?.about)
+const last_modified = computed(() => data.value?.last_modified)
+
+useHead({
+	title: `${plugin.value?.title} - Blockbench Plugin`,
+	meta: [
+		{ hid: 'description', name: 'description', content: plugin.value?.description },
+		// Open Graph
+		{ hid: 'og:title', property: 'og:title', content: `${plugin.value?.title} - Blockbench` },
+		{ hid: 'og:description', property: 'og:description', content: plugin.value?.description },
+		// Twitter Card
+		{ hid: 'twitter:title', name: 'twitter:title', content: `${plugin.value?.title} - Blockbench` },
+		{ hid: 'twitter:description', name: 'twitter:description', content: plugin.value?.description }
+	]
+});
 </script>
 
 <style scoped>

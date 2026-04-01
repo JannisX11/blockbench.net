@@ -1,18 +1,23 @@
 <template>
 	<div id="page_flow">
-		<content class="content error_page">
+		<div class="content error_page">
 			<img src="~assets/error.png" />
 			<h1 v-if="error.statusCode == 404">Sorry, we could not find this page 😕</h1>
 			<h1 v-else>We encountered an error 😕</h1>
 			<p>{{ error.statusCode }}</p>
 			<p v-if="error.statusCode != 404">{{ error.message }}</p>
-		</content>
+		</div>
 	</div>
 </template>
 
 <script>
 import HeaderBar from './components/HeaderBar'
 import FooterBar from './components/FooterBar'
+
+
+definePageMeta({
+	layout: 'wiki',
+});
 
 export default {
     props: ['error'],

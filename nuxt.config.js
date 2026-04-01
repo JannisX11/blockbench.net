@@ -1,7 +1,8 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	// Target: https://go.nuxtjs.dev/config-target
-	//target: 'static',
-	//ssr: true,
+
+	target: 'static',
+	ssr: true,
 
 	meta: {
 		title: 'Blockbench',
@@ -19,6 +20,16 @@ export default defineNuxtConfig({
 		link: [
 			{ rel: 'icon', type: 'image/png', href: '/favicon.png' }
 		]
+	},
+
+	routeRules: {
+		// Temporary redirect using a 307 status code
+		"/translations": {
+			redirect: "https://blockbench.net/wiki/blockbench/localization",
+		},
+		"/faq": {
+			redirect: "https://blockbench.net/wiki/blockbench/faq",
+		},
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -59,30 +70,10 @@ export default defineNuxtConfig({
 		]
 	},
 
-	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	modules: [
 		'@nuxtjs/google-fonts',
-		'@nuxtjs/color-mode',
-		'nuxt-svgo'
+		'@nuxtjs/color-mode'
 	],
-
-	/*content: {
-		
-		markdown: {
-			prism: {
-				theme: 'prism-themes/themes/prism-material-oceanic.css'
-			}
-		},
-		tocDepth: 3
-	},*/
-
-	/*fontawesome: {
-		component: 'fa',
-		icons: {
-			solid: true,
-			brands: true
-		}
-	},*/
 
 	colorMode: {
 		preference: 'light'
@@ -102,5 +93,9 @@ export default defineNuxtConfig({
 		public: 'static'
 	},
 
-	compatibilityDate: '2026-04-01',
-});
+	compatibilityDate: '2025-07-15',
+	devtools: { enabled: true },
+	devServer: {
+		port: 3005
+	}
+})
