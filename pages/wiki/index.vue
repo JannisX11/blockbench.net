@@ -25,10 +25,15 @@
 </template>
 
 <script>
+import { defineNuxtComponent } from 'nuxt/app';
+import { definePageMeta } from 'nuxt/dist/pages/runtime';
 
 
-export default {
+definePageMeta({
 	layout: 'wiki',
+});
+
+export default defineNuxtComponent({
 	head() {
 		return {
 			title: `Blockbench Wiki`,
@@ -46,7 +51,7 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>
 
 <style>

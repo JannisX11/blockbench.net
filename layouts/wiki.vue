@@ -3,7 +3,7 @@
 		<HeaderBar />
 		<div id="wiki_wrapper">
 			<NavigationSidebar />
-			<nuxt/>
+			<slot></slot>
 		</div>
 		<FooterBar />
 	</div>

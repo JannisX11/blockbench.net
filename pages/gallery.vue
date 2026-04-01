@@ -303,7 +303,7 @@ Wayfarer: https://twitter.com/blockbench/status/1360341166378676225
 FactoryTown: https://twitter.com/Ycarx/status/1318018434949664768
 
  */
-export default {
+export default defineNuxtComponent({
 	head () {
 		return {
 			title: 'Gallery - Blockbench',
@@ -325,7 +325,7 @@ export default {
 			return !this.filter || tags.includes(this.filter);
 		}
 	}
-}
+})
 </script>
 
 

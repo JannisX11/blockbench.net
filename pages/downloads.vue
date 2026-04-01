@@ -134,7 +134,7 @@ const data = {
 	type: 'Latest Version',
 };
 
-export default {
+export default defineNuxtComponent({
 	data() {return data},
 	async fetch(context) {
 		data.version = '1.1.1';
@@ -198,7 +198,7 @@ export default {
 			{ hid: 'description', name: 'description', content: 'Download the latest version of Blockbench - for Windows, mac, and Linux' },
 		],
 	}
-}
+})
 </script>
 
 <style scoped>

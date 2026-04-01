@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import HeaderBar from './../components/HeaderBar'
-import FooterBar from './../components/FooterBar'
+import HeaderBar from './components/HeaderBar'
+import FooterBar from './components/FooterBar'
 
 export default {
     props: ['error'],

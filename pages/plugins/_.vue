@@ -76,7 +76,7 @@ import Markdown from '@nuxt/markdown'
 	return false;
 }
 
-export default {
+export default defineNuxtComponent({
 	async asyncData({params}) {
 		let plugin_id = params.pathMatch.replace(/[\\\/]+/, '');
 		let response = await fetch(`https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json`)
@@ -155,7 +155,7 @@ export default {
 			]
 		}
 	},
-}
+})
 </script>
 
 <style scoped>

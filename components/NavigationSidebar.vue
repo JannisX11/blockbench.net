@@ -50,7 +50,7 @@ export default {
   	},
 	methods: {
 		async updateSearch() {
-			let articles;
+			/*let articles;
 			if (this.search_term == '') {
 				articles = await this.$content(undefined, {deep: true})
 					.only(['title', 'slug', 'path', 'description'])
@@ -69,7 +69,7 @@ export default {
 					return article.path.substr(1, category.id.length) == category.id;
 				})
 				category.pages.splice(0, category.pages.length, ...pages);
-			})
+			})*/
 			
 		}
 	},

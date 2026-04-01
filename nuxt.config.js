@@ -1,11 +1,9 @@
-export default {
+export default defineNuxtConfig({
 	// Target: https://go.nuxtjs.dev/config-target
-	target: 'static',
-	ssr: true,
+	//target: 'static',
+	//ssr: true,
 
-
-	// Global page headers: https://go.nuxtjs.dev/config-head
-	head: {
+	meta: {
 		title: 'Blockbench',
 		htmlAttrs: {
 			lang: 'en'
@@ -25,16 +23,10 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
+		'@fortawesome/fontawesome-svg-core/styles.css',
 		'@/assets/css/main.css'
 	],
 
-	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [
-	],
-
-  
-	router: {
-	},
 
 	generate: {
 		fallback: true,
@@ -66,21 +58,15 @@ export default {
 			'/wiki/guides/model-rendering',
 		]
 	},
-  
-
-	// Auto import components: https://go.nuxtjs.dev/config-components
-	components: true,
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-	buildModules: [
-		'@nuxt/content',
-		'@nuxtjs/svg',
-		'@nuxtjs/fontawesome',
+	modules: [
 		'@nuxtjs/google-fonts',
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
+		'nuxt-svgo'
 	],
 
-	content: {
+	/*content: {
 		
 		markdown: {
 			prism: {
@@ -88,14 +74,18 @@ export default {
 			}
 		},
 		tocDepth: 3
-	},
+	},*/
 
-	fontawesome: {
+	/*fontawesome: {
 		component: 'fa',
 		icons: {
 			solid: true,
 			brands: true
 		}
+	},*/
+
+	colorMode: {
+		preference: 'light'
 	},
 
 	googleFonts: {
@@ -108,15 +98,9 @@ export default {
         base64: false
 	},
 
-	colorMode: {
-		preference: 'light'
+	dir: {
+		public: 'static'
 	},
 
-	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-	],
-
-	// Build Configuration: https://go.nuxtjs.dev/config-build
-	build: {
-	}
-}
+	compatibilityDate: '2026-04-01',
+});

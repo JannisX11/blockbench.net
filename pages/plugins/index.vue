@@ -25,7 +25,7 @@
 <script>
 
 
-export default {
+export default defineNuxtComponent({
 	async asyncData({params}) {
 		let response = await fetch(`https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json`)
 		const plugin_data = await response.json();
@@ -77,7 +77,7 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>
 
 <style scoped>

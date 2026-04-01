@@ -324,7 +324,7 @@
 <script>
 const default_page = 'q_game';
 
-export default {
+export default defineNuxtComponent({
 	data() {return {
 		page: default_page,
 		history: [],
@@ -353,7 +353,7 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>
 
 <style scoped>
