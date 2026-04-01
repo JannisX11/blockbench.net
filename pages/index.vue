@@ -35,35 +35,35 @@
 				<h2>Who's using Blockbench</h2>
 				<div id="blockbench_user_list">
 					<a href="https://minecraft.net" target="_blank" rel="noopener">
-						<img src="~assets/companies/mccb_logo_primary.png" alt="Mojang Studios Logo">
+						<img loading="lazy" src="~assets/companies/mccb_logo_primary.png" alt="Mojang Studios Logo">
 						Mojang Studios
 					</a>
 					<a href="https://hytale.com/" target="_blank" rel="noopener">
-						<img src="~assets/companies/hytale.png" alt="Hytale Logo" style="margin-bottom: -8px;height: 72px;">
+						<img loading="lazy" src="~assets/companies/hytale.png" alt="Hytale Logo" style="margin-bottom: -8px;height: 72px;">
 						Hytale
 					</a>
 					<a href="https://goblinzstudio.com/game/dungeon-tycoon/" target="_blank" rel="noopener">
-						<img src="~assets/companies/dungeon_tycoon.png" alt="Dungeon Tycoon Logo">
+						<img loading="lazy" src="~assets/companies/dungeon_tycoon.png" alt="Dungeon Tycoon Logo">
 						Dungeon Tycoon
 					</a>
 					<a href="https://noxcrew.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/noxcrew.png" alt="Noxcrew Logo">
+						<img loading="lazy" src="~assets/companies/noxcrew.png" alt="Noxcrew Logo">
 						Noxcrew
 					</a>
 					<a href="https://sparkuniverse.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/spark_logo.png" alt="Spark Universe Logo">
+						<img loading="lazy" src="~assets/companies/spark_logo.png" alt="Spark Universe Logo">
 						Spark Universe
 					</a>
 					<a href="https://www.cyclone.games" target="_blank" rel="noopener">
-						<img src="~assets/companies/cyclone.svg" alt="Cyclone Logo">
+						<img loading="lazy" src="~assets/companies/cyclone.svg" alt="Cyclone Logo">
 						Cyclone
 					</a>
 					<a href="https://orevillestudios.com" class="oreville_studios" target="_blank" rel="noopener">
-						<img src="~assets/companies/oreville_studios_logo.svg" alt="Oreville Studios Logo">
+						<img loading="lazy" src="~assets/companies/oreville_studios_logo.svg" alt="Oreville Studios Logo">
 						Oreville Studios
 					</a>
 					<a href="https://www.gamemodeone.com" target="_blank" rel="noopener">
-						<img src="~assets/companies/gamemodeone.svg" alt="Gamemode One Logo">
+						<img loading="lazy" src="~assets/companies/gamemodeone.svg" alt="Gamemode One Logo">
 						Gamemode One
 					</a>
 					<p>...and many more!</p>
