@@ -99,7 +99,7 @@ export default {
 		transition: border-width 60ms ease;
 		cursor: pointer;
 	}
-	#menu a.nuxt-link-active, #menu a:hover {
+	#menu a.router-link-active, #menu a:hover {
 		border-bottom-width: 5px;
 		color: var(--dark-hover);
 	}
@@ -152,7 +152,7 @@ export default {
 			border-bottom: none;
 			color: var(--light-hover);
 		}
-		#menu a.nuxt-link-active {
+		#menu a.router-link-active {
 			border-bottom: none;
 			border-left: 5px solid var(--accent);
 			color: var(--light-hover);

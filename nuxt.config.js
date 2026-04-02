@@ -70,10 +70,41 @@ export default defineNuxtConfig({
 		]
 	},
 
+	content: {
+		highlight: {
+			theme: {
+				// Default theme (same as single string)
+				default: 'github-dark',
+				dark: 'github-dark',
+			}
+		},
+		build: {
+			markdown: {
+				toc: {
+					depth: 3
+				}
+			},
+		}
+	},
+
 	modules: [
+		'@nuxt/content',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/color-mode'
 	],
+
+	  vite: {
+		optimizeDeps: {
+			include: [
+				'@vue/devtools-core',
+				'@vue/devtools-kit',
+				'@fortawesome/fontawesome-svg-core',
+				'@fortawesome/vue-fontawesome',
+				'@fortawesome/free-solid-svg-icons',
+				'@fortawesome/free-brands-svg-icons',
+			]
+		}
+	},
 
 	colorMode: {
 		preference: 'light'

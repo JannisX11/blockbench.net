@@ -1,5 +1,5 @@
 <template>
-	<div id="page_flow">
+	<div id="page_flow" class="page_flow">
 		<HeaderBar />
 		<slot></slot>
 		<FooterBar />
@@ -23,7 +23,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 }
-#page_flow > div {
+.page_flow > div {
 	margin-top: var(--header-height);
 	scroll-margin-top: var(--header-height);
 	flex-grow: 1;

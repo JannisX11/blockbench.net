@@ -76,6 +76,12 @@ export default {
 		background-color: var(--light-background);
 		border-left: 4px solid var(--accent);
 	}
+	pre {
+		background-color: var(--light-background);
+		padding: 10px 16px;
+		border-radius: 5px;
+		overflow: auto;
+	}
 
 	/* TOC */
 	@media only screen and (min-width: 800px) {
