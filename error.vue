@@ -1,13 +1,13 @@
 <template>
-	<div id="page_flow">
+	<NuxtLayout name="default">
 		<div class="content error_page">
-			<img src="~assets/error.png" />
+			<img src="@/assets/error.png" />
 			<h1 v-if="error.statusCode == 404">Sorry, we could not find this page 😕</h1>
 			<h1 v-else>We encountered an error 😕</h1>
 			<p>{{ error.statusCode }}</p>
 			<p v-if="error.statusCode != 404">{{ error.message }}</p>
 		</div>
-	</div>
+	</NuxtLayout>
 </template>
 
 <script>
@@ -15,9 +15,6 @@ import HeaderBar from './components/HeaderBar'
 import FooterBar from './components/FooterBar'
 
 
-definePageMeta({
-	layout: 'wiki',
-});
 
 export default {
     props: ['error'],
@@ -43,6 +40,7 @@ export default {
 	scroll-margin-top: var(--header-height);
 	text-align: center;
 	margin-top: calc(34vh - 230px);
+	display: block;
 }
 .error_page p {
 	font-size: 1.5em;

@@ -55,7 +55,6 @@ const updateSearch = async () => {
 		category.pages.splice(0, Infinity);
 	}
 	let lower_case = search_term.value.toLowerCase();
-	console.log(search_term, search_term.value)
 
 	for (let page of pages) {
 		let category_id = page.path.split('/')[1];

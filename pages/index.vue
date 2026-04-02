@@ -178,7 +178,7 @@ export default defineNuxtComponent({
 
 	section.download {
 		background-color: var(--dark-background);
-		background-image: url('~assets/background.jpg');
+		background-image: url('@/assets/background.jpg');
 		background-size: cover;
 		color: white;
 		text-align: center;
@@ -249,7 +249,7 @@ export default defineNuxtComponent({
 	div#sketchfab_viewer {
 		text-align: center;
 		padding-top: 20vh;
-		background-image: url('~assets/sketchfab.png');
+		background-image: url('@/assets/sketchfab.png');
 		background-repeat: no-repeat;
 		background-position: center;
 	}
