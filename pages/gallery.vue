@@ -220,7 +220,7 @@
 			<section v-if="showImage(['minecraft'])">
 				<img loading="lazy" src="~assets/gallery/goat.png" alt="Minecraft Goat" />
 				<h2>Minecraft Goat</h2>
-				<label>By <a target="_blank" rel="noopener" href="twitter.com/Mojang">Mojang Studios</a>, October 2020</label>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Mojang">Mojang Studios</a>, October 2020</label>
 				<p>The Goat was one of the first vanilla Minecraft models that was created in Blockbench!
 					It was first shown as part of the mountains biome in the community vote at Minecon Live 2019. After winning the vote, the Goat was added to Minecraft as part of the Caves and Cliffs Update, Part 1.</p>
 			</section>

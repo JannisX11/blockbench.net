@@ -26,7 +26,6 @@
 
 <script>
 import { defineNuxtComponent } from 'nuxt/app';
-import { definePageMeta } from 'nuxt/dist/pages/runtime';
 
 
 definePageMeta({
