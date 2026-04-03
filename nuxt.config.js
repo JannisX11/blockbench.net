@@ -38,38 +38,14 @@ export default defineNuxtConfig({
 		'@/assets/css/main.css'
 	],
 
-
-	generate: {
-		fallback: true,
-		exclude: [
-			/^\/downloads/,
-			/^\/plugins/
-		],
-		routes: [
-			'/wiki/docs/bbmodel',
-			'/wiki/docs/blockbench',
-			'/wiki/docs/plugin',
-			'/wiki/docs/property',
-			'/wiki/docs/ui',
-			'/wiki/docs/undo',
-			'/wiki/docs/url-parameters',
-			'/wiki/docs/utility',
-			'/wiki/blockbench/faq',
-			'/wiki/blockbench/formats',
-			'/wiki/blockbench/legacy-versions',
-			'/wiki/blockbench/localization',
-			'/wiki/blockbench/logos',
-			'/wiki/blockbench/themes',
-			'/wiki/guides/bedrock-modeling',
-			'/wiki/guides/blockbench-overview-tips',
-			'/wiki/guides/emissive-textures-renders',
-			'/wiki/guides/export-formats',
-			'/wiki/guides/minecraft-particles-sounds',
-			'/wiki/guides/minecraft-style-guide',
-			'/wiki/guides/model-rendering',
-		]
+	nitro: {
+		prerender: {
+			ignore: [
+				'/plugins',
+				'/downloads',
+			]
+		}
 	},
-
 	content: {
 		highlight: {
 			theme: {

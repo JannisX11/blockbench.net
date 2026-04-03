@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const search_term = ref('axe')
+const search_term = ref('')
 const show_menu = ref(true)
 
 const { data } = await useAsyncData('data', () => {

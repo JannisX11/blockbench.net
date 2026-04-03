@@ -27,6 +27,8 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
+const search_term = ref('')
+
 // Fetch plugin list
 const { data: plugins } = await useAsyncData('plugins', async () => {
   const response = await fetch(
