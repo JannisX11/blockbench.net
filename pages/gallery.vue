@@ -18,6 +18,13 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
+				<img loading="lazy" src="~assets/gallery/5.1.webp" alt="Splash Art Contest 5.1 Winner" />
+				<h2>Splash Art Contest 5.1 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://x.com/AnzSamaEr">AnzSama</a> &amp; <a target="_blank" rel="noopener" href="https://contests.blockbench.net/artists/768854550744137800">C-on</a>, March 2026</label>
+				<p>For the theme "Cozy Workplace", this submission of a cozy art studio, with lots of small details to discover, won first place with 383 votes!</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner', 'scifi', 'mesh'])">
 				<img loading="lazy" src="~assets/gallery/5.0.webp" alt="Splash Art Contest 5.0 Winner" />
 				<h2>Splash Art Contest 5.0 Winner</h2>
@@ -170,7 +177,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle', 'scifi'])">
-				<img loading="lazy" src="~assets/gallery/3.9.png" alt="Splash Art Contest 3.9 Winner" />
+				<img loading="lazy" src="~assets/gallery/3.9.webp" alt="Splash Art Contest 3.9 Winner" />
 				<h2>Splash Art Contest 3.9 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/LorenOLoren1">Loren</a> and <a target="_blank" rel="noopener" href="https://twitter.com/Dxnkbarkeit">Dankbarkeit</a>, June 2021</label>
 				<p>18 entries were submitted for the 6th Splash Art Contest with the theme "Off Road Pickup Truck". Ultimately, it was a head-to-head race between Wacky's submission, and this entry.
