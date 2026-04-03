@@ -16,7 +16,7 @@
 				<nuxt-link to='/gallery'>Gallery</nuxt-link>
 				<a href='https://contests.blockbench.net' target="_blank">Contests</a>
 				<nuxt-link to='/plugins'>Plugins</nuxt-link>
-				<nuxt-link to='/wiki'>Wiki</nuxt-link>
+				<nuxt-link to="/wiki" active-class="router-link-active">Wiki</nuxt-link>
 				<a class="menu_icon" href="https://bsky.app/profile/blockbench.net" target="_blank" rel="noopener" title="Bluesky"><fa :icon="['fab', 'bluesky']" /></a>
 				<a class="menu_icon" href="https://twitter.com/blockbench" target="_blank" rel="noopener" title="Twitter"><fa :icon="['fab', 'twitter']" /></a>
 				<a class="menu_icon" href="https://reddit.com/r/blockbench" target="_blank" rel="noopener" title="Reddit"><fa :icon="['fab', 'reddit-alien']" /></a>

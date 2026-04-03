@@ -193,6 +193,9 @@ export default defineNuxtComponent({
 	section.download .buttons {
 		text-align: center;
 		padding: 20px;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
 	}
 	#main_logo {
 		max-width: 100%;
@@ -204,12 +207,14 @@ export default defineNuxtComponent({
 		transform: rotateX(max(calc(10deg - 60deg * var(--scroll)), -20deg));
 		margin-bottom: -120px;
 		transition: transform 800ms ease;
+		border-radius: 7px;
 	}
 	#front_page_app:hover {
 		transform: translateY(-3px);
 	}
 	section.download button {
 		padding: 0;
+		border-radius: 7px;
 	}
 	section.download button a {
 		padding: 20px 28px;

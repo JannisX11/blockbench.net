@@ -1,25 +1,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
-	target: 'static',
 	ssr: true,
 
-	meta: {
-		title: 'Blockbench',
-		htmlAttrs: {
-			lang: 'en'
-		},
-		meta: [
-			{ charset: 'utf-8' },
-			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ name: 'theme-color', content: '#212e3c' },
-			{ hid: 'description', name: 'description', content: 'An easy to use 3D model editor for low-poly and pixel-art' },
-			{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://blockbench.net/logo_banner.png' },
-			{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
-		],
-		link: [
-			{ rel: 'icon', type: 'image/png', href: '/favicon.png' }
-		]
+	app: {
+		head: {
+			title: 'Blockbench',
+			htmlAttrs: {
+				lang: 'en'
+			},
+			meta: [
+				{ charset: 'utf-8' },
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+				{ name: 'theme-color', content: '#212e3c' },
+				{ hid: 'description', name: 'description', content: 'An easy to use 3D model editor for low-poly and pixel-art' },
+				{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://blockbench.net/logo_banner.png' },
+				{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+			],
+			link: [
+				{ rel: 'icon', type: 'image/png', href: '/favicon.png' }
+			]
+		}
 	},
 
 	routeRules: {
@@ -38,8 +39,15 @@ export default defineNuxtConfig({
 		'@/assets/css/main.css'
 	],
 
+	experimental: {
+		defaults: {
+			prefetch: false
+		}
+	},
+
 	nitro: {
 		prerender: {
+			crawl: true,
 			ignore: [
 				'/plugins',
 				'/downloads',
@@ -69,7 +77,14 @@ export default defineNuxtConfig({
 		'@nuxtjs/color-mode'
 	],
 
-	  vite: {
+	vite: {
+		build: {
+			rollupOptions: {
+				output: {
+					manualChunks: undefined
+				}
+			}
+		},
 		optimizeDeps: {
 			include: [
 				'@vue/devtools-core',

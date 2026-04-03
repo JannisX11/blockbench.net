@@ -47,7 +47,7 @@ body {
 	background-color: var(--light-ui);
 	color: var(--light-text);
 }
-.dark-mode body {
+html.dark body {
 	--light-ui: var(--dark-background);
 	--light-background: #151a1e;
 	--light-text: #cdcdd5;

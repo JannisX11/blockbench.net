@@ -51,6 +51,7 @@ const categories = ref([
 const updateSearch = async () => {
 	const pages = data.value;
 	if (!pages) return;
+	console.log(pages)
 	for (let category of categories.value) {
 		category.pages.splice(0, Infinity);
 	}

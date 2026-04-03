@@ -22,15 +22,19 @@
 import { useRoute } from 'vue-router'
 
 let route = useRoute();
-const { data: data } = await useAsyncData(() => queryCollection('content').path(route.path.replace('/wiki', '')).first())
+const { data: doc } = await useAsyncData(
+	() => queryCollection('content').path(route.path.replace('/wiki', '')).first(),
+	{
+		watch: [() => route.path]
+	}
+);
 
-const doc = computed(() => data.value);
 const description = computed(() => doc ? doc.value?.description : 'Blockbench Wiki');
 
 const avatars = ref<Record<string, string>>({})
 
 watchEffect(async () => {
-	const authors = data.value?.meta.authors
+	const authors = doc.value?.meta.authors
 	if (!Array.isArray(authors)) return;
 
 	const entries = await Promise.all(
