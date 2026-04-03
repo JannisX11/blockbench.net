@@ -59,7 +59,7 @@
 						
 					</div>
 
-					<center><p>Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre-releases and older versions.</p></center>
+					<p style="text-align: center;">Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre-releases and older versions.</p>
 
 					<h4>Updates</h4>
 					<p>Blockbench updates to the latest version automatically! </p>
@@ -124,6 +124,10 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
+
+let route = useRoute();
+
 const path = 'https://github.com/JannisX11/blockbench/releases/download';
 
 
@@ -188,7 +192,7 @@ const { data } = await useAsyncData('data', async () => {
 		data.type = 'Latest Version'
 	}
 	return data;
-})
+}, {watch: [() => route.path]})
 
 const type = computed(() => data.value?.type);
 const name = computed(() => data.value?.name);

@@ -73,6 +73,7 @@ export default defineNuxtConfig({
 
 	modules: [
 		'@nuxt/content',
+		'@nuxtjs/mdc',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/color-mode'
 	],

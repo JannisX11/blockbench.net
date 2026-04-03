@@ -287,13 +287,13 @@ export default defineNuxtComponent({
 		margin-bottom: 4px;
 	}
 
-	.dark-mode #blockbench_user_list .oreville_studios img {
+	html.dark #blockbench_user_list .oreville_studios img {
 		filter: invert(1);
 	}
-	html:not(.dark-mode) #blockbench_user_list img.logo_dark_mode {
+	html:not(.dark) #blockbench_user_list img.logo_dark_mode {
 		display: none;
 	}
-	html.dark-mode #blockbench_user_list img.logo_light_mode {
+	html.dark #blockbench_user_list img.logo_light_mode {
 		display: none;
 	}
 

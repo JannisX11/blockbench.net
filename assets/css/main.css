@@ -72,6 +72,12 @@ h1, h2, h3, h4 {
 	margin-bottom: 4px;
 	font-weight: 400;
 }
+.content h1 > a,
+.content h2 > a,
+.content h3 > a,
+.content h4 > a {
+	color: inherit;
+}
 h1 {
 	padding-top: 16px;
 	padding-bottom: 2px;
@@ -126,7 +132,7 @@ code {
 	background-color: #f1f3f5;
 	padding: 0 4px;
 }
-.dark-mode code {
+html.dark code {
 	background-color: #263238;
 }
 pre code {

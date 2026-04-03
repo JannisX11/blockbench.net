@@ -18,7 +18,7 @@
 
 				<div v-if="about" class="about">
 					<h4>About</h4>
-					<p class="about" v-html="about.html"></p>
+					<MDC :value="about" tag="about" class="about" />
 				</div>
 
 				<p class="variant" v-if="plugin.variant == 'desktop'">Only for the desktop app</p>
@@ -130,11 +130,6 @@ const { data } = await useAsyncData(`plugin-${plugin_id}`, async () => {
 		}
 	}
 
-	if (about) {
-		//let md = new Markdown({ toc: false, sanitize: false });
-		//about = await md.toMarkup(about);
-	}
-
 	return {
 		plugins,
 		plugin_id,
@@ -173,7 +168,7 @@ useHead({
 		padding: 16px 24px;
 		margin: 24px -15px;
 	}
-	html.dark-mode .plugin {
+	html.dark .plugin {
 		background: var(--dark-ui);
 	}
 	.plugin .title {

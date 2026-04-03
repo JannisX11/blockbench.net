@@ -114,7 +114,7 @@ useHead({
 		transform: translateY(-3px);
 		box-shadow: 0 0 16px #0001;
 	}
-	html.dark-mode #plugin_list .plugin:hover {
+	html.dark #plugin_list .plugin:hover {
 		background: var(--dark-ui);
 	}
 	#plugin_list .title {

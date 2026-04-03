@@ -24,9 +24,7 @@ import { useRoute } from 'vue-router'
 let route = useRoute();
 const { data: doc } = await useAsyncData(
 	() => queryCollection('content').path(route.path.replace('/wiki', '')).first(),
-	{
-		watch: [() => route.path]
-	}
+	{watch: [() => route.path]}
 );
 
 const description = computed(() => doc ? doc.value?.description : 'Blockbench Wiki');
