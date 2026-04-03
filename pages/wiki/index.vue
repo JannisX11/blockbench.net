@@ -66,6 +66,7 @@ useHead({
 		max-width: 300px;
 		color: inherit;
 		transition: transform 100ms ease, box-shadow 100ms ease, background 100ms ease;
+		border-radius: 7px;
 	}
 	#wiki_recommendations a:hover {
 		text-decoration: none;

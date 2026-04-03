@@ -165,6 +165,7 @@ useHead({
 		min-height: 200px;
 		padding: 16px 24px;
 		margin: 24px -15px;
+		border-radius: 8px;
 	}
 	html.dark .plugin {
 		background: var(--dark-ui);

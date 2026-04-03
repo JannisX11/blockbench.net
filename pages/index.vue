@@ -272,6 +272,7 @@ export default defineNuxtComponent({
 		text-align: center;
 		color: var(--light-subtle);
 		transition: background-color 300ms ease, transform 300ms ease;
+		border-radius: 7px;
 	}
 	#blockbench_user_list {
 		text-align: center;

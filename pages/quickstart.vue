@@ -375,6 +375,7 @@ export default defineNuxtComponent({
 			padding: 10px 20px 10px 20px;
 			font-size: 1.16em;
 			cursor: pointer;
+			border-radius: 7px;
 		}
 		.answer::before{
 			content: "❯";

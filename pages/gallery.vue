@@ -351,6 +351,7 @@ export default defineNuxtComponent({
 		background-color: var(--light-background);
 		padding: 10px 20px;
 		cursor: pointer;
+		border-radius: 7px;
 	}
 	#filter_list li:hover {
 		background-color: var(--accent);
@@ -366,11 +367,13 @@ export default defineNuxtComponent({
 		padding: 24px;
 		padding-top: 0;
 		background-color: var(--light-background);
+		border-radius: 7px;
 	}
 	img {
 		width: calc(100% + 48px);
 		margin-right: -24px;
 		margin-left: -24px;
+		border-radius: 7px;
 	}
 	label {
 		color: var(--light-subtle);

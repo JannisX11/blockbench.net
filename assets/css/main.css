@@ -116,6 +116,7 @@ button {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 4px 0;
+	border-radius: 7px;
 }
 input[type=text], input[type=number] {
 	appearance: none;
@@ -126,6 +127,7 @@ input[type=text], input[type=number] {
 	padding: 8px 12px;
 	color: inherit;
 	outline-color: var(--accent);
+	border-radius: 6px;
 }
 
 code {

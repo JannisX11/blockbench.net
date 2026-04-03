@@ -236,6 +236,7 @@ useHead({
 		color: inherit;
 		text-decoration: none;
 		transition: transform 120ms ease;
+		border-radius: 8px;
 	}
 	.install_os a:first-of-type {
 		background-color: var(--accent);

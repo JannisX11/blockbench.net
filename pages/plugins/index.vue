@@ -98,6 +98,7 @@ useHead({
 		padding: 8px 16px;
 		color: inherit;
 		transition: transform 100ms ease, box-shadow 100ms ease, background 100ms ease;
+		border-radius: 8px;
 	}
 	#plugin_list .plugin:hover {
 		text-decoration: none;
