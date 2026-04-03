@@ -31,6 +31,9 @@ export default defineNuxtConfig({
 		"/faq": {
 			redirect: "https://blockbench.net/wiki/blockbench/faq",
 		},
+		"/wiki/**": {
+			prerender: true
+		},
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css

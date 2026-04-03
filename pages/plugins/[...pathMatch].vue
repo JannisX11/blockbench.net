@@ -44,8 +44,6 @@
 </template>
 
 <script setup>
-//import Markdown from '@nuxt/markdown'
-import { useRoute } from 'vue-router'
 
 const route = useRoute();
 let path_match = route.params.pathMatch instanceof Array ? route.params.pathMatch[0] : route.params.pathMatch;

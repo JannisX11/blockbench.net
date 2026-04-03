@@ -19,11 +19,11 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 
-let route = useRoute();
+const route = useRoute();
 const { data: doc } = await useAsyncData(
-	() => queryCollection('content').path(route.path.replace('/wiki', '')).first(),
+	route.path,
+	() => queryCollection('content').path(route.path.substring(5)).first(),
 	{watch: [() => route.path]}
 );
 

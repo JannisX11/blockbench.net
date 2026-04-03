@@ -124,8 +124,6 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
-
 let route = useRoute();
 
 const path = 'https://github.com/JannisX11/blockbench/releases/download';
