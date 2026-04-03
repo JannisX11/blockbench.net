@@ -1,8 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
-	ssr: true,
+	modules: [
+		'@nuxt/content',
+		'@nuxtjs/mdc',
+		'@nuxt/image',
+		'@nuxtjs/google-fonts',
+		'@nuxtjs/color-mode'
+	],
 
+	dir: {
+		public: 'static'
+	},
+
+	ssr: true,
 	app: {
 		head: {
 			title: 'Blockbench',
@@ -74,13 +85,6 @@ export default defineNuxtConfig({
 		}
 	},
 
-	modules: [
-		'@nuxt/content',
-		'@nuxtjs/mdc',
-		'@nuxtjs/google-fonts',
-		'@nuxtjs/color-mode'
-	],
-
 	vite: {
 		build: {
 			rollupOptions: {
@@ -115,8 +119,10 @@ export default defineNuxtConfig({
         base64: false
 	},
 
-	dir: {
-		public: 'static'
+	image: {
+		dir: 'assets',
+		format: ['webp'],
+		quality: 10
 	},
 
 	compatibilityDate: '2025-07-15',

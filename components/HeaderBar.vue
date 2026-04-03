@@ -3,7 +3,7 @@
 		<div id="navigation">
 
 			<nuxt-link id="home_link" to='/'>
-				<img src="~assets/blockbench_logo_text_white.svg" alt="Blockbench" height="32px" />
+				<img src="assets/blockbench_logo_text_white.svg" alt="Blockbench" height="32px" />
 			</nuxt-link>
 
 			<div id="mobile_menu_toggle" @click="show_menu = !show_menu">

@@ -67,7 +67,7 @@
 
 				</section>
 
-				<img src="~assets/wiki/download.png" alt="Image of a computer, a phone, and a tablet, running Blockbench." />
+				<NuxtImg src="wiki/download.png" alt="Image of a computer, a phone, and a tablet, running Blockbench." />
 
 				<section>
 					<h4>Mobile App</h4>

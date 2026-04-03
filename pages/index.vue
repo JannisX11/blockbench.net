@@ -2,7 +2,7 @@
 	<div>
 		<section class="download">
 			<div class="content">
-				<img id="main_logo" src="~assets/blockbench_logo_text_white.svg" alt="Blockbench" height="72px" />
+				<NuxtImg id="main_logo" src="blockbench_logo_text_white.svg" alt="Blockbench" height="72px" />
 
 				<h3>A low-poly 3D model editor</h3>
 
@@ -11,7 +11,7 @@
 					<button class="webapp"><a href="https://web.blockbench.net" target="_blank" rel="noopener">Open Web App</a></button>
 				</div>
 
-				<img id="front_page_app" src="~assets/front_page_app.png" alt="Blockbench Interface" />
+				<NuxtImg id="front_page_app" src="front_page_app.png" alt="Blockbench Interface" />
 			</div>
 		</section>
 		
@@ -35,35 +35,35 @@
 				<h2>Who's using Blockbench</h2>
 				<div id="blockbench_user_list">
 					<a href="https://minecraft.net" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/mccb_logo_primary.png" alt="Mojang Studios Logo">
+						<NuxtImg loading="lazy" src="companies/mccb_logo_primary.png" alt="Mojang Studios Logo" />
 						Mojang Studios
 					</a>
 					<a href="https://hytale.com/" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/hytale.png" alt="Hytale Logo" style="margin-bottom: -8px;height: 72px;">
+						<NuxtImg loading="lazy" src="companies/hytale.png" alt="Hytale Logo" style="margin-bottom: -8px;height: 72px;" />
 						Hytale
 					</a>
 					<a href="https://goblinzstudio.com/game/dungeon-tycoon/" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/dungeon_tycoon.png" alt="Dungeon Tycoon Logo">
+						<NuxtImg loading="lazy" src="companies/dungeon_tycoon.png" alt="Dungeon Tycoon Logo" />
 						Dungeon Tycoon
 					</a>
 					<a href="https://noxcrew.com" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/noxcrew.png" alt="Noxcrew Logo">
+						<NuxtImg loading="lazy" src="companies/noxcrew.png" alt="Noxcrew Logo" />
 						Noxcrew
 					</a>
 					<a href="https://sparkuniverse.com" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/spark_logo.png" alt="Spark Universe Logo">
+						<NuxtImg loading="lazy" src="companies/spark_logo.png" alt="Spark Universe Logo" />
 						Spark Universe
 					</a>
 					<a href="https://www.cyclone.games" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/cyclone.svg" alt="Cyclone Logo">
+						<NuxtImg loading="lazy" src="companies/cyclone.svg" alt="Cyclone Logo" />
 						Cyclone
 					</a>
 					<a href="https://orevillestudios.com" class="oreville_studios" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/oreville_studios_logo.svg" alt="Oreville Studios Logo">
+						<NuxtImg loading="lazy" src="companies/oreville_studios_logo.svg" alt="Oreville Studios Logo" />
 						Oreville Studios
 					</a>
 					<a href="https://www.gamemodeone.com" target="_blank" rel="noopener">
-						<img loading="lazy" src="~assets/companies/gamemodeone.svg" alt="Gamemode One Logo">
+						<NuxtImg loading="lazy" src="companies/gamemodeone.svg" alt="Gamemode One Logo" />
 						Gamemode One
 					</a>
 					<p>...and many more!</p>
@@ -79,7 +79,7 @@
 					<p>Use cuboids to get that Minecraft aesthetic, or create complex low-poly shapes using the mesh modeling tools!</p>
 				</div>
 				<div>
-					<img src="~assets/features/flower_pot.png" alt="Modeling Illustration" />
+					<NuxtImg src="features/flower_pot.png" alt="Modeling Illustration" />
 				</div>
 			</div>
 
@@ -91,7 +91,7 @@
 					<p>You can paint directly on the model in 3D space, use the 2D texture editor, or connect your favorite external image editor or pixel art software.</p>
 				</div>
 				<div>
-					<img loading="lazy" src="~assets/features/texturing.png" alt="Texturing Illustration" />
+					<NuxtImg loading="lazy" src="features/texturing.png" alt="Texturing Illustration" />
 				</div>
 			</div>
 
@@ -102,7 +102,7 @@
 					<p><a target="_blank" rel="noopener" href="https://sketchfab.com/jannisx11/collections/blockbench-animations">View Blockbench animations...</a></p>
 				</div>
 				<div>
-					<img loading="lazy" src="~assets/features/animation.png" alt="Animation Illustration" />
+					<NuxtImg loading="lazy" src="features/animation.png" alt="Animation Illustration" />
 				</div>
 			</div>
 
@@ -115,7 +115,7 @@
 					<p><nuxt-link to="/plugins">Browse Blockbench plugins...</nuxt-link></p>
 				</div>
 				<div>
-					<img loading="lazy" src="~assets/features/plugins.png" alt="Plugin Illustration" />
+					<NuxtImg loading="lazy" src="features/plugins.png" alt="Plugin Illustration" />
 				</div>
 			</div>
 
@@ -127,7 +127,7 @@
 					<p><a target="_blank" rel="noopener" href="https://github.com/JannisX11/blockbench">View the source code...</a></p>
 				</div>
 				<div>
-					<img loading="lazy" src="~assets/features/open_source.png" alt="Open Source Illustration" />
+					<NuxtImg loading="lazy" src="features/open_source.png" alt="Open Source Illustration" />
 				</div>
 			</div>
 		</section>

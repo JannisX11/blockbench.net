@@ -1,7 +1,7 @@
 <template>
 	<NuxtLayout name="default">
 		<div class="content error_page">
-			<img src="@/assets/error.png" />
+			<NuxtImg src="@/assets/error.png" />
 			<h1 v-if="error.statusCode == 404">Sorry, we could not find this page 😕</h1>
 			<h1 v-else>We encountered an error 😕</h1>
 			<p>{{ error.statusCode }}</p>
