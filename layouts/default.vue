@@ -1,7 +1,7 @@
 <template>
-	<div id="page_flow">
+	<div id="page_flow" class="page_flow">
 		<HeaderBar />
-		<nuxt id="content_wrapper" />
+		<slot></slot>
 		<FooterBar />
 	</div>
 </template>
@@ -23,7 +23,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 }
-#content_wrapper {
+.page_flow > div {
 	margin-top: var(--header-height);
 	scroll-margin-top: var(--header-height);
 	flex-grow: 1;

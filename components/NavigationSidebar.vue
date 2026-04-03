@@ -13,12 +13,12 @@
 
 				<li v-for="category in categories" :key="category.id">
 
-					<nuxt-link :to="{ name: 'wiki', params: { slug: category.id } }">{{ category.title }}</nuxt-link>
+					<nuxt-link :to="{ name: 'wiki', params: {  } }">{{ category.title }}</nuxt-link>
 					<div class="category_fold_button" v-if="category.pages && category.pages.length" @click="category.folded = !category.folded">
 						<fa :icon="category.folded ? 'angle-right' : 'angle-down'" />
 					</div>
 					<ul class="nav_pages" v-if="!category.folded">
-						<li v-for="page in category.pages" :key="page.slug">
+						<li v-for="page in category.pages" :key="page.id">
 							<nuxt-link :to="'/wiki' + page.path" :title="page.description">{{ page.title }}</nuxt-link>
 						</li>
 					</ul>
@@ -28,55 +28,53 @@
 	</div>
 </template>
 
-<script>
 
-export default {
-	name: 'NavigationSidebar',
-	data() {return {
-		show_menu: false,
-		search_term: '',
-		categories: [
-			{id: 'home', title: 'Home', folded: false},
-			{id: 'guides', title: 'Guides', folded: false, pages: []},
-			{id: 'blockbench', title: 'Blockbench', folded: false, pages: []},
-			{id: 'docs', title: 'Documentation', folded: false, pages: []},
-		],
-	}},
-	
-	watch: {
-		search_term() {
-			this.updateSearch()
-		}
-  	},
-	methods: {
-		async updateSearch() {
-			let articles;
-			if (this.search_term == '') {
-				articles = await this.$content(undefined, {deep: true})
-					.only(['title', 'slug', 'path', 'description'])
-					.sortBy('path', 'asc')
-					.search(this.search_term)
-					.fetch()
-			} else {
-				articles = await this.$content(undefined, {deep: true})
-					.sortBy('path', 'asc')
-					.search(this.search_term)
-					.fetch()
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const search_term = ref('')
+const show_menu = ref(true)
+
+const { data } = await useAsyncData('data', () => {
+	let colletion = queryCollection('content').order('id', 'ASC');
+	return colletion.select('title', 'path', 'description', 'id').all();
+})
+
+const categories = ref([
+	{ id: 'home', title: 'Home', folded: false, pages: [] as any[] },
+	{ id: 'guides', title: 'Guides', folded: false, pages: [] as any[] },
+	{ id: 'blockbench', title: 'Blockbench', folded: false, pages: [] as any[] },
+	{ id: 'docs', title: 'Documentation', folded: false, pages: [] as any[] }
+])
+
+
+const updateSearch = async () => {
+	const pages = data.value;
+	if (!pages) return;
+	for (let category of categories.value) {
+		category.pages.splice(0, Infinity);
+	}
+	let lower_case = search_term.value.toLowerCase();
+
+	for (let page of pages) {
+		let category_id = page.path.split('/')[1];
+		let cat = categories.value.find(c => c.id == category_id);
+		if (cat) {
+			if (lower_case) {
+				if (
+					!page.title.toLowerCase().includes(lower_case) &&
+					!page.description.toLowerCase().includes(lower_case)
+				) continue;
 			}
-			this.categories.forEach(category => {
-				if (!category.pages) return;
-				let pages = articles.filter(article => {
-					return article.path.substr(1, category.id.length) == category.id;
-				})
-				category.pages.splice(0, category.pages.length, ...pages);
-			})
-			
+			cat.pages.push(page);
 		}
-	},
-	async beforeMount() {
-		this.updateSearch();
 	}
 }
+watchEffect(updateSearch);
+watch(search_term, () => {
+	updateSearch();
+})
+
 </script>
 
 <style scoped>
@@ -128,7 +126,7 @@ export default {
 	ul.nav_pages > li > a {
 		padding-left: 30px;
 	}
-	ul.nav_pages > li a.nuxt-link-active {
+	ul.nav_pages > li a.router-link-active {
 		background-color: var(--accent);
 		color: var(--dark-hover);
 	}

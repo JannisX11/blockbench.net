@@ -80,7 +80,7 @@
 </template>
 
 <script>
-export default {
+export default defineNuxtComponent({
 	head () {
 		return {
 			meta: [
@@ -88,5 +88,5 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>

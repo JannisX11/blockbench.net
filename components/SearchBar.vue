@@ -1,8 +1,8 @@
 <template>
 	<div class="search_bar">
-		<input type="text" placeholder="Search..." :value="value" @input="change($event.target.value)">
-		<div :title="value ? 'Search' : 'Clear'" :class="{clickable: !!value}" @click="change('')">
-			<fa v-if="!value" icon="magnifying-glass" />
+		<input type="text" placeholder="Search..." :value="modelValue" @input="change($event.target.value)">
+		<div :title="modelValue ? 'Search' : 'Clear'" :class="{clickable: !!modelValue}" @click="change('')">
+			<fa v-if="!modelValue" icon="magnifying-glass" />
 			<fa v-else icon="xmark" />
 		</div>
 	</div>
@@ -11,14 +11,14 @@
 <script>
 export default {
 	name: 'SearchBar',
-	props: {
-		value: String
-	},
-	methods: {
-		change(text) {
-			this.$emit('input', text);
-		}
-	}
+    props: {
+        modelValue: String
+    },
+    methods: {
+        change(text) {
+            this.$emit('update:modelValue', text)
+        }
+    }
 }
 </script>
 

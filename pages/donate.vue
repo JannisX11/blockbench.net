@@ -31,7 +31,7 @@
 </template>
 
 <script>
-export default {
+export default defineNuxtComponent({
 	head () {
 		return {
 			title: 'Donate - Blockbench',
@@ -44,5 +44,5 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>

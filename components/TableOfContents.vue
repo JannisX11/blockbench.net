@@ -3,11 +3,23 @@
 		<div id="toc_title">Table of Contents</div>
 		<ul>
 			<li
-				v-for="link of document.toc"
+				v-for="link of document.body.toc.links"
 				:key="link.id"
-				:class="{ 'toc2': link.depth === 2, 'toc3': link.depth === 3 }"
+				class="toc2"
 				>
 				<nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
+				<ul>
+					<li
+						v-for="link of link.children"
+						:key="link.id"
+						class="toc3"
+						>
+						<nuxt-link :to="`#${link.id}`">{{ link.text }}</nuxt-link>
+						<ul>
+							
+						</ul>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</div>
@@ -47,11 +59,11 @@ export default {
 		background-color: var(--accent);
 		color: var(--dark-hover);
 	}
-	li.toc2 a {
+	li.toc2 > a {
 		font-weight: bold;
 		padding-left: 8px;
 	}
-	li.toc3 a {
+	li.toc3 > a {
 		padding-left: 20px;
 	}
 	@media only screen and (max-width: 600px) {

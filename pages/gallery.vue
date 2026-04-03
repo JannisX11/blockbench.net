@@ -18,6 +18,13 @@
 				<li :class="{selected: filter == 'scifi'}" @click="filter = 'scifi';">Sci-Fi</li>
 			</ul>
 
+			<section v-if="showImage(['splashart', 'winner', 'mesh'])">
+				<img loading="lazy" src="~assets/gallery/5.1.webp" alt="Splash Art Contest 5.1 Winner" />
+				<h2>Splash Art Contest 5.1 Winner</h2>
+				<label>By <a target="_blank" rel="noopener" href="https://x.com/AnzSamaEr">AnzSama</a> &amp; <a target="_blank" rel="noopener" href="https://contests.blockbench.net/artists/768854550744137800">C-on</a>, March 2026</label>
+				<p>For the theme "Cozy Workplace", this submission of a cozy art studio, with lots of small details to discover, won first place with 383 votes!</p>
+			</section>
+
 			<section v-if="showImage(['splashart', 'winner', 'scifi', 'mesh'])">
 				<img loading="lazy" src="~assets/gallery/5.0.webp" alt="Splash Art Contest 5.0 Winner" />
 				<h2>Splash Art Contest 5.0 Winner</h2>
@@ -170,7 +177,7 @@
 			</section>
 
 			<section v-if="showImage(['splashart', 'winner', 'vehicle', 'scifi'])">
-				<img loading="lazy" src="~assets/gallery/3.9.png" alt="Splash Art Contest 3.9 Winner" />
+				<img loading="lazy" src="~assets/gallery/3.9.webp" alt="Splash Art Contest 3.9 Winner" />
 				<h2>Splash Art Contest 3.9 Winner</h2>
 				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/LorenOLoren1">Loren</a> and <a target="_blank" rel="noopener" href="https://twitter.com/Dxnkbarkeit">Dankbarkeit</a>, June 2021</label>
 				<p>18 entries were submitted for the 6th Splash Art Contest with the theme "Off Road Pickup Truck". Ultimately, it was a head-to-head race between Wacky's submission, and this entry.
@@ -220,7 +227,7 @@
 			<section v-if="showImage(['minecraft'])">
 				<img loading="lazy" src="~assets/gallery/goat.png" alt="Minecraft Goat" />
 				<h2>Minecraft Goat</h2>
-				<label>By <a target="_blank" rel="noopener" href="twitter.com/Mojang">Mojang Studios</a>, October 2020</label>
+				<label>By <a target="_blank" rel="noopener" href="https://twitter.com/Mojang">Mojang Studios</a>, October 2020</label>
 				<p>The Goat was one of the first vanilla Minecraft models that was created in Blockbench!
 					It was first shown as part of the mountains biome in the community vote at Minecon Live 2019. After winning the vote, the Goat was added to Minecraft as part of the Caves and Cliffs Update, Part 1.</p>
 			</section>
@@ -303,7 +310,7 @@ Wayfarer: https://twitter.com/blockbench/status/1360341166378676225
 FactoryTown: https://twitter.com/Ycarx/status/1318018434949664768
 
  */
-export default {
+export default defineNuxtComponent({
 	head () {
 		return {
 			title: 'Gallery - Blockbench',
@@ -325,7 +332,7 @@ export default {
 			return !this.filter || tags.includes(this.filter);
 		}
 	}
-}
+})
 </script>
 
 
@@ -344,6 +351,7 @@ export default {
 		background-color: var(--light-background);
 		padding: 10px 20px;
 		cursor: pointer;
+		border-radius: 7px;
 	}
 	#filter_list li:hover {
 		background-color: var(--accent);
@@ -359,11 +367,13 @@ export default {
 		padding: 24px;
 		padding-top: 0;
 		background-color: var(--light-background);
+		border-radius: 7px;
 	}
 	img {
 		width: calc(100% + 48px);
 		margin-right: -24px;
 		margin-left: -24px;
+		border-radius: 7px;
 	}
 	label {
 		color: var(--light-subtle);

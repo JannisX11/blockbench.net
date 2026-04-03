@@ -324,7 +324,7 @@
 <script>
 const default_page = 'q_game';
 
-export default {
+export default defineNuxtComponent({
 	data() {return {
 		page: default_page,
 		history: [],
@@ -353,7 +353,7 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>
 
 <style scoped>
@@ -375,6 +375,7 @@ export default {
 			padding: 10px 20px 10px 20px;
 			font-size: 1.16em;
 			cursor: pointer;
+			border-radius: 7px;
 		}
 		.answer::before{
 			content: "❯";

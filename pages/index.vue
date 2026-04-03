@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<section class="download">
-			<content class="content">
+			<div class="content">
 				<img id="main_logo" src="~assets/blockbench_logo_text_white.svg" alt="Blockbench" height="72px" />
 
 				<h3>A low-poly 3D model editor</h3>
@@ -12,11 +12,11 @@
 				</div>
 
 				<img id="front_page_app" src="~assets/front_page_app.png" alt="Blockbench Interface" />
-			</content>
+			</div>
 		</section>
 		
 		<section class="showcase">
-			<content class="content">
+			<div class="content">
 				<h2>Made in Blockbench!</h2>
 				<div id="sketchfab_viewer" v-if="!sketchfab_cookies_accepted">
 					<h4>View awesome Blockbench models in 3D!</h4>
@@ -27,11 +27,11 @@
 					frameborder="0" allow="autoplay; fullscreen; vr" allowvr=""
 					allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""
 				></iframe>
-			</content>
+			</div>
 		</section>
 
 		<section class="users">
-			<content class="content">
+			<div class="content">
 				<h2>Who's using Blockbench</h2>
 				<div id="blockbench_user_list">
 					<a href="https://minecraft.net" target="_blank" rel="noopener">
@@ -68,11 +68,11 @@
 					</a>
 					<p>...and many more!</p>
 				</div>
-			</content>
+			</div>
 		</section>
 		
 		<section class="features">
-			<content class="content split">
+			<div class="content split">
 				<div class="text_body">
 					<h3>Low-poly Modeling</h3>
 					<p>Blockbench puts all the tools at your disposal to make the creation process of low-poly models as easy as possible.</p>
@@ -81,9 +81,9 @@
 				<div>
 					<img src="~assets/features/flower_pot.png" alt="Modeling Illustration" />
 				</div>
-			</content>
+			</div>
 
-			<content class="content split">
+			<div class="content split">
 				<div class="text_body">
 					<h3>Texturing Tools</h3>
 					<p>Create, edit and paint texture right inside the program. Create or import palettes, paint, or draw shapes.</p>
@@ -93,9 +93,9 @@
 				<div>
 					<img loading="lazy" src="~assets/features/texturing.png" alt="Texturing Illustration" />
 				</div>
-			</content>
+			</div>
 
-			<content class="content split">
+			<div class="content split">
 				<div class="text_body">
 					<h3>Animations</h3>
 					<p>Blockbench comes with a powerful animation editor. Rig your model, then use position, rotation and scale keyframes to bring it to life. Use the graph editor to fine-tune your creation.</p>
@@ -104,9 +104,9 @@
 				<div>
 					<img loading="lazy" src="~assets/features/animation.png" alt="Animation Illustration" />
 				</div>
-			</content>
+			</div>
 
-			<content class="content split">
+			<div class="content split">
 				<div class="text_body">
 					<h3>Plugins</h3>
 					<p>Customize Blockbench with the built-in plugin store.</p>
@@ -117,9 +117,9 @@
 				<div>
 					<img loading="lazy" src="~assets/features/plugins.png" alt="Plugin Illustration" />
 				</div>
-			</content>
+			</div>
 
-			<content class="content split">
+			<div class="content split">
 				<div class="text_body">
 					<h3>Free & Open Source</h3>
 					<p>Blockbench is free to use for any type of project, forever, no strings attached.</p>
@@ -129,14 +129,16 @@
 				<div>
 					<img loading="lazy" src="~assets/features/open_source.png" alt="Open Source Illustration" />
 				</div>
-			</content>
+			</div>
 		</section>
 	</div>
 </template>
 
 <script>
+import { defineNuxtComponent } from 'nuxt/app';
 
-export default {
+
+export default defineNuxtComponent({
 	data() {return {
 		sketchfab_cookies_accepted: false
 	}},
@@ -155,7 +157,7 @@ export default {
 		}, false);
 	},
 	
-}
+})
 </script>
 
 <style scoped>
@@ -176,7 +178,7 @@ export default {
 
 	section.download {
 		background-color: var(--dark-background);
-		background-image: url('~assets/background.jpg');
+		background-image: url('@/assets/background.jpg');
 		background-size: cover;
 		color: white;
 		text-align: center;
@@ -191,6 +193,9 @@ export default {
 	section.download .buttons {
 		text-align: center;
 		padding: 20px;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
 	}
 	#main_logo {
 		max-width: 100%;
@@ -202,12 +207,14 @@ export default {
 		transform: rotateX(max(calc(10deg - 60deg * var(--scroll)), -20deg));
 		margin-bottom: -120px;
 		transition: transform 800ms ease;
+		border-radius: 7px;
 	}
 	#front_page_app:hover {
 		transform: translateY(-3px);
 	}
 	section.download button {
 		padding: 0;
+		border-radius: 7px;
 	}
 	section.download button a {
 		padding: 20px 28px;
@@ -247,7 +254,7 @@ export default {
 	div#sketchfab_viewer {
 		text-align: center;
 		padding-top: 20vh;
-		background-image: url('~assets/sketchfab.png');
+		background-image: url('@/assets/sketchfab.png');
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -265,6 +272,7 @@ export default {
 		text-align: center;
 		color: var(--light-subtle);
 		transition: background-color 300ms ease, transform 300ms ease;
+		border-radius: 7px;
 	}
 	#blockbench_user_list {
 		text-align: center;
@@ -280,13 +288,13 @@ export default {
 		margin-bottom: 4px;
 	}
 
-	.dark-mode #blockbench_user_list .oreville_studios img {
+	html.dark #blockbench_user_list .oreville_studios img {
 		filter: invert(1);
 	}
-	html:not(.dark-mode) #blockbench_user_list img.logo_dark_mode {
+	html:not(.dark) #blockbench_user_list img.logo_dark_mode {
 		display: none;
 	}
-	html.dark-mode #blockbench_user_list img.logo_light_mode {
+	html.dark #blockbench_user_list img.logo_light_mode {
 		display: none;
 	}
 
