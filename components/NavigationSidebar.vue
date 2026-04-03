@@ -13,13 +13,13 @@
 
 				<li v-for="category in categories" :key="category.id">
 
-					<nuxt-link :to="{ name: 'wiki', params: {  } }">{{ category.title }}</nuxt-link>
+					<nuxt-link no-prefetch :to="{ name: 'wiki', params: {  } }">{{ category.title }}</nuxt-link>
 					<div class="category_fold_button" v-if="category.pages && category.pages.length" @click="category.folded = !category.folded">
 						<fa :icon="category.folded ? 'angle-right' : 'angle-down'" />
 					</div>
 					<ul class="nav_pages" v-if="!category.folded">
 						<li v-for="page in category.pages" :key="page.id">
-							<nuxt-link :to="'/wiki' + page.path" :title="page.description">{{ page.title }}</nuxt-link>
+							<nuxt-link no-prefetch :to="'/wiki' + page.path" :title="page.description">{{ page.title }}</nuxt-link>
 						</li>
 					</ul>
 				</li>

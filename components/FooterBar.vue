@@ -5,8 +5,8 @@
 				This site is hosted by <img id="netlify_logo" src="~assets/netlify-full-logo-dark.svg" alt="Deploys by Netlify" />
 			</a>
 			<nav>
-				<nuxt-link to='/about'>About</nuxt-link>
-				<nuxt-link to='/privacy-policy'>Privacy Policy</nuxt-link>
+				<nuxt-link no-prefetch to='/about'>About</nuxt-link>
+				<nuxt-link no-prefetch to='/privacy-policy'>Privacy Policy</nuxt-link>
 			</nav>
 		</div>
 	</footer>
