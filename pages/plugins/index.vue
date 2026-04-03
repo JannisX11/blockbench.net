@@ -47,17 +47,10 @@ const { data: plugins } = await useAsyncData('plugins', async () => {
   return list
 })
 
-// Local state
-const searchTerm = ref('')
-
-// Selected plugin based on route param
-const plugin = computed(() => {
-	return plugins.value?.[route.params.pathMatch]
-})
 
 // Filtered list
 const filteredPlugins = computed(() => {
-	const term = searchTerm.value.trim().toUpperCase()
+	const term = search_term.value.trim().toUpperCase()
 	if (!term) return plugins.value || []
 
 	return (plugins.value || []).filter(p => {

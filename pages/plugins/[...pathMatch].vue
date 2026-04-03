@@ -231,13 +231,13 @@ useHead({
 </style>
 <style>
 
-	p.about i.icon {
+	.about i.icon {
 		display: none;
 	}
-	p.about img {
+	.about img {
 		max-width: 100%;
 	}
-	p.about h1, p.about h2 {
+	.about h1, .about h2 {
 		padding-bottom: 12px;
 	}
 </style>
