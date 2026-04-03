@@ -146,7 +146,6 @@ const { data } = await useAsyncData(`plugin-${plugin_id}`, async () => {
 
 
 // Expose values
-const plugins = computed(() => data.value?.plugins)
 const plugin = computed(() => data.value?.plugin)
 const about = computed(() => data.value?.about)
 const last_modified = computed(() => data.value?.last_modified)
