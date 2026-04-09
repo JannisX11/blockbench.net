@@ -98,7 +98,6 @@ export default defineNuxtConfig({
 			rollupOptions: {
 				output: {
       				inlineDynamicImports: true,
-					manualChunks: undefined
 				}
 			}
 		},
