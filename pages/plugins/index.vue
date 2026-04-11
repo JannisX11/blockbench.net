@@ -22,62 +22,57 @@
 	</div>
 </template>
 
-<script>
+<script setup>
+
+const search_term = ref('')
+
+// Fetch plugin list
+const { data: plugins } = await useAsyncData('plugins', async () => {
+  const response = await fetch(
+    'https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json'
+  )
+  const pluginData = await response.json()
+
+  const list = Object.entries(pluginData).map(([id, item]) => ({
+    ...item,
+    id
+  }))
+
+  const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' })
+  list.sort((a, b) => collator.compare(a.title, b.title))
+
+  return list
+})
 
 
-export default {
-	async asyncData({params}) {
-		let response = await fetch(`https://raw.githubusercontent.com/JannisX11/blockbench-plugins/master/plugins.json`)
-		const plugin_data = await response.json();
-		const plugins = [];
-		for (let key in plugin_data) {
-			plugin_data[key].id = key;
-			plugins.push(plugin_data[key]);
-		}
-		
-		const sort_collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-		plugins.sort((a, b) => sort_collator.compare(a.title, b.title));
-		return {
-			search_term: '',
-			plugins,
-			plugin: plugins[params.pathMatch]
-		};
-	},
-	computed: {
-		filteredPlugins() {
-			let term = this.search_term.toUpperCase();
+// Filtered list
+const filteredPlugins = computed(() => {
+	const term = search_term.value.trim().toUpperCase()
+	if (!term) return plugins.value || []
 
-			return this.plugins.filter(plugin => {
-				if (!term) return true;
-				if (term.length > 0) {
-					if (
-						plugin.id.toUpperCase().includes(term) ||
-						plugin.title.toUpperCase().includes(term) ||
-						plugin.description.toUpperCase().includes(term) ||
-						plugin.author.toUpperCase().includes(term)
-					) {
-						return true;
-					}
-				}
-				return false;
-			})
-		}
-	},
-	head() {
-		return {
-			title: `Plugins - Blockbench`,
-			meta: [
-				{ hid: 'description', name: 'description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' },
-				// Open Graph
-				{ hid: 'og:title', property: 'og:title', content: `Plugins - Blockbench` },
-				{ hid: 'og:description', property: 'og:description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' },
-				// Twitter Card
-				{ hid: 'twitter:title', name: 'twitter:title', content: `Plugins - Blockbench` },
-				{ hid: 'twitter:description', name: 'twitter:description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' }
-			]
-		}
-	}
-}
+	return (plugins.value || []).filter(p => {
+		return (
+			p.id.toUpperCase().includes(term) ||
+			p.title.toUpperCase().includes(term) ||
+			p.description.toUpperCase().includes(term) ||
+			p.author.toUpperCase().includes(term)
+		)
+	})
+})
+
+// Page metadata
+useHead({
+	title: `Plugins - Blockbench`,
+	meta: [
+		{ hid: 'description', name: 'description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' },
+		// Open Graph
+		{ hid: 'og:title', property: 'og:title', content: `Plugins - Blockbench` },
+		{ hid: 'og:description', property: 'og:description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' },
+		// Twitter Card
+		{ hid: 'twitter:title', name: 'twitter:title', content: `Plugins - Blockbench` },
+		{ hid: 'twitter:description', name: 'twitter:description', content: 'These are all plugins that are available to install in Blockbench through the built-in plugin store.' }
+	]
+})
 </script>
 
 <style scoped>
@@ -103,13 +98,14 @@ export default {
 		padding: 8px 16px;
 		color: inherit;
 		transition: transform 100ms ease, box-shadow 100ms ease, background 100ms ease;
+		border-radius: 8px;
 	}
 	#plugin_list .plugin:hover {
 		text-decoration: none;
-		transform: scale(1.02);
+		transform: translateY(-3px);
 		box-shadow: 0 0 16px #0001;
 	}
-	html.dark-mode #plugin_list .plugin:hover {
+	html.dark #plugin_list .plugin:hover {
 		background: var(--dark-ui);
 	}
 	#plugin_list .title {

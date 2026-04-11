@@ -17,16 +17,29 @@
 			</p>
 
 			<h2>Contact</h2>
-			<p>For help with Blockbench, please use the help channels on the Blockbench Discord server.</p>
-			<p><a target="_blank" rel="noopener" href="https://discord.gg/blockbench">Discord Server</a></p>
-			<p>Business E-Mail: info@blockbench.net</p>
+			<p>
+				For help with Blockbench, please use the help channels on the Blockbench Discord server:
+				<a target="_blank" rel="noopener" href="https://discord.gg/blockbench">Discord Server</a>
+			</p>
+			
+			<p>
+				Or visit the subreddit:
+				<a target="_blank" rel="noopener" href="https://www.reddit.com/r/Blockbench/">r/Blockbench</a>
+			</p>
+
+			<p>
+				You found a bug or have an idea for a Blockbench feature? Visit the GitHub issue tracker:
+				<a target="_blank" rel="noopener" href="https://github.com/JannisX11/blockbench/issues">JannisX11/Blockbench</a>
+			</p>
+
+			<p>Email: info (at) blockbench dot net<br />Please note that we do not provide support via email. If you have a question or need help, please use the links listed above.</p>
 
 		</content>
 	</div>
 </template>
 
 <script>
-export default {
+export default defineNuxtComponent({
 	head () {
 		return {
 			meta: [
@@ -34,5 +47,5 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>

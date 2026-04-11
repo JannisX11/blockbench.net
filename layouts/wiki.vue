@@ -3,7 +3,7 @@
 		<HeaderBar />
 		<div id="wiki_wrapper">
 			<NavigationSidebar />
-			<nuxt/>
+			<slot></slot>
 		</div>
 		<FooterBar />
 	</div>
@@ -69,6 +69,18 @@ export default {
 		padding: 14px 12px;
 		background-color: var(--light-background);
 		border-left: 10px solid #f53040e0;
+	}
+	blockquote {
+		margin-bottom: 8px;
+		padding: 18px 16px;
+		background-color: var(--light-background);
+		border-left: 4px solid var(--accent);
+	}
+	pre {
+		background-color: var(--light-background);
+		padding: 10px 16px;
+		border-radius: 5px;
+		overflow: auto;
 	}
 
 	/* TOC */

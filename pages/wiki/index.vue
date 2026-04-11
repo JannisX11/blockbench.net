@@ -24,29 +24,27 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 
-
-export default {
+definePageMeta({
 	layout: 'wiki',
-	head() {
-		return {
-			title: `Blockbench Wiki`,
-			meta: [
-				{ hid: 'description', name: 'description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
-				// Open Graph
-				{ hid: 'og:title', property: 'og:title', content: `Blockbench Wiki` },
-				{ hid: 'og:description', property: 'og:description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
-				// Twitter Card
-				{ hid: 'twitter:title', name: 'twitter:title', content: `Blockbench Wiki` },
-				{ hid: 'twitter:description', name: 'twitter:description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
-				// Img
-				{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.blockbench.net/images/wiki/wiki.png' },
-				{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' }
-			]
-		}
-	}
-}
+});
+
+useHead({
+	title: `Blockbench Wiki`,
+	meta: [
+		{ hid: 'description', name: 'description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
+		// Open Graph
+		{ hid: 'og:title', property: 'og:title', content: `Blockbench Wiki` },
+		{ hid: 'og:description', property: 'og:description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
+		// Twitter Card
+		{ hid: 'twitter:title', name: 'twitter:title', content: `Blockbench Wiki` },
+		{ hid: 'twitter:description', name: 'twitter:description', content: 'Welcome to the Blockbench Wiki, the central place for knowledge about Blockbench!' },
+		// Img
+		{ hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.blockbench.net/images/wiki/wiki.png' },
+		{ hid: 'twitter:card', name: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' }
+	]
+})
 </script>
 
 <style>
@@ -68,10 +66,11 @@ export default {
 		max-width: 300px;
 		color: inherit;
 		transition: transform 100ms ease, box-shadow 100ms ease, background 100ms ease;
+		border-radius: 7px;
 	}
 	#wiki_recommendations a:hover {
 		text-decoration: none;
-		transform: scale(1.02);
+		transform: translateY(-3px);
 		box-shadow: 0 0 16px rgb(0 0 0 / 7%);
 	}
 	#wiki_recommendations > a > h4 {

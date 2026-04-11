@@ -59,11 +59,11 @@
 						
 					</div>
 
-					<center><p>Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre-releases and older versions.</p></center>
+					<p style="text-align: center;">Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre-releases and older versions.</p>
 
 					<h4>Updates</h4>
 					<p>Blockbench updates to the latest version automatically! </p>
-					<p>To update the desktop app, you can alternatively download and run the installer again. Running the installer will just change the installed Blockbench version, it won't touch and user preferences and models.</p>
+					<p>To update the desktop app, you can alternatively download and run the installer again. Running the installer will just change the installed Blockbench version, it won't touch any user preferences and models.</p>
 
 				</section>
 
@@ -73,8 +73,8 @@
 					<h4>Mobile App</h4>
 					<p>Are you using a mobile device? Blockbench is available as a progressive web app! That means that you can install it directly from the browser, without the need to use an APK or go through an app store:</p>
 					<ul>
-						<li>On Android, go to&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Chrome. A pop-up will appear, asking you whether to add Blockbench.</li>
-						<li>On iOS, open&nbsp;<a href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Safari. Press the share button and select “Add to Home Screen”</li>
+						<li>On Android, go to&nbsp;<a target="_blank" href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Chrome. A pop-up will appear, asking you whether to add Blockbench.</li>
+						<li>On iOS, open&nbsp;<a target="_blank" href="https://web.blockbench.net/">web.blockbench.net</a>&nbsp;in Safari. Press the share button and select “Add to Home Screen”</li>
 					</ul>
 
 					<h4>Windows 7 & 8</h4>
@@ -89,19 +89,19 @@
 					<li>
 						Desktop App
 						<ul>
-							<li><b>Windows</b> 10 or newer (64 bit)</li>
-							<li><b>macOS</b> 11 (Big Sur) or newer</li>
-							<li><b>Linux</b> Ubuntu 18.04, Debian 10, Fedora 32 or newer (64 bit)</li>
+							<li><b>Windows</b> 10 or newer</li>
+							<li><b>macOS</b> 12 (Monterey) or newer</li>
+							<li><b>Linux</b> Ubuntu 20.04 or newer (or comparable) (x64, Wayland may not be supported in some cases)</li>
 							<li>2+ GB of empty storage space</li>
 						</ul>
 					</li>
 					<li>
 						Web App
 						<ul>
-							<li><b>Chrome/Edge</b> 80+</li>
-							<li><b>Firefox</b> 74+</li>
-							<li><b>Opera</b> 67+</li>
-							<li><b>Safari on iOS</b> 13.4+</li>
+							<li><b>Chrome/Edge</b> 92+</li>
+							<li><b>Firefox</b> 90+</li>
+							<li><b>Opera</b> 78+</li>
+							<li><b>Safari on iOS</b> 15.4+</li>
 						</ul>
 					</li>
 					<li>4 GB RAM</li>
@@ -123,78 +123,86 @@
 	</div>
 </template>
 
-<script>
+<script setup>
+let route = useRoute();
+
 const path = 'https://github.com/JannisX11/blockbench/releases/download';
 
-const data = {
-	path,
-	version: '1.0.0',
-	name: '',
-	has_windows_arm: true,
-	type: 'Latest Version',
-};
 
-export default {
-	data() {return data},
-	async fetch(context) {
-		data.version = '1.1.1';
-		function isNewerThan(string1/*new*/, string2/*old*/) {
-			// Is string1 newer than string2 ?
-			let arr1 = string1.split(/[.-]/);
-			let arr2 = string2.split(/[.-]/);
-			let i = 0;
-			let num1 = 0;
-			let num2 = 0;
-			while (i < Math.max(arr1.length, arr2.length)) {
-				num1 = arr1[i];
-				num2 = arr2[i];
-				if (num1 == 'beta') num1 = -1;
-				if (num2 == 'beta') num2 = -1;
-				num1 = parseInt(num1) || 0;
-				num2 = parseInt(num2) || 0;
-				if (num1 > num2) {
-					return true;
-				} else if (num1 < num2) {
-					return false
-				}
-				i++;
-			}
-			return false;
+function isNewerThan(string1/*new*/, string2/*old*/) {
+	// Is string1 newer than string2 ?
+	let arr1 = string1.split(/[.-]/);
+	let arr2 = string2.split(/[.-]/);
+	let i = 0;
+	let num1 = 0;
+	let num2 = 0;
+	while (i < Math.max(arr1.length, arr2.length)) {
+		num1 = arr1[i];
+		num2 = arr2[i];
+		if (num1 == 'beta') num1 = -1;
+		if (num2 == 'beta') num2 = -1;
+		num1 = parseInt(num1) || 0;
+		num2 = parseInt(num2) || 0;
+		if (num1 > num2) {
+			return true;
+		} else if (num1 < num2) {
+			return false
 		}
-		if (typeof location != 'undefined' && location.hash.length > 5 && location.hash.substr(1, 1) == 'v') {
-			
-			data.version = location.hash.substr(2)
-			data.name = location.hash.substr(2)
-			data.type = 'Selected Version';
-			data.has_windows_arm = isNewerThan(data.version, '4.10.99')
-
-		} else if (typeof location != 'undefined' && (location.hash.substr(1, 4) == 'beta' || location.hash.substr(1, 4) == 'pre')) {
-			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases?per_page=1');
-			let [release] = await response.json();
-
-			data.version = release.tag_name.replace(/^v/, '')
-			data.name = release.name
-			data.type = 'Latest Prerelease'
-
-		} else {
-			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
-			let release = await response.json();
-
-			data.version = release.tag_name.replace(/^v/, '')
-			data.name = release.name
-			data.type = 'Latest Version'
-		}
-	},
-	head: {
-		title: 'Downloads - Blockbench',
-		htmlAttrs: {
-			lang: 'en'
-		},
-		meta: [
-			{ hid: 'description', name: 'description', content: 'Download the latest version of Blockbench - for Windows, mac, and Linux' },
-		],
+		i++;
 	}
+	return false;
 }
+
+const { data } = await useAsyncData('data', async () => {
+	const data = {
+		path,
+		version: '1.0.0',
+		name: '',
+		has_windows_arm: true,
+		type: 'Latest Version',
+	};
+	data.version = '1.1.1';
+	if (typeof location != 'undefined' && location.hash.length > 5 && location.hash.substr(1, 1) == 'v') {
+		
+		data.version = location.hash.substr(2)
+		data.name = location.hash.substr(2)
+		data.type = 'Selected Version';
+		data.has_windows_arm = isNewerThan(data.version, '4.10.99')
+
+	} else if (typeof location != 'undefined' && (location.hash.substr(1, 4) == 'beta' || location.hash.substr(1, 4) == 'pre')) {
+		let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases?per_page=1');
+		let [release] = await response.json();
+
+		if (!release.tag_name) throw 'Cannot find selected version';
+
+		data.version = release.tag_name.replace(/^v/, '')
+		data.name = release.name
+		data.type = 'Latest Prerelease'
+
+	} else {
+		let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
+		let release = await response.json();
+
+		if (!release.tag_name) throw 'Unable to access GitHub API';
+
+		data.version = release.tag_name.replace(/^v/, '')
+		data.name = release.name
+		data.type = 'Latest Version'
+	}
+	return data;
+}, {watch: [() => route.path]})
+
+const type = computed(() => data.value?.type);
+const name = computed(() => data.value?.name);
+const version = computed(() => data.value?.version ?? '1.0.1');
+const has_windows_arm = computed(() => data.value?.has_windows_arm);
+
+useHead({
+	title: 'Downloads - Blockbench',
+	meta: [
+		{ hid: 'description', name: 'description', content: 'Download the latest version of Blockbench - for Windows, mac, and Linux' },
+	],
+});
 </script>
 
 <style scoped>
@@ -228,13 +236,15 @@ export default {
 		color: inherit;
 		text-decoration: none;
 		transition: transform 120ms ease;
+		border-radius: 8px;
 	}
 	.install_os a:first-of-type {
 		background-color: var(--accent);
 		color: var(--dark-hover);
 	}
 	.install_os a:hover {
-		transform: scale(1.06);
+		text-decoration: underline;
+		transform: translateY(-1px);
 	}
 	a.blockbench_download > * {
 		cursor: inherit;

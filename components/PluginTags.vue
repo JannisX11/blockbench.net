@@ -16,6 +16,12 @@ export default {
 			if (lowercase.startsWith('minecraft')) {
 				return 'var(--color-tag-mc)'
 			}
+			if (lowercase.startsWith('minecraft')) {
+				return 'var(--color-tag-mc)'
+			}
+			if (lowercase.startsWith('hytale')) {
+				return 'var(--color-tag-hytale)'
+			}
 			if (lowercase == 'deprecated') {
 				return 'var(--color-tag-deprecated)'
 			}
@@ -38,6 +44,7 @@ export default {
 		line-height: 0;
 		margin-left: -4px;
 		--color-tag-mc: #73e473;
+		--color-tag-hytale: #4a4297;
 		--color-tag-deprecated: #ff3467;
 		--color-tag-misc: var(--accent);
 	}

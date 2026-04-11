@@ -73,14 +73,14 @@
 			<h2>Contact Us</h2>
 			<p>If you have any questions about this Privacy Policy, You can contact us:</p>
 			<ul>
-				<li>By email: info@blockbench.net</li>
+				<li>By email: info (at) blockbench dot net</li>
 			</ul>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {
+export default defineNuxtComponent({
 	head () {
 		return {
 			meta: [
@@ -88,5 +88,5 @@ export default {
 			]
 		}
 	}
-}
+})
 </script>

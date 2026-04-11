@@ -47,7 +47,7 @@ body {
 	background-color: var(--light-ui);
 	color: var(--light-text);
 }
-.dark-mode body {
+html.dark body {
 	--light-ui: var(--dark-background);
 	--light-background: #151a1e;
 	--light-text: #cdcdd5;
@@ -71,6 +71,12 @@ h1, h2, h3, h4 {
 	padding-top: 10px;
 	margin-bottom: 4px;
 	font-weight: 400;
+}
+.content h1 > a,
+.content h2 > a,
+.content h3 > a,
+.content h4 > a {
+	color: inherit;
 }
 h1 {
 	padding-top: 16px;
@@ -113,6 +119,7 @@ button {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 4px 0;
+	border-radius: 7px;
 }
 input[type=text], input[type=number] {
 	appearance: none;
@@ -123,13 +130,14 @@ input[type=text], input[type=number] {
 	padding: 8px 12px;
 	color: inherit;
 	outline-color: var(--accent);
+	border-radius: 6px;
 }
 
 code {
 	background-color: #f1f3f5;
 	padding: 0 4px;
 }
-.dark-mode code {
+html.dark code {
 	background-color: #263238;
 }
 pre code {
