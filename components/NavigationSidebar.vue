@@ -23,6 +23,13 @@
 						</li>
 					</ul>
 				</li>
+
+				<li>
+					<a target="_blank" href="https://web.blockbench.net/docs">
+						API Reference Docs
+						<fa icon="arrow-up-right-from-square" />
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</div>
@@ -44,7 +51,7 @@ const categories = ref([
 	{ id: 'home', title: 'Home', folded: false, pages: [] as any[] },
 	{ id: 'guides', title: 'Guides', folded: false, pages: [] as any[] },
 	{ id: 'blockbench', title: 'Blockbench', folded: false, pages: [] as any[] },
-	{ id: 'docs', title: 'Documentation', folded: false, pages: [] as any[] }
+	{ id: 'docs', title: 'Technical Documentation', folded: false, pages: [] as any[] }
 ])
 
 
