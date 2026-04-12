@@ -140,7 +140,7 @@ code {
 html.dark code {
 	background-color: #263238;
 }
-pre code {
+.content pre code {
 	background-color: unset;
 	padding: unset;
 }

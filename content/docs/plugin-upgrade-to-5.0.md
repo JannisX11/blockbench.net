@@ -153,7 +153,7 @@ For plugin creators, hopefully not much should change, except that types should 
 
 You can install the types from `blockbench-types`. Use the tag `@beta` to install the latest types for the 5.0 beta:
 
-```batch
+```bash
 npm i --save-dev blockbench-types@beta
 ```
 

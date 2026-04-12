@@ -81,6 +81,7 @@ export default {
 		padding: 10px 16px;
 		border-radius: 5px;
 		overflow: auto;
+		margin-bottom: 16px;
 	}
 
 	/* TOC */
