@@ -235,7 +235,7 @@ v.mouth_shape = slider('Mouth', 1, 1, 3)
 
 You can repeat the previous steps for as many details in your rig as you like, including eyes, eye brows, nose, etc.
 
-#### Animate with the rig
+#### Use the rig in animations
 
 The final step is to keyframe the value of the variable. You can either do this in the same animation, or create a new animation for this, and keep both playing.
 

@@ -143,6 +143,7 @@ html.dark code {
 .content pre code {
 	background-color: unset;
 	padding: unset;
+	line-height: 22px;
 }
 table {
 	border-spacing: 0;
