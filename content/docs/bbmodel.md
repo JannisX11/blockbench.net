@@ -71,5 +71,5 @@ Note that additions and non-breaking changes are not listed on this page. This i
 
 ## Format documentation
 
-There is no complete specification of the JSON format at this point in time. To understand it, it is recommended to look at example .bbmodel files and to examine the Blockbench source code: [js/io/formats/bbmodel.js](https://github.com/JannisX11/blockbench/blob/master/js/io/formats/bbmodel.js)
+There is no complete specification of the JSON format at this point in time. To understand it, it is recommended to look at example .bbmodel files and to examine the Blockbench source code: [js/formats/bbmodel.js](https://github.com/JannisX11/blockbench/blob/master/js/formats/bbmodel.js)
 
