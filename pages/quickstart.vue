@@ -200,15 +200,15 @@
 
 				<template v-if="page == 'hytale'">
 					<h4 class="suggestion">The following format was suggested for you:</h4>
-					<h2>Generic Model</h2>
-					<p>Blockbench is the official modeling software for creating models and animations for Hytale.</p>
-					<p>Hytale will release on January 13th 2026, but the modeling tools are already available and models can be created.</p>
+					<h2>Hytale Character / Hytale Prop</h2>
+					<p>Blockbench is the official modeling software for creating models and animations for <a href="https://hytale.com" target="_blank">Hytale</a>.</p>
+					<p>The Hytale Models plugin for Blockbench adds two new model formats: Hytale Character for characters and items and Hytale Prop for blocks.</p>
 
 					<h3>Quick Info</h3>
 					<ul>
 						<li>The <a href="https://www.blockbench.net/plugins/hytale_plugin" target="_blank">Hytale Models plugin</a> is required to make models</li>
 						<li>Discord Help Forum: <a href="https://discord.gg/CBhgSJvuj5" class="channel" target="_blank">#help-hytale</a></li>
-						<li>Hytale Discord Server: <a href="https://discord.gg/hytale" class="channel" target="_blank">Hytale</a></li>
+						<li>Hytale Discord Server: <a href="https://discord.gg/hytale" target="_blank">Hytale</a></li>
 						<li>Models are built with cubes in a hierarchy of groups, with cubes and quads (flat cubes with one face).</li>
 						<li>The default front direction for Hytale models is South, away from the N arrow on the grid.</li>
 						<li>The main block size for Hytale is 32 pixels for blocks and props, and 64 pixels for characters and attachments. Once you selected the correct Hytale format for your model, the base grid will represent the size of one block in-game.</li>
@@ -386,10 +386,6 @@ export default defineNuxtComponent({
 			background-color: var(--accent);
 			color: var(--dark-hover)
 		}
-		a.channel {
-			color: #3e90ff;
-			font-weight: 600;
-		}
 		.suggestion {
 			margin-bottom: 28px;
 			color: var(--dark-text);
@@ -397,5 +393,6 @@ export default defineNuxtComponent({
 			font-weight: 300;
 			margin: 15px -20px;
 			padding: 20px;
+			border-radius: 6px;
 		}
 </style>
