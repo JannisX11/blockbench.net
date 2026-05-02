@@ -57,11 +57,6 @@ export default defineNuxtConfig({
 
 	nitro: {
 		preset: 'cloudflare-pages',
-		cloudflare: {
-			pages: {
-				projectName: 'blockbench-net',
-			}
-		},
 		prerender: {
 			crawl: true,
 			ignore: [
