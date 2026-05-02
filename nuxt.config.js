@@ -54,13 +54,9 @@ export default defineNuxtConfig({
 			}
 		}
 	},
-	experimental: {
-		defaults: {
-			prefetch: false
-		}
-	},
 
 	nitro: {
+		preset: 'cloudflare-pages',
 		prerender: {
 			crawl: true,
 			ignore: [
@@ -95,13 +91,6 @@ export default defineNuxtConfig({
 	],
 
 	vite: {
-		build: {
-			rollupOptions: {
-				output: {
-      				inlineDynamicImports: true,
-				}
-			}
-		},
 		optimizeDeps: {
 			include: [
 				'@vue/devtools-core',
