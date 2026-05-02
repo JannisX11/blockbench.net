@@ -56,7 +56,6 @@ export default defineNuxtConfig({
 	},
 
 	nitro: {
-		preset: 'cloudflare-pages',
 		prerender: {
 			crawl: true,
 			ignore: [
