@@ -1,9 +1,6 @@
 <template>
 	<footer id="footer">
 		<div id="footer_content">
-			<a href="https://www.netlify.com" target="_blank" rel="noopener">
-				This site is hosted by <img id="netlify_logo" src="~assets/netlify-full-logo-dark.svg" alt="Deploys by Netlify" />
-			</a>
 			<nav>
 				<nuxt-link no-prefetch to='/about'>About</nuxt-link>
 				<nuxt-link no-prefetch to='/privacy-policy'>Privacy Policy</nuxt-link>
@@ -42,10 +39,6 @@ export default {
 	}
 	a:hover {
 		color: var(--dark-hover);
-	}
-	#netlify_logo {
-		vertical-align: text-top;
-		height: 20px;
 	}
 
 	@media only screen and (max-width: 600px) {
