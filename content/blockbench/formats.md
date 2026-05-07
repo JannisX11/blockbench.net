@@ -51,7 +51,7 @@ Multiple textures support|x| | | | | |x|
 Bone rotations| |x|x|x|x|x|x|x
 Individual cube rotations|x|x| |x| |x|x|x
 Cube axis rotations|1|3| |3| |3|3|3
-Rotation angle limits|22.5°|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited
+Rotation angle limits|Unlimited⁶|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited|Unlimited
 | | | | | | | |
 **Animations**| | | | | | | |
 Model animations| |x|x|x|x⁴| |x|x
@@ -69,6 +69,6 @@ Sound/Particle/Custom Keyframes| |x|x| | | |x|x
 - ³ Use [GeckoLib](https://github.com/bernie-g/geckolib/wiki) to run Blockbench animations in Minecraft mods
 - ⁴ Optifine entities support expression based animations. Requires the [CEM Template Loader Plugin](https://www.blockbench.net/plugins/cem_template_loader) to be able to edit and preview inside Blockbench. [Documentation](https://www.wynem.com/?cem_animation_doc)
 - ⁵ Models that don't support unlimited cube sizes are restricted to only integers for cube sizes i.e. 0 1 2 etc.
-
+- ⁶ Limited to multiples of 22.5° before 1.21.6
 
 </template>
