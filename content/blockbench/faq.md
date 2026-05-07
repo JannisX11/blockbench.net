@@ -31,7 +31,7 @@ Mojang also supports the development of Blockbench, both for internal use, and f
 
 ### Where do I report bugs?
 
-You can report issues on the [Blockbench bug tracker](https://github.com/JannisX11/blockbench) on Github. Before you report a bug, make sure it hasn't already been reported.
+You can report issues on the [Blockbench bug tracker](https://github.com/JannisX11/blockbench/issues) on Github. Before you report a bug, make sure it hasn't already been reported.
 
 
 ### Where do I find error messages?
