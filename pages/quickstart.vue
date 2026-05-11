@@ -357,42 +357,42 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped>
-		p {
-			margin: 16px 0;
-		}
-		h3 {
-			margin-top: 16px;
-			margin-bottom: 4px;
-		}
-		li {
-			margin-left: 25px;
-		}
-		.quickstart_page {
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-		.answer {
-			padding: 10px 20px 10px 20px;
-			font-size: 1.16em;
-			cursor: pointer;
-			border-radius: 7px;
-		}
-		.answer::before{
-			content: "❯";
-			display: inline-block;
-			width: 20px;
-		}
-		.answer:hover {
-			background-color: var(--accent);
-			color: var(--dark-hover)
-		}
-		.suggestion {
-			margin-bottom: 28px;
-			color: var(--dark-text);
-			background-color: var(--dark-ui);
-			font-weight: 300;
-			margin: 15px -20px;
-			padding: 20px;
-			border-radius: 6px;
-		}
+	p {
+		margin: 16px 0;
+	}
+	h3 {
+		margin-top: 16px;
+		margin-bottom: 4px;
+	}
+	li {
+		margin-left: 25px;
+	}
+	.quickstart_page {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.answer {
+		padding: 10px 20px 10px 20px;
+		font-size: 1.16em;
+		cursor: pointer;
+		border-radius: 7px;
+	}
+	.answer::before{
+		content: "❯";
+		display: inline-block;
+		width: 20px;
+	}
+	.answer:hover {
+		background-color: var(--accent);
+		color: var(--dark-hover)
+	}
+	.suggestion {
+		margin-bottom: 28px;
+		color: var(--dark-text);
+		background-color: var(--dark-ui);
+		font-weight: 300;
+		margin: 15px -20px;
+		padding: 20px;
+		border-radius: 6px;
+	}
 </style>

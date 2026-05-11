@@ -42,24 +42,6 @@ export default defineNuxtConfig({
 		'@/assets/css/main.css'
 	],
 
-	hooks: {
-		// No prefetch to reduce Netlify token usage
-		'build:manifest': (manifest) => {
-			// This loops through the build manifest and removes 
-			// the prefetch/preload flags from all assets
-			for (const key in manifest) {
-				const entry = manifest[key]
-				entry.prefetch = false
-				entry.preload = false
-			}
-		}
-	},
-	experimental: {
-		defaults: {
-			prefetch: false
-		}
-	},
-
 	nitro: {
 		prerender: {
 			crawl: true,
@@ -95,13 +77,6 @@ export default defineNuxtConfig({
 	],
 
 	vite: {
-		build: {
-			rollupOptions: {
-				output: {
-      				inlineDynamicImports: true,
-				}
-			}
-		},
 		optimizeDeps: {
 			include: [
 				'@vue/devtools-core',
