@@ -31,7 +31,7 @@ Mojang also supports the development of Blockbench, both for internal use, and f
 
 ### Where do I report bugs?
 
-You can report issues on the [Blockbench bug tracker](https://github.com/JannisX11/blockbench) on Github. Before you report a bug, make sure it hasn't already been reported.
+You can report issues on the [Blockbench bug tracker](https://github.com/JannisX11/blockbench/issues) on Github. Before you report a bug, make sure it hasn't already been reported.
 
 
 ### Where do I find error messages?
@@ -58,14 +58,14 @@ Blockbench is available as a progressive web app. That means that you can instal
 
 ### How do I add reference images/blueprints?
 
-You can add reference images to Blockbench. They can be placed as a background behind your model, or above the UI. On orthographic camera angles, an image can be used as a blueprint. To add a new reference image, right click in the preview and click "Add Reference Image". Right click the reference image to change its settings, move it to a different layer, or enable clear mode for blueprints. After exiting the refernece image edit mode, you can double-click a reference image to edit it again.
+You can add reference images to Blockbench. They can be placed as a background behind your model, or above the UI. On orthographic camera angles, an image can be used as a blueprint. To add a new reference image, right click in the preview and click "Add Reference Image". Right click the reference image to change its settings, move it to a different layer, or enable clear mode for blueprints. After exiting the reference image edit mode, you can double-click a reference image to edit it again.
 
 
 ### Which technology and programming language is Blockbench built on?
 
 Blockbench is built on web technologies. This allows it to work seamlessly across different platforms, and even as a web app on Android, iOS, and Chromebook.
 
-The program is mainly written in Javascript, the it renders the 3D preview in WebGL with the help of THREE.JS. The customizable interface is mainly written in Javascript, with some of the dynamic components, such as the Outliner, using Vue.js 2 for dynamic rendering.
+The program is mainly written in JavaScript and TypeScript. The 3D preview is rendered using WebGL and THREE.JS. The customizable interface is mainly written in JavaScript and TypeScript, with some of the dynamic components, such as the Outliner, using Vue.js 2 for dynamic rendering.
 
 The desktop apps on Windows, Linux, and Mac are created with Electron.
 
