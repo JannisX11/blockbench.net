@@ -51,6 +51,7 @@ const categories = ref([
 	{ id: 'home', title: 'Home', folded: false, pages: [] as any[] },
 	{ id: 'guides', title: 'Guides', folded: false, pages: [] as any[] },
 	{ id: 'blockbench', title: 'Blockbench', folded: false, pages: [] as any[] },
+	{ id: 'creations', title: 'Creations', folded: false, pages: [] as any[] },
 	{ id: 'docs', title: 'Technical Documentation', folded: false, pages: [] as any[] }
 ])
 
