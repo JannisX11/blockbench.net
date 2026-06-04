@@ -31,6 +31,9 @@ export default defineNuxtConfig({
 		"/faq": {
 			redirect: "https://blockbench.net/wiki/blockbench/faq",
 		},
+		"/wiki/creations": {
+			redirect: "/wiki/creations/indie-development",
+		},
 		"/wiki/**": {
 			prerender: true
 		},
