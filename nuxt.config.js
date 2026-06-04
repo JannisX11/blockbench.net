@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 			redirect: "https://blockbench.net/wiki/blockbench/faq",
 		},
 		"/wiki/creations": {
-			redirect: "/wiki/creations/indie-development",
+			redirect: "/wiki/creations/indie-games",
 		},
 		"/wiki/**": {
 			prerender: true

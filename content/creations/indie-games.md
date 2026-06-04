@@ -1,5 +1,5 @@
 ---
-title: Indie Development
+title: Indie Games
 description: A showcase of indie games that used Blockbench as a primary tool in their creation process
 authors:
   - Dakotero
