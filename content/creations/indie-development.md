@@ -58,7 +58,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> Everheart</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Strategy, Automation, Roguelike, Tower Defense, Co-op</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#e67e22; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Early Access, 2026</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, 2026</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">You are building underground, automating a factory, and defending it against parasites that want to tear everything apart. Runs are roguelite so each attempt plays out a bit differently, and you can bring up to two friends along online if you want company.</p>
     <a href="https://store.steampowered.com/app/3929340/We_Build_Below/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
@@ -92,7 +92,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> iron cast flight</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Beat 'em Up, Action Roguelike, Dungeon Crawler, Hack and Slash</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, 2027</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">A brawler roguelite set in a world of dwarves, fantasy taverns, and general mayhem. You loot, you fight, you upgrade, and then you do it all over again. The whole thing leans into old-school fantasy comedy and does not take itself too seriously.</p>
     <a href="https://store.steampowered.com/app/3704330/Dwarf_Boozter/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
@@ -126,7 +126,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> Top Chop Games</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Roguelite, Dungeon Crawler, Cooking, Management</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon</span> <span style="font-size:0.85em;">(Demo available)</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, Q4 2026</span> <span style="font-size:0.85em;">(Demo available)</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">Half dungeon crawler, half bakery. You head into candy-themed dungeons to collect ingredients, come back to bake and sell desserts, and try to keep your shop afloat while the landlord keeps hiking up the rent. There is a free demo up if you want to try it before it launches.</p>
     <a href="https://store.steampowered.com/app/2996900/Dungeons__Desserts/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
