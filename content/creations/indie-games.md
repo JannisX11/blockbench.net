@@ -58,7 +58,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> Everheart</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Strategy, Automation, Roguelike, Tower Defense, Co-op</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#e67e22; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Early Access, 2026</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, 2026</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">You are building underground, automating a factory, and defending it against parasites that want to tear everything apart. Runs are roguelite so each attempt plays out a bit differently, and you can bring up to two friends along online if you want company.</p>
     <a href="https://store.steampowered.com/app/3929340/We_Build_Below/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
@@ -92,7 +92,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> iron cast flight</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Beat 'em Up, Action Roguelike, Dungeon Crawler, Hack and Slash</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, 2027</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">A brawler roguelite set in a world of dwarves, fantasy taverns, and general mayhem. You loot, you fight, you upgrade, and then you do it all over again. The whole thing leans into old-school fantasy comedy and does not take itself too seriously.</p>
     <a href="https://store.steampowered.com/app/3704330/Dwarf_Boozter/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
@@ -126,7 +126,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> Top Chop Games</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Roguelite, Dungeon Crawler, Cooking, Management</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon</span> <span style="font-size:0.85em;">(Demo available)</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, Q4 2026</span> <span style="font-size:0.85em;">(Demo available)</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">Half dungeon crawler, half bakery. You head into candy-themed dungeons to collect ingredients, come back to bake and sell desserts, and try to keep your shop afloat while the landlord keeps hiking up the rent. There is a free demo up if you want to try it before it launches.</p>
     <a href="https://store.steampowered.com/app/2996900/Dungeons__Desserts/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
@@ -198,6 +198,40 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> <span style="color:#27ae60; font-weight:bold;">96% Positive</span> (31 reviews)</p>
     <p style="margin:0 0 16px;">A boomer shooter set on the western frontier. You work through 9 main missions and 7 side missions with 16 weapons across 4 difficulty levels. It is short and focused, which suits the format well.</p>
     <a href="https://store.steampowered.com/app/3227060/Saloonery/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
+  </div>
+</div>
+
+---
+
+## Graytail
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0 36px;">
+  <div style="width:320px; max-width:100%; flex-shrink:0;">
+    <a href="https://store.steampowered.com/app/2888960/Graytail/" target="_blank" rel="noopener">
+      <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/b6cf37aeea8791ed51793ee779cd258870d3ad28/header.jpg?t=1777013144" alt="Graytail key art" style="width:100%; border-radius:6px; display:block;">
+    </a>
+    <div class="ss-strip">
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/a5a1231eccd6d07fe69b871762975e81575ee401/ss_a5a1231eccd6d07fe69b871762975e81575ee401.600x338.jpg?t=1777013144" alt="Graytail screenshot 1">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/a5a1231eccd6d07fe69b871762975e81575ee401/ss_a5a1231eccd6d07fe69b871762975e81575ee401.600x338.jpg?t=1777013144" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/a79c0e61dcef0106090d751c7197e77ad9c82c1f/ss_a79c0e61dcef0106090d751c7197e77ad9c82c1f.600x338.jpg?t=1777013144" alt="Graytail screenshot 2">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/a79c0e61dcef0106090d751c7197e77ad9c82c1f/ss_a79c0e61dcef0106090d751c7197e77ad9c82c1f.600x338.jpg?t=1777013144" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/26b5a5fa0465f062e474475c6e0ee57305a85cd3/ss_26b5a5fa0465f062e474475c6e0ee57305a85cd3.600x338.jpg?t=1777013144" alt="Graytail screenshot 3">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2888960/26b5a5fa0465f062e474475c6e0ee57305a85cd3/ss_26b5a5fa0465f062e474475c6e0ee57305a85cd3.600x338.jpg?t=1777013144" alt="">
+      </div>
+    </div>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <p style="margin:4px 0;"><strong>Developer:</strong> Concode</p>
+    <p style="margin:4px 0;"><strong>Genre:</strong> Action Adventure, RPG, Puzzle, Mystery, 2.5D</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, Q2 2027</span></p>
+    <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
+    <p style="margin:0 0 16px;">A 2.5D pixel art mystery set on a small island in the Pacific. A legendary pilot has gone missing, and the protagonist searching for her is also fighting through severe headaches and medication that blurs the line between what is real and what is not. Physics puzzles, boss fights, and a story that leans into that uncertainty.</p>
+    <a href="https://store.steampowered.com/app/2888960/Graytail/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
   </div>
 </div>
 
