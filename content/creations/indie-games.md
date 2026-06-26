@@ -237,6 +237,40 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
 
 ---
 
+## Pat the Cat
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0 36px;">
+  <div style="width:320px; max-width:100%; flex-shrink:0;">
+    <a href="https://store.steampowered.com/app/3924280/Pat_the_Cat/" target="_blank" rel="noopener">
+      <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3924280/35365b0cf5ae674aa3ca367c49fee2fc8db7d76a/header.jpg?t=1782374449" alt="Pat the Cat key art" style="width:100%; border-radius:6px; display:block;">
+    </a>
+    <div class="ss-strip">
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3924280/dff65bfad6ef4fe9b901b6c10369789da7644611/ss_dff65bfad6ef4fe9b901b6c10369789da7644611.600x338.jpg?t=1782374449" alt="Pat the Cat screenshot 1">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3924280/dff65bfad6ef4fe9b901b6c10369789da7644611/ss_dff65bfad6ef4fe9b901b6c10369789da7644611.600x338.jpg?t=1782374449" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3924280/765ec4be9ad9796b31a52367f6c0e2bbee19c6e0/ss_765ec4be9ad9796b31a52367f6c0e2bbee19c6e0.600x338.jpg?t=1782374449" alt="Pat the Cat screenshot 2">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3924280/765ec4be9ad9796b31a52367f6c0e2bbee19c6e0/ss_765ec4be9ad9796b31a52367f6c0e2bbee19c6e0.600x338.jpg?t=1782374449" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3924280/b7d452ad929707a2e32bfe6163dbef5f6939b737/ss_b7d452ad929707a2e32bfe6163dbef5f6939b737.600x338.jpg?t=1782374449" alt="Pat the Cat screenshot 3">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3924280/b7d452ad929707a2e32bfe6163dbef5f6939b737/ss_b7d452ad929707a2e32bfe6163dbef5f6939b737.600x338.jpg?t=1782374449" alt="">
+      </div>
+    </div>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <p style="margin:4px 0;"><strong>Developer:</strong> okfinegames</p>
+    <p style="margin:4px 0;"><strong>Genre:</strong> Casual, Idle, Desktop Companion, Cozy, Cats</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#27ae60; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Released, June 25 2026</span> &nbsp; $2.79</p>
+    <p style="margin:4px 0 12px;"><strong>Reviews:</strong> <span style="color:#27ae60; font-weight:bold;">100% Positive</span> (69 reviews)</p>
+    <p style="margin:0 0 16px;">A cozy desktop companion where you look after a little cat. You pet it, feed it, and play with it to earn purr points, which you spend on hats, toys, and new surroundings. It sits right on your desktop while you do other things, which is kind of the whole appeal.</p>
+    <a href="https://store.steampowered.com/app/3924280/Pat_the_Cat/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
+  </div>
+</div>
+
+---
+
 ## Get Featured
 
 <div class="block-info">
