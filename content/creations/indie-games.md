@@ -92,7 +92,7 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> iron cast flight</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Beat 'em Up, Action Roguelike, Dungeon Crawler, Hack and Slash</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, 2027</span></p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, February 2027</span></p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
     <p style="margin:0 0 16px;">A brawler roguelite set in a world of dwarves, fantasy taverns, and general mayhem. You loot, you fight, you upgrade, and then you do it all over again. The whole thing leans into old-school fantasy comedy and does not take itself too seriously.</p>
     <a href="https://store.steampowered.com/app/3704330/Dwarf_Boozter/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
@@ -262,10 +262,146 @@ Got a game you made with Blockbench? Scroll to the bottom to find out how to get
   <div style="flex:1; min-width:200px;">
     <p style="margin:4px 0;"><strong>Developer:</strong> okfinegames</p>
     <p style="margin:4px 0;"><strong>Genre:</strong> Casual, Idle, Desktop Companion, Cozy, Cats</p>
-    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#27ae60; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Released, June 25 2026</span> &nbsp; $2.79</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#27ae60; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Released, June 25 2026</span> &nbsp; $3.29</p>
     <p style="margin:4px 0 12px;"><strong>Reviews:</strong> <span style="color:#27ae60; font-weight:bold;">100% Positive</span> (69 reviews)</p>
     <p style="margin:0 0 16px;">A cozy desktop companion where you look after a little cat. You pet it, feed it, and play with it to earn purr points, which you spend on hats, toys, and new surroundings. It sits right on your desktop while you do other things, which is kind of the whole appeal.</p>
     <a href="https://store.steampowered.com/app/3924280/Pat_the_Cat/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
+  </div>
+</div>
+
+---
+
+## Peckers
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0 36px;">
+  <div style="width:320px; max-width:100%; flex-shrink:0;">
+    <a href="https://store.steampowered.com/app/4060780/Peckers/" target="_blank" rel="noopener">
+      <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/1a7b70677d4358a57c74124dad8eb6435b749e2d/header.jpg?t=1787673750" alt="Peckers key art" style="width:100%; border-radius:6px; display:block;">
+    </a>
+    <div class="ss-strip">
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/45fb5e5754238bf8ca9d800756969b70659f31e3/ss_45fb5e5754238bf8ca9d800756969b70659f31e3.600x338.jpg?t=1787673750" alt="Peckers screenshot 1">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/45fb5e5754238bf8ca9d800756969b70659f31e3/ss_45fb5e5754238bf8ca9d800756969b70659f31e3.600x338.jpg?t=1787673750" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/e85f479385ea874eb246b563b6d8ffdcdffff84c/ss_e85f479385ea874eb246b563b6d8ffdcdffff84c.600x338.jpg?t=1787673750" alt="Peckers screenshot 2">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/e85f479385ea874eb246b563b6d8ffdcdffff84c/ss_e85f479385ea874eb246b563b6d8ffdcdffff84c.600x338.jpg?t=1787673750" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/a3c53051b578f09ad462aabcac6a489f0b84f108/ss_a3c53051b578f09ad462aabcac6a489f0b84f108.600x338.jpg?t=1787673750" alt="Peckers screenshot 3">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4060780/a3c53051b578f09ad462aabcac6a489f0b84f108/ss_a3c53051b578f09ad462aabcac6a489f0b84f108.600x338.jpg?t=1787673750" alt="">
+      </div>
+    </div>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <p style="margin:4px 0;"><strong>Developer:</strong> Humblebright Studio</p>
+    <p style="margin:4px 0;"><strong>Genre:</strong> Casual, Clicker, Idle, Desktop Companion, Crafting</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#27ae60; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Released, April 2 2026</span> &nbsp; $2.99</p>
+    <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
+    <p style="margin:0 0 16px;">A small clicker you can tuck in the corner of your screen while doing other things. You gather resources, craft gear, and pick up quests from quirky NPCs. The kind of game that quietly runs in the background and gives you something to poke at between tasks.</p>
+    <a href="https://store.steampowered.com/app/4060780/Peckers/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
+  </div>
+</div>
+
+---
+
+## Repotted
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0 36px;">
+  <div style="width:320px; max-width:100%; flex-shrink:0;">
+    <a href="https://store.steampowered.com/app/4508730/Repotted/" target="_blank" rel="noopener">
+      <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/37454ff36540ffcf23765f473877ad59e022f9e3/header.jpg?t=1787673614" alt="Repotted key art" style="width:100%; border-radius:6px; display:block;">
+    </a>
+    <div class="ss-strip">
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/fe0c3a7787e0e6f52773b65779de621ef18efe00/ss_fe0c3a7787e0e6f52773b65779de621ef18efe00.600x338.jpg?t=1787673614" alt="Repotted screenshot 1">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/fe0c3a7787e0e6f52773b65779de621ef18efe00/ss_fe0c3a7787e0e6f52773b65779de621ef18efe00.600x338.jpg?t=1787673614" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/a5065b4bc0dc4a6b4623356692487f6d6ff10531/ss_a5065b4bc0dc4a6b4623356692487f6d6ff10531.600x338.jpg?t=1787673614" alt="Repotted screenshot 2">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/a5065b4bc0dc4a6b4623356692487f6d6ff10531/ss_a5065b4bc0dc4a6b4623356692487f6d6ff10531.600x338.jpg?t=1787673614" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/b79f96261c330466e7e47a6102ddeb8577e3064b/ss_b79f96261c330466e7e47a6102ddeb8577e3064b.600x338.jpg?t=1787673614" alt="Repotted screenshot 3">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4508730/b79f96261c330466e7e47a6102ddeb8577e3064b/ss_b79f96261c330466e7e47a6102ddeb8577e3064b.600x338.jpg?t=1787673614" alt="">
+      </div>
+    </div>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <p style="margin:4px 0;"><strong>Developer:</strong> Humblebright Studio, Quirkitt!</p>
+    <p style="margin:4px 0;"><strong>Genre:</strong> Casual, Idle, Desktop Companion, Farming Sim, Cozy</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon</span></p>
+    <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
+    <p style="margin:0 0 16px;">A cozy desktop companion about growing plants in charming pots. You arrange them, take care of them, and manage their needs while you get on with the rest of your day. Made by the same studio behind Peckers.</p>
+    <a href="https://store.steampowered.com/app/4508730/Repotted/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
+  </div>
+</div>
+
+---
+
+## Long Gone
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0 36px;">
+  <div style="width:320px; max-width:100%; flex-shrink:0;">
+    <a href="https://store.steampowered.com/app/1977610/Long_Gone/" target="_blank" rel="noopener">
+      <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/b831c7e4fac95445cfc898c0ef00be1ea5800d8d/header.jpg?t=1776651851" alt="Long Gone key art" style="width:100%; border-radius:6px; display:block;">
+    </a>
+    <div class="ss-strip">
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/52f25c620f7518bec270b63f751c0847b20d79b0/ss_52f25c620f7518bec270b63f751c0847b20d79b0.600x338.jpg" alt="Long Gone screenshot 1">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/52f25c620f7518bec270b63f751c0847b20d79b0/ss_52f25c620f7518bec270b63f751c0847b20d79b0.600x338.jpg" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/9a963f4185be6bf06fddae2a8cbb1debfbf07f41/ss_9a963f4185be6bf06fddae2a8cbb1debfbf07f41.600x338.jpg" alt="Long Gone screenshot 2">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/9a963f4185be6bf06fddae2a8cbb1debfbf07f41/ss_9a963f4185be6bf06fddae2a8cbb1debfbf07f41.600x338.jpg" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/e0f0b1f3d4b4107c2192100d3d7167d7645dbd07/ss_e0f0b1f3d4b4107c2192100d3d7167d7645dbd07.600x338.jpg" alt="Long Gone screenshot 3">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1977610/e0f0b1f3d4b4107c2192100d3d7167d7645dbd07/ss_e0f0b1f3d4b4107c2192100d3d7167d7645dbd07.600x338.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <p style="margin:4px 0;"><strong>Developer:</strong> Hillfort Games</p>
+    <p style="margin:4px 0;"><strong>Genre:</strong> Adventure, Puzzle Platformer, 2.5D, Post-apocalyptic, Pixel Graphics</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, 2027</span></p>
+    <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
+    <p style="margin:0 0 16px;">A 2.5D pixel adventure set in a suburb that has been abandoned for decades after a zombie outbreak. You explore the area with your cat, solve environmental puzzles, and piece together the lives of the people who used to live there through what they left behind.</p>
+    <a href="https://store.steampowered.com/app/1977610/Long_Gone/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
+  </div>
+</div>
+
+---
+
+## OBVERSE
+
+<div style="display:flex; gap:24px; flex-wrap:wrap; margin:16px 0 36px;">
+  <div style="width:320px; max-width:100%; flex-shrink:0;">
+    <a href="https://store.steampowered.com/app/4028770/OBVERSE/" target="_blank" rel="noopener">
+      <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/7fecd65b42528af8a025a17605144fe50cdd3415/header.jpg?t=1780153861" alt="OBVERSE key art" style="width:100%; border-radius:6px; display:block;">
+    </a>
+    <div class="ss-strip">
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/be76898c3644db826f1036adeb8c3527eadc6153/ss_be76898c3644db826f1036adeb8c3527eadc6153.600x338.jpg?t=1780153861" alt="OBVERSE screenshot 1">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/be76898c3644db826f1036adeb8c3527eadc6153/ss_be76898c3644db826f1036adeb8c3527eadc6153.600x338.jpg?t=1780153861" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/bca5f03595aced08b5c8361d640400bf603218d1/ss_bca5f03595aced08b5c8361d640400bf603218d1.600x338.jpg?t=1780153861" alt="OBVERSE screenshot 2">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/bca5f03595aced08b5c8361d640400bf603218d1/ss_bca5f03595aced08b5c8361d640400bf603218d1.600x338.jpg?t=1780153861" alt="">
+      </div>
+      <div class="ss-item">
+        <img class="thumb" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/a2c3fdd5e09a2f501160c4b90d719c1946cc153b/ss_a2c3fdd5e09a2f501160c4b90d719c1946cc153b.600x338.jpg?t=1780153861" alt="OBVERSE screenshot 3">
+        <img class="preview" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4028770/a2c3fdd5e09a2f501160c4b90d719c1946cc153b/ss_a2c3fdd5e09a2f501160c4b90d719c1946cc153b.600x338.jpg?t=1780153861" alt="">
+      </div>
+    </div>
+  </div>
+  <div style="flex:1; min-width:200px;">
+    <p style="margin:4px 0;"><strong>Developer:</strong> Diego Spartano, Sebastian Spartano</p>
+    <p style="margin:4px 0;"><strong>Genre:</strong> Immersive Sim, FPS, Sci-fi, Puzzle, Mystery, Stealth</p>
+    <p style="margin:4px 0;"><strong>Status:</strong> <span style="background:#7f8c8d; color:#fff; border-radius:3px; padding:1px 7px; font-size:0.85em; font-weight:bold;">Coming Soon, TBA</span></p>
+    <p style="margin:4px 0 12px;"><strong>Reviews:</strong> Not yet available</p>
+    <p style="margin:0 0 16px;">A first-person sci-fi mystery set inside a secret underground research facility. You explore, hack systems, and find your way past hostile machines using whatever solutions you can think of. Made by two developers.</p>
+    <a href="https://store.steampowered.com/app/4028770/OBVERSE/" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:var(--dark-hover); border-radius:4px; text-decoration:none; font-weight:bold;">View on Steam</a>
   </div>
 </div>
 
