@@ -194,7 +194,7 @@ const { data } = await useAsyncData('data', async () => {
 
 const type = computed(() => data.value?.type);
 const name = computed(() => data.value?.name);
-const version = computed(() => data.value?.version ?? '1.0.1');
+const version = computed(() => data.value?.version ?? '5.1.6');
 const has_windows_arm = computed(() => data.value?.has_windows_arm);
 
 useHead({
