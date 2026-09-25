@@ -8,12 +8,12 @@
 			<p>Choose the installation method for your system. Once installed, you will receive the latest updates automatically.</p>
 			<p>If you need help getting started, check out the <nuxt-link to="/quickstart">Quickstart Guide</nuxt-link>.</p>
 
-			<p id="update_title"><b>{{ type }}: </b><span>{{ name }}</span></p>
+			<p id="update_title" v-if="type || name"><b>{{ type }}: </b><span>{{ name }}</span></p>
 
 			<div id="install_options">
 				<section>
 
-					<div id="install_os_section">
+					<div id="install_os_section" v-if="version != '1.0.1'">
 					
 						<div class="install_os">
 							<fa :icon="['fab', 'windows']" />
@@ -58,8 +58,12 @@
 						</div>
 						
 					</div>
+					<div v-else id="download_alternative">
+						<p>Failed to connect to GitHub API, it may be temporarily down or unavailable in your region.</p>
+						<p>You can try to get the latest downloads from the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> instead.</p>
+					</div>
 
-					<p style="text-align: center;">Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre-releases and older versions.</p>
+					<p v-if="version != '1.0.1'" style="text-align: center;">Or check the <a href="https://github.com/JannisX11/blockbench/releases" target="_blank" rel="noopener">Github release page</a> for pre-releases and older versions.</p>
 
 					<h4>Updates</h4>
 					<p>Blockbench updates to the latest version automatically! </p>
@@ -180,14 +184,23 @@ const { data } = await useAsyncData('data', async () => {
 		data.type = 'Latest Prerelease'
 
 	} else {
-		let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
-		let release = await response.json();
+		try {
+			let response = await fetch('https://api.github.com/repos/JannisX11/blockbench/releases/latest');
+			let release = await response.json()();
+			data.version = release.tag_name.replace(/^v/, '');
+			data.name = release.name;
+			data.type = 'Latest Version';
+		} catch (err) {
+			let response = await fetch('https://web.blockbench.net/package.json');
+			let package_json = await response.json();
 
-		if (!release.tag_name) throw 'Unable to access GitHub API';
+			if (!package_json?.version) throw 'Unable to access latest version';
 
-		data.version = release.tag_name.replace(/^v/, '')
-		data.name = release.name
-		data.type = 'Latest Version'
+			data.version = package_json.version;
+			data.name = package_json.version;
+			data.type = 'Latest Version'
+		}
+
 	}
 	return data;
 }, {watch: [() => route.path]})
@@ -214,6 +227,12 @@ useHead({
 	#install_os_section {
 		display: flex;
 		margin-bottom: 20px;
+	}
+	#download_alternative {
+		margin-bottom: 8px;
+		padding: 14px 12px;
+		background-color: var(--light-background);
+		border-left: 10px solid #f53040e0;
 	}
 	.install_os {
 		text-align: center;
@@ -244,7 +263,6 @@ useHead({
 	}
 	.install_os a:hover {
 		text-decoration: underline;
-		transform: translateY(-1px);
 	}
 	a.blockbench_download > * {
 		cursor: inherit;
