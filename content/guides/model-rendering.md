@@ -16,25 +16,19 @@ The difference between the Blockbench preview (left) and the final render (right
 
 The first step is choosing a rendering program. Usually, The higher the render quality and the more options you need, the harder the program is to learn.
 
-|					|3D Viewer		|Sketchfab	|Light Tracer	|Blender		|
-|-------------------|---------------|-----------|---------------|---------------|
-|**Difficulty**		|Very Easy		|Easy		|Medium			|Hard			|
-|**Quality**		|Low			|Medium		|High			|High			|
-|**Features**		|1/10			|4/10		|6/10			|10/10			|
-|**Raytracing**		|-				|-			|Yes			|Yes, with Cycles|
-|**Transparent Background**|Yes		|Yes		|(Paid)    		|Yes			|
-|**Platforms**		|Windows		|Web		|Windows, Mac|Windows, Linux, Mac|
-|**Price**			|Free			|Free		|Freemium		|Free			|
+|					|Sketchfab	|Light Tracer	|Blender		|
+|-------------------|-----------|---------------|---------------|
+|**Difficulty**		|Easy		|Medium			|Hard			|
+|**Quality**		|Medium		|High			|High			|
+|**Features**		|4/10		|6/10			|10/10			|
+|**Raytracing**		|-			|Yes			|Yes, with Cycles|
+|**Transparent Background**|Yes |(Paid)    		|Yes			|
+|**Platforms**		|Web		|Windows, Mac|Windows, Linux, Mac|
+|**Price**			|Free		|Freemium		|Free			|
 
 <div class="block-info">
     Raytracing is a rendering technique where light rays, emitted from a light source, bounce around the model and are reflected and occluded by objects in the scene. In regular real-time renderers, shadows are calculated from the object shape and blurred on the edges, and ambient occlusion is faked based on the shape of the model. Compared to that, raytracing produces a much more realistic and appealing result because it closely simulates how light works in the real world.
 </div>
-
-
-### Windows 3D Viewer
-
-The default Windows 3D Viewer is an easy to use, but limited viewing and rendering program for 3D models. You can render your model from different angles and set up light sources around your model.
-
 
 ### Sketchfab
 
@@ -44,31 +38,18 @@ Due to the features of the 3D editor, Sketchfab is also a great option to render
 
 ### Light Tracer
 
-Light Tracer is an app that is focused on rendering. It is a big step up in quality compared to Sketchfab and 3D Viewer, but is is still very easy to use.
+Light Tracer is an app that is focused on rendering. It is a big step up in quality compared to Sketchfab, but is is still very easy to use.
 
 Light Tracer has a free browser app that has limited functionality but can still produce great results. The desktop app with full featureset is available as a subscription or a one-time purchase for $49 USD.
-
 
 ### Blender
 
 Blender is a professional 3D modeling and rendering software. It has essentially unlimited options, but also comes with a steep learning curve.
 Blender has a similar feature set to paid 3D programs, such as Cinema 4D, 3ds Max, and Maya. If you have one of those programs, you can use them for rendering as well.
 
-
 ## How to render
 
 Before you import your model into your rendering program of choice, you need to export it in a compatible format. The format glTF is recommended for this, since it is compatible with all programs in the list, it saves everything into one file, and it even supports model hierarchy and animations. Export your model via **File** > **Export** > **Export as glTF**.
-
-### Windows 3D Viewer
-
-Right click the exported glTF file and select **Open with** > **3D Viewer**.
-
-You can select a lighting preset in the sidebar. Below that, you can fine-tune the parameters of each light source.
-
-![Windows 3D Viewer](/images/wiki/guides/rendering/3d-viewer.png)
-
-Once you are happy with your lighting and camera angle, go to **File** > **Export Image**. Select the desired resolution and export options, and press **Export**.
-
 
 ### Sketchfab
 
@@ -86,7 +67,6 @@ Once you are happy with the result, one way to export your image is to simply ta
 
 If this isn't enough, you can also use Sketchfab's [Screenshot tool](https://labs.sketchfab.com/experiments/screenshots/). This allows you to specify an image resolution or export with a transparent background.
 
-
 ### Light Tracer
 
 Open the [Light Tracer Browser App](https://lighttracer.org/app.html) or the desktop app if you have it, and drag your model glTF file from your file browser into the program. On the dialog that pops up, press **Replace**.
@@ -101,8 +81,6 @@ In the paid version, you can also configure a back plate, a custom background th
 
 Once you are happy with your angle and lighting, press the **Save render to image** button that is located in the center above the model. This will export your model as an image.
 
-
-
 ### Blender
 
 You can download Blender from [Blender.org - Download](https://www.blender.org/download/).
@@ -114,5 +92,3 @@ After opening Blender, make sure to delete the default cube by pressing Delete a
 This article won't go in depth about setting up the camera and lighting in Blender, but here is a great [tutorial video](https://youtu.be/5UCc3Z_-ibs) about it.
 
 Once you are happy with your lighting, press **F12** to render your model. Go to **Image** > **Save** to export your render as a PNG image.
-
-
