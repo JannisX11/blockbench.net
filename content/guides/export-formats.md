@@ -2,7 +2,8 @@
 title: 3D Export
 description: An overview of the different export formats and how to transfer your model into other programs
 authors:
-	- JannisX11
+  - JannisX11
+  - WeiseSchokolade
 ---
 
 
@@ -62,8 +63,13 @@ There is usually an ideal format for each application:
   <tr>
    <td>Sketchfab
    </td>
-   <td>glTF (File > Export > Upload to Sketchfab)
+   <td>glTF (File > Export > Upload to Sketchfab) 
    </td>
+  </tr>
+  <tr>
+    <td>3D printing
+    </td>
+    <td>STL</td>
   </tr>
 </table>
 
@@ -126,6 +132,18 @@ FBX is a proprietary 3D format by Autodesk. It is widely used for 3D games and m
 * Not compatible with Blender, since Blender can only import binary FBX and Blockbench can only export ASCII FBX
 
 
+### STL
+
+STL is a file format used for computer manufacturing and 3D printing. It's focused on simple meshes and doesn't include textures or animations.
+
+#### Advantages
+* Compatible with CAD and 3D printing software
+* Compatible with Blender and Unity
+* Allows for 3d printing
+
+#### Disadvantages
+* Doesn't support textures, animations or materials
+
 ### DAE (Collada)
 
 Collada is an open-source 3D format that is intended for exchanging files between different 3D programs. It supports hierarchy and animations.
@@ -140,8 +158,6 @@ Collada is an open-source 3D format that is intended for exchanging files betwee
 #### Disadvantages
 
 * More limited material options when compared to glTF
-
-
 
 
 ## Import Guides
