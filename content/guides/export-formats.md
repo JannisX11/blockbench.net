@@ -2,8 +2,8 @@
 title: 3D Export
 description: An overview of the different export formats and how to transfer your model into other programs
 authors:
-	- JannisX11
-    - WeiseSchokolade
+  - JannisX11
+  - WeiseSchokolade
 ---
 
 
