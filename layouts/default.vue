@@ -22,10 +22,9 @@ export default {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	padding-top: var(--header-height);
 }
 .page_flow > div {
-	margin-top: var(--header-height);
-	scroll-margin-top: var(--header-height);
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;

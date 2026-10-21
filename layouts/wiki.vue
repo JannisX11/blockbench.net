@@ -28,7 +28,6 @@ export default {
 
 	#wiki_wrapper {
 		margin: auto;
-		margin-top: var(--header-height);
 		scroll-margin-top: var(--header-height);
 		max-width: var(--max-page-width);
 		flex-grow: 1;

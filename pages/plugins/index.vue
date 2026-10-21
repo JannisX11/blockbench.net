@@ -90,6 +90,7 @@ useHead({
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		grid-gap: 1rem;
+		width: 100%;
 	}
 	#plugin_list .plugin {
 		display: block;

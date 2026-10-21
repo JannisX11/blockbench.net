@@ -36,11 +36,10 @@ export default {
 	flex-direction: column;
 }
 .content.error_page {
-	margin-top: var(--header-height);
-	scroll-margin-top: var(--header-height);
 	text-align: center;
 	margin-top: calc(34vh - 230px);
 	display: block;
+	flex-grow: 1;
 }
 .error_page p {
 	font-size: 1.5em;

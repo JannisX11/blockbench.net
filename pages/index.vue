@@ -246,6 +246,9 @@ export default defineNuxtComponent({
 		background-color: var(--dark-background);;
 		color: var(--dark-text);
 	}
+	section.showcase h2 {
+		border: none;
+	}
 	#sketchfab_viewer {
 		width: 100%;
 		height: min(75vh, 640px);
